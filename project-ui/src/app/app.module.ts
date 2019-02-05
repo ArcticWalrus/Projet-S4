@@ -1,7 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
+
 import { AppComponent } from './app.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { DataDisplayComponent } from './data-display/data-display.component';
@@ -18,7 +23,11 @@ import { MainDisplayComponent } from './main-display/main-display.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+
+    MatSidenavModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
