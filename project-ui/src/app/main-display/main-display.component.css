@@ -1,0 +1,16 @@
+.globalContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.sideDiv {
+    width: 20%;
+    height: 100%;
+}
+
+.centralDiv {
+    width: 100%;
+    height: 100%;
+}
