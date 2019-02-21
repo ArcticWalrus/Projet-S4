@@ -13,11 +13,11 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity decodeur_Velocyraptor is
   port ( 
-    in_run_clk      : in std_logic;
-    in_reset     : in std_logic;
-    in_low_clk       : in std_logic;
-    in_value       : in std_logic;
-    out_values  : out  std_logic_vector(11 downto 0)
+    in_run_clk_dec      : in std_logic;
+    in_reset_dec     : in std_logic;
+    in_low_clk_dec       : in std_logic;
+    in_value_dec       : in std_logic;
+    out_values_dec  : out  std_logic_vector(11 downto 0)
 );
 end decodeur_Velocyraptor;
 
@@ -36,19 +36,19 @@ architecture Behavioral of decodeur_Velocyraptor is
 begin
 
 -- Assignation du prochain état (à chaque bclk prochain etat vas dans live eta)
-    process(in_run_clk, in_reset)
+    process(in_run_clk_dec, in_reset_dec)
         begin
-            if (in_reset ='1') then 
+            if (in_reset_dec ='1') then 
                 live_state <= sta_0;
             else
-                if rising_edge(in_run_clk) then
+                if rising_edge(in_run_clk_dec) then
                     live_state <= next_state;
                 end if;
             end if;
     end process;
 
         -- temporaire
-        out_values <=  (others =>'0');
+        out_values_dec <=  (others =>'0');
 
 
 end Behavioral;
