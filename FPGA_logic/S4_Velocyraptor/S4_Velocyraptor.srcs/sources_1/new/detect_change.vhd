@@ -1,4 +1,4 @@
----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 -- decodeur_Velocyraptor.vhd
 ---------------------------------------------------------------------------------------------
 -- Auteur(s)       : Kate-Lys Phaneuf Michaud
@@ -11,23 +11,23 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 
-entity decodeur_Velocyraptor is
+entity detect_change is
   port ( 
     in_run_clk      : in std_logic;
-    in_reset     : in    std_logic;  -- 
+    in_reset     : in std_logic;
     in_low_clk       : in std_logic;
-    in_value       : in std_logic;
-    out_values  : out  std_logic_vector(11 downto 0)
+    in_value       : std_logic_vector(11 downto 0);
+    out_result  : out  std_logic_vector(11 downto 0) -- no idea of this output tho
 );
-end decodeur_Velocyraptor;
+end detect_change;
 
-architecture Behavioral of decodeur_Velocyraptor is
+architecture Behavioral of detect_change is
 
 
 begin
 
         -- temporaire
-        out_values <=  (others =>'0');
+        out_result <=  (others =>'0');
 
 
 end Behavioral;

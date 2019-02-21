@@ -30,15 +30,23 @@ end chaine_FPGA;
 architecture Behavioral of chaine_FPGA is
   
 component decodeur_Velocyraptor is
-  Port ( 
-    in_run_clk      : in std_logic;
-    in_reset     : in    std_logic;  -- 
-    in_low_clk       : in std_logic;
-    in_value       : in std_logic;
-    out_values  : out  std_logic_vector(11 downto 0)
-);
+    port ( 
+        in_run_clk      : in std_logic;
+        in_reset     : in    std_logic;  -- 
+        in_low_clk       : in std_logic;
+        in_value       : in std_logic;
+        out_values  : out  std_logic_vector(11 downto 0)
+    );
 end component;
  
+component clock_generate is
+    port  (
+       in_reset    : in STD_LOGIC;
+       in_master_clk    : in STD_LOGIC;
+       out_run_clk   : out  STD_LOGIC;
+       out_low_clk : out  STD_LOGIC
+      );
+end component;
 ---------------------------------------------------------------------------------
 -- Signaux
 ----------------------------------------------------------------------------------
