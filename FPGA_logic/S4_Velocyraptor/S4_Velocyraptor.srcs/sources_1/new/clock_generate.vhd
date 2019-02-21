@@ -38,7 +38,7 @@ low_clk_process : process(in_master_clk)
                  low_clk <= '0';
                  compteur_low  <= "00000000"; 
               else
-                 if compteur_low = 128 then -- 256/2
+                 if compteur_low = 128 then -- minimum 175 à 105 ici : 256/2
                     compteur_low <= "00000000"; 
                     low_clk <= not low_clk;
                  else
@@ -55,7 +55,7 @@ run_clk_process : process(in_master_clk)
                  run_clk <= '0';
                  compteur_run <= "00"; 
               else
-                 if compteur_run = 01 then
+                 if compteur_run = 01 then -- minimum 7 à 10 ici 
                     compteur_run <= "00"; 
                     run_clk <= not run_clk;
                  else

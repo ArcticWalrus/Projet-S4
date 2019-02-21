@@ -763,3 +763,153 @@ selectCodeEditor("detect_change.vhd", 287, 241); // ce (w, ck)
 selectCodeEditor("detect_change.vhd", 293, 290); // ce (w, ck)
 selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "chaine_FPGA.vhd", 1); // k (j, ck)
 selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, ck)
+// Elapsed time: 57 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, decodeur_Velocyraptor(Behavioral) (decodeur_Velocyraptor.vhd)]", 3, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, decodeur_Velocyraptor(Behavioral) (decodeur_Velocyraptor.vhd)]", 3, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("decodeur_Velocyraptor.vhd", 156, 197); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 263, 197); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 668 MB. GUI used memory: 47 MB. Current time: 2/21/19 3:04:39 PM EST
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 239 seconds
+selectCodeEditor("decodeur_Velocyraptor.vhd", 481, 45); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 54, 369); // ce (w, ck)
+typeControlKey((HResource) null, "decodeur_Velocyraptor.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 25, 250); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 70, 264); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 23, 232); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 28, 250); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 28, 249); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 55, 262); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 56, 263); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 83, 282); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 80, 318); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 83, 317); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 85, 335); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 84, 351); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 303, 388); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("decodeur_Velocyraptor.vhd", 71, 97); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 71, 97, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "decodeur_Velocyraptor.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 105, 331); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 105, 331, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "decodeur_Velocyraptor.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 234, 414); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 234, 414, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "decodeur_Velocyraptor.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 65, 115); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 65, 115, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "decodeur_Velocyraptor.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 191, 327); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 191, 327, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "decodeur_Velocyraptor.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 134, 368); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 134, 368, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "decodeur_Velocyraptor.vhd", 'v'); // ce (w, ck)
+// Elapsed time: 18 seconds
+selectCodeEditor("decodeur_Velocyraptor.vhd", 767, 435); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 706, 300); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 58, 246); // ce (w, ck)
+typeControlKey((HResource) null, "decodeur_Velocyraptor.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 19, 197); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 118, 216); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 1, 194); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 62, 231); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 30, 212); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 170, 343); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 108, 196); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 108, 196, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("decodeur_Velocyraptor.vhd", 123, 197); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 123, 197, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "decodeur_Velocyraptor.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 371, 349); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 371, 349, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "decodeur_Velocyraptor.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 109, 349); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 109, 349, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("decodeur_Velocyraptor.vhd", 220, 353); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 220, 353, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("decodeur_Velocyraptor.vhd", 393, 383); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 116, 346); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 116, 346, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "decodeur_Velocyraptor.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 173, 334); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 173, 334, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "decodeur_Velocyraptor.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 175, 382); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 175, 382, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "decodeur_Velocyraptor.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 179, 246); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 179, 246, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "decodeur_Velocyraptor.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 309, 339); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 309, 339, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "decodeur_Velocyraptor.vhd", 'v'); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("decodeur_Velocyraptor.vhd", 91, 113); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 91, 131); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 91, 146); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 56, 164); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 117, 143); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 50, 160); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 400, 178); // ce (w, ck)
+selectCodeEditor("decodeur_Velocyraptor.vhd", 181, 145); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 668 MB. GUI used memory: 45 MB. Current time: 2/21/19 3:34:39 PM EST
+// Elapsed time: 1829 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 5); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constraint_FPGA.xdc]", 7, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constraint_FPGA.xdc]", 7, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constraint_FPGA.xdc]", 7, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("constraint_FPGA.xdc", 259, 171); // ce (w, ck)
+// Elapsed time: 41 seconds
+selectCodeEditor("constraint_FPGA.xdc", 320, 263); // ce (w, ck)
+selectCodeEditor("constraint_FPGA.xdc", 320, 263, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("constraint_FPGA.xdc", 318, 264); // ce (w, ck)
+selectCodeEditor("constraint_FPGA.xdc", 318, 264, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("constraint_FPGA.xdc", 318, 264); // ce (w, ck)
+selectCodeEditor("constraint_FPGA.xdc", 318, 264); // ce (w, ck)
+selectCodeEditor("constraint_FPGA.xdc", 353, 294); // ce (w, ck)
+// Elapsed time: 246 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clock_generate.vhd", 3); // k (j, ck)
+selectCodeEditor("clock_generate.vhd", 649, 246); // ce (w, ck)
+// Elapsed time: 54 seconds
+selectCodeEditor("clock_generate.vhd", 889, 212); // ce (w, ck)
+// Elapsed time: 174 seconds
+selectCodeEditor("clock_generate.vhd", 913, 145); // ce (w, ck)
+// Elapsed time: 28 seconds
+selectCodeEditor("clock_generate.vhd", 326, 129); // ce (w, ck)
+// Elapsed time: 23 seconds
+selectCodeEditor("clock_generate.vhd", 356, 314); // ce (w, ck)
+// Elapsed time: 493 seconds
+selectCodeEditor("clock_generate.vhd", 410, 177); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 11 seconds
+selectCodeEditor("clock_generate.vhd", 393, 314); // ce (w, ck)
+// Elapsed time: 28 seconds
+selectCodeEditor("clock_generate.vhd", 508, 316); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 71 seconds
+selectCodeEditor("clock_generate.vhd", 892, 149); // ce (w, ck)
