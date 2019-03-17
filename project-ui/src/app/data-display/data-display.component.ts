@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { BaseChartDirective } from 'ng2-charts/ng2-charts'
+import { ChartDataSets, ChartOptions } from 'chart.js';
+import { Color, Label, BaseChartDirective } from 'ng2-charts'
+import * as pluginAnnotations from 'chartjs-plugin-annotation';
 //import { DataService } from '../services/data-service.service';
 
 @Component({
@@ -8,30 +10,68 @@ import { BaseChartDirective } from 'ng2-charts/ng2-charts'
   styleUrls: ['./data-display.component.css']
 })
 export class DataDisplayComponent implements OnInit {
-  @ViewChild(BaseChartDirective) chart: BaseChartDirective;
   public test = 0;
   public timer: any;
-  public lineChartData:Array<any> = [
+
+  public lineChartData: ChartDataSets[] = [
     {data: [], label: 'Speed'},
-    /* {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'},
-    {data: [18, 48, 77, 9, 100, 27, 40], label: 'Series C'} */
   ];
-  public lineChartLabels:Array<any> = [];
-  public lineChartOptions:any = {
-    responsive: true
+  public lineChartLabels: Label[] = [];
+  public lineChartOptions: (ChartOptions & { annotation: any }) = {
+    responsive: true,
+    scales: {
+      // We use this empty structure as a placeholder for dynamic theming.
+      xAxes: [{}],
+      yAxes: [
+        {
+          id: 'y-axis-0',
+          position: 'left',
+        },
+        {
+          id: 'y-axis-1',
+          position: 'right',
+          gridLines: {
+            color: 'rgba(255,0,0,0.3)',
+          },
+          ticks: {
+            fontColor: 'red',
+          }
+        }
+      ]
+    },
+    annotation: {
+      annotations: [
+        {
+          type: 'line',
+          mode: 'vertical',
+          scaleID: 'x-axis-0',
+          value: 'March',
+          borderColor: 'orange',
+          borderWidth: 2,
+          label: {
+            enabled: true,
+            fontColor: 'orange',
+            content: 'LineAnno'
+          }
+        },
+      ],
+    },
   };
   public lineChartColors:Array<any> = [
-    { // grey
-      backgroundColor: 'rgba(148,159,177,0.2)',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
+    { // dark grey
+      backgroundColor: 'rgba(77,83,96,0.2)',
+      borderColor: 'rgba(77,83,96,1)',
+      pointBackgroundColor: 'rgba(77,83,96,1)',
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+      pointHoverBorderColor: 'rgba(77,83,96,1)'
     }
   ];
   public lineChartLegend:boolean = true;
   public lineChartType:string = 'line';
+  public lineChartPlugins = [pluginAnnotations];
+
+  @ViewChild(BaseChartDirective) chart: BaseChartDirective;
 
   constructor(/* private dataService: DataService */) { 
 
@@ -63,7 +103,7 @@ export class DataDisplayComponent implements OnInit {
     console.log(this.lineChartLabels);
     console.log("\n\nlinechartdata after : ");
     console.log(this.lineChartData);
-    this.chart.chart.update();
+    //this.chart.chart.update();
     
   }
 }
