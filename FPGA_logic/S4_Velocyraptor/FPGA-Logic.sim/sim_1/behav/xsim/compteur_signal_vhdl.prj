@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../FPGA-Logic.srcs/sources_1/imports/new/detectzero.vhd" \
+"../../../../FPGA-Logic.srcs/sources_1/imports/new/tamponcirc.vhd" \
+"../../../../FPGA-Logic.srcs/sources_1/new/compteur_signal.vhd" \
+
+# Do not sort compile order
+nosort

@@ -2,13 +2,86 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Mar 17 15:45:00 2019
-# Process ID: 11748
+# Start of session at: Mon Mar 18 16:19:06 2019
+# Process ID: 1368
 # Current directory: C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14596 C:\Users\Kitty\Documents\GitHub\Projet-S4\FPGA_logic\S4_Velocyraptor\FPGA-Logic.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5324 C:\Users\Kitty\Documents\GitHub\Projet-S4\FPGA_logic\S4_Velocyraptor\FPGA-Logic.xpr
 # Log file: C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/vivado.log
 # Journal file: C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source compteur_signal.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top FPGA_Logic [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+source FPGA_Logic.tcl
+add_force {/FPGA_Logic/sys_clock} -radix bin {0 0ns} {1 500ps} -repeat_every 1000ps
+restart
+run 1 us
+add_force {/FPGA_Logic/sys_clock} -radix bin {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+close_sim
+close_sim
+close [ open C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sources_1/new/Traitement.vhd w ]
+add_files C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sources_1/new/Traitement.vhd
+update_compile_order -fileset sources_1
+launch_simulation
+source FPGA_Logic.tcl
+add_force {/FPGA_Logic/Synchronisation/clkm} -radix bin {1 0ns} {0 50000ps} -repeat_every 100000ps
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 s
+close_sim
 update_compile_order -fileset sources_1

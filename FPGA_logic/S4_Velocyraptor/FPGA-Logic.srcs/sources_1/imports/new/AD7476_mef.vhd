@@ -1,14 +1,3 @@
---------------------------------------------------------------------------------
--- MEF de controle du convertisseur AD7476  
--- D. Dalle septembre 2018 PMOD AD1
--- AD7476_mef.vhd
--- ref: http://www.analog.com/media/cn/technical-documentation/evaluation-documentation/AD7476A_7477A_7478A.pdf 
----------------------------------------------------------------------------------------------
---	Librairy and Package Declarations
----------------------------------------------------------------------------------------------
-
---a refaire, decode ADC en 32bit signed vector App3
-
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -21,9 +10,7 @@ entity AD7476_mef is
 port(
 	clk_AD			: in std_logic;
 	reset			: in std_logic;
-	--i_Strobe200kHz	: in std_logic;
 	i_Strobe_AD	    : in std_logic;
-	o_AdcNcs		: out std_logic;
 	o_BitAv			: out std_logic;
 	o_DAV			: out std_logic
 	);
@@ -128,9 +115,9 @@ end process;
 
 
 -- Calcul des sorties
-with fsm_etat_courant select
-	o_AdcNcs <=	'1' when sta_Attente,
-				'0' when others;				
+--with fsm_etat_courant select
+--	o_AdcNcs <=	'1' when sta_Attente,
+--				'0' when others;				
 with fsm_etat_courant select
 	o_BitAv	<=	'0' when sta_Attente | sta_Demarrage1 | sta_Demarrage2 | sta_Demarrage3 | sta_FinSequence,
 				'1' when others;

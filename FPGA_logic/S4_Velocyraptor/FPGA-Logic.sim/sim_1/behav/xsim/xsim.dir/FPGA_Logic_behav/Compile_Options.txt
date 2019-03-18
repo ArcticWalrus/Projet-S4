@@ -1,0 +1,1 @@
+-wto "8d605269e6d9451384456ecf6d1a9941" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "FPGA_Logic_behav" "xil_defaultlib.FPGA_Logic" -log "elaborate.log" 

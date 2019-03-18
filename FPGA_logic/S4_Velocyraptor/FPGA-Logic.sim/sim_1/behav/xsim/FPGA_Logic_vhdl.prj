@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../FPGA-Logic.srcs/sources_1/imports/new/Synchro_Horloges.vhd" \
+"../../../../FPGA-Logic.srcs/sources_1/new/FPGA-Logic.vhd" \
+
+# Do not sort compile order
+nosort

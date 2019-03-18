@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity detectzero is
     Port ( 
         i_clk, id_reset: in std_ulogic;
-        i_x: in signed(31 downto 0);
+        i_x: in signed(11 downto 0);
         o_s, o_z: out std_ulogic
     );
 end detectzero;
@@ -14,24 +14,37 @@ architecture comport of detectzero is
     type detect_seq_type is (init, p0, p1, p2, p3, n0, n1, n2, n3);
     signal etat_courant, etat_suivant: detect_seq_type;
     signal signe_x: std_ulogic;
+    signal so_z : std_ulogic;
 begin
-    registre: process( i_clk, i_reset )
+    registre: process( i_clk, id_reset )
     begin
-        if (i_reset = '1') then
+        if (id_reset = '1') then
             etat_courant <= init;
         elsif (i_clk = '1' and i_clk'event) then
             etat_courant <= etat_suivant;
         end if;
     end process;
     
-    signe_x <= i_x(31) xor '1';   -- signe_x = 1 si i_x positif ou nul, 0 autrement
+    returnLow : process (i_clk)
+    begin
+        if (i_clk = '0'and i_clk'event) then
+            if (so_z = '1') then
+                so_z <= '0';
+                o_z <= '0';
+            end if;
+        end if;
+    end process;
+    
+    o_z <= so_z;
+    
+    signe_x <= i_x(11) xor '1';   -- signe_x = 1 si i_x positif ou nul, 0 autrement
     
     decodeur: process( signe_x, etat_courant )
     begin
         case etat_courant is
             when init =>
                 o_s <= '0';
-                o_z <= '0';
+                so_z <= '0';
                 if signe_x = '1' then 
                     etat_suivant <= p1;
                 else
@@ -39,7 +52,7 @@ begin
                 end if;
             when p0 =>
                 o_s <= '0';
-                o_z <= '0';
+                so_z <= '0';
                 if signe_x = '1' then
                     etat_suivant <= p1;
                 else
@@ -47,7 +60,7 @@ begin
                 end if;
             when p1 =>
                 o_s <= '0';
-                o_z <= '0';
+                so_z <= '0';
                 if signe_x = '1' then
                     etat_suivant <= p2;
                 else
@@ -55,7 +68,7 @@ begin
                 end if;
             when p2 =>
                 o_s <= '0';
-                o_z <= '0';
+                so_z <= '0';
                 if signe_x = '1' then
                     etat_suivant <= p3;
                 else
@@ -63,7 +76,7 @@ begin
                 end if;
             when p3 =>
                 o_s <= '1';
-                o_z <= '1';
+                so_z <= '1';
                 if signe_x = '1' then
                     etat_suivant <= n0;
                 else
@@ -71,7 +84,7 @@ begin
                 end if;
             when n0 =>
                 o_s <= '1';
-                o_z <= '0';
+                so_z <= '0';
                 if signe_x = '1' then
                     etat_suivant <= n0;
                 else
@@ -79,7 +92,7 @@ begin
                 end if;
             when n1 =>
                 o_s <= '1';
-                o_z <= '0';
+                so_z <= '0';
                 if signe_x = '1' then
                     etat_suivant <= n0;
                 else
@@ -87,7 +100,7 @@ begin
                 end if;
             when n2 =>
                 o_s <= '1';
-                o_z <= '0';
+                so_z <= '0';
                 if signe_x = '1' then
                     etat_suivant <= n0;
                 else
@@ -95,7 +108,7 @@ begin
                 end if;
             when n3 =>
                 o_s <= '0';
-                o_z <= '1';
+                so_z <= '1';
                 if signe_x = '1' then
                     etat_suivant <= p1;
                 else
