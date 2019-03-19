@@ -7,12 +7,20 @@ use UNISIM.VComponents.all;
 
 entity magnetic is
     Port (  --Generaux
+            i_clk           : in    std_logic;
+            i_reset         : in    std_logic;
+            i_str_tampon    : in    std_logic;
             
             --Controle ADC
             i_Data          : in    std_logic; -- bit arrivant de l'adc
             i_Strobe_ADC    : in    std_logic; -- strobe debut conversion 380KHz??
 
             --Traitement de signal
+            o_vitesse       : out   std_logic;
+            o_calories      : out   std_logic;
+            o_distance      : out   std_logic;
+            i_poid_Kg       : in    std_logic;
+            i_taille_m      : in    std_logic
     );     
 end magnetic;
 
@@ -33,7 +41,12 @@ architecture Behavioral of magnetic is
         Port ( 
                 line_in         : in signed(11 downto 0);
                 i_clk, i_reset  : in std_logic;
+<<<<<<< HEAD
                 o_nb_items      : out unsigned(5 downto 0);
+=======
+                i_stb_tampon    : in std_logic;
+                o_nb_items      : out std_logic_vector(7 downto 0);
+>>>>>>> 7c7830c72c186f62f6254ff1dda31b405bb50668
                 o_high          : out std_logic
         );
     end component;
@@ -72,6 +85,12 @@ begin
 
     entity_compteur_signal : compteur_signal
         Port map( 
+            line_in         => s_line_in,
+            i_clk           => s_clk,
+            i_stb_tampon    => i_str_tampon,
+            i_reset         => s_reset,
+            o_nb_items      => s_nb_items,
+            o_high          => s_detect
         );
 
     Controleur :  Ctrl_AD1 
