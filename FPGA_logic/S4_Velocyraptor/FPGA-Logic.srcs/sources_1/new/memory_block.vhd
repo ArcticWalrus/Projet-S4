@@ -5,6 +5,7 @@ use work.Velocyraptor_package.all;
 
 entity memory_block is
     Port (
+            reset           : in    std_logic;
             -- data qui provient de l'ergonomie
             i_strb_ergo     : in    std_logic;
             i_data_ergo     : in    std_logic_vector (31 downto 0);
@@ -29,35 +30,41 @@ end memory_block;
 architecture Behavioral of memory_block is
 
 signal mem_ergo         :   ERGO_MEM    :=((others=> (others=>'0')));
-signal mem_ergo_index   :   integer     := 0;
+signal mem_ergo_index   :   natural     := 0;
 
 signal mem_speed        :   SPEED_MEM   :=((others=> (others=>'0')));
-signal mem_speed_index  :   integer     := 0;
+signal mem_speed_index  :   natural     := 0;
 
 signal mem_dist         :   DIST_MEM    :=((others=> (others=>'0')));
-signal mem_dist_index   :   integer     := 0;
+signal mem_dist_index   :   natural     := 0;
 
 signal mem_cals         :   CALS_MEM    :=((others=> (others=>'0')));
-signal mem_cals_index   :   integer     := 0;
+signal mem_cals_index   :   natural     := 0;
 
 
 begin
 
     -- gestion du tampon ergo.
-    process(i_strb_ergo)
+    process(i_strb_ergo,reset)
     begin
-        if i_strb_ergo = '1' then
+        if i_strb_ergo = '1' and reset = '0' then
         
             mem_ergo(mem_ergo_index) <= i_data_ergo;
-            mem_ergo_index <= (mem_ergo_index + 1);
+            mem_ergo_index <= mem_ergo_index + 1;
         
+        elsif  reset = '1' then
+        
+            mem_ergo  <= (( others=> ( others =>'0' )));
+
+            mem_ergo_index <= 0;
+            
         end if;
     end process;
     
     -- gestion du tampon magnétique.
-    process(i_strb_mag)
+    process(i_strb_mag,reset)
     begin
-        if i_strb_mag = '1' then
+        if i_strb_mag = '1' and reset = '0' then
         
             mem_speed(mem_speed_index) <= i_data_speed;
             mem_speed_index <= (mem_speed_index + 1);
@@ -67,6 +74,16 @@ begin
             
             mem_cals(mem_cals_index) <= i_data_cals;
             mem_cals_index <= (mem_cals_index + 1);
+        
+        elsif  reset = '1' then
+        
+        mem_speed <= (( others=> ( others =>'0' )));
+        mem_dist  <= (( others=> ( others =>'0' )));
+        mem_cals  <= (( others=> ( others =>'0' )));
+
+        mem_speed_index <= 0;                                                        
+        mem_dist_index <= 0;                                                         
+        mem_cals_index <= 0;
         
         end if;
     end process;
@@ -82,18 +99,18 @@ begin
             o_data_cals  <= mem_cals;
         
         elsif falling_edge(i_serv_sig) then -- i_serv_sig passe de 1 à 0 -> reset tampon
-        
-            mem_ergo  <= (( others=> ( others =>'0' )));
-            mem_speed <= (( others=> ( others =>'0' )));
-            mem_dist  <= (( others=> ( others =>'0' )));
-            mem_cals  <= (( others=> ( others =>'0' )));
+                    
+--            mem_ergo  <= (( others=> ( others =>'0' )));
+--            mem_speed <= (( others=> ( others =>'0' )));
+--            mem_dist  <= (( others=> ( others =>'0' )));
+--            mem_cals  <= (( others=> ( others =>'0' )));
             
-            mem_ergo_index <= 0; 
-            mem_speed_index <= 0;
-            mem_dist_index <= 0; 
-            mem_cals_index <= 0; 
+--            mem_ergo_index <= 0; 
+--            mem_speed_index <= 0;
+--            mem_dist_index <= 0; 
+--            mem_cals_index <= 0; 
 
         end if;
-    end process;
+    end process;                                                             
 
 end Behavioral;
