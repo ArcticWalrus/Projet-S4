@@ -45,11 +45,10 @@ architecture Behavioral of FPGA_Logic is
             Port ( 
                     clkm            : in  std_logic;  -- Entrée  horloge maitre   (50 MHz soit 20 ns ou 100 MHz soit 10 ns)
                     o_S_10MHz       : out std_logic;  -- source horloge divisee          (clkm MHz / (2*constante_diviseur_p +2) devrait donner 5 MHz soit 200 ns)
-                    o_CLK_10MHz     : out std_logic;
-                    o_S_100Hz       : out  std_logic; -- source horloge 100 Hz : out  std_logic;   -- (100  Hz approx:  99,952 Hz)
-                    o_S_380Hz       : out  STD_LOGIC; 
-                    o_stb_100Hz     : out  std_logic; -- strobe 100Hz synchro sur clk_5MHz 
-                    o_S_1Hz         : out  std_logic  -- Signal temoin 1 Hz
+                    o_clk_10MHz     : out  STD_LOGIC;    -- horlgoe via bufg
+                    o_stb_380kHz    : out  STD_LOGIC;    -- source horloge 380 Hz : out  STD_LOGIC;  
+                    o_stb_200Hz     : out  STD_LOGIC;    -- strobe durée 1/clk_5mHz aligne sur front 100Hz
+                    o_S_1Hz         : out  STD_LOGIC     -- Signal temoin 1 Hz
             );
     end component;
        
@@ -57,6 +56,7 @@ architecture Behavioral of FPGA_Logic is
             Port (  --Generaux
                     i_clk           : in std_logic;
                     i_reset         : in std_logic;
+                    i_str_tampon    : in std_logic;
                     
                     --Controle ADC
                     i_Data          : in    std_logic; -- bit arrivant de l'adc
@@ -73,7 +73,8 @@ architecture Behavioral of FPGA_Logic is
     
     signal clk_10MHz       : std_logic; --inversée
     signal d_S_10MHz       : std_logic;
-    signal d_strobe_380Hz  : std_logic := '0';  -- est utile pour debounce et cadence echantillonnage AD1
+    signal d_stb_380kHz    : std_logic := '0';  -- est utile pour debounce et cadence echantillonnage AD1
+    signal d_stb_200Hz     : std_logic;
     
     signal reset           : std_logic; 
     
@@ -81,7 +82,6 @@ architecture Behavioral of FPGA_Logic is
     signal d_AD_Dselect    : std_logic; 
     signal d_echantillon   : std_logic_vector (11 downto 0); 
     
-    signal s_line_in       : std_logic_vector(31 downto 0);
     signal s_nb_items      : std_logic_vector(7 downto 0);
     signal s_detect        : std_logic;
 
@@ -93,9 +93,8 @@ begin
                 clkm         =>  sys_clock,
                 o_S_10MHz    =>  o_AD_CLK,
                 o_CLK_10MHz  => clk_10MHz,
-                o_S_100Hz    => open,
-                o_S_380Hz    => d_strobe_380Hz,
-                o_stb_100Hz  => open,
+                o_stb_380kHz => d_stb_380kHz,
+                o_stb_200Hz  => d_stb_200Hz,
                 o_S_1Hz      => o_ledtemoin_b
         );
     
@@ -103,10 +102,11 @@ begin
         Port map(  --Generaux
                 i_clk           =>  d_S_10MHz,
                 i_reset         =>  reset,
+                i_str_tampon    =>  d_stb_200Hz,
                 
                 --Controle ADC
                 i_Data          =>  i_ADC_Data,
-                i_Strobe_ADC    =>  d_strobe_380Hz,
+                i_Strobe_ADC    =>  d_stb_380kHz,
 
                 --Traitement de signal
                 o_vitesse       =>  o_vitesse,
@@ -116,7 +116,7 @@ begin
                 i_taille_m      =>  i_taille_m
         );
   
-  o_AD_NCS <= d_strobe_380Hz;
+  o_AD_NCS <= d_stb_380kHz;
   o_AD_CLK <= d_S_10MHz;
   
 end Behavioral;
