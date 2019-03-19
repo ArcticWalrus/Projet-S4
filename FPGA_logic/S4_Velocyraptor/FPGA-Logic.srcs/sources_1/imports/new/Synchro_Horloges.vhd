@@ -14,9 +14,8 @@ generic (const_CLK_syst_MHz: integer := 100);
             clkm            : in STD_LOGIC;      -- Entrée  horloge maitre   (100 MHz soit 10 ns  Pt clk a 125MHz)
             o_S_10MHz       : out  STD_LOGIC;    -- source horloge divisee   (clkm MHz / (2*constante_diviseur_p +2) devrait donner 10 MHz soit 100 ns)
             o_clk_10MHz     : out  STD_LOGIC;    -- horlgoe via bufg
-            o_S_100Hz       : out  STD_LOGIC;    -- source horloge 100 Hz : out  STD_LOGIC;   -- (100  Hz approx:  99,952 Hz) 
-            o_S_380Hz       : out  STD_LOGIC;    -- source horloge 380 Hz : out  STD_LOGIC;  
-            o_stb_100Hz     : out  STD_LOGIC;    -- strobe durée 1/clk_5mHz aligne sur front 100Hz
+            o_stb_380kHz    : out  STD_LOGIC;    -- source horloge 380 Hz : out  STD_LOGIC;  
+            o_stb_200Hz     : out  STD_LOGIC;    -- strobe durée 1/clk_5mHz aligne sur front 100Hz
             o_S_1Hz         : out  STD_LOGIC     -- Signal temoin 1 Hz
     );                    
 end Synchro_Horloges;
@@ -26,24 +25,26 @@ architecture Behavioral of Synchro_Horloges is
     constant CLKp_MHz_des : integer := 5; --MHz
     constant constante_diviseur_p: integer  :=(const_CLK_syst_MHz/(2*CLKp_MHz_des));   -- quand on fait toggle sur le signal Clkp5MHzint
     constant cdiv1 : std_logic_vector(3  downto 0):= conv_std_logic_vector(constante_diviseur_p, 4);     
-    constant cdiv2 : std_logic_vector(4 downto 0):= conv_std_logic_vector   (25, 5) ;     -- overflow a Clkp5MHzint/26 = 192.3 kHz  soit 5.2 us
-    constant cdiv3 : std_logic_vector(15 downto 0):= conv_std_logic_vector (1848, 16) ;   -- overflow a Clk200kHzInt / 1924 = 99.952 = ~100 Hz soit 10.005 ms (t réel)
+    constant cdiv2 : std_logic_vector(4 downto 0):= conv_std_logic_vector   (25, 5) ;     -- overflow a Clkp10MHzint/26 = 380 kHz  soit 5.2 us
+    constant cdiv3 : std_logic_vector(15 downto 0):= conv_std_logic_vector (1848, 16) ;   -- overflow a Clk200kHzInt / 1924 = 99.952 = ~200 Hz soit 10.005 ms (t réel)
     constant cdiv4 : std_logic_vector(7 downto 0):= conv_std_logic_vector  (99, 8) ;      -- o_S1Hz = o_clk3 / 100    =  1 Hz soit 1 s
   
 
     signal ValueCounter10MHz        : std_logic_vector(4 downto 0)   := "00000";
-    signal ValueCounter200kHz       : std_logic_vector(4 downto 0)   := "00000";
-    signal ValueCounter100Hz        : std_logic_vector(15 downto 0)  := "0000000000000000";
+    signal ValueCounter380kHz       : std_logic_vector(4 downto 0)   := "00000";
+    signal ValueCounter200Hz        : std_logic_vector(15 downto 0)  := "0000000000000000";
     signal ValueCounter1Hz          : std_logic_vector(7 downto 0)   := "00000000";
     
     signal clk_10MHzInt             : std_logic := '0';
     
     signal q_s10MHzInt              : std_logic := '0';
     signal q_s1HzInt                : std_logic := '0' ;
-    signal q_s100HzInt              : std_logic := '0' ;  
-    signal q_strobe100HzInt         : std_logic := '0';
-    signal q_s100HzInt_5M           : std_logic := '0';
-    signal q_s380HzInt              : std_logic := '0';
+    signal q_s200HzInt              : std_logic := '0' ;  
+    signal q_strobe200HzInt         : std_logic := '0';
+    signal q_s200HzInt_5M           : std_logic := '0';
+    signal q_s380kHzInt_5M          : std_logic := '0';
+    signal q_s380kHzInt             : std_logic := '0';
+    signal q_strobe380kHzInt        : std_logic := '0';
  
 
 begin
@@ -55,12 +56,11 @@ ClockBuffer: bufg
         );
 
 
-o_clk_10MHz <= clk_10MHzInt;
-o_S_10MHz   <= q_s10MHzInt;
-o_S_100Hz  <= q_s100HzInt;
-o_S_380Hz <= q_s380HzInt;
-o_S_1Hz    <= q_s1HzInt;
-o_stb_100Hz <=  q_strobe100HzInt;
+o_clk_10MHz     <= clk_10MHzInt;
+o_S_10MHz       <= q_s10MHzInt;
+o_S_1Hz         <= q_s1HzInt;
+o_stb_200Hz     <=  q_strobe200HzInt;
+o_stb_380kHz    <=  q_strobe380kHzInt;
 
 DiviseurHorloge: process(clkm)
 begin
@@ -69,14 +69,14 @@ begin
        if (ValueCounter10MHz = cdiv1) then               -- evenement se produit aux 100 approx ns
             ValueCounter10MHz <= "00000";
             q_s10MHzInt <= Not q_s10MHzInt;	            -- pour generer horloge a exterieur du module (prevoir bufg)	
-            ValueCounter200kHz <= ValueCounter200kHz + 1;
-            if (ValueCounter200kHz = cdiv2) then        -- evenement se produit aux 5 us approx
-                 ValueCounter200kHz <= "00000";
-                 q_s380HzInt <= Not q_s380HzInt;
-                 ValueCounter100Hz <= ValueCounter100Hz + 1;
-                 if (ValueCounter100Hz = cdiv3) then    -- evenement se produit aux 5 ms  approx
-                      ValueCounter100Hz <= "0000000000000000";
-                      q_s100HzInt <= Not q_s100HzInt;
+            ValueCounter380kHz <= ValueCounter380kHz + 1;
+            if (ValueCounter380kHz = cdiv2) then        -- evenement se produit aux 5 us approx
+                 ValueCounter380kHz <= "00000";
+                 q_s380kHzInt <= Not q_s380kHzInt;
+                 ValueCounter200Hz <= ValueCounter200Hz + 1;
+                 if (ValueCounter200Hz = cdiv3) then    -- evenement se produit aux 5 ms  approx
+                      ValueCounter200Hz <= "0000000000000000";
+                      q_s200HzInt <= Not q_s200HzInt;
                       ValueCounter1Hz <= ValueCounter1Hz + 1;
                       if (ValueCounter1Hz = cdiv4) then -- evenement se produit aux 500 ms approx
                           ValueCounter1Hz <= "00000000";
@@ -88,11 +88,19 @@ begin
 	end if;
 end process;
 
-GenererStrobe100Hz: process(clk_10MHzInt)  
+GenererStrobe380kHz: process(clk_10MHzInt)  
 begin
 	if(clk_10MHzInt'event and clk_10MHzInt = '1') then
-		q_s100HzInt_5M <= q_s380HzInt;
-		q_strobe100HzInt <= q_s380HzInt and not(q_s100HzInt_5M);
+		q_s380kHzInt_5M <= q_s380kHzInt;
+		q_strobe380kHzInt <= q_s380kHzInt and not(q_s380kHzInt_5M);
+	end if;
+end process;
+
+GenererStrobe200Hz: process(clk_10MHzInt)  
+begin
+	if(clk_10MHzInt'event and clk_10MHzInt = '1') then
+		q_s200HzInt_5M <= q_s200HzInt;
+		q_strobe200HzInt <= q_s200HzInt and not(q_s200HzInt_5M);
 	end if;
 end process;
 

@@ -1419,3 +1419,7 @@ selectCodeEditor("Traitement.vhd", 237, 164); // ce (w, ck)
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: DG_ANALYSIS_MSG_RESET
 // TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
