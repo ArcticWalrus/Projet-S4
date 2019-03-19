@@ -41,12 +41,8 @@ architecture Behavioral of magnetic is
         Port ( 
                 line_in         : in signed(11 downto 0);
                 i_clk, i_reset  : in std_logic;
-<<<<<<< HEAD
                 o_nb_items      : out unsigned(5 downto 0);
-=======
                 i_stb_tampon    : in std_logic;
-                o_nb_items      : out std_logic_vector(7 downto 0);
->>>>>>> 7c7830c72c186f62f6254ff1dda31b405bb50668
                 o_high          : out std_logic
         );
     end component;
