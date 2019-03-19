@@ -2,8 +2,12 @@
 2018.2
 Jun 14 2018
 20:41:02
-C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sources_1/imports/new/Synchro_Horloges.vhd,1552945371,vhdl,,,,synchro_horloges,,,,,,,,
-C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sources_1/imports/new/detectzero.vhd,1552938482,vhdl,,,,detectzero,,,,,,,,
-C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sources_1/imports/new/tamponcirc.vhd,1552937981,vhdl,,,,tamponcirc,,,,,,,,
-C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sources_1/new/FPGA-Logic.vhd,1552937438,vhdl,,,,fpga_logic,,,,,,,,
-C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sources_1/new/compteur_signal.vhd,1552938438,vhdl,,,,compteur_signal,,,,,,,,
+D:/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sources_1/imports/new/AD7476_mef.vhd,1553000475,vhdl,,,,ad7476_mef,,,,,,,,
+D:/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sources_1/imports/new/Ctrl_AD1.vhd,1553000475,vhdl,,,,ctrl_ad1,,,,,,,,
+D:/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sources_1/imports/new/Synchro_Horloges.vhd,1553000475,vhdl,,,,synchro_horloges,,,,,,,,
+D:/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sources_1/imports/new/detectzero.vhd,1553003912,vhdl,,,,detectzero,,,,,,,,
+D:/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sources_1/imports/new/tamponcirc.vhd,1553002760,vhdl,,,,tamponcirc,,,,,,,,
+D:/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sources_1/new/FPGA-Logic.vhd,1553004158,vhdl,,,,fpga_logic,,,,,,,,
+D:/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sources_1/new/Traitement.vhd,1553000475,vhdl,,,,traitement,,,,,,,,
+D:/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sources_1/new/compteur_signal.vhd,1553003413,vhdl,,,,compteur_signal,,,,,,,,
+D:/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sources_1/new/magnetic.vhd,1553003766,vhdl,,,,magnetic,,,,,,,,

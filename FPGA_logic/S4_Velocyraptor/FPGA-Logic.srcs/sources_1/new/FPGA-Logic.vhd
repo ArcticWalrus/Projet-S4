@@ -7,7 +7,7 @@ use UNISIM.VComponents.all;
 
 entity FPGA_Logic is
     port (  --Onboard
-            sys_clock       : in std_logic;
+            sysclk          : in std_logic;
             o_leds          : out std_logic_vector ( 3 downto 0 );
             i_sw            : in std_logic_vector ( 3 downto 0 );
             i_btn           : in std_logic_vector ( 3 downto 0 );
@@ -90,7 +90,7 @@ begin
  
     Synchronisation : Synchro_Horloges
         port map (
-                clkm         =>  sys_clock,
+                clkm         =>  sysclk,
                 o_S_10MHz    =>  o_AD_CLK,
                 o_CLK_10MHz  => clk_10MHz,
                 o_S_100Hz    => open,

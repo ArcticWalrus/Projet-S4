@@ -38,23 +38,23 @@ architecture Behavioral of magnetic is
    
     component compteur_signal
         Port ( 
-                line_in         : in std_logic_vector(31 downto 0);
+                line_in         : in signed(11 downto 0);
                 i_clk, i_reset  : in std_logic;
-                o_nb_items      : out std_logic_vector(7 downto 0);
+                o_nb_items      : out unsigned(5 downto 0);
                 o_high          : out std_logic
         );
     end component;
     
     component Traitement is
         Port ( 
-                i_clk           : in std_logic;
-                i_reset         : in std_logic;
-                o_vitesse       : out std_logic;
-                o_calories      : out std_logic;
-                o_distance      : out std_logic;
-                i_poid_Kg       : in std_logic;
-                i_taille_m      : in std_logic;
-                i_tours_par_t   : in std_logic
+                i_clk               : in std_logic;
+                i_reset             : in std_logic;
+                o_vitesse           : out std_logic;
+                o_calories          : out std_logic;
+                o_distance          : out std_logic;
+                i_poid_Kg           : in std_logic;
+                i_taille_m          : in std_logic;
+                i_tours_en_2sec     : in unsigned(5 downto 0)
         );
     end component;
       
@@ -68,8 +68,8 @@ architecture Behavioral of magnetic is
     signal d_echantillon    : std_logic_vector (11 downto 0); 
     
     --Compteur Signal
-    signal s_line_in        : std_logic_vector(11 downto 0);
-    signal s_nb_items       : std_logic_vector(7 downto 0);
+    signal s_line_in        : signed(11 downto 0);
+    signal s_nb_items       : unsigned(5 downto 0);
     signal s_detect         : std_logic;
     
     --Traitement
@@ -98,14 +98,14 @@ begin
       
     inst_traitement : Traitement
         Port map ( 
-              i_clk           => s_clk, 
-              i_reset         => s_reset,
-              o_vitesse       => o_vitesse,
-              o_calories      => o_calories,
-              o_distance      => o_distance,
-              i_poid_Kg       => i_poid_Kg,
-              i_taille_m      => i_taille_m,
-              i_tours_par_t   => s_reset        --temporaire
+              i_clk             => s_clk, 
+              i_reset           => s_reset,
+              o_vitesse         => o_vitesse,
+              o_calories        => o_calories,
+              o_distance        => o_distance,
+              i_poid_Kg         => i_poid_Kg,
+              i_taille_m        => i_taille_m,
+              i_tours_en_2sec   => s_nb_items        --temporaire
         );
 
 end Behavioral;

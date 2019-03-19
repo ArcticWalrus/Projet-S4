@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sources_1/imports/new/Synchro_Horloges.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity Synchro_Horloges
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sources_1/new/FPGA-Logic.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FPGA_Logic

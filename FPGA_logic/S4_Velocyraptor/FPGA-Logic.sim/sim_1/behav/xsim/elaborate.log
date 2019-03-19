@@ -16,5 +16,12 @@ Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
 Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
 Compiling architecture behavioral of entity xil_defaultlib.Synchro_Horloges [\Synchro_Horloges(const_clk_syst...]
+Compiling architecture comport of entity xil_defaultlib.tamponcirc [tamponcirc_default]
+Compiling architecture comport of entity xil_defaultlib.detectzero [detectzero_default]
+Compiling architecture behavioral of entity xil_defaultlib.compteur_signal [compteur_signal_default]
+Compiling architecture behavioral of entity xil_defaultlib.AD7476_mef [ad7476_mef_default]
+Compiling architecture behavioral of entity xil_defaultlib.Ctrl_AD1 [ctrl_ad1_default]
+Compiling architecture behavioral of entity xil_defaultlib.Traitement [traitement_default]
+Compiling architecture behavioral of entity xil_defaultlib.magnetic [magnetic_default]
 Compiling architecture behavioral of entity xil_defaultlib.fpga_logic
 Built simulation snapshot FPGA_Logic_behav

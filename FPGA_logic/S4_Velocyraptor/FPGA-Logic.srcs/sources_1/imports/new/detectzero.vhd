@@ -25,15 +25,14 @@ begin
         end if;
     end process;
     
-    returnLow : process (i_clk)
-    begin
-        if (i_clk = '0'and i_clk'event) then
-            if (so_z = '1') then
-                so_z <= '0';
-                o_z <= '0';
-            end if;
-        end if;
-    end process;
+--    returnLow : process (i_clk)
+--    begin
+--        if (i_clk = '0'and i_clk'event) then
+--            if (so_z = '1') then
+--                so_z <= '0';
+--            end if;
+--        end if;
+--    end process;
     
     o_z <= so_z;
     
