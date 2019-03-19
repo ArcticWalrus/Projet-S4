@@ -4,11 +4,12 @@ use ieee.numeric_std.all;
 
 entity compteur_signal is
   Port ( 
-        line_in         : in signed(11 downto 0);
-        i_clk, i_reset  : in std_logic;
-        o_nb_items      : out unsigned(5 downto 0);
-        i_stb_tampon    : in std_logic;
-        o_high          : out std_logic
+        line_in          : in signed(11 downto 0);
+        i_clk, i_reset   : in std_logic;
+        o_nb_items       : out unsigned(5 downto 0);
+        i_stb_tampon     : in std_logic;
+        o_high           : out std_logic;
+        o_nb_items_total : out unsigned(31 downto 0)
   );
 end compteur_signal;
 
@@ -20,7 +21,8 @@ component tamponcirc is
             i_decrement_stb     : in std_ulogic;
             i_WR                : in std_ulogic;
             o_plein, o_vide     : out std_ulogic;
-            o_nb_items          : out unsigned( 5 downto 0 )
+            o_nb_items          : out unsigned( 5 downto 0 );
+            o_nb_items_total    : out unsigned(31 downto 0)
     );
 end component;
 
@@ -48,7 +50,8 @@ iteration_tampon : tamponcirc
             i_WR            => s_z,
             o_plein         => s_plein,
             o_vide          => s_vide,
-            o_nb_items      => o_nb_items
+            o_nb_items      => o_nb_items,
+            o_nb_items_total => o_nb_items_total
     );
 
 iteration_detect :  detectzero

@@ -16,11 +16,11 @@ entity magnetic is
             i_Strobe_ADC    : in    std_logic; -- strobe debut conversion 380KHz??
 
             --Traitement de signal
-            o_vitesse       : out   std_logic;
-            o_calories      : out   std_logic;
-            o_distance      : out   std_logic;
-            i_poid_Kg       : in    std_logic;
-            i_taille_m      : in    std_logic
+            o_vitesse       : out   unsigned(31 downto 0);
+            o_calories      : out   unsigned(31 downto 0);
+            o_distance      : out   unsigned(31 downto 0);
+            i_poid_Kg       : in    unsigned(7 downto 0);
+            i_taille_cm     : in    unsigned(7 downto 0)
     );     
 end magnetic;
 
@@ -30,7 +30,7 @@ architecture Behavioral of magnetic is
         port (  
                 clk_AD          : in    std_logic; --clk
                 i_DO            : in    std_logic;  --data in
-                i_Strobe_AD     : in    std_logic; --strobe 200Hz
+                i_Strobe_AD     : in    std_logic; --strobe 380MHz
                 reset           : in    std_logic; 
                 o_dav_strobe    : out   std_logic; --data ready
                 o_ech           : out   std_logic_vector (11 downto 0) --data complete
@@ -39,11 +39,12 @@ architecture Behavioral of magnetic is
    
     component compteur_signal
         Port ( 
-                line_in         : in signed(11 downto 0);
-                i_clk, i_reset  : in std_logic;
-                o_nb_items      : out unsigned(5 downto 0);
-                i_stb_tampon    : in std_logic;
-                o_high          : out std_logic
+                line_in          : in signed(11 downto 0);
+                i_clk, i_reset   : in std_logic;
+                o_nb_items       : out unsigned(5 downto 0);
+                i_stb_tampon     : in std_logic;
+                o_high           : out std_logic;
+                o_nb_items_total : out unsigned(31 downto 0)
         );
     end component;
     
@@ -51,27 +52,24 @@ architecture Behavioral of magnetic is
         Port ( 
                 i_clk               : in std_logic;
                 i_reset             : in std_logic;
-                o_vitesse           : out std_logic;
-                o_calories          : out std_logic;
-                o_distance          : out std_logic;
-                i_poid_Kg           : in std_logic;
-                i_taille_m          : in std_logic;
-                i_tours_en_2sec     : in unsigned(5 downto 0)
+                o_vitesse           : out unsigned(31 downto 0);
+                o_calories          : out unsigned(31 downto 0);
+                o_distance          : out unsigned(31 downto 0);
+                i_nb_items_total    : in unsigned(31 downto 0);
+                i_poid_Kg           : in unsigned(7 downto 0);
+                i_taille_cm         : in unsigned(7 downto 0);
+                i_tours_en_2sec     : in unsigned(7 downto 0)
         );
     end component;
-      
-    signal s_clk            : std_logic;
-    signal s_reset          : std_logic; 
-    
+          
     --ADC
-    signal d_Strobe_ADC     : std_logic;
     signal d_data_ready     : std_logic;
-    signal d_bit_in         : std_logic; 
     signal d_echantillon    : std_logic_vector (11 downto 0); 
     
     --Compteur Signal
     signal s_line_in        : signed(11 downto 0);
-    signal s_nb_items       : unsigned(5 downto 0);
+    signal s_nb_items       : unsigned(7 downto 0);
+    signal s_nb_items_total : unsigned(31 downto 0);
     signal s_detect         : std_logic;
     
     --Traitement
@@ -81,33 +79,35 @@ begin
 
     entity_compteur_signal : compteur_signal
         Port map( 
-            line_in         => s_line_in,
-            i_clk           => s_clk,
+            line_in         => signed(d_echantillon), 
+            i_clk           => i_clk,
             i_stb_tampon    => i_str_tampon,
-            i_reset         => s_reset,
+            i_reset         => i_reset,
             o_nb_items      => s_nb_items,
-            o_high          => s_detect
+            o_high          => s_detect,
+            o_nb_items_total => s_nb_items_total 
         );
 
     Controleur :  Ctrl_AD1 
         port map(
-            clk_AD         => s_clk,            -- pour horloge externe du convertisseur (variable logique ne passant pas par bufg)
-            i_DO           => d_bit_in,         -- bit de données provenant du convertisseur (via um mux)
-            i_Strobe_AD    => d_Strobe_ADC,     -- synchronisation: déclencheur de la conversion
-            reset          => s_reset,
+            clk_AD         => i_clk,            -- pour horloge externe du convertisseur (variable logique ne passant pas par bufg)
+            i_DO           => i_Data,           -- bit de données provenant du convertisseur (via um mux)
+            i_Strobe_AD    => i_Strobe_ADC,     -- synchronisation: déclencheur de la conversion
+            reset          => i_reset,
             o_dav_strobe   => d_data_ready,     -- indicateur de conversion complete
             o_ech          => d_echantillon     -- valeur de l'échantillon lu
         );
       
     inst_traitement : Traitement
         Port map ( 
-              i_clk             => s_clk, 
-              i_reset           => s_reset,
+              i_clk             => i_clk, 
+              i_reset           => i_reset,
               o_vitesse         => o_vitesse,
               o_calories        => o_calories,
               o_distance        => o_distance,
+              i_nb_items_total  => s_nb_items_total ,
               i_poid_Kg         => i_poid_Kg,
-              i_taille_m        => i_taille_m,
+              i_taille_cm       => i_taille_cm,
               i_tours_en_2sec   => s_nb_items        --temporaire
         );
 

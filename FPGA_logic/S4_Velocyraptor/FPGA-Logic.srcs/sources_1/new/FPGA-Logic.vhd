@@ -27,11 +27,11 @@ entity FPGA_Logic is
             
             -- Serveur
             o_ergonomie     : out std_logic_vector ( 2 downto 0 );
-            o_vitesse       : out std_logic;
-            o_calories      : out std_logic;
-            o_distance      : out std_logic;
-            i_poid_Kg       : in std_logic;
-            i_taille_m      : in std_logic
+            o_vitesse       : out   unsigned(31 downto 0);
+            o_calories      : out   unsigned(31 downto 0);
+            o_distance      : out   unsigned(31 downto 0);
+            i_poid_Kg       : in    unsigned(7 downto 0);
+            i_taille_m      : in    unsigned(7 downto 0)
             
     );
 end FPGA_Logic;
@@ -43,12 +43,12 @@ architecture Behavioral of FPGA_Logic is
     component Synchro_Horloges is
         generic (const_CLK_syst_MHz: integer := freq_sys_MHz);
             Port ( 
-                    clkm            : in  std_logic;  -- Entrée  horloge maitre   (50 MHz soit 20 ns ou 100 MHz soit 10 ns)
-                    o_S_10MHz       : out std_logic;  -- source horloge divisee          (clkm MHz / (2*constante_diviseur_p +2) devrait donner 5 MHz soit 200 ns)
-                    o_clk_10MHz     : out  STD_LOGIC;    -- horlgoe via bufg
-                    o_stb_380kHz    : out  STD_LOGIC;    -- source horloge 380 Hz : out  STD_LOGIC;  
-                    o_stb_200Hz     : out  STD_LOGIC;    -- strobe durée 1/clk_5mHz aligne sur front 100Hz
-                    o_S_1Hz         : out  STD_LOGIC     -- Signal temoin 1 Hz
+                clkm            : in STD_LOGIC;      -- Entrée  horloge maitre   (100 MHz soit 10 ns  Pt clk a 125MHz)
+                o_S_10MHz       : out  STD_LOGIC;    -- source horloge divisee   (clkm MHz / (2*constante_diviseur_p +2) devrait donner 10 MHz soit 100 ns)
+                o_clk_10MHz     : out  STD_LOGIC;    -- horlgoe via bufg
+                o_stb_380kHz    : out  STD_LOGIC;    -- source horloge 380 Hz : out  STD_LOGIC;  
+                o_stb_200Hz     : out  STD_LOGIC;    -- strobe durée 1/clk_5mHz aligne sur front 100Hz
+                o_S_1Hz         : out  STD_LOGIC     -- Signal temoin 1 Hz
             );
     end component;
        
@@ -63,18 +63,19 @@ architecture Behavioral of FPGA_Logic is
                     i_Strobe_ADC    : in    std_logic; -- strobe debut conversion 380KHz??
 
                     --Traitement de signal
-                    o_vitesse       : out std_logic;
-                    o_calories      : out std_logic;
-                    o_distance      : out std_logic;
-                    i_poid_Kg       : in std_logic;
-                    i_taille_m      : in std_logic
+                    o_vitesse       : out unsigned(31 downto 0);
+                    o_calories      : out unsigned(31 downto 0);
+                    o_distance      : out unsigned(31 downto 0);                  
+                    i_poid_Kg       : in  unsigned(7 downto 0);
+                    i_taille_m      : in  unsigned(7 downto 0)               
             );               
     end component;
     
-    signal clk_10MHz       : std_logic; --inversée
-    signal d_S_10MHz       : std_logic;
-    signal d_stb_380kHz    : std_logic := '0';  -- est utile pour debounce et cadence echantillonnage AD1
+    signal d_S_10MHz       : std_logic; --inversée
+    signal d_clk_10MHz     : std_logic;
+    signal d_stb_380kHz    : std_logic;  -- est utile pour debounce et cadence echantillonnage AD1
     signal d_stb_200Hz     : std_logic;
+    signal d_S_1Hz         : std_logic;  
     
     signal reset           : std_logic; 
     
@@ -82,6 +83,7 @@ architecture Behavioral of FPGA_Logic is
     signal d_AD_Dselect    : std_logic; 
     signal d_echantillon   : std_logic_vector (11 downto 0); 
     
+    signal s_line_in       : std_logic_vector(31 downto 0);
     signal s_nb_items      : std_logic_vector(7 downto 0);
     signal s_detect        : std_logic;
 
@@ -90,19 +92,19 @@ begin
  
     Synchronisation : Synchro_Horloges
         port map (
-                clkm         =>  sysclk,
-                o_S_10MHz    =>  o_AD_CLK,
-                o_CLK_10MHz  => clk_10MHz,
-                o_stb_380kHz => d_stb_380kHz,
-                o_stb_200Hz  => d_stb_200Hz,
-                o_S_1Hz      => o_ledtemoin_b
+                clkm            =>  sysclk,
+                o_S_10MHz       =>  d_clk_10MHz,
+                o_CLK_10MHz     => d_clk_10MHz,
+                o_stb_380kHz    => d_stb_380kHz,
+                o_stb_200Hz     => d_stb_200Hz,
+                o_S_1Hz         => d_S_1Hz
         );
     
     insta_magnetic : magnetic
         Port map(  --Generaux
                 i_clk           =>  d_S_10MHz,
                 i_reset         =>  reset,
-                i_str_tampon    =>  d_stb_200Hz,
+                i_str_tampon    => d_stb_200Hz,
                 
                 --Controle ADC
                 i_Data          =>  i_ADC_Data,
@@ -115,7 +117,8 @@ begin
                 i_poid_Kg       =>  i_poid_Kg,
                 i_taille_m      =>  i_taille_m
         );
-  
+  o_ledtemoin_b <= d_S_1Hz;
+  o_AD_CLK <= d_clk_10MHz;
   o_AD_NCS <= d_stb_380kHz;
   o_AD_CLK <= d_S_10MHz;
   
