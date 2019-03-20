@@ -93,7 +93,7 @@ export class DataDisplayComponent implements OnInit {
     //console.log("linechartdata in random : " +this.lineChartData);
     //console.log("linechartdata.data : " + this.lineChartData[0].data[0]);
     //dataBuffer[0].data.push(Math.floor(Math.random()*(this.max-this.min+1)+this.min));
-    dataBuffer[0].data.push(this.dataService.getData()); //Math.floor(Math.random()*(this.max-this.min+1)+this.min);
+    dataBuffer[0].data = this.dataService.getData(); 
     this.compteur++;
     this.lineChartData = dataBuffer;
     this.lineChartLabels = labBuffer.slice(1,this.compteur);

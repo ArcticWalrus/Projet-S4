@@ -7,9 +7,12 @@ export class DataService {
 
   constructor() { }
 
+  public speedData: number[] =[];
+
   getData(){
-    let max = 15;
+    let max = 30;
     let min = 0;
-    return (Math.floor(Math.random()*(max-min+1)+min));
+    this.speedData.push(Math.floor(Math.random()*(max-min+1)+min))
+    return (this.speedData);
   }
 }
