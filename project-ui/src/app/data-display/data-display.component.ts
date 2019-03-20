@@ -10,13 +10,9 @@ import { DataService } from '../services/data-service.service';
   styleUrls: ['./data-display.component.css']
 })
 export class DataDisplayComponent implements OnInit {
-  public test = 0;
-  public timer: any;
 
-  public lineChartData: ChartDataSets[] = [
-    {data: [], label: 'Speed'},
-  ];
-  public lineChartLabels: Label[] = [];
+  public lineChartData: ChartDataSets[];
+  public lineChartLabels: Label[];
   public lineChartOptions: (ChartOptions & { annotation: any }) = {
     responsive: true,
     scales: {
@@ -26,7 +22,7 @@ export class DataDisplayComponent implements OnInit {
         {
           id: 'y-axis-0',
           position: 'left',
-        },
+        }/* ,
         {
           id: 'y-axis-1',
           position: 'right',
@@ -36,7 +32,7 @@ export class DataDisplayComponent implements OnInit {
           ticks: {
             fontColor: 'red',
           }
-        }
+        } */
       ]
     },
     annotation: {
@@ -74,34 +70,18 @@ export class DataDisplayComponent implements OnInit {
   @ViewChild(BaseChartDirective) chart: BaseChartDirective;
 
   constructor(private dataService: DataService) { 
-
+    this.lineChartData = [
+      {data: [], label: 'Speed'},
+    ];
+    this.lineChartLabels = ['Vitesse'];
   }
 
   ngOnInit() {
-    console.log("linechartdata on init : " + this.lineChartData);
-    let _this = this;
-    let lineChartDataBuffer:Array<any> = [{data: [], label: 'speed'}];
-    let labelsBuffer:Array<any> = Array.from(Array(31).keys());
-    this.timer = setInterval(function() {
-      _this.generateRandom(lineChartDataBuffer, labelsBuffer);
-    }, 2000)
-  }
-
-  public compteur = 0;
-  generateRandom(dataBuffer, labBuffer): void{
-
-    //console.log("linechartdata in random : " +this.lineChartData);
-    //console.log("linechartdata.data : " + this.lineChartData[0].data[0]);
-    //dataBuffer[0].data.push(Math.floor(Math.random()*(this.max-this.min+1)+this.min));
-    dataBuffer[0].data = this.dataService.getData(); 
-    this.compteur++;
-    this.lineChartData = dataBuffer;
-    this.lineChartLabels = labBuffer.slice(1,this.compteur);
-    console.log("\n\nlinechartlabels after : ");
-    console.log(this.lineChartLabels);
-    console.log("\n\nlinechartdata after : ");
-    console.log(this.lineChartData);
-    //this.chart.chart.update();
-    
+      this.dataService.getData()
+      .subscribe(
+        data => {
+        this.lineChartData[0].data = data[0].values;
+        this.lineChartLabels = data[0].labels;
+        });
   }
 }
