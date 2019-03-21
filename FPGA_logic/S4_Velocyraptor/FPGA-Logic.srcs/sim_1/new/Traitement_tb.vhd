@@ -42,7 +42,6 @@ architecture Behavioral of Traitement_tb is
         Port ( 
                 i_clk               : in std_logic;
                 i_reset             : in std_logic;
-                o_vitesse_real      : real;
                 o_vitesse           : out unsigned(31 downto 0);
                 o_calories          : out unsigned(31 downto 0);
                 o_distance          : out unsigned(31 downto 0);
@@ -55,7 +54,6 @@ architecture Behavioral of Traitement_tb is
 
     signal clk: std_ulogic := '0';
     signal reset: std_ulogic;
-    signal s_vitesse_real : real;
     signal s_vitesse : unsigned(31 downto 0);
     signal s_calories : unsigned(31 downto 0);
     signal s_distance : unsigned(31 downto 0);
@@ -69,14 +67,13 @@ begin
     dut: entity work.Traitement port map (
         i_clk              => clk,
         i_reset            => reset,
-        o_vitesse_real     => s_vitesse_real,
         o_vitesse          => s_vitesse,
         o_calories         => s_calories,
         o_distance         => s_distance,
         i_nb_items_total   => x"00000012",
         i_poid_Kg          => x"50",
         i_taille_cm        => x"B2",
-        i_tours_en_2sec    => x"05"
+        i_tours_en_2sec    => x"06"
     );
 
 end Behavioral;
