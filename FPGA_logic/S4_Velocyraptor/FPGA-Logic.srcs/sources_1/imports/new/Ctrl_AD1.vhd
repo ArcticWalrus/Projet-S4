@@ -10,7 +10,7 @@ entity Ctrl_AD1 is
           i_Strobe_AD     : in    std_logic; 
           reset           : in    std_logic; 
           o_dav_strobe    : out   std_logic; 
-          o_ech           : out   std_logic_vector (11 downto 0)
+          o_ech           : out   signed (11 downto 0)
     );
 end Ctrl_AD1;
 
@@ -29,7 +29,7 @@ architecture BEHAVIORAL of Ctrl_AD1 is
     signal d_BITAV_mef      : std_logic;
     signal d_DAV            : std_logic;
     signal q_DAV            : std_logic;
-    signal q_ech            : std_logic_vector (11 downto 0); 
+    signal q_ech            : signed (11 downto 0); 
     signal d_reinitialise   : std_logic;
     
     signal d_strobe_AD    : std_logic;
