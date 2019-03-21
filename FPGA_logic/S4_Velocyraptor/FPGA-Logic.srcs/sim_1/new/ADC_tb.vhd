@@ -31,11 +31,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity ADC_tb is --incomplete tb
+entity ADC_tb_temp is --incomplete tb
 --  Port ( );
-end ADC_tb;
+end ADC_tb_temp;
 
-architecture Behavioral of ADC_tb is
+architecture Behavioral of ADC_tb_temp is
 
 component Ctrl_AD1 is
    port ( clk_AD          : in    std_logic; 
