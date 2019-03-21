@@ -1,0 +1,125 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 1644
+License: Customer
+
+Current time: 	Tue Mar 19 14:37:28 EDT 2019
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 16
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 104 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	D:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	Kitty
+User home directory: C:/Users/Kitty
+User working directory: C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor
+User country: 	CA
+User language: 	en
+User locale: 	en_CA
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2018.2
+RDI_DATADIR: D:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: D:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/Kitty/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/Kitty/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/Kitty/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	D:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/vivado.log
+Vivado journal file location: 	C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/vivado.jou
+Engine tmp dir: 	C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/.Xil/Vivado-1644-DESKTOP-SGTBFME
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: D:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Xilinx/Vivado/2018.2
+XILINX_SDK: D:/Xilinx/SDK/2018.2
+XILINX_VIVADO: D:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: D:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	130 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 522 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 71 MB (+71906kb) [00:00:12]
+// [Engine Memory]: 509 MB (+382544kb) [00:00:12]
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Kitty\Documents\GitHub\Projet-S4\FPGA_logic\S4_Velocyraptor\FPGA-Logic.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'D:/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 547 MB. GUI used memory: 38 MB. Current time: 3/19/19 2:37:30 PM EDT
+// [Engine Memory]: 547 MB (+12770kb) [00:00:17]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 575 MB (+338kb) [00:00:26]
+// Project name: FPGA-Logic; location: C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor; part: xc7z010clg400-1
+// [Engine Memory]: 628 MB (+25965kb) [00:00:28]
+// Tcl Message: open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 744.645 ; gain = 70.398 
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// a (ck): Critical Messages: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 628 MB. GUI used memory: 41 MB. Current time: 3/19/19 2:37:45 PM EDT
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (ck)
+// [GUI Memory]: 75 MB (+400kb) [00:11:06]
+// [GUI Memory]: 79 MB (+477kb) [00:22:17]
+// [GUI Memory]: 84 MB (+587kb) [00:28:47]
+// HMemoryUtils.trashcanNow. Engine heap size: 628 MB. GUI used memory: 40 MB. Current time: 3/19/19 3:07:45 PM EDT
+// [GUI Memory]: 88 MB (+455kb) [00:48:48]
+// HMemoryUtils.trashcanNow. Engine heap size: 628 MB. GUI used memory: 38 MB. Current time: 3/19/19 3:37:45 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 628 MB. GUI used memory: 38 MB. Current time: 3/19/19 4:07:46 PM EDT
+// [GUI Memory]: 93 MB (+140kb) [01:52:15]
+// HMemoryUtils.trashcanNow. Engine heap size: 628 MB. GUI used memory: 38 MB. Current time: 3/19/19 4:37:46 PM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 628 MB. GUI used memory: 38 MB. Current time: 3/19/19 5:07:46 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 628 MB. GUI used memory: 39 MB. Current time: 3/19/19 5:37:46 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 628 MB. GUI used memory: 38 MB. Current time: 3/19/19 6:07:47 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 628 MB. GUI used memory: 38 MB. Current time: 3/19/19 6:37:47 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 628 MB. GUI used memory: 38 MB. Current time: 3/19/19 7:07:47 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 628 MB. GUI used memory: 39 MB. Current time: 3/19/19 7:37:48 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 628 MB. GUI used memory: 38 MB. Current time: 3/19/19 8:07:48 PM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED

@@ -2,27 +2,48 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Mar 19 09:01:43 2019
-# Process ID: 12444
-# Current directory: D:/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10532 D:\Documents\GitHub\Projet-S4\FPGA_logic\S4_Velocyraptor\FPGA-Logic.xpr
-# Log file: D:/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/vivado.log
-# Journal file: D:/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor\vivado.jou
+# Start of session at: Thu Mar 21 13:29:17 2019
+# Process ID: 7748
+# Current directory: C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11732 C:\Users\Kitty\Documents\GitHub\Projet-S4\FPGA_logic\S4_Velocyraptor\FPGA-Logic.xpr
+# Log file: C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/vivado.log
+# Journal file: C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project D:/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.xpr
+open_project C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.xpr
 update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse {C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sim_1/new/ADC_tb.vhd C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sim_1/new/FPGA-Logic_tb.vhd C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sim_1/new/Traitement_tb.vhd C:/Users/Kitty/Documents/GitHub/Projet-S4/FPGA_logic/S4_Velocyraptor/FPGA-Logic.srcs/sim_1/new/Magnetic_tb.vhd}
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top ADC_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
 launch_simulation
+source ADC_tb.tcl
+close_sim
 launch_simulation
-launch_simulation
-launch_simulation
-launch_simulation
-launch_simulation
-launch_simulation
-launch_simulation
-launch_simulation
-source FPGA_Logic.tcl
-add_files -fileset constrs_1 -norecurse D:/Documents/School/UdeS-S4/App3/pb_APP_log_seq_gab/pb_APP_log_seq/pb_APP_log_seq.srcs/constrs_1/new/circuit_tr_signal.xdc
+source ADC_tb.tcl
+run 1 s
 relaunch_sim
-restart
-run 100000 ns
+run 1 s
+run 1 s
+relaunch_sim
+run 1 s
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Magnetic_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source Magnetic_tb.tcl

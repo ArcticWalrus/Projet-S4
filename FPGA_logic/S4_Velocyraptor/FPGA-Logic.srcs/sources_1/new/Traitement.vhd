@@ -14,7 +14,7 @@ entity Traitement is
             i_nb_items_total    : in unsigned(31 downto 0);
             i_poid_Kg           : in unsigned(7 downto 0);
             i_taille_cm         : in unsigned(7 downto 0);
-            i_tours_en_2sec     : in unsigned(7 downto 0)
+            i_tours_en_2sec     : in unsigned(5 downto 0)
     );
 end Traitement;
 

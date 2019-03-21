@@ -33,7 +33,7 @@ architecture Behavioral of magnetic is
                 i_Strobe_AD     : in    std_logic; --strobe 380MHz
                 reset           : in    std_logic; 
                 o_dav_strobe    : out   std_logic; --data ready
-                o_ech           : out   std_logic_vector (11 downto 0) --data complete
+                o_ech           : out   signed (11 downto 0) --data complete
         );
     end  component;
    
@@ -58,17 +58,17 @@ architecture Behavioral of magnetic is
                 i_nb_items_total    : in unsigned(31 downto 0);
                 i_poid_Kg           : in unsigned(7 downto 0);
                 i_taille_cm         : in unsigned(7 downto 0);
-                i_tours_en_2sec     : in unsigned(7 downto 0)
+                i_tours_en_2sec     : in unsigned(5 downto 0)
         );
     end component;
           
     --ADC
     signal d_data_ready     : std_logic;
-    signal d_echantillon    : std_logic_vector (11 downto 0); 
+    signal d_echantillon    : signed(11 downto 0); 
     
     --Compteur Signal
     signal s_line_in        : signed(11 downto 0);
-    signal s_nb_items       : unsigned(7 downto 0);
+    signal s_nb_items       : unsigned(5 downto 0);
     signal s_nb_items_total : unsigned(31 downto 0);
     signal s_detect         : std_logic;
     
@@ -79,7 +79,7 @@ begin
 
     entity_compteur_signal : compteur_signal
         Port map( 
-            line_in         => signed(d_echantillon), 
+            line_in         => d_echantillon, 
             i_clk           => i_clk,
             i_stb_tampon    => i_str_tampon,
             i_reset         => i_reset,
