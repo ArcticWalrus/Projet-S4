@@ -1,0 +1,119 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 7308
+License: Customer
+
+Current time: 	Sat Mar 23 16:47:16 EDT 2019
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 2560x1440
+Screen resolution (DPI): 96
+Available screens: 4
+Available disk space: 667 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	lebr2112
+User home directory: C:/Users/RaphaëlLebrasseur
+User working directory: D:/OneDrive - USherbrooke/SESSIONS/S4/Projet/PROJECT_FILES/P2_S4_Velociraptor
+User country: 	CA
+User language: 	fr
+User locale: 	fr_CA
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/RaphaëlLebrasseur/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/RaphaëlLebrasseur/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/RaphaëlLebrasseur/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	D:/OneDrive - USherbrooke/SESSIONS/S4/Projet/PROJECT_FILES/P2_S4_Velociraptor/vivado.log
+Vivado journal file location: 	D:/OneDrive - USherbrooke/SESSIONS/S4/Projet/PROJECT_FILES/P2_S4_Velociraptor/vivado.jou
+Engine tmp dir: 	D:/OneDrive - USherbrooke/SESSIONS/S4/Projet/PROJECT_FILES/P2_S4_Velociraptor/.Xil/Vivado-7308-DESKTOP-L2Q9UI1
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	215 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 553 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: D:\OneDrive - USherbrooke\SESSIONS\S4\Projet\PROJECT_FILES\P2_S4_Velociraptor\P2_S4_Velociraptor.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// [GUI Memory]: 62 MB (+62798kb) [00:00:06]
+// [Engine Memory]: 499 MB (+371603kb) [00:00:06]
+// Tcl Message: open_project {D:/OneDrive - USherbrooke/SESSIONS/S4/Projet/PROJECT_FILES/P2_S4_Velociraptor/P2_S4_Velociraptor.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 578 MB. GUI used memory: 43 MB. Current time: 3/23/19 4:47:18 PM EDT
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 578 MB (+56415kb) [00:00:11]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 70 MB (+5020kb) [00:00:14]
+// [Engine Memory]: 610 MB (+3436kb) [00:00:14]
+// [GUI Memory]: 77 MB (+3480kb) [00:00:15]
+// Tcl Message: open_project {D:/OneDrive - USherbrooke/SESSIONS/S4/Projet/PROJECT_FILES/P2_S4_Velociraptor/P2_S4_Velociraptor.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/OneDrive - USherbrooke/SESSIONS/S4/Projet/PROJECT_FILES/ip_repo/myip_1.0'. INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/OneDrive - USherbrooke/SESSIONS/S4/Projet/FichiersAtelier1/Pmod_vivado-library-2018.2-1'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// [Engine Memory]: 661 MB (+21340kb) [00:00:17]
+// Tcl Message: open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 880.926 ; gain = 129.301 
+// Project name: P2_S4_Velociraptor; location: D:/OneDrive - USherbrooke/SESSIONS/S4/Projet/PROJECT_FILES/P2_S4_Velociraptor; part: xc7z010clg400-1
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 81 MB (+325kb) [00:00:23]
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 14 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa (ck): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aa)
+// [GUI Memory]: 86 MB (+520kb) [00:00:34]
+dismissDialog("Launch SDK"); // aa (ck)
+// Tcl Message: launch_sdk -workspace {D:/OneDrive - USherbrooke/SESSIONS/S4/Projet/PROJECT_FILES/P2_S4_Velociraptor/P2_S4_Velociraptor.sdk} -hwspec {D:/OneDrive - USherbrooke/SESSIONS/S4/Projet/PROJECT_FILES/P2_S4_Velociraptor/P2_S4_Velociraptor.sdk/design_1_wrapper.hdf} 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace D:/OneDrive - USherbrooke/SESSIONS/S4/Projet/PROJECT_FILES/P2_S4_Velociraptor/P2_S4_Velociraptor.sdk -hwspec D:/OneDrive - USherbrooke/SESSIONS/S4/Projet/PROJECT_FILES/P2_S4_Velociraptor/P2_S4_Velociraptor.sdk/design_1_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
