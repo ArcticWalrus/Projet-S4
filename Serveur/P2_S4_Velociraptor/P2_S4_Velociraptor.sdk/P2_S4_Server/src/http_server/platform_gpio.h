@@ -22,5 +22,6 @@
 void platform_init_gpios();
 int toggle_leds();
 unsigned int get_switch_state();
+unsigned int get_fpga_data();
 
 #endif

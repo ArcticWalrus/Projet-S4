@@ -130,6 +130,27 @@ int do_http_get(struct tcp_pcb *pcb, char *req, int rlen)
 	signed int fsize, hlen;
 	unsigned int n;
 
+	if (is_cmd_fpga(req)) {
+			unsigned int switches = get_switch_state();
+			xil_printf("http POST: switch state: %x\r\n", switches);
+
+			sprintf(sw_buf, "{\"switches\": []");
+
+
+			//sprintf(sw_buf, "Test Velociraptor");
+			sw_len = strlen(sw_buf);
+
+			len = generate_http_header(buf, "js", sw_len);
+
+			strcat(buf, sw_buf);
+			len += sw_len;
+
+			xil_printf("buffer: \r\n %s \r\n", buf);
+		}
+
+
+
+
 	char *fext;
 	err_t err;
 

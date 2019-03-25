@@ -23,15 +23,17 @@
 #include <xgpio.h>
 XGpio xgpio_input_;
 
-void
-platform_init_gpios()
+void platform_init_gpios()
 {
 	XGpio_Initialize(&xgpio_input_, XPAR_AXI_GPIO_0_DEVICE_ID);
 	XGpio_SetDataDirection(&xgpio_input_, 1, 0xF);
 }
 
-unsigned int 
-get_switch_state()
+unsigned int get_switch_state()
 {
     return XGpio_DiscreteRead(&xgpio_input_, 1);
+}
+
+unsigned int get_fpga_data(){
+
 }

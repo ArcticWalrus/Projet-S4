@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Mar 23 16:53:46 2019
+# Process ID: 21212
+# Current directory: D:/DEV/School_Project/PROJECT_FILES/P2_S4_Velociraptor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24712 D:\DEV\School_Project\PROJECT_FILES\P2_S4_Velociraptor\P2_S4_Velociraptor.xpr
+# Log file: D:/DEV/School_Project/PROJECT_FILES/P2_S4_Velociraptor/vivado.log
+# Journal file: D:/DEV/School_Project/PROJECT_FILES/P2_S4_Velociraptor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/DEV/School_Project/PROJECT_FILES/P2_S4_Velociraptor/P2_S4_Velociraptor.xpr
+INFO: [Project 1-313] Project file moved from 'D:/OneDrive - USherbrooke/SESSIONS/S4/Projet/PROJECT_FILES/P2_S4_Velociraptor' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [filemgmt 56-1] IP Repository Path: Directory not found as 'D:/DEV/School_Project/FichiersAtelier1/Pmod_vivado-library-2018.2-1'; using path 'D:/OneDrive - USherbrooke/SESSIONS/S4/Projet/FichiersAtelier1/Pmod_vivado-library-2018.2-1' instead.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/DEV/School_Project/PROJECT_FILES/ip_repo/myip_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/OneDrive - USherbrooke/SESSIONS/S4/Projet/FichiersAtelier1/Pmod_vivado-library-2018.2-1'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 884.742 ; gain = 147.434
+update_compile_order -fileset sources_1
+launch_sdk -workspace D:/DEV/School_Project/PROJECT_FILES/P2_S4_Velociraptor/P2_S4_Velociraptor.sdk -hwspec D:/DEV/School_Project/PROJECT_FILES/P2_S4_Velociraptor/P2_S4_Velociraptor.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/DEV/School_Project/PROJECT_FILES/P2_S4_Velociraptor/P2_S4_Velociraptor.sdk -hwspec D:/DEV/School_Project/PROJECT_FILES/P2_S4_Velociraptor/P2_S4_Velociraptor.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 23 17:09:58 2019...
