@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
+use work.Velocyraptor_package.all;
 
 library UNISIM;
 use UNISIM.VComponents.all;
@@ -26,12 +27,13 @@ entity FPGA_Logic is
             i_IMU_data      : in std_logic;
             
             -- Serveur
-            o_ergonomie     : out std_logic_vector ( 2 downto 0 );
-            o_vitesse       : out   unsigned(31 downto 0);
-            o_calories      : out   unsigned(31 downto 0);
-            o_distance      : out   unsigned(31 downto 0);
+            o_ergonomie     : out   ERGO_MEM;     --std_logic_vector ( 2 downto 0 );
+            o_vitesse       : out   SPEED_MEM;    --unsigned(31 downto 0);
+            o_calories      : out   CALS_MEM;     --unsigned(31 downto 0);
+            o_distance      : out   DIST_MEM;     --unsigned(31 downto 0);
             i_poid_Kg       : in    unsigned(7 downto 0);
-            i_taille_m      : in    unsigned(7 downto 0)
+            i_taille_m      : in    unsigned(7 downto 0);
+            i_signal        : in std_logic
             
     );
 end FPGA_Logic;
@@ -53,23 +55,48 @@ architecture Behavioral of FPGA_Logic is
     end component;
        
     component magnetic is
-            Port (  --Generaux
-                    i_clk           : in std_logic;
-                    i_reset         : in std_logic;
-                    i_str_tampon    : in std_logic;
-                    
-                    --Controle ADC
-                    i_Data          : in    std_logic; -- bit arrivant de l'adc
-                    i_Strobe_ADC    : in    std_logic; -- strobe debut conversion 380KHz??
+        Port (  --Generaux
+            i_clk           : in std_logic;
+            i_reset         : in std_logic;
+            i_str_tampon    : in std_logic;
+            
+            --Controle ADC
+            i_Data          : in    std_logic; -- bit arrivant de l'adc
+            i_Strobe_ADC    : in    std_logic; -- strobe debut conversion 380KHz??
 
-                    --Traitement de signal
-                    o_vitesse       : out unsigned(31 downto 0);
-                    o_calories      : out unsigned(31 downto 0);
-                    o_distance      : out unsigned(31 downto 0);                  
-                    i_poid_Kg       : in  unsigned(7 downto 0);
-                    i_taille_m      : in  unsigned(7 downto 0)               
-            );               
+            --Traitement de signal
+            o_vitesse       : out unsigned(31 downto 0);
+            o_calories      : out unsigned(31 downto 0);
+            o_distance      : out unsigned(31 downto 0);                  
+            i_poid_Kg       : in  unsigned(7 downto 0);
+            i_taille_m      : in  unsigned(7 downto 0)               
+        );               
     end component;
+    
+    component memory_block is
+        Port (
+            reset           : in    std_logic;
+            
+            -- data qui provient de l'ergonomie
+            i_strb_ergo     : in    std_logic;
+            i_data_ergo     : in    std_logic_vector (31 downto 0);
+            
+            -- data qui provient du capteur magnétique
+            --i_strb_mag      : in    std_logic;
+            i_data_speed    : in    unsigned (31 downto 0);
+            i_data_dist     : in    unsigned (31 downto 0);
+            i_data_cals     : in    unsigned (31 downto 0);
+            
+            -- signal du serveur
+            i_serv_sig      : in    std_logic;
+            
+            -- data out
+            o_data_ergo     : out   ERGO_MEM; 
+            o_data_speed    : out   SPEED_MEM;
+            o_data_dist     : out   DIST_MEM; 
+            o_data_cals     : out   CALS_MEM
+        );               
+      end component;
     
     signal d_S_10MHz       : std_logic; --inversée
     signal d_clk_10MHz     : std_logic;
@@ -86,6 +113,10 @@ architecture Behavioral of FPGA_Logic is
     signal s_line_in       : std_logic_vector(31 downto 0);
     signal s_nb_items      : std_logic_vector(7 downto 0);
     signal s_detect        : std_logic;
+    
+    signal s_vitesse       : unsigned(31 downto 0);
+    signal s_distance      : unsigned(31 downto 0);
+    signal s_calories      : unsigned(31 downto 0);
 
 begin
     reset    <= i_btn(0);    
@@ -111,12 +142,37 @@ begin
                 i_Strobe_ADC    =>  d_stb_380kHz,
 
                 --Traitement de signal
-                o_vitesse       =>  o_vitesse,
-                o_calories      =>  o_calories,
-                o_distance      =>  o_distance,
+                o_vitesse       =>  s_vitesse,
+                o_calories      =>  s_calories,
+                o_distance      =>  s_distance,
                 i_poid_Kg       =>  i_poid_Kg,
                 i_taille_m      =>  i_taille_m
-        );
+    );
+        
+    insta_memory : memory_block
+        Port map( 
+             reset          =>  reset,
+             
+             -- data qui provient de l'ergonomie
+             i_strb_ergo    =>  '0',
+             i_data_ergo    =>  x"00000000",
+             
+             -- data qui provient du capteur magnétique
+             --i_strb_mag     =>  '0',
+             i_data_speed   =>  s_vitesse,
+             i_data_cals    =>  s_calories,
+             i_data_dist    =>  s_distance,
+             
+             -- signal du serveur
+             i_serv_sig     =>  i_signal,
+             
+             -- data out
+             o_data_ergo    =>  o_ergonomie,
+             o_data_speed   =>  o_vitesse,
+             o_data_cals    =>  o_calories,
+             o_data_dist    =>  o_distance                 
+    );
+        
   o_ledtemoin_b <= d_S_1Hz;
   o_AD_CLK <= d_clk_10MHz;
   o_AD_NCS <= d_stb_380kHz;
