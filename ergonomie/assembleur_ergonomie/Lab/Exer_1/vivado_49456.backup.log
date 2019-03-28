@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Mar 23 13:48:09 2019
+# Process ID: 49456
+# Current directory: C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/assembleur_ergonomie/Exer_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent54292 C:\Users\ArcticWalrus\Documents\GitHub\Projet-S4\ergonomie\assembleur_ergonomie\Exer_1\Exer_1.xpr
+# Log file: C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/assembleur_ergonomie/Exer_1/vivado.log
+# Journal file: C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/assembleur_ergonomie/Exer_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/assembleur_ergonomie/Exer_1/Exer_1.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/assembleur_ergonomie/Exer_1'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 754.520 ; gain = 85.723
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 23 20:33:40 2019...
