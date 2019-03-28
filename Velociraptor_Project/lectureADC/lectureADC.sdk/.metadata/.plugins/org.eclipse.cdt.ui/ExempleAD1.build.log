@@ -1,8 +1,8 @@
-22:31:50 **** Incremental Build of configuration Debug for project ExempleAD1 ****
+11:14:11 **** Incremental Build of configuration Debug for project ExempleAD1 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Rien à faire pour « main-build ».
 
-22:31:51 Build Finished (took 942ms)
+11:14:12 Build Finished (took 294ms)
 

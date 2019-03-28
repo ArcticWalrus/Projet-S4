@@ -8,8 +8,8 @@ entity Traitement is
             i_clk               : in std_logic; --10 MHz (100ns)
             i_reset             : in std_logic;
             o_vitesse           : out unsigned(5 downto 0);
-            o_calories          : out unsigned(31 downto 0);
-            o_distance          : out unsigned(31 downto 0);
+            o_calorie           : out unsigned(10 downto 0);
+            o_distance          : out unsigned(10 downto 0);
             i_nb_items_total    : in unsigned(31 downto 0);
             i_poid_Kg           : in unsigned(7 downto 0);
             i_taille_cm         : in unsigned(7 downto 0);
@@ -30,25 +30,25 @@ signal compteur_next_state : etat_compteur;
 
 signal s_u_vitesse : unsigned(5 downto 0);
 constant circonference: natural := natural(2.0 * MATH_PI * real(rayon_roue));
-signal s_vitesse, calories, constante_calories : natural;
+signal s_vitesse, calorie, constante_calorie : natural;
 signal compteur : unsigned(31 downto 0);
 
 begin
 
-    process(i_reset, i_tours_en_2sec, s_vitesse, i_nb_items_total, calories)
+    process(i_reset, i_tours_en_2sec, s_vitesse, i_nb_items_total, calorie)
     begin
 --    	if i_reset = '1' then
-            s_vitesse <= natural(0.0); --m/s
+            s_vitesse   <= natural(0.0); --m/s
             
             s_u_vitesse <= (others => '0');
-            o_distance <= (others => '0');
-            o_calories <= (others => '0');
+            o_distance  <= "00000000001";
+            o_calorie   <= "00000000010";
 --    	else 
 --            s_vitesse <= natural(circonference * Real(to_integer(i_tours_en_2sec)) / 2.0); --m/s
             
 --            s_u_vitesse <= to_unsigned(natural(real(s_vitesse) * 3.6), 32); --(km/h) à vérifier l'allure de la valeur 
 --            o_distance <= to_unsigned(natural(circonference * Real(to_integer(i_nb_items_total)) * 100.0), 32); --à vérifier l'allure de la valeur facteur 100 -> 2 décimales
---            o_calories <= to_unsigned(natural(real(calories)*10.0), 32); --temporaire, il faut accumuler les valeurs facteur 10 pour 1 décimale	
+--            o_calorie  <= to_unsigned(natural(real(calorie)*10.0), 32); --temporaire, il faut accumuler les valeurs facteur 10 pour 1 décimale	
 --    	end if;
     
     end process;
@@ -67,31 +67,31 @@ begin
     if (i_reset = '1') then
         compteur_next_state <= init;
         compteur <= x"00000000";
-        calories <= natural(0.0);     
+        calorie <= natural(0.0);     
     elsif i_clk = '1' then
         case compteur_etat is
             when init =>
                 compteur_next_state <= counting;
                 compteur <= x"00000000";
-                calories <= calories;
+                calorie <= calorie;
             when counting =>
                 if compteur < x"0001869D" then --en bas de 100000 coups d'horloges
                     compteur_next_state <= counting;
-                    calories <= calories;
+                    calorie <= calorie;
                 else
                     compteur_next_state <= reached_10ms;
-                    calories <= calories;
+                    calorie <= calorie;
                 end if;
                 compteur <= compteur + x"00000001";
             when reached_10ms =>
                 compteur_next_state <= init;
                 --calories <= calories + natural(real(constante_calories)/2.0); --on rajoute le nombre de calories selon la constante
-                calories <= 0;                                               -- à la vitesse actuelle selon le poids (2 est un hotfix
+                calorie <= 0;                                               -- à la vitesse actuelle selon le poids (2 est un hotfix
                                                                --lié que la constante est additionnée 2 fois
                 compteur <= x"00000000";
             when others =>
                 compteur_next_state <= init;   
-                calories <= calories;     
+                calorie <= calorie;     
                 compteur <= x"00000000";  
         end case;
     end if;  

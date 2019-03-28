@@ -193,9 +193,11 @@ vcom -work xil_defaultlib -64 -93 \
 "../../../bd/design_1/ipshared/339b/hdl/myip_v1_0.vhd" \
 "../../../bd/design_1/ip/design_1_myip_0_1/sim/design_1_myip_0_1.vhd" \
 "../../../bd/design_1/sim/design_1.vhd" \
-"../../../bd/design_1/ipshared/bcb6/hdl/myIO_IP_v1_0_S00_AXI.vhd" \
-"../../../bd/design_1/ipshared/bcb6/hdl/myIO_IP_v1_0.vhd" \
+"../../../bd/design_1/ipshared/79e7/hdl/myIO_IP_v1_0_S00_AXI.vhd" \
+"../../../bd/design_1/ipshared/79e7/hdl/myIO_IP_v1_0.vhd" \
 "../../../bd/design_1/ip/design_1_myIO_IP_0_0/sim/design_1_myIO_IP_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_myIO_IP_1_0/sim/design_1_myIO_IP_1_0.vhd" \
+"../../../bd/design_1/ip/design_1_myIO_IP_2_0/sim/design_1_myIO_IP_2_0.vhd" \
 
 vlog -work axi_protocol_converter_v2_1_17 -64 "+incdir+../../../../lectureADC.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lectureADC.srcs/sources_1/bd/design_1/ipshared/5bb9/hdl/verilog" "+incdir+../../../../lectureADC.srcs/sources_1/bd/design_1/ipshared/70fd/hdl" "+incdir+C:/Xilinx/Vivado/2018.2/data/xilinx_vip/include" "+incdir+../../../../lectureADC.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../lectureADC.srcs/sources_1/bd/design_1/ipshared/5bb9/hdl/verilog" "+incdir+../../../../lectureADC.srcs/sources_1/bd/design_1/ipshared/70fd/hdl" "+incdir+C:/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
 "../../../../lectureADC.srcs/sources_1/bd/design_1/ipshared/ccfb/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

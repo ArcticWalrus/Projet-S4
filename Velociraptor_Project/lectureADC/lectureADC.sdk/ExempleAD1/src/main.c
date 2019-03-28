@@ -21,10 +21,18 @@ u16 AD1_GetSampleRaw();
 float AD1_GetSampleVoltage();
 u16 Speed_GetSampleRaw();
 float Speed_GetSampleValue();
+u16 Distance_GetSampleRaw();
+float Distance_GetSampleValue();
+u16 Calorie_GetSampleRaw();
+float Calorie_GetSampleValue();
 void DisplayVoltage(float value, char *voltage_char);
 
 #define MY_AD1_IP_BASEADDRESS  XPAR_MYIP_0_S00_AXI_BASEADDR
-#define MY_VITESSE_IP_BASEADDRESS  XPAR_MYIO_IP_0_S00_AXI_BASEADDR
+
+#define MY_VITESSE_IP_BASEADDRESS  XPAR_MYIO_IP_VITESSE_S00_AXI_BASEADDR
+#define MY_DISTANCE_IP_BASEADDRESS  XPAR_MYIO_IP_DISTANCE_S00_AXI_BASEADDR
+#define MY_CALORIE_IP_BASEADDRESS  XPAR_MYIO_IP_CALORIE_S00_AXI_BASEADDR
+
 #define AD1_NUM_BITS 	12
 
 const float ReferenceVoltage = 64;
@@ -37,8 +45,8 @@ int main()
 	PmodOLED oledDevice;
 	int sw_data = 0;
 	u8 pmod8LDvalue = 0;
-	float currentVoltage = 0;
-	char voltageChar[5];
+	float currentData = 0;
+	char dataChar[5];
 
     print("Bienvenue\n\r");
 
@@ -59,8 +67,7 @@ int main()
 	OLED_SetCharUpdate(&oledDevice, 0);
 	// Préparer l'écran pour afficher l'état des boutons et des switch
 	OLED_ClearBuffer(&oledDevice);
-	OLED_SetCursor(&oledDevice, 0, 3);
-	OLED_PutString(&oledDevice, "Vitesse = ");
+
 	OLED_Update(&oledDevice);
 
 	print("Initialisation finie\n\r");
@@ -74,21 +81,56 @@ int main()
 
 
 		// lire la tension provenant du PmodAD1
-		currentVoltage = Speed_GetSampleValue();
+		if(sw_data == 0){
+			OLED_ClearBuffer(&oledDevice);
+			currentData = Speed_GetSampleValue();
+			OLED_SetCursor(&oledDevice, 0, 3);
+			OLED_PutString(&oledDevice, "Vitesse = ");
+			// Affichage de la vitesse sur le Pmod OLED
+			sprintf(dataChar,"%2.2f",currentData);
+			OLED_SetCursor(&oledDevice, 10, 3);
+			OLED_PutString(&oledDevice, dataChar);
+			OLED_Update(&oledDevice);
+		}
+		else if (sw_data == 1){
+			OLED_ClearBuffer(&oledDevice);
+			currentData = Distance_GetSampleValue();
+			OLED_SetCursor(&oledDevice, 0, 3);
+			OLED_PutString(&oledDevice, "Distance = ");
+			// Affichage de la distance sur le Pmod OLED
+			sprintf(dataChar,"%2.2f",currentData);
+			OLED_SetCursor(&oledDevice, 11, 3);
+			OLED_PutString(&oledDevice, dataChar);
+			OLED_Update(&oledDevice);
+		}
+		else if (sw_data == 2){
+			OLED_ClearBuffer(&oledDevice);
+			currentData = Calorie_GetSampleValue();
+			OLED_SetCursor(&oledDevice, 0, 3);
+			OLED_PutString(&oledDevice, "Calorie = ");
+			// Affichage de la Calorie sur le Pmod OLED
+			sprintf(dataChar,"%2.2f",currentData);
+			OLED_SetCursor(&oledDevice, 10, 3);
+			OLED_PutString(&oledDevice, dataChar);
+			OLED_Update(&oledDevice);
+		}
+		else {
+			OLED_ClearBuffer(&oledDevice);
+			OLED_SetCursor(&oledDevice, 0, 3);
+			OLED_PutString(&oledDevice, "You had one job");
+			OLED_Update(&oledDevice);
+		}
+
 
 
 		// Affichage graduel du voltage sur le Pmod 8LD
 		// 3.3V => tous les leds allumés
 		// 0.0V => tous les leds éteints
-		pmod8LDvalue = 0xFF << (8 - (u8)(currentVoltage / ReferenceVoltage * 8));
+		pmod8LDvalue = 0xFF << (8 - (u8)(currentData / ReferenceVoltage * 8));
 		GPIO_setPins(&pmod8LD,pmod8LDvalue);
 
 
-		// Affichage du voltage sur le Pmod OLED
-		sprintf(voltageChar,"%2.2f",currentVoltage);
-		OLED_SetCursor(&oledDevice, 10, 3);
-		OLED_PutString(&oledDevice, voltageChar);
-		OLED_Update(&oledDevice);
+
 
 	}
 
@@ -121,9 +163,39 @@ u16 Speed_GetSampleRaw()
 
 float Speed_GetSampleValue()
 {
-	u16 rawSample = AD1_GetSampleRaw();
+	u16 rawSample = Speed_GetSampleRaw();
 
-	return (float)rawSample / 100;
+	return (float)rawSample;
+
+}
+
+u16 Distance_GetSampleRaw()
+{
+	u16 rawData =  MYIP_mReadReg(MY_DISTANCE_IP_BASEADDRESS, 0x0) & 0xFFF;
+	return rawData;
+}
+
+
+float Distance_GetSampleValue()
+{
+	u16 rawSample = Distance_GetSampleRaw();
+
+	return (float)rawSample;
+
+}
+
+u16 Calorie_GetSampleRaw()
+{
+	u16 rawData =  MYIP_mReadReg(MY_CALORIE_IP_BASEADDRESS, 0x0) & 0xFFF;
+	return rawData;
+}
+
+
+float Calorie_GetSampleValue()
+{
+	u16 rawSample = Calorie_GetSampleRaw();
+
+	return (float)rawSample;
 
 }
 

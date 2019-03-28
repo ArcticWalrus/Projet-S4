@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Wed Mar 27 21:42:08 2019
+--Date        : Thu Mar 28 09:46:06 2019
 --Host        : DESKTOP-6BCDJM7 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -50,11 +50,15 @@ entity design_1_wrapper is
     Pmod_OLED_pin7_io : inout STD_LOGIC;
     Pmod_OLED_pin8_io : inout STD_LOGIC;
     Pmod_OLED_pin9_io : inout STD_LOGIC;
-    i_data : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    i_data_calorie : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    i_data_distance : in STD_LOGIC_VECTOR ( 31 downto 0 );
     i_data_echantillon : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    i_data_vitesse : in STD_LOGIC_VECTOR ( 31 downto 0 );
     i_sw_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    o_data : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    o_data_calorie : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    o_data_distance : out STD_LOGIC_VECTOR ( 31 downto 0 );
     o_data_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    o_data_vitesse : out STD_LOGIC_VECTOR ( 31 downto 0 );
     o_leds_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
 end design_1_wrapper;
@@ -135,8 +139,12 @@ architecture STRUCTURE of design_1_wrapper is
     Pmod_OLED_pin8_o : out STD_LOGIC;
     o_data_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
     i_data_echantillon : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    i_data : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    o_data : out STD_LOGIC_VECTOR ( 31 downto 0 )
+    i_data_vitesse : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    o_data_vitesse : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    o_data_distance : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    o_data_calorie : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    i_data_distance : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    i_data_calorie : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component design_1;
   component IOBUF is
@@ -379,11 +387,15 @@ design_1_i: component design_1
       Pmod_OLED_pin9_i => Pmod_OLED_pin9_i,
       Pmod_OLED_pin9_o => Pmod_OLED_pin9_o,
       Pmod_OLED_pin9_t => Pmod_OLED_pin9_t,
-      i_data(31 downto 0) => i_data(31 downto 0),
+      i_data_calorie(31 downto 0) => i_data_calorie(31 downto 0),
+      i_data_distance(31 downto 0) => i_data_distance(31 downto 0),
       i_data_echantillon(11 downto 0) => i_data_echantillon(11 downto 0),
+      i_data_vitesse(31 downto 0) => i_data_vitesse(31 downto 0),
       i_sw_tri_i(3 downto 0) => i_sw_tri_i(3 downto 0),
-      o_data(31 downto 0) => o_data(31 downto 0),
+      o_data_calorie(31 downto 0) => o_data_calorie(31 downto 0),
+      o_data_distance(31 downto 0) => o_data_distance(31 downto 0),
       o_data_out(31 downto 0) => o_data_out(31 downto 0),
+      o_data_vitesse(31 downto 0) => o_data_vitesse(31 downto 0),
       o_leds_tri_o(3 downto 0) => o_leds_tri_o(3 downto 0)
     );
 end STRUCTURE;

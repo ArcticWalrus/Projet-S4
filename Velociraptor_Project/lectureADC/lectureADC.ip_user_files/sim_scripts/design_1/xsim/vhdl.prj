@@ -9,8 +9,10 @@ vhdl xil_defaultlib  \
 "../../../bd/design_1/ipshared/339b/hdl/myip_v1_0.vhd" \
 "../../../bd/design_1/ip/design_1_myip_0_1/sim/design_1_myip_0_1.vhd" \
 "../../../bd/design_1/sim/design_1.vhd" \
-"../../../bd/design_1/ipshared/bcb6/hdl/myIO_IP_v1_0_S00_AXI.vhd" \
-"../../../bd/design_1/ipshared/bcb6/hdl/myIO_IP_v1_0.vhd" \
+"../../../bd/design_1/ipshared/79e7/hdl/myIO_IP_v1_0_S00_AXI.vhd" \
+"../../../bd/design_1/ipshared/79e7/hdl/myIO_IP_v1_0.vhd" \
 "../../../bd/design_1/ip/design_1_myIO_IP_0_0/sim/design_1_myIO_IP_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_myIO_IP_1_0/sim/design_1_myIO_IP_1_0.vhd" \
+"../../../bd/design_1/ip/design_1_myIO_IP_2_0/sim/design_1_myIO_IP_2_0.vhd" \
 
 nosort

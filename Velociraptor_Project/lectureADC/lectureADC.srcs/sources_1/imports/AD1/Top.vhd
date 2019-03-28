@@ -107,8 +107,8 @@ constant freq_sys_MHz: integer := 125;  -- MHz
             
            --Traitement de signal
            o_vitesse       : out unsigned(5 downto 0);
-           o_calories      : out unsigned(31 downto 0);
-           o_distance      : out unsigned(31 downto 0);                  
+           o_calorie      : out unsigned(10 downto 0);
+           o_distance      : out unsigned(10 downto 0);                  
            i_poid_Kg       : in  unsigned(7 downto 0);
            i_taille_cm      : in  unsigned(7 downto 0)               
        );               
@@ -178,11 +178,19 @@ constant freq_sys_MHz: integer := 125;  -- MHz
            Pmod_OLED_pin7_io : inout STD_LOGIC;
            Pmod_OLED_pin8_io : inout STD_LOGIC;
            Pmod_OLED_pin9_io : inout STD_LOGIC;
-           i_data_echantillon : in STD_LOGIC_VECTOR ( 11 downto 0 );
-           i_data   : in std_logic_vector (31 downto 0);
+           
+           -- Input des blocs de communication fpga/serveur
+           i_data_echantillon : in STD_LOGIC_VECTOR ( 11 downto 0 );    -- Input du bloc myip (non utilisé)
+           i_data_vitesse   : in std_logic_vector (31 downto 0);
+           i_data_distance   : in std_logic_vector (31 downto 0);
+           i_data_calorie   : in std_logic_vector (31 downto 0);
            i_sw_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
-           o_data_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
-           o_data   : out std_logic_vector (31 downto 0);
+           
+           -- Output des blocs de communication fpga/serveur
+           o_data_out : out STD_LOGIC_VECTOR ( 31 downto 0 ); -- Output du bloc myip (non utilisé)
+           o_data_vitesse   : out std_logic_vector (31 downto 0);
+           o_data_distance   : out std_logic_vector (31 downto 0);
+           o_data_calorie   : out std_logic_vector (31 downto 0);
            o_leds_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 )
        );
        end component;
@@ -201,9 +209,10 @@ constant freq_sys_MHz: integer := 125;  -- MHz
       signal s_nb_items      : std_logic_vector(7 downto 0);
       signal s_detect        : std_logic;
       
+      --  Signaux de liaison 
       signal s_vitesse       : unsigned(5 downto 0);
-      signal s_distance      : unsigned(31 downto 0);
-      signal s_calories      : unsigned(31 downto 0);
+      signal s_distance      : unsigned(10 downto 0);
+      signal s_calorie      : unsigned(10 downto 0);
 begin
     reset    <= i_btn(0);    
         
@@ -250,7 +259,7 @@ begin
                 
                 --Traitement de signal
                 o_vitesse       => s_vitesse,
-                o_calories      => s_calories,
+                o_calorie      => s_calorie,
                 o_distance      => s_distance,
 --                i_poid_Kg       => i_poid_Kg,
 --                i_taille_cm      => i_taille_cm
@@ -323,14 +332,21 @@ begin
               Pmod_OLED_pin8_io  => Pmod_OLED(5),
               Pmod_OLED_pin9_io  => Pmod_OLED(6),
               Pmod_OLED_pin10_io => Pmod_OLED(7),
-              
-              i_data_echantillon => d_echantillon,
-              i_data(5 downto 0)             => std_logic_vector(s_vitesse),
-              i_data(31 downto 6)   => (others => '0'), 
-              i_sw_tri_i => i_sw,
-              o_data_out => open,
-              o_data    => open,
-              o_leds_tri_o => o_leds
+              ----------------------------------------
+              i_data_echantillon            => d_echantillon,
+              i_data_vitesse(5 downto 0)    => std_logic_vector(s_vitesse),
+              i_data_vitesse(31 downto 6)   => (others => '0'), 
+              i_data_distance(10 downto 0)  => std_logic_vector(s_distance),
+              i_data_distance(31 downto 11) => (others => '0'), 
+              i_data_calorie(10 downto 0)   => std_logic_vector(s_calorie),
+              i_data_calorie(31 downto 11)  => (others => '0'), 
+              i_sw_tri_i                    => i_sw,
+              ----------------------------------------
+              o_data_out        => open,
+              o_data_vitesse    => open,
+              o_data_distance   => open,
+              o_data_calorie    => open,
+              o_leds_tri_o      => o_leds
           );
          
     o_AD_NCS <= d_strobe_100Hz;

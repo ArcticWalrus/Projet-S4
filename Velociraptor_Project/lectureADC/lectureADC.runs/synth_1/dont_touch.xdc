@@ -66,6 +66,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_myip_0
 # IP: bd/design_1/ip/design_1_myIO_IP_0_0/design_1_myIO_IP_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_myIO_IP_0_0 || ORIG_REF_NAME==design_1_myIO_IP_0_0} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_myIO_IP_1_0/design_1_myIO_IP_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_myIO_IP_1_0 || ORIG_REF_NAME==design_1_myIO_IP_1_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_myIO_IP_2_0/design_1_myIO_IP_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_myIO_IP_2_0 || ORIG_REF_NAME==design_1_myIO_IP_2_0} -quiet] -quiet
+
 # IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0} -quiet] -quiet
 
@@ -76,11 +82,6 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==PmodOLED_pmod_bridge_0_0 || ORIG_REF_NAME==PmodOLED_pmod_bridge_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
 # XDC: bd/design_1/ip/design_1_PmodOLED_0_0/src/PmodOLED_pmod_bridge_0_0/src/pmod_concat_ooc.xdc
-
-# XDC: bd/design_1/ip/design_1_PmodOLED_0_0/design_1_PmodOLED_0_0_board.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_PmodOLED_0_0 || ORIG_REF_NAME==design_1_PmodOLED_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
-# XDC: bd/design_1/ip/design_1_PmodOLED_0_0/src/PmodOLED_ooc.xdc
 
 # XDC: bd/design_1/ip/design_1_PmodOLED_0_0/src/PmodOLED_axi_quad_spi_0_0/PmodOLED_axi_quad_spi_0_0_board.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==PmodOLED_axi_quad_spi_0_0 || ORIG_REF_NAME==PmodOLED_axi_quad_spi_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
@@ -101,6 +102,11 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 # XDC: bd/design_1/ip/design_1_PmodOLED_0_0/src/PmodOLED_axi_gpio_0_0/PmodOLED_axi_gpio_0_0.xdc
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==PmodOLED_axi_gpio_0_0 || ORIG_REF_NAME==PmodOLED_axi_gpio_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
+# XDC: bd/design_1/ip/design_1_PmodOLED_0_0/design_1_PmodOLED_0_0_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_PmodOLED_0_0 || ORIG_REF_NAME==design_1_PmodOLED_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: bd/design_1/ip/design_1_PmodOLED_0_0/src/PmodOLED_ooc.xdc
+
 # XDC: bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_rst_ps7_0_50M_0 || ORIG_REF_NAME==design_1_rst_ps7_0_50M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
@@ -112,11 +118,6 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/design_1/ip/design_1_PmodGPIO_0_0/src/PmodGPIO_pmod_bridge_0_0/src/pmod_concat_ooc.xdc
 
-# XDC: bd/design_1/ip/design_1_PmodGPIO_0_0/design_1_PmodGPIO_0_0_board.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_PmodGPIO_0_0 || ORIG_REF_NAME==design_1_PmodGPIO_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
-# XDC: bd/design_1/ip/design_1_PmodGPIO_0_0/src/PmodGPIO_ooc.xdc
-
 # XDC: bd/design_1/ip/design_1_PmodGPIO_0_0/src/PmodGPIO_axi_gpio_0_0/PmodGPIO_axi_gpio_0_0_board.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==PmodGPIO_axi_gpio_0_0 || ORIG_REF_NAME==PmodGPIO_axi_gpio_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
@@ -124,6 +125,11 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/design_1/ip/design_1_PmodGPIO_0_0/src/PmodGPIO_axi_gpio_0_0/PmodGPIO_axi_gpio_0_0.xdc
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==PmodGPIO_axi_gpio_0_0 || ORIG_REF_NAME==PmodGPIO_axi_gpio_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/design_1/ip/design_1_PmodGPIO_0_0/design_1_PmodGPIO_0_0_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_PmodGPIO_0_0 || ORIG_REF_NAME==design_1_PmodGPIO_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: bd/design_1/ip/design_1_PmodGPIO_0_0/src/PmodGPIO_ooc.xdc
 
 # XDC: bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_0_0 || ORIG_REF_NAME==design_1_axi_gpio_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
