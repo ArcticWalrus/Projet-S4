@@ -2,10 +2,10 @@
 			;
 			; This is the start of 'myProgram' for KCPSM6
 			;
-			;  8-bit LSB d'un échantillon de l'ADC
+			;  8-bit LSB d'un echantillon de l'ADC
 			CONSTANT ADC_LSB_port, 00
 			;
-			;  4-bit MSB d'un échantillon de l'ADC
+			;  4-bit MSB d'un echantillon de l'ADC
 			CONSTANT ADC_MSB_port, 01
 			;
 			;  
