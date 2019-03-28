@@ -1,0 +1,119 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.2 (64-bit)
+# SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
+# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
+# Start of session at: Tue Dec 11 15:46:05 2018
+# Process ID: 5652
+# Current directory: C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9572 C:\ProjetsFPGA\projets_vivado\pb_APP_log_comb\pb_APP_log_comb.xpr
+# Log file: C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/vivado.log
+# Journal file: C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 839.191 ; gain = 95.594
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Labo_adder4b_sol_registre.vhd] -no_script -reset -force -quiet
+remove_files  C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Labo_adder4b_sol_registre.vhd
+file delete -force C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Labo_adder4b_sol_registre.vhd
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/circuit_atelier.vhd] -no_script -reset -force -quiet
+remove_files  C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/circuit_atelier.vhd
+file delete -force C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/circuit_atelier.vhd
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Circuit_Thermo_Bin_sol.vhd] -no_script -reset -force -quiet
+remove_files  C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Circuit_Thermo_Bin_sol.vhd
+file delete -force C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Circuit_Thermo_Bin_sol.vhd
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Labo_adder4b_sol.vhd] -no_script -reset -force -quiet
+remove_files  C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Labo_adder4b_sol.vhd
+file delete -force C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Labo_adder4b_sol.vhd
+update_compile_order -fileset sources_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+set_property top labo_adder4b [current_fileset]
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Ther2bin12b.vhd] -no_script -reset -force -quiet
+remove_files  C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Ther2bin12b.vhd
+file delete -force C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Ther2bin12b.vhd
+export_ip_user_files -of_objects  [get_files {{C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Add4bitsA .vhd}}] -no_script -reset -force -quiet
+remove_files  {{C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Add4bitsA .vhd}}
+file delete -force {C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Add4bitsA .vhd}
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/labo_adder4b_sol_v1_tb.vhd] -no_script -reset -force -quiet
+remove_files  C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/labo_adder4b_sol_v1_tb.vhd
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Fct2_3.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/ctrl_labo_adder4b.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/moins_5.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/synchro_module_v1.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Add1bitA .vhd}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Add1bitB .vhd}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Add4bitsB .vhd}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Bin2BCD_NS.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Bin2BCD_S.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Bouton2Bin.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Decodeur3_8.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Mux4_1.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Parite.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Ther2bin4b.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/affhex_pmodssd_sol.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/attenateur_pwm.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/compteur_atelier.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/compteur_atelier_v2.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/compteur_atelier_v3.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/compteur_demo.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/conditionne_btn_v3.vhd] -no_script -reset -force -quiet
+remove_files  {C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Fct2_3.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/ctrl_labo_adder4b.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/moins_5.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/synchro_module_v1.vhd {C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Add1bitA .vhd} {C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Add1bitB .vhd} {C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Add4bitsB .vhd} C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Bin2BCD_NS.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Bin2BCD_S.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Bouton2Bin.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Decodeur3_8.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Mux4_1.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Parite.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Ther2bin4b.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/affhex_pmodssd_sol.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/attenateur_pwm.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/compteur_atelier.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/compteur_atelier_v2.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/compteur_atelier_v3.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/compteur_demo.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/conditionne_btn_v3.vhd}
+file delete -force C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Fct2_3.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/ctrl_labo_adder4b.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/moins_5.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/synchro_module_v1.vhd {C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Add1bitA .vhd} {C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Add1bitB .vhd} {C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Add4bitsB .vhd} C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Bin2BCD_NS.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Bin2BCD_S.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Bouton2Bin.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Decodeur3_8.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Mux4_1.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Parite.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Ther2bin4b.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/affhex_pmodssd_sol.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/attenateur_pwm.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/compteur_atelier.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/compteur_atelier_v2.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/compteur_atelier_v3.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/compteur_demo.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/conditionne_btn_v3.vhd
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/conditionne_btn_v4.vhd] -no_script -reset -force -quiet
+remove_files  C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/conditionne_btn_v4.vhd
+file delete -force C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/conditionne_btn_v4.vhd
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Labo_adder4b_sol_v1.vhd] -no_script -reset -force -quiet
+remove_files  C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Labo_adder4b_sol_v1.vhd
+file delete -force C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Labo_adder4b_sol_v1.vhd
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Adder4b_structurel_test.vhd] -no_script -reset -force -quiet
+remove_files  C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Adder4b_structurel_test.vhd
+file delete -force C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Adder4b_structurel_test.vhd
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/add1bit_AB_sol_tb.vhd] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/add1bit_AB_sol_tb.vhd
+file delete -force C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/add1bit_AB_sol_tb.vhd
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Adder4b_v1.vhd] -no_script -reset -force -quiet
+remove_files  C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Adder4b_v1.vhd
+file delete -force C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Adder4b_v1.vhd
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/compteur_atelier_tb.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/add4bits_AB_sol_tb.vhd] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/compteur_atelier_tb.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/add4bits_AB_sol_tb.vhd}
+file delete -force C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/compteur_atelier_tb.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/add4bits_AB_sol_tb.vhd
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Circuit_Thermo_Bin.vhd] -no_script -reset -force -quiet
+remove_files  C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Circuit_Thermo_Bin.vhd
+file delete -force C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Circuit_Thermo_Bin.vhd
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/strb_gen_v3.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Add1b.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Adder4b_v2.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Adder4b_v3.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/clkdiv_module_v1.vhd] -no_script -reset -force -quiet
+remove_files  {C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/strb_gen_v3.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Add1b.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Adder4b_v2.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Adder4b_v3.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/clkdiv_module_v1.vhd}
+file delete -force C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/strb_gen_v3.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Add1b.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Adder4b_v2.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Adder4b_v3.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/clkdiv_module_v1.vhd
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/constrs_1/new/circuit_labo_adder4b_reg.xdc] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/constrs_1/new/circuit_atelier.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 {C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/constrs_1/new/circuit_labo_adder4b_reg.xdc C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/constrs_1/new/circuit_atelier.xdc}
+file delete -force C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/constrs_1/new/circuit_labo_adder4b_reg.xdc C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/constrs_1/new/circuit_atelier.xdc
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/decodeur_3_8_tb.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/parite_tb.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/labo_adder4b_sol_tb.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/labo_adder4b_sol_registre_tb.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/circuit_thermo_bin_sol_tb.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/circuit_atelier_tb.vhd] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/decodeur_3_8_tb.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/parite_tb.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/labo_adder4b_sol_tb.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/labo_adder4b_sol_registre_tb.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/circuit_thermo_bin_sol_tb.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/circuit_atelier_tb.vhd}
+file delete -force C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/decodeur_3_8_tb.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/parite_tb.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/labo_adder4b_sol_tb.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/labo_adder4b_sol_registre_tb.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/circuit_thermo_bin_sol_tb.vhd C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sim_1/new/circuit_atelier_tb.vhd
+export_ip_user_files -of_objects  [get_files C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/synchro_module.vhd] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/synchro_module.vhd
+archive_project C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb.xpr.zip -temp_dir C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/.Xil/Vivado-5652-DalleVostro01 -force -include_local_ip_cache -include_config_settings
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/.Xil/Vivado-5652-DalleVostro01' for archiving project
+Scanning sources...
+Finished scanning sources
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [ProjectBase 1-495] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience any problem with archiving the project, please consider setting environment variable $TEMP to a shorter path.
+Current project path is 'C:/ProjetsFPGA/projets_vivado/pb_APP_log_comb/.Xil/Vivado-5652-DalleVostro01/PrjAr/_X_'.
+INFO: [Coretcl 2-1213] Including run results for 'synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'impl_1'

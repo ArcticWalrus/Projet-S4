@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/compteur_atelier.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/compteur_atelier_v2.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/compteur_atelier_v3.vhd" \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/compteur_atelier_tb.vhd" \
+
+# Do not sort compile order
+nosort

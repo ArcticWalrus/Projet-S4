@@ -1,0 +1,102 @@
+!SESSION 2019-03-19 12:47:00.564 -----------------------------------------------
+eclipse.buildId=2018.2
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/raye2601/Desktop/IMU_demo/IMU_demo.sdk
+
+This is a continuation of log file C:\Users\raye2601\Desktop\IMU_demo\IMU_demo.sdk\.metadata\.bak_0.log
+Created Time: 2019-03-19 15:14:32.291
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.291
+!MESSAGE XSCT command with result: [source C:/Users/raye2601/Desktop/IMU_demo/IMU_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl], Result: [null, ]. Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.291
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A78095A"} -index 0], Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.320
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A78095A"} -index 0], Result: [null, ]. Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.320
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/raye2601/Desktop/IMU_demo/IMU_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.358
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/raye2601/Desktop/IMU_demo/IMU_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, design_1_wrapper_33]. Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.359
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.360
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.360
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A78095A"} -index 0], Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.387
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A78095A"} -index 0], Result: [null, ]. Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.388
+!MESSAGE XSCT Command: [stop], Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.405
+!MESSAGE XSCT command with result: [stop], Result: [null, ]. Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.405
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.649
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.650
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.655
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.656
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A78095A"} -index 0], Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.683
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A78095A"} -index 0], Result: [null, ]. Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.683
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.713
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.713
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A78095A"} -index 0], Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.737
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A78095A"} -index 0], Result: [null, ]. Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.737
+!MESSAGE XSCT Command: [dow C:/Users/raye2601/Desktop/IMU_demo/IMU_demo.sdk/ExempleIMU/Debug/ExempleIMU.elf], Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.978
+!MESSAGE XSCT command with result: [dow C:/Users/raye2601/Desktop/IMU_demo/IMU_demo.sdk/ExempleIMU/Debug/ExempleIMU.elf], Result: [null, ]. Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.979
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.980
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:32.983
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A78095A"} -index 0], Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:33.007
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A78095A"} -index 0], Result: [null, ]. Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:33.007
+!MESSAGE XSCT Command: [con], Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:33.041
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-61
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:33.046
+!MESSAGE XSCT Command: [disconnect tcfchan#35], Thread: Thread-2035
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-03-19 15:14:33.052
+!MESSAGE XSCT command with result: [disconnect tcfchan#35], Result: [null, ]. Thread: Thread-2035

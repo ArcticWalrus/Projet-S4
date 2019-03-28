@@ -1,0 +1,139 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 51020
+License: Customer
+
+Current time: 	Thu Mar 28 12:40:22 EDT 2019
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 175 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	ArcticWalrus
+User home directory: C:/Users/ArcticWalrus
+User working directory: C:/Users/ArcticWalrus/Downloads/ergonomie/pb_APP_log_comb
+User country: 	CA
+User language: 	en
+User locale: 	en_CA
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/ArcticWalrus/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/ArcticWalrus/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/ArcticWalrus/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/ArcticWalrus/Downloads/ergonomie/pb_APP_log_comb/vivado.log
+Vivado journal file location: 	C:/Users/ArcticWalrus/Downloads/ergonomie/pb_APP_log_comb/vivado.jou
+Engine tmp dir: 	C:/Users/ArcticWalrus/Downloads/ergonomie/pb_APP_log_comb/.Xil/Vivado-51020-DESKTOP-J3PS77H
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	191 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 515 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 67 MB (+68244kb) [00:00:10]
+// [Engine Memory]: 478 MB (+350255kb) [00:00:10]
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\ArcticWalrus\Downloads\ergonomie\pb_APP_log_comb\pb_APP_log_comb.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/ArcticWalrus/Downloads/ergonomie/pb_APP_log_comb/pb_APP_log_comb.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/ArcticWalrus/Downloads/ergonomie/pb_APP_log_comb/pb_APP_log_comb.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/raye2601/Desktop/pb_APP_log_comb' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// [Engine Memory]: 524 MB (+22523kb) [00:00:14]
+// HMemoryUtils.trashcanNow. Engine heap size: 524 MB. GUI used memory: 37 MB. Current time: 3/28/19 12:40:24 PM EDT
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 557 MB (+6719kb) [00:00:18]
+// Tcl Message: open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 822.551 ; gain = 96.898 
+// Project name: pb_APP_log_comb; location: C:/Users/ArcticWalrus/Downloads/ergonomie/pb_APP_log_comb; part: xc7z010clg400-1
+// [Engine Memory]: 598 MB (+14359kb) [00:00:22]
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 11 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, labo_adder4b(BEHAVIORAL) (Labo_adder4b.vhd)]", 1); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Text]", 4); // B (D, ck)
+// PAPropertyPanels.initPanels (synchro_module_v2.vhd) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, labo_adder4b(BEHAVIORAL) (Labo_adder4b.vhd), inst_synch : synchro_module_v2(Behavioral) (synchro_module_v2.vhd)]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, labo_adder4b(BEHAVIORAL) (Labo_adder4b.vhd), inst_synch : synchro_module_v2(Behavioral) (synchro_module_v2.vhd)]", 2, false, false, false, false, false, true); // B (D, ck) - Double Click
+// [GUI Memory]: 71 MB (+4kb) [00:01:00]
+// Elapsed time: 22 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, labo_adder4b(BEHAVIORAL) (Labo_adder4b.vhd), inst_deportation : deportation(Behavioral) (imu.vhd)]", 3, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, labo_adder4b(BEHAVIORAL) (Labo_adder4b.vhd), inst_deportation : deportation(Behavioral) (imu.vhd)]", 3, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 49 seconds
+selectCodeEditor("imu.vhd", 1088, 285); // ce (w, ck)
+// WARNING: HTimer (StateMonitor Timer) is taking 1009ms to process. Increasing delay to 4000 ms.
+// [GUI Memory]: 76 MB (+1441kb) [00:02:21]
+// [GUI Memory]: 80 MB (+716kb) [00:03:48]
+// Elapsed time: 144 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, labo_adder4b(BEHAVIORAL) (Labo_adder4b.vhd), inst_synch : synchro_module_v2(Behavioral) (synchro_module_v2.vhd)]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, labo_adder4b(BEHAVIORAL) (Labo_adder4b.vhd), inst_synch : synchro_module_v2(Behavioral) (synchro_module_v2.vhd)]", 2, false, false, false, false, false, true); // B (D, ck) - Double Click
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 350ms to process. Increasing delay to 2000 ms.
+// [GUI Memory]: 84 MB (+43kb) [00:07:39]
+// [GUI Memory]: 89 MB (+36kb) [00:09:30]
+// Elapsed time: 618 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "imu.vhd", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Text, archive_project_summary.txt]", 5, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Text, archive_project_summary.txt]", 5, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Text, notes_labo_adder4b.txt]", 6, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Text, notes_labo_adder4b.txt]", 6, false, false, false, false, false, true); // B (D, ck) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 8); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, labo_adder4b(BEHAVIORAL) (Labo_adder4b.vhd)]", 10); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, labo_adder4b(BEHAVIORAL) (Labo_adder4b.vhd), inst_deportation : deportation(Behavioral) (imu.vhd)]", 12, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, labo_adder4b(BEHAVIORAL) (Labo_adder4b.vhd), inst_deportation : deportation(Behavioral) (imu.vhd)]", 12, false, false, false, false, false, true); // B (D, ck) - Double Click
+// [GUI Memory]: 93 MB (+151kb) [00:17:51]
+// Elapsed time: 247 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "synchro_module_v2.vhd", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "synchro_module_v2.vhd", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "imu.vhd", 2); // k (j, ck)

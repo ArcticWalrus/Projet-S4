@@ -1,0 +1,109 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 43712
+License: Customer
+
+Current time: 	Thu Mar 28 13:03:41 EDT 2019
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 175 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	ArcticWalrus
+User home directory: C:/Users/ArcticWalrus
+User working directory: C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/assembleur_ergonomie/MEF
+User country: 	CA
+User language: 	en
+User locale: 	en_CA
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/ArcticWalrus/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/ArcticWalrus/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/ArcticWalrus/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/assembleur_ergonomie/MEF/vivado.log
+Vivado journal file location: 	C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/assembleur_ergonomie/MEF/vivado.jou
+Engine tmp dir: 	C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/assembleur_ergonomie/MEF/.Xil/Vivado-43712-DESKTOP-J3PS77H
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	193 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 505 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 67 MB (+68005kb) [00:00:09]
+// [Engine Memory]: 477 MB (+348752kb) [00:00:09]
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\ArcticWalrus\Documents\GitHub\Projet-S4\ergonomie\assembleur_ergonomie\MEF\MEF.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/assembleur_ergonomie/MEF/MEF.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/assembleur_ergonomie/MEF' 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/assembleur_ergonomie/MEF/MEF.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/assembleur_ergonomie/MEF' INFO: [Project 1-313] Project file moved from 'C:/ZYBO/FichiersAtelier4Picoblaze/Demo2' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 73 MB (+2358kb) [00:00:13]
+// [Engine Memory]: 545 MB (+46347kb) [00:00:13]
+// [GUI Memory]: 80 MB (+3299kb) [00:00:14]
+// [Engine Memory]: 579 MB (+7339kb) [00:00:14]
+// [GUI Memory]: 90 MB (+6239kb) [00:00:15]
+// HMemoryUtils.trashcanNow. Engine heap size: 608 MB. GUI used memory: 45 MB. Current time: 3/28/19 1:03:46 PM EDT
+// Tcl Message: open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 802.137 ; gain = 77.188 
+// Project name: MEF; location: C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/assembleur_ergonomie/MEF; part: xc7z010clg400-1
+// [Engine Memory]: 612 MB (+4067kb) [00:00:17]
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 37 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top(Behavioral) (Top.vhd)]", 1); // B (D, ck)
+// PAPropertyPanels.initPanels (Ctrl_AD1.vhd) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top(Behavioral) (Top.vhd), Controleur : Ctrl_AD1(BEHAVIORAL) (Ctrl_AD1.vhd)]", 2, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top(Behavioral) (Top.vhd), Controleur : Ctrl_AD1(BEHAVIORAL) (Ctrl_AD1.vhd)]", 2, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top(Behavioral) (Top.vhd), Picoblaze : Pblaze_uCtrler(Behavioral) (Pblaze_uCtrler.vhd)]", 5, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top(Behavioral) (Top.vhd), Picoblaze : Pblaze_uCtrler(Behavioral) (Pblaze_uCtrler.vhd)]", 5, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Ctrl_AD1.vhd", 1); // k (j, ck)
