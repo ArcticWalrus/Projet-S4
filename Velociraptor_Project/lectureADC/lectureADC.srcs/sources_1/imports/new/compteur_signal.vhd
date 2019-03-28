@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity compteur_signal is
   Port ( 
-        line_in          : in signed(11 downto 0);
+        line_in          : in std_logic_vector(11 downto 0);
         i_clk, i_reset   : in std_logic;
         o_nb_items       : out unsigned(5 downto 0);
         i_stb_tampon     : in std_logic;
@@ -29,7 +29,7 @@ end component;
 component detectzero is
     Port ( 
             i_clk, id_reset     : in std_ulogic;
-            i_x                 : in signed(11 downto 0);
+            i_x                 : in std_logic_vector(11 downto 0);
             o_s, o_z            : out std_ulogic
     );
 end component;

@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity detectzero is
     Port ( 
         i_clk, id_reset: in std_ulogic;
-        i_x: in signed(11 downto 0);
+        i_x: in std_logic_vector(11 downto 0);
         o_s, o_z: out std_ulogic
     );
 end detectzero;
@@ -35,8 +35,17 @@ begin
 --    end process;
     
     o_z <= so_z;
+    signe : process(i_x)
+    begin
+        if (i_x < x"3E1") then 
+            signe_x <= '1';
+        else
+            signe_x <= '0';
+        end if;
+        
+    end process;
     
-    signe_x <= i_x(11) xor '1';   -- signe_x = 1 si i_x positif ou nul, 0 autrement
+    --signe_x <= i_x(11) xor '1';   -- signe_x = 1 si i_x positif ou nul, 0 autrement
     
     decodeur: process( signe_x, etat_courant )
     begin

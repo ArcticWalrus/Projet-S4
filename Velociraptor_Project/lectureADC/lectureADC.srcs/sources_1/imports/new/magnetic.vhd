@@ -40,7 +40,7 @@ architecture Behavioral of magnetic is
    
     component compteur_signal
         Port ( 
-                line_in          : in signed(11 downto 0);
+                line_in          : in std_logic_vector(11 downto 0);
                 i_clk, i_reset   : in std_logic;
                 o_nb_items       : out unsigned(5 downto 0);
                 i_stb_tampon     : in std_logic;
@@ -65,10 +65,10 @@ architecture Behavioral of magnetic is
           
     --ADC
     signal d_data_ready     : std_logic;
-    signal d_echantillon    : signed(11 downto 0); 
+    --signal d_echantillon    : signed(11 downto 0); 
     
     --Compteur Signal
-    signal s_line_in        : signed(11 downto 0);
+    --signal s_line_in        : signed(11 downto 0);
     signal s_nb_items       : unsigned(5 downto 0);
     signal s_nb_items_total : unsigned(31 downto 0);
     signal s_detect         : std_logic;
@@ -80,7 +80,7 @@ begin
 
     entity_compteur_signal : compteur_signal
         Port map( 
-            line_in         => signed(i_ech), 
+            line_in         => i_ech, 
             i_clk           => i_clk,
             i_stb_tampon    => i_str_tampon,
             i_reset         => i_reset,

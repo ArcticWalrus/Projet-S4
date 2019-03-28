@@ -11,7 +11,7 @@ library UNISIM;
 use UNISIM.Vcomponents.ALL;
 
 entity Ctrl_AD1 is
-   port ( clk_AD           : in    std_logic; 
+   port ( clk_AD          : in    std_logic; 
           i_DO            : in    std_logic; 
           i_Strobe_AD     : in    std_logic; 
           reset           : in    std_logic; 

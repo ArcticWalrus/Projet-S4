@@ -86,10 +86,10 @@ constant freq_sys_MHz: integer := 125;  -- MHz
      generic (const_CLK_syst_MHz: integer := freq_sys_MHz);
        Port ( 
             clkm        : in  std_logic;  -- Entrée  horloge maitre   (50 MHz soit 20 ns ou 100 MHz soit 10 ns)
-            o_S_5MHz    : out std_logic;  -- source horloge divisee          (clkm MHz / (2*constante_diviseur_p +2) devrait donner 5 MHz soit 200 ns)
-            o_CLK_5MHz  : out std_logic;
-            o_S_100Hz   : out  std_logic; -- source horloge 100 Hz : out  std_logic;   -- (100  Hz approx:  99,952 Hz) 
-            o_stb_100Hz : out  std_logic; -- strobe 100Hz synchro sur clk_5MHz 
+            o_S_10MHz    : out std_logic;  -- source horloge divisee          (clkm MHz / (2*constante_diviseur_p +2) devrait donner 5 MHz soit 200 ns)
+            o_clk_10MHz  : out std_logic;
+            o_stb_380kHz   : out  std_logic; -- source horloge 100 Hz : out  std_logic;   -- (100  Hz approx:  99,952 Hz) 
+            o_stb_200Hz : out  std_logic; -- strobe 100Hz synchro sur clk_5MHz 
             o_S_1Hz     : out  std_logic  -- Signal temoin 1 Hz
         );
        end component;  
@@ -195,10 +195,11 @@ constant freq_sys_MHz: integer := 125;  -- MHz
        );
        end component;
    
-      signal clk_5MHz        : std_logic;
-      signal d_S_5MHz        : std_logic;
-      signal d_strobe_100Hz  : std_logic := '0';  -- est utile pour debounce et cadence echantillonnage AD1
-     
+      signal clk_10MHz        : std_logic;
+      signal d_S_10MHz        : std_logic;
+      signal d_strobe_380kHz  : std_logic := '0';  -- est utile pour debounce et cadence echantillonnage AD1
+      signal d_strobe_200Hz   : std_logic := '0';  -- est utile pour debounce et cadence echantillonnage AD1
+           
       signal reset           : std_logic; 
       
       signal d_davs          : std_logic;
@@ -227,9 +228,9 @@ begin
      
    Controleur :  Ctrl_AD1 
      port map(
-        clk_AD         => clk_5MHz,         -- pour horloge externe du convertisseur (variable logique ne passant pas par bufg)
+        clk_AD         => clk_10MHz,         -- pour horloge externe du convertisseur (variable logique ne passant pas par bufg)
         i_DO           => d_AD_Dselect,     -- bit de données provenant du convertisseur (via um mux)
-        i_Strobe_AD    => d_strobe_100Hz,   -- synchronisation: déclencheur de la conversion
+        i_Strobe_AD    => d_strobe_380kHz,   -- synchronisation: déclencheur de la conversion
         RESET          => reset,
         o_dav_strobe   => d_davs,           -- indicateur de conversion complete
         o_ech          => d_echantillon,    -- valeur de l'échantillon lu
@@ -239,18 +240,18 @@ begin
    Synchronisation : Synchro_Horloges
     port map (
            clkm         => sys_clock,
-           o_S_5MHz     => o_AD_CLK,
-           o_CLK_5MHz   => clk_5MHz,
-           o_S_100Hz    => open,
-           o_stb_100Hz  => d_strobe_100Hz,
+           o_S_10MHz     => o_AD_CLK,
+           o_clk_10MHz   => clk_10MHz,
+           o_stb_380kHz  => d_strobe_380kHz,
+           o_stb_200Hz  => d_strobe_200Hz,
            o_S_1Hz      => o_ledtemoin_b
     );
     
     insta_magnetic : magnetic
         Port map(  --Generaux
-                i_clk           => d_S_5MHz,
+                i_clk           => d_S_10MHz,
                 i_reset         => reset,
-                i_str_tampon    => d_strobe_100Hz,
+                i_str_tampon    => d_strobe_380kHz,
                 
                 --Controle ADC
                 --i_Data          =>  i_ADC_Data,
@@ -349,7 +350,7 @@ begin
               o_leds_tri_o      => o_leds
           );
          
-    o_AD_NCS <= d_strobe_100Hz;
+    --o_AD_NCS <= d_strobe_200Hz;
   
 end Behavioral;
 

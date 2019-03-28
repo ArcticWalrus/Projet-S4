@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Thu Mar 28 11:07:58 2019
+| Date         : Thu Mar 28 14:04:04 2019
 | Host         : DESKTOP-6BCDJM7 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Top_methodology_drc_routed.rpt -pb Top_methodology_drc_routed.pb -rpx Top_methodology_drc_routed.rpx
 | Design       : Top
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 59
+             Violations found: 60
 +-----------+----------+-------------------------------------------------+------------+
 | Rule      | Severity | Description                                     | Violations |
 +-----------+----------+-------------------------------------------------+------------+
 | PDRC-190  | Warning  | Suboptimally placed synchronized register chain | 1          |
-| TIMING-17 | Warning  | Non-clocked sequential cell                     | 30         |
+| TIMING-17 | Warning  | Non-clocked sequential cell                     | 31         |
 | TIMING-18 | Warning  | Missing input or output delay                   | 26         |
 | XDCB-5    | Warning  | Runtime inefficient way to find pin objects     | 2          |
 +-----------+----------+-------------------------------------------------+------------+
@@ -37,7 +37,7 @@ Table of Contents
 -----------------
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell Design/design_1_i/PmodOLED_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to in site SLICE_X21Y57 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell Design/design_1_i/PmodOLED_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1_CDC_1 is not placed in the same (SLICE) site.
+The FDRE cell Design/design_1_i/PmodOLED_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to in site SLICE_X22Y61 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell Design/design_1_i/PmodOLED_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1_CDC_1 is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-17#1 Warning
@@ -47,147 +47,152 @@ Related violations: <none>
 
 TIMING-17#2 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[0]_lopt_replica/C is not reached by a timing clock
+The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#3 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[10]/C is not reached by a timing clock
+The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#4 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[11]/C is not reached by a timing clock
+The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#5 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[12]/C is not reached by a timing clock
+The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#6 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[13]/C is not reached by a timing clock
+The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#7 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[14]/C is not reached by a timing clock
+The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#8 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[15]/C is not reached by a timing clock
+The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#9 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[16]/C is not reached by a timing clock
+The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#10 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[1]/C is not reached by a timing clock
+The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#11 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[2]/C is not reached by a timing clock
+The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#12 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[3]/C is not reached by a timing clock
+The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#13 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[4]/C is not reached by a timing clock
+The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#14 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[5]/C is not reached by a timing clock
+The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#15 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[6]/C is not reached by a timing clock
+The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#16 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[7]/C is not reached by a timing clock
+The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#17 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[8]/C is not reached by a timing clock
+The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#18 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/MEF/FSM_onehot_fsm_etat_courant_reg[9]/C is not reached by a timing clock
+The clock pin Controleur/q_ech_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#19 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/q_ech_reg[0]/C is not reached by a timing clock
+The clock pin Controleur/q_ech_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#20 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/q_ech_reg[10]/C is not reached by a timing clock
+The clock pin Controleur/q_ech_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#21 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/q_ech_reg[11]/C is not reached by a timing clock
+The clock pin Controleur/q_ech_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#22 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/q_ech_reg[1]/C is not reached by a timing clock
+The clock pin Controleur/q_ech_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#23 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/q_ech_reg[2]/C is not reached by a timing clock
+The clock pin Controleur/q_ech_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#24 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/q_ech_reg[3]/C is not reached by a timing clock
+The clock pin Controleur/q_ech_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#25 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/q_ech_reg[4]/C is not reached by a timing clock
+The clock pin Controleur/q_ech_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#26 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/q_ech_reg[5]/C is not reached by a timing clock
+The clock pin Controleur/q_ech_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#27 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/q_ech_reg[6]/C is not reached by a timing clock
+The clock pin Controleur/q_ech_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#28 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/q_ech_reg[7]/C is not reached by a timing clock
+The clock pin Controleur/q_ech_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#29 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/q_ech_reg[8]/C is not reached by a timing clock
+The clock pin Controleur/q_ech_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#30 Warning
 Non-clocked sequential cell  
-The clock pin Controleur/q_ech_reg[9]/C is not reached by a timing clock
+The clock pin Synchronisation/q_s100HzInt_5M_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#31 Warning
+Non-clocked sequential cell  
+The clock pin Synchronisation/q_strobe100HzInt_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-18#1 Warning

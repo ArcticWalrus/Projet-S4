@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Thu Mar 28 11:08:00 2019
+| Date             : Thu Mar 28 14:04:06 2019
 | Host             : DESKTOP-6BCDJM7 running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.532        |
+| Total On-Chip Power (W)  | 1.531        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.412        |
+| Dynamic (W)              | 1.411        |
 | Device Static (W)        | 0.120        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 67.3         |
@@ -53,19 +53,19 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.006 |        4 |       --- |             --- |
-| Slice Logic              |     0.001 |     4552 |       --- |             --- |
-|   LUT as Logic           |     0.001 |     1491 |     17600 |            8.47 |
-|   Register               |    <0.001 |     2278 |     35200 |            6.47 |
+| Slice Logic              |     0.001 |     4558 |       --- |             --- |
+|   LUT as Logic           |     0.001 |     1495 |     17600 |            8.49 |
+|   Register               |    <0.001 |     2280 |     35200 |            6.48 |
 |   CARRY4                 |    <0.001 |       22 |      4400 |            0.50 |
 |   LUT as Distributed RAM |    <0.001 |       16 |      6000 |            0.27 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   LUT as Shift Register  |    <0.001 |       63 |      6000 |            1.05 |
 |   Others                 |     0.000 |      349 |       --- |             --- |
-| Signals                  |     0.002 |     3370 |       --- |             --- |
-| I/O                      |     0.004 |       32 |       100 |           32.00 |
+| Signals                  |     0.002 |     3371 |       --- |             --- |
+| I/O                      |     0.003 |       32 |       100 |           32.00 |
 | PS7                      |     1.399 |        1 |       --- |             --- |
 | Static Power             |     0.120 |          |           |                 |
-| Total                    |     1.532 |          |           |                 |
+| Total                    |     1.531 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -152,7 +152,7 @@ Table of Contents
 +---------------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                              | Power (W) |
 +---------------------------------------------------------------------------------------------------+-----------+
-| Top                                                                                               |     1.412 |
+| Top                                                                                               |     1.411 |
 |   Controleur                                                                                      |    <0.001 |
 |     MEF                                                                                           |    <0.001 |
 |   Design                                                                                          |     1.409 |
