@@ -1,0 +1,1848 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 9968
+License: Customer
+
+Current time: 	Wed Mar 27 19:24:18 EDT 2019
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 35 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	raf_0
+User home directory: C:/Users/raf_0
+User working directory: C:/Users/raf_0/Desktop/ADC/lectureADC
+User country: 	CA
+User language: 	fr
+User locale: 	fr_CA
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/raf_0/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/raf_0/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/raf_0/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/raf_0/Desktop/ADC/lectureADC/vivado.log
+Vivado journal file location: 	C:/Users/raf_0/Desktop/ADC/lectureADC/vivado.jou
+Engine tmp dir: 	C:/Users/raf_0/Desktop/ADC/lectureADC/.Xil/Vivado-9968-DESKTOP-6BCDJM7
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	147 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 495 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 64 MB (+64852kb) [00:00:08]
+// [Engine Memory]: 455 MB (+325261kb) [00:00:08]
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\raf_0\Desktop\ADC\lectureADC\lectureADC.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// [Engine Memory]: 505 MB (+28946kb) [00:00:12]
+// HMemoryUtils.trashcanNow. Engine heap size: 533 MB. GUI used memory: 38 MB. Current time: 3/27/19 7:24:20 PM EDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 621 MB (+94852kb) [00:00:16]
+// [GUI Memory]: 69 MB (+1148kb) [00:00:19]
+// Tcl Message: open_project C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myIO_IP_1.0'. INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myip_1.0'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/Pmod_vivado-library-2018.2-1'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 803.176 ; gain = 153.383 
+// Project name: lectureADC; location: C:/Users/raf_0/Desktop/ADC/lectureADC; part: xc7z010clg400-1
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 73 MB (+1327kb) [00:01:10]
+// [GUI Memory]: 86 MB (+9071kb) [00:01:15]
+// Elapsed time: 54 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top(Behavioral) (Top.vhd)]", 1); // B (D, ck)
+// PAPropertyPanels.initPanels (Top.vhd) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top(Behavioral) (Top.vhd)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top(Behavioral) (Top.vhd)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("Top.vhd", 63, 297); // ce (w, ck)
+selectCodeEditor("Top.vhd", 80, 255); // ce (w, ck)
+selectCodeEditor("Top.vhd", 82, 272); // ce (w, ck)
+selectCodeEditor("Top.vhd", 101, 278); // ce (w, ck)
+selectCodeEditor("Top.vhd", 100, 293); // ce (w, ck)
+selectCodeEditor("Top.vhd", 395, 341); // ce (w, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 6); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 7); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top(Behavioral) (Top.vhd)]", 1); // B (D, ck)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i (N, ck)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 2); // i (N, ck)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Compile Order", 3); // i (N, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1]", 1); // B (D, ck)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1]", 1); // B (D, ck)
+// Elapsed time: 284 seconds
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 1); // i (c, ck)
+// [Engine Memory]: 668 MB (+17321kb) [00:06:37]
+// HMemoryUtils.trashcanNow. Engine heap size: 670 MB. GUI used memory: 57 MB. Current time: 3/27/19 7:30:45 PM EDT
+// [GUI Memory]: 91 MB (+1038kb) [00:07:45]
+// Elapsed time: 146 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Velocyraptor_package.vhd]", 5, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Velocyraptor_package.vhd]", 5, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("Velocyraptor_package.vhd", 142, 370); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 247, 328); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 246, 365); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 545, 300); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 279, 275); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 263, 296); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 320, 337); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 560, 302); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 194, 277, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectMenuItem(RDIResource.HInputHandler_TOGGLE_LINE_COMMENTS, "Toggle Line Comments"); // ad (aj, Popup.HeavyWeightWindow)
+selectCodeEditor("Velocyraptor_package.vhd", 584, 296); // ce (w, ck)
+// HOptionPane Error: 'The paste failed. The clipboard content is not text. (Paste Error)'
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "Velocyraptor_package.vhd", 'v'); // ce (w, ck)
+selectButton("RDIResource.HInputHandler_PASTE_FAILED_CLIPBOARD_CONTENT_OK", "OK"); // JButton (A, G)
+selectCodeEditor("Velocyraptor_package.vhd", 523, 323); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 262, 318); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 563, 301); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 84, 299); // ce (w, ck)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("Velocyraptor_package.vhd", 282, 325); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 541, 294); // ce (w, ck)
+typeControlKey((HResource) null, "Velocyraptor_package.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 471, 272, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectMenu(RDIResource.HCodeEditor_BLANK_OPERATIONS, "Blank Operations"); // V (aj, Popup.HeavyWeightWindow)
+selectMenuItem(RDIResource.HInputHandler_TOGGLE_LINE_COMMENTS, "Toggle Line Comments"); // ad (aj, Popup.HeavyWeightWindow)
+// HMemoryUtils.trashcanNow. Engine heap size: 688 MB. GUI used memory: 60 MB. Current time: 3/27/19 7:33:50 PM EDT
+selectCodeEditor("Velocyraptor_package.vhd", 575, 292); // ce (w, ck)
+typeControlKey((HResource) null, "Velocyraptor_package.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 377, 394); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 323, 368); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 154, 351); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 343, 447); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 496, 379); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 467, 405); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 496, 368); // ce (w, ck)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("Velocyraptor_package.vhd", 500, 424); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 550, 397); // ce (w, ck)
+// [Engine Memory]: 702 MB (+417kb) [00:10:19]
+// [GUI Memory]: 97 MB (+1839kb) [00:10:40]
+// Elapsed time: 68 seconds
+selectCodeEditor("Velocyraptor_package.vhd", 232, 381); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 249, 347); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 238, 381); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 244, 403); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 258, 384); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 379, 407); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 221, 364); // ce (w, ck)
+typeControlKey((HResource) null, "Velocyraptor_package.vhd", 'c'); // ce (w, ck)
+typeControlKey((HResource) null, "Velocyraptor_package.vhd", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Velocyraptor_package.vhd", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Velocyraptor_package.vhd", 'v'); // ce (w, ck)
+// [GUI Memory]: 107 MB (+5146kb) [00:11:48]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 27 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Mar 27 19:36:20 2019] Launched synth_1... Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, ck) - Node
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 2549ms to process. Increasing delay to 2000 ms.
+// ah (ck): Synthesis Completed: addNotify
+// Elapsed time: 1015 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Wed Mar 27 19:53:21 2019] Launched impl_1... Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (ck)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// ah (ck): Implementation Failed: addNotify
+// Elapsed time: 209 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // ah (ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("Velocyraptor_package.vhd", 416, 406); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 421, 441); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 472, 372); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 529, 354); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 490, 436); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 230, 288); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 387, 370); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 57, 319, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectMenu(RDIResource.HCodeEditor_BLANK_OPERATIONS, "Blank Operations"); // V (aj, Popup.HeavyWeightWindow)
+selectMenu(RDIResource.HCodeEditor_DIFF_WITH, "Diff with"); // V (aj, Popup.HeavyWeightWindow)
+selectMenu(RDIResource.HCodeEditor_BLANK_OPERATIONS, "Blank Operations"); // V (aj, Popup.HeavyWeightWindow)
+selectMenuItem(RDIResource.HInputHandler_TOGGLE_LINE_COMMENTS, "Toggle Line Comments"); // ad (aj, Popup.HeavyWeightWindow)
+selectCodeEditor("Velocyraptor_package.vhd", 525, 191); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 583, 403); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 114 MB (+1362kb) [00:34:05]
+// Elapsed time: 126 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.vhd", 1); // k (j, ck)
+selectCodeEditor("Top.vhd", 152, 291); // ce (w, ck)
+selectCodeEditor("Top.vhd", 186, 262); // ce (w, ck)
+selectCodeEditor("Top.vhd", 237, 364); // ce (w, ck)
+// Elapsed time: 20 seconds
+selectCodeEditor("Top.vhd", 192, 253); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Velocyraptor_package.vhd", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.vhd", 1); // k (j, ck)
+selectCodeEditor("Top.vhd", 273, 253); // ce (w, ck)
+selectCodeEditor("Top.vhd", 279, 311); // ce (w, ck)
+selectCodeEditor("Top.vhd", 300, 246); // ce (w, ck)
+selectCodeEditor("Top.vhd", 305, 232); // ce (w, ck)
+selectCodeEditor("Top.vhd", 346, 285); // ce (w, ck)
+selectCodeEditor("Top.vhd", 298, 234); // ce (w, ck)
+selectCodeEditor("Top.vhd", 301, 231); // ce (w, ck)
+selectCodeEditor("Top.vhd", 304, 220); // ce (w, ck)
+selectCodeEditor("Top.vhd", 301, 193); // ce (w, ck)
+selectCodeEditor("Top.vhd", 423, 259); // ce (w, ck)
+selectCodeEditor("Top.vhd", 516, 333); // ce (w, ck)
+selectCodeEditor("Top.vhd", 588, 371); // ce (w, ck)
+selectCodeEditor("Top.vhd", 542, 295); // ce (w, ck)
+selectCodeEditor("Top.vhd", 152, 241); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("Top.vhd", 546, 307); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 13, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 120 MB (+200kb) [00:36:39]
+// Tcl Message: [Wed Mar 27 20:00:46 2019] Launched synth_1... Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/synth_1/runme.log [Wed Mar 27 20:00:46 2019] Launched impl_1... Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 704 MB. GUI used memory: 61 MB. Current time: 3/27/19 8:03:50 PM EDT
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// ah (ck): Implementation Failed: addNotify
+// Elapsed time: 211 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // ah (ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("Top.vhd", 339, 243); // ce (w, ck)
+// Elapsed time: 171 seconds
+selectCodeEditor("Top.vhd", 545, 198); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("Top.vhd", 340, 296); // ce (w, ck)
+// Elapsed time: 198 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design, [Place 30-68] Instance Design/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG (BUFG) is not placed. ]", 3); // ah (O, ck)
+// Elapsed time: 112 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Velocyraptor_package.vhd", 2); // k (j, ck)
+// Elapsed time: 111 seconds
+selectCodeEditor("Velocyraptor_package.vhd", 381, 373); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 387, 407); // ce (w, ck)
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.vhd", 1); // k (j, ck)
+selectCodeEditor("Top.vhd", 312, 336); // ce (w, ck)
+selectCodeEditor("Top.vhd", 396, 401); // ce (w, ck)
+selectCodeEditor("Top.vhd", 472, 354); // ce (w, ck)
+selectCodeEditor("Top.vhd", 512, 321); // ce (w, ck)
+selectCodeEditor("Top.vhd", 510, 345); // ce (w, ck)
+selectCodeEditor("Top.vhd", 447, 325); // ce (w, ck)
+selectCodeEditor("Top.vhd", 471, 302); // ce (w, ck)
+// Elapsed time: 82 seconds
+selectCodeEditor("Top.vhd", 265, 135); // ce (w, ck)
+selectCodeEditor("Top.vhd", 276, 158); // ce (w, ck)
+selectCodeEditor("Top.vhd", 299, 189); // ce (w, ck)
+// Elapsed time: 133 seconds
+selectCodeEditor("Top.vhd", 54, 190); // ce (w, ck)
+selectCodeEditor("Top.vhd", 63, 204); // ce (w, ck)
+selectCodeEditor("Top.vhd", 38, 249); // ce (w, ck)
+// Elapsed time: 20 seconds
+selectCodeEditor("Top.vhd", 440, 92); // ce (w, ck)
+selectCodeEditor("Top.vhd", 440, 208); // ce (w, ck)
+selectCodeEditor("Top.vhd", 419, 396); // ce (w, ck)
+selectCodeEditor("Top.vhd", 418, 431); // ce (w, ck)
+selectCodeEditor("Top.vhd", 471, 358); // ce (w, ck)
+selectCodeEditor("Top.vhd", 476, 392); // ce (w, ck)
+selectCodeEditor("Top.vhd", 479, 389); // ce (w, ck)
+// Elapsed time: 34 seconds
+selectCodeEditor("Top.vhd", 546, 292); // ce (w, ck)
+// Elapsed time: 30 seconds
+selectCodeEditor("Top.vhd", 404, 176); // ce (w, ck)
+selectCodeEditor("Top.vhd", 253, 163); // ce (w, ck)
+// Elapsed time: 131 seconds
+selectCodeEditor("Top.vhd", 727, 324); // ce (w, ck)
+selectCodeEditor("Top.vhd", 649, 270); // ce (w, ck)
+selectCodeEditor("Top.vhd", 374, 213); // ce (w, ck)
+selectCodeEditor("Top.vhd", 393, 243); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("Top.vhd", 172, 283); // ce (w, ck)
+// Elapsed time: 254 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Velocyraptor_package.vhd", 2); // k (j, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 489, 352); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 558, 299); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 478, 369); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 424, 368); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 109, 310); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 231, 349); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 277, 355); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 205, 314); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 488, 447); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 487, 389); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.vhd", 1); // k (j, ck)
+selectCodeEditor("Top.vhd", 415, 220); // ce (w, ck)
+selectCodeEditor("Top.vhd", 314, 144); // ce (w, ck)
+selectCodeEditor("Top.vhd", 292, 160); // ce (w, ck)
+selectCodeEditor("Top.vhd", 287, 186); // ce (w, ck)
+selectCodeEditor("Top.vhd", 280, 209); // ce (w, ck)
+selectCodeEditor("Top.vhd", 466, 242); // ce (w, ck)
+selectCodeEditor("Top.vhd", 414, 158); // ce (w, ck)
+selectCodeEditor("Top.vhd", 417, 198); // ce (w, ck)
+selectCodeEditor("Top.vhd", 366, 193); // ce (w, ck)
+selectCodeEditor("Top.vhd", 406, 189); // ce (w, ck)
+selectCodeEditor("Top.vhd", 418, 173); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 13, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// A (ck): Synthesis is Out-of-date: addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+selectCodeEditor("Top.vhd", 559, 249); // ce (w, ck)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Place Design, [Place 30-68] Instance Design/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG (BUFG) is not placed. ]", 3); // ah (O, ck)
+selectCodeEditor("Top.vhd", 696, 184); // ce (w, ck)
+// Elapsed time: 23 seconds
+selectCodeEditor("Top.vhd", 157, 183); // ce (w, ck)
+selectCodeEditor("Top.vhd", 845, 179); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("Top.vhd", 559, 140); // ce (w, ck)
+selectCodeEditor("Top.vhd", 565, 157); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Top.vhd", 387, 277); // ce (w, ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("Top.vhd", 142, 280); // ce (w, ck)
+selectCodeEditor("Top.vhd", 302, 425); // ce (w, ck)
+selectCodeEditor("Top.vhd", 468, 256); // ce (w, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 13, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Mar 27 20:29:23 2019] Launched synth_1... Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/synth_1/runme.log [Wed Mar 27 20:29:23 2019] Launched impl_1... Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, ck)
+// TclEventType: RUN_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 704 MB. GUI used memory: 53 MB. Current time: 3/27/19 8:33:51 PM EDT
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// ah (ck): Implementation Failed: addNotify
+// Elapsed time: 342 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // ah (ck)
+// Elapsed time: 47 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, (String) null, 2); // ah (O, ck)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, (String) null, 2); // ah (O, ck)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, (String) null, 2); // ah (O, ck)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, (String) null, 2); // ah (O, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, Atelier3_Constraintes.xdc]", 15, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, Atelier3_Constraintes.xdc]", 15, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("Atelier3_Constraintes.xdc", 433, 213); // ce (w, ck)
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 8406 ms. Increasing delay to 3000 ms.
+// Elapsed time: 207 seconds
+selectCodeEditor("Atelier3_Constraintes.xdc", 533, 395); // ce (w, ck)
+selectCodeEditor("Atelier3_Constraintes.xdc", 545, 388); // ce (w, ck)
+selectCodeEditor("Atelier3_Constraintes.xdc", 400, 376); // ce (w, ck)
+selectCodeEditor("Atelier3_Constraintes.xdc", 424, 382); // ce (w, ck)
+// Elapsed time: 55 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.vhd", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Atelier3_Constraintes.xdc", 3); // k (j, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 166, 334); // ce (w, ck)
+selectCodeEditor("Velocyraptor_package.vhd", 201, 353); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.vhd", 1); // k (j, ck)
+// Elapsed time: 70 seconds
+selectCodeEditor("Top.vhd", 123, 386); // ce (w, ck)
+selectCodeEditor("Top.vhd", 321, 399); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("Top.vhd", 335, 346); // ce (w, ck)
+selectCodeEditor("Top.vhd", 39, 303, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectMenuItem(RDIResource.HInputHandler_TOGGLE_LINE_COMMENTS, "Toggle Line Comments"); // ad (aj, Popup.HeavyWeightWindow)
+selectCodeEditor("Top.vhd", 123, 321); // ce (w, ck)
+selectCodeEditor("Top.vhd", 124, 330); // ce (w, ck)
+selectCodeEditor("Top.vhd", 249, 421); // ce (w, ck)
+selectCodeEditor("Top.vhd", 401, 465); // ce (w, ck)
+selectCodeEditor("Top.vhd", 419, 423); // ce (w, ck)
+selectCodeEditor("Top.vhd", 433, 421); // ce (w, ck)
+selectCodeEditor("Top.vhd", 378, 424); // ce (w, ck)
+selectCodeEditor("Top.vhd", 441, 438); // ce (w, ck)
+selectCodeEditor("Top.vhd", 439, 420); // ce (w, ck)
+selectCodeEditor("Top.vhd", 444, 476); // ce (w, ck)
+selectCodeEditor("Top.vhd", 295, 412); // ce (w, ck)
+selectCodeEditor("Top.vhd", 291, 425); // ce (w, ck)
+selectCodeEditor("Top.vhd", 247, 413); // ce (w, ck)
+selectCodeEditor("Top.vhd", 407, 444); // ce (w, ck)
+selectCodeEditor("Top.vhd", 297, 453); // ce (w, ck)
+selectCodeEditor("Top.vhd", 290, 465); // ce (w, ck)
+selectCodeEditor("Top.vhd", 293, 455); // ce (w, ck)
+selectCodeEditor("Top.vhd", 291, 454); // ce (w, ck)
+selectCodeEditor("Top.vhd", 438, 238); // ce (w, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, magnetic.vhd]", 10, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, magnetic.vhd]", 10, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Velocyraptor_package.vhd", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "magnetic.vhd", 3); // k (j, ck)
+selectCodeEditor("magnetic.vhd", 275, 351); // ce (w, ck)
+selectCodeEditor("magnetic.vhd", 287, 409); // ce (w, ck)
+selectCodeEditor("magnetic.vhd", 334, 434); // ce (w, ck)
+selectCodeEditor("magnetic.vhd", 335, 374); // ce (w, ck)
+selectCodeEditor("magnetic.vhd", 336, 324); // ce (w, ck)
+selectCodeEditor("magnetic.vhd", 323, 325); // ce (w, ck)
+selectCodeEditor("magnetic.vhd", 326, 330); // ce (w, ck)
+selectCodeEditor("magnetic.vhd", 224, 434); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.vhd", 1); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 14 seconds
+selectCodeEditor("Top.vhd", 484, 274); // ce (w, ck)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i (N, ck)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Compile Order", 3); // i (N, ck)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i (N, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, ck) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, ck) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, ck) - Node
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i (N, ck)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 2); // i (N, ck)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i (N, ck)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs]", 0); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs]", 0); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, design_1]", 1); // B (D, ck)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 2); // i (N, ck)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Compile Order", 3); // i (N, ck)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 2); // i (N, ck)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i (N, ck)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i (N, ck)
+selectCodeEditor("Top.vhd", 380, 276); // ce (w, ck)
+selectCodeEditor("Top.vhd", 113, 350); // ce (w, ck)
+selectCodeEditor("Top.vhd", 381, 393); // ce (w, ck)
+selectCodeEditor("Top.vhd", 199, 347); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("Top.vhd", 305, 417); // ce (w, ck)
+selectCodeEditor("Top.vhd", 362, 399); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("Top.vhd", 335, 372); // ce (w, ck)
+selectCodeEditor("Top.vhd", 464, 395); // ce (w, ck)
+selectCodeEditor("Top.vhd", 442, 368); // ce (w, ck)
+selectCodeEditor("Top.vhd", 426, 439); // ce (w, ck)
+selectCodeEditor("Top.vhd", 433, 362); // ce (w, ck)
+selectCodeEditor("Top.vhd", 444, 426); // ce (w, ck)
+selectCodeEditor("Top.vhd", 419, 477); // ce (w, ck)
+selectCodeEditor("Top.vhd", 392, 424); // ce (w, ck)
+selectCodeEditor("Top.vhd", 395, 389); // ce (w, ck)
+selectCodeEditor("Top.vhd", 323, 399); // ce (w, ck)
+selectCodeEditor("Top.vhd", 326, 361); // ce (w, ck)
+selectCodeEditor("Top.vhd", 316, 130); // ce (w, ck)
+selectCodeEditor("Top.vhd", 181, 369); // ce (w, ck)
+selectCodeEditor("Top.vhd", 145, 368); // ce (w, ck)
+// Elapsed time: 40 seconds
+selectCodeEditor("Top.vhd", 456, 437); // ce (w, ck)
+selectCodeEditor("Top.vhd", 466, 474); // ce (w, ck)
+selectCodeEditor("Top.vhd", 432, 356); // ce (w, ck)
+selectCodeEditor("Top.vhd", 428, 462); // ce (w, ck)
+selectCodeEditor("Top.vhd", 496, 274); // ce (w, ck)
+// Elapsed time: 21 seconds
+selectCodeEditor("Top.vhd", 351, 247); // ce (w, ck)
+selectCodeEditor("Top.vhd", 454, 298); // ce (w, ck)
+selectCodeEditor("Top.vhd", 450, 369); // ce (w, ck)
+selectCodeEditor("Top.vhd", 464, 305); // ce (w, ck)
+selectCodeEditor("Top.vhd", 267, 370); // ce (w, ck)
+selectCodeEditor("Top.vhd", 366, 429); // ce (w, ck)
+selectCodeEditor("Top.vhd", 370, 260); // ce (w, ck)
+selectCodeEditor("Top.vhd", 414, 472); // ce (w, ck)
+selectCodeEditor("Top.vhd", 395, 419); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// aj (ck): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_CANCEL, "Cancel"); // a (aj)
+dismissDialog("Save Project"); // aj (ck)
+selectCodeEditor("Atelier3_Constraintes.xdc", 110, 375); // ce (w, ck)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("Atelier3_Constraintes.xdc", 140, 361); // ce (w, ck)
+typeControlKey(null, null, 'z');
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Top.vhd", 145, 360); // ce (w, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (ck): Launch Runs: addNotify
+selectButton("PAResourceQtoS.RunImplementation_THERE_NO_NETLIST_AVAILABLE_OK_OK", "OK"); // JButton (A, G)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Mar 27 20:47:18 2019] Launched synth_1... Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/synth_1/runme.log [Wed Mar 27 20:47:18 2019] Launched impl_1... Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bx (ck)
+// TclEventType: RUN_FAILED
+// ah (ck): Synthesis Failed: addNotify
+// Elapsed time: 110 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-549] port width mismatch for port 'o_vitesse': port width = 32, actual width = 6 [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:106]. ]", 1, false); // ah (O, ck)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\raf_0\Desktop\ADC\lectureADC\lectureADC.srcs\sources_1\imports\new\magnetic.vhd;-;;-;16;-;line;-;106;-;;-;16;-;"); // ah (O, ck)
+// Elapsed time: 11 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top(Behavioral) (Top.vhd), insta_magnetic : magnetic(Behavioral) (magnetic.vhd)]", 4); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top(Behavioral) (Top.vhd), insta_magnetic : magnetic(Behavioral) (magnetic.vhd), inst_traitement : Traitement(Behavioral) (Traitement.vhd)]", 6, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top(Behavioral) (Top.vhd), insta_magnetic : magnetic(Behavioral) (magnetic.vhd), inst_traitement : Traitement(Behavioral) (Traitement.vhd)]", 6, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("Traitement.vhd", 342, 167); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 472, 315); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 324, 289); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 341, 311); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 224, 317); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 150, 351); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 386, 317); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "magnetic.vhd", 3); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bx (ck):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunImplementation_THERE_NO_NETLIST_AVAILABLE_OK_OK", "OK"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Wed Mar 27 20:50:05 2019] Launched synth_1... Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/synth_1/runme.log [Wed Mar 27 20:50:05 2019] Launched impl_1... Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bx (ck)
+// Elapsed time: 89 seconds
+selectCodeEditor("magnetic.vhd", 409, 510); // ce (w, ck)
+// TclEventType: RUN_FAILED
+// ah (ck): Synthesis Failed: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-97] array index 31 out of range [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:162]. ]", 1, false); // ah (O, ck)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\raf_0\Desktop\ADC\lectureADC\lectureADC.srcs\sources_1\imports\new\Traitement.vhd;-;;-;16;-;line;-;162;-;;-;16;-;"); // ah (O, ck)
+selectCodeEditor("Traitement.vhd", 126, 553); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 288, 554); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 340, 553); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 19 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-285] failed synthesizing module 'Traitement' [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:20]. ]", 2, true); // ah (O, ck) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\raf_0\Desktop\ADC\lectureADC\lectureADC.srcs\sources_1\imports\new\Traitement.vhd;-;;-;16;-;line;-;20;-;;-;16;-;"); // ah (O, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bx (ck):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunImplementation_THERE_NO_NETLIST_AVAILABLE_OK_OK", "OK"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: [Wed Mar 27 20:52:17 2019] Launched synth_1... Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/synth_1/runme.log [Wed Mar 27 20:52:17 2019] Launched impl_1... Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bx (ck)
+// TclEventType: RUN_FAILED
+// ah (ck): Synthesis Failed: addNotify
+// Elapsed time: 98 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-549] port width mismatch for port 'o_vitesse': port width = 6, actual width = 32 [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:56]. ]", 1, false); // ah (O, ck)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\raf_0\Desktop\ADC\lectureADC\lectureADC.srcs\sources_1\imports\new\magnetic.vhd;-;;-;16;-;line;-;56;-;;-;16;-;"); // ah (O, ck)
+selectCodeEditor("magnetic.vhd", 373, 177); // ce (w, ck)
+selectCodeEditor("magnetic.vhd", 392, 323); // ce (w, ck)
+selectCodeEditor("magnetic.vhd", 413, 325); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-285] failed synthesizing module 'magnetic' [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:28]. ]", 2, true); // ah (O, ck) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\raf_0\Desktop\ADC\lectureADC\lectureADC.srcs\sources_1\imports\new\magnetic.vhd;-;;-;16;-;line;-;28;-;;-;16;-;"); // ah (O, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("magnetic.vhd", 198, 384); // ce (w, ck)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse", true); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Traitement.vhd", 4); // k (j, ck)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse", true); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "vitesse"); // l (aQ, ck)
+selectCodeEditor("Traitement.vhd", 153, 434); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 432, 421); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 367, 431); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 370, 474); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 112, 405); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 91, 401); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 95, 471); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 126, 449); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 85, 400); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 237, 453); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 331, 439); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 259, 474); // ce (w, ck)
+selectCodeEditor("Traitement.vhd", 357, 409); // ce (w, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bx (ck):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunImplementation_THERE_NO_NETLIST_AVAILABLE_OK_OK", "OK"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+// Elapsed time: 14 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Mar 27 20:55:20 2019] Launched synth_1... Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/synth_1/runme.log [Wed Mar 27 20:55:20 2019] Launched impl_1... Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 16 seconds
+dismissDialog("Starting Design Runs"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 418ms to process. Increasing delay to 3000 ms.
+// ah (ck): Implementation Completed: addNotify
+// Elapsed time: 324 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_MODIFY
+// bx (ck):  Generate Bitstream : addNotify
+// Tcl Message: [Wed Mar 27 21:00:54 2019] Launched impl_1... Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 85 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bx (ck):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+dismissDialog("Open Hardware Manager"); // bx (ck)
+// Elapsed time: 36 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IMPORT, "Import"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// X (ck): Export Hardware: addNotify
+selectCheckBox(PAResourceItoN.NewExportHardwareDialog_INCLUDE_BITSTREAM, "Include bitstream", true); // g (Q, X): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (X)
+// 'm' command handler elapsed time: 5 seconds
+selectButton("PAResourceItoN.NewExportHardwareDialog_EXPORTED_FILE_FOR_THIS_MODULE_WAS_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Export Hardware"); // X (ck)
+// Tcl Message: file copy -force C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/Top.sysdef C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf  
+// HMemoryUtils.trashcanNow. Engine heap size: 704 MB. GUI used memory: 64 MB. Current time: 3/27/19 9:03:51 PM EDT
+// Elapsed time: 176 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IMPORT, "Import"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa (ck): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aa)
+dismissDialog("Launch SDK"); // aa (ck)
+// Tcl Message: launch_sdk -workspace C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// Elapsed time: 298 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IMPORT, "Import"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// X (ck): Export Hardware: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (X)
+// 'm' command handler elapsed time: 5 seconds
+selectButton("PAResourceItoN.NewExportHardwareDialog_EXPORTED_FILE_FOR_THIS_MODULE_WAS_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Export Hardware"); // X (ck)
+// Tcl Message: file copy -force C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/Top.sysdef C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf  
+// Elapsed time: 29 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IMPORT, "Import"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// X (ck): Export Hardware: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (X)
+// 'm' command handler elapsed time: 3 seconds
+selectButton("PAResourceItoN.NewExportHardwareDialog_EXPORTED_FILE_FOR_THIS_MODULE_WAS_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Export Hardware"); // X (ck)
+// Tcl Message: file copy -force C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/Top.sysdef C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf  
+// Elapsed time: 11 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IMPORT, "Import"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa (ck): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aa)
+dismissDialog("Launch SDK"); // aa (ck)
+// Tcl Message: launch_sdk -workspace C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// Elapsed time: 243 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IMPORT, "Import"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa (ck): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aa)
+dismissDialog("Launch SDK"); // aa (ck)
+// Tcl Message: launch_sdk -workspace C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// Elapsed time: 95 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bx (ck):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd} 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding cell -- usherbrooke.ca:user:myip:1.0 - myip_0 Adding cell -- xilinx.com:user:myIO_IP:1.0 - myIO_IP_0 Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0 Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1 Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0 Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M Adding cell -- digilentinc.com:IP:PmodGPIO:1.0 - PmodGPIO_0 Adding cell -- digilentinc.com:IP:PmodOLED:1.0 - PmodOLED_0 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc Successfully read diagram <design_1> from BD file <C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd> 
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 882.207 ; gain = 24.301 
+// 'bA' command handler elapsed time: 6 seconds
+dismissDialog("Open Block Design"); // bx (ck)
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_RESET0_N 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_RESET0_N 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_RESET0_N 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_RESET0_N 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_RESET0_N 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_RESET0_N 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_RESET0_N 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_RESET0_N 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_RESET0_N 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_RESET0_N 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_RESET0_N 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_RESET0_N 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// Elapsed time: 17 seconds
+selectButton(PAResourceQtoS.SystemTab_REPORT_IP_STATUS, "Report IP Status"); // h (cM, ck)
+// Run Command: PAResourceCommand.PACommandNames_REPORT_IP_STATUS
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status  
+// bx (ck):  Report IP Status : addNotify
+dismissDialog("Report IP Status"); // bx (ck)
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /i_data_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /i_data_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /i_data_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /i_data_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /i_data_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /i_data_0_1 
+// Elapsed time: 42 seconds
+ // selectButton(PAResourceItoN.IPStatusTablePanel_MORE_INFO, "IP contains locked subcore"); // N (B, ck)
+selectTreeTable(PAResourceItoN.IPStatusTablePanel_IP_STATUS_TABLE, "/PmodOLED_0 ; true ; design_1_PmodOLED_0_0 [PmodOLED_v1_0] (IP contains locked subcore) ; design_1_PmodOLED_0_0 [PmodOLED_v1_0] (IP contains locked subcore) ;  ; PmodOLED_v1_0 ; 1.0 (Rev. 16) ; 1.0 (Rev. 16) ; design_1_PmodOLED_0_0 [PmodOLED_v1_0] (IP contains locked subcore) ; xc7z010clg400-1", 1, "design_1_PmodOLED_0_0 [PmodOLED_v1_0] (IP contains locked subcore)", 2, true); // B (O, ck) - Node
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+selectButton(RDIResource.HPopupTitle_CLOSE, (String) null); // k (n, ResizableWindow)
+// IP Status Information for PmodOLED_v1_0: hide
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// HMemoryUtils.trashcanNow. Engine heap size: 704 MB. GUI used memory: 69 MB. Current time: 3/27/19 9:33:52 PM EDT
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1840 ms. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1426 ms. Increasing delay to 3000 ms.
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_RESET0_N 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_RESET0_N 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_interconnect_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_interconnect_aresetn 
+// Elapsed time: 1344 seconds
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a (g, ck)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// ah (ck): Upgrade IP: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// TclEventType: RSB_OPEN_DIAGRAM
+dismissDialog("Upgrade IP"); // ah (ck)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// bx (ck):  Upgrade IP : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: upgrade_ip [get_ips  {design_1_PmodOLED_0_0 design_1_PmodGPIO_0_0}] -log ip_upgrade.log 
+// Tcl Message: Upgrading 'C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd' 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-1972] Upgraded design_1_PmodGPIO_0_0 from PmodGPIO_v1_0 1.0 to PmodGPIO_v1_0 1.0 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-1972] Upgraded design_1_PmodOLED_0_0 from PmodOLED_v1_0 1.0 to PmodOLED_v1_0 1.0 
+// TclEventType: RSB_SAVE_DIAGRAM
+// CommandFailedException: ERROR: [BD 41-45] Cell path not found: /design_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: Wrote  : <C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd>  
+// Tcl Message: INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/raf_0/Desktop/ADC/lectureADC/ip_upgrade.log'. 
+// Tcl Message: export_ip_user_files -of_objects [get_ips {design_1_PmodOLED_0_0 design_1_PmodGPIO_0_0}] -no_script -sync -force -quiet 
+// aI (ck): Generate Output Products: addNotify
+selectButton("PAResourceTtoZ.UpgradeIP_IP_UPGRADE_COMPLETED_OK", "OK"); // JButton (A, G)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a (aI)
+// bx (ck):  Managing Output Products : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: generate_target all [get_files  C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// CommandFailedException: ERROR: [BD 41-45] Cell path not found: /design_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : <C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd>  
+// Tcl Message: VHDL Output written to : C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/synth/design_1.vhd 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// CommandFailedException: ERROR: [BD 41-45] Cell path not found: /design_1 
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: VHDL Output written to : C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/sim/design_1.vhd VHDL Output written to : C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 . 
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded PmodOLED_pmod_bridge_0_0 (Pmod Bridge 1.0) from revision 9 to revision 12 
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 713 MB. GUI used memory: 70 MB. Current time: 3/27/19 9:42:12 PM EDT
+// TclEventType: IP_LOCK_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded PmodOLED_axi_quad_spi_0_0 (AXI Quad SPI 3.2) from revision 14 to revision 16 
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded PmodOLED_axi_gpio_0_0 (AXI GPIO 2.0) from revision 17 to revision 19 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block PmodOLED_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M . 
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded PmodGPIO_pmod_bridge_0_0 (Pmod Bridge 1.0) from revision 9 to revision 12 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 745 MB (+8547kb) [02:18:11]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded PmodGPIO_axi_gpio_0_0 (AXI GPIO 2.0) from revision 17 to revision 19 
+// Tcl Message: INFO: [IP_Flow 19-3420] Updated PmodGPIO_xlslice_0_0 to use current project options 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-3420] Updated PmodGPIO_xlslice_0_1 to use current project options 
+// Tcl Message: INFO: [IP_Flow 19-3420] Updated PmodGPIO_xlslice_0_2 to use current project options 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-3420] Updated PmodGPIO_xlslice_t_0_0 to use current project options 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-3420] Updated PmodGPIO_xlconcat_0_0 to use current project options 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block PmodGPIO_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_1 . INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar . INFO: [BD 41-1029] Generation completed for the IP Integrator block myip_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block myIO_IP_0 . 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: Exporting to file C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh Generated Block Design Tcl file C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Generated Hardware Definition File C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/synth/design_1.hwdef 
+// Tcl Message: generate_target: Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1045.730 ; gain = 144.012 
+// Tcl Message: export_ip_user_files -of_objects [get_files C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 756 MB. GUI used memory: 71 MB. Current time: 3/27/19 9:42:27 PM EDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// a (ck): Critical Messages: addNotify
+// Elapsed time: 46 seconds
+dismissDialog("Managing Output Products"); // bx (ck)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (ck)
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // h (cM, ck)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// IP Status Information for PmodOLED_v1_0: hide
+// Tcl Message: report_ip_status -name ip_status  
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_RESET0_N 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_RESET0_N 
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectRadioButton(PAResourceItoN.LaunchPanel_GENERATE_SCRIPTS_ONLY, "Generate scripts only"); // a (Q, f)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// Tcl Message: launch_runs impl_1 -jobs 4 -scripts_only 
+// A (ck): Scripts Generated: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 782 MB. GUI used memory: 69 MB. Current time: 3/27/19 9:43:12 PM EDT
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+dismissDialog("Scripts Generated"); // A (ck)
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /i_data_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /i_data_0_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bx (ck):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunImplementation_THERE_NO_NETLIST_AVAILABLE_OK_OK", "OK"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run impl_1 
+// f (ck): Launch Runs: addNotify
+selectRadioButton(PAResourceItoN.LaunchPanel_GENERATE_SCRIPTS_ONLY, "Generate scripts only"); // a (Q, f)
+selectRadioButton(PAResourceItoN.LaunchPanel_GENERATE_SCRIPTS_ONLY, "Generate scripts only"); // a (Q, f)
+selectRadioButton(PAResourceItoN.LaunchPanel_LAUNCH_RUNS_ON_LOCAL_HOST, "Launch runs on local host:"); // a (Q, f)
+// [Engine Memory]: 784 MB (+842kb) [02:19:13]
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Mar 27 21:43:27 2019] Launched synth_1... Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/synth_1/runme.log [Wed Mar 27 21:43:28 2019] Launched impl_1... Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 14 seconds
+dismissDialog("Starting Design Runs"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Implementation Completed: addNotify
+// Elapsed time: 315 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (ck)
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// bx (ck):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Mar 27 21:48:46 2019] Launched impl_1... Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 107 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IMPORT, "Import"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// X (ck): Export Hardware: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (X)
+selectButton("PAResourceItoN.NewExportHardwareDialog_EXPORTED_FILE_FOR_THIS_MODULE_WAS_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Export Hardware"); // X (ck)
+// Tcl Message: file copy -force C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/Top.sysdef C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf  
+// Elapsed time: 11 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IMPORT, "Import"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa (ck): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aa)
+dismissDialog("Launch SDK"); // aa (ck)
+// Tcl Message: launch_sdk -workspace C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// Elapsed time: 415 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bx (ck):  Open Block Design : addNotify
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd} 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+dismissDialog("Open Block Design"); // bx (ck)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 703, 190, 1251, 586, false, false, false, true, false); // fJ (k, ck) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // aa (aj, ck)
+selectMenu(PAResourceQtoS.SystemBuilderMenu_IP_DOCUMENTATION, "IP Documentation"); // aa (aj, ck)
+selectMenu(PAResourceQtoS.SystemBuilderView_ORIENTATION, "Orientation"); // aa (aj, ck)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // aa (aj, ck)
+selectMenu(PAResourceQtoS.SystemBuilderView_ORIENTATION, "Orientation"); // aa (aj, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER, "Edit in IP Packager"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER
+// k (ck): Edit in IP Packager: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (k)
+// 'i' command handler elapsed time: 7 seconds
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+dismissDialog("Edit in IP Packager"); // k (ck)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 725, 251, 1251, 586, false, false, false, true, false); // fJ (k, ck) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // aa (aj, Popup.HeavyWeightWindow)
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // aa (aj, Popup.HeavyWeightWindow)
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_1, myIO_IP_0]", 7, true, false, false, false, true, false); // i (O, ck) - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Block Properties..."); // ad (aj, ck)
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 1); // i (c, ck)
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "IP", 2); // i (c, ck)
+selectButton((HResource) null, "Properties_settings"); // u (f, ck): TRUE
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_ps7_0_50M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /processing_system7_0_FCLK_CLK0 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /i_data_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /i_data_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /i_data_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /i_data_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /i_data_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /i_data_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /i_data_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /i_data_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /i_data_0_1 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /i_data_0_1 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (ck): Re-customize IP: addNotify
+// Elapsed time: 19 seconds
+dismissDialog("Re-customize IP"); // r (ck)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (ck): Re-customize IP: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (ck)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (ck): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // r (ck)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 739, 328, 1251, 586, false, false, false, true, false); // fJ (k, ck) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SystemBuilderMenu_IP_DOCUMENTATION, "IP Documentation"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SystemBuilderView_ORIENTATION, "Orientation"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER, "Edit in IP Packager"); // ad (aj, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER
+// k (ck): Edit in IP Packager: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (k)
+// bx (ck):  Edit in IP Packager : addNotify
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: ipx::edit_ip_in_project -upgrade true -name myIO_IP_v1_0_project -directory C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.tmp/myIO_IP_v1_0_project c:/Users/raf_0/Desktop/ADC/ip_repo/myIO_IP_1.0/component.xml 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 822 MB. GUI used memory: 86 MB. Current time: 3/27/19 9:59:29 PM EDT
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// [Engine Memory]: 824 MB (+1523kb) [02:35:24]
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1085.344 ; gain = 18.031 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myIO_IP_1.0'. INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myip_1.0'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/Pmod_vivado-library-2018.2-1'. INFO: [IP_Flow 19-795] Syncing license key meta-data 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// [GUI Memory]: 128 MB (+2178kb) [02:35:26]
+// [GUI Memory]: 137 MB (+3226kb) [02:35:26]
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: ipx::edit_ip_in_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 1202.996 ; gain = 135.684 
+// 'i' command handler elapsed time: 17 seconds
+// Elapsed time: 12 seconds
+dismissDialog("Edit in IP Packager"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - myIO_IP", 1); // k (j, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Compatibility", 1); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // ao (O, ck)
+expandTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "VHDL Synthesis ;  ;  ; false ;  ;  ; myIO_IP_v1_0", 2); // M (O, ck)
+expandTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Software Driver ;  ;  ; false ;  ;  ; ", 6); // M (O, ck)
+// [Engine Memory]: 879 MB (+14187kb) [02:36:02]
+// Tcl Message: current_project lectureADC 
+// Elapsed time: 13 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 741, 397, 1251, 586, false, false, false, true, false); // fJ (k, ck) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_ORIENTATION, "Orientation"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SystemBuilderView_ORIENTATION, "Orientation"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER, "Edit in IP Packager"); // ad (aj, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER
+// k (ck): Edit in IP Packager: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (k)
+// bx (ck):  Edit in IP Packager : addNotify
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: ipx::edit_ip_in_project -upgrade true -name myip_v1_0_project -directory C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.tmp/myip_v1_0_project c:/Users/raf_0/Desktop/ADC/ip_repo/myip_1.0/component.xml 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 886 MB. GUI used memory: 105 MB. Current time: 3/27/19 10:00:28 PM EDT
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1221.734 ; gain = 3.391 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myIO_IP_1.0'. INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myip_1.0'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/Pmod_vivado-library-2018.2-1'. INFO: [IP_Flow 19-795] Syncing license key meta-data 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: ipx::edit_ip_in_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1225.168 ; gain = 6.824 
+// 'i' command handler elapsed time: 12 seconds
+// Elapsed time: 11 seconds
+dismissDialog("Edit in IP Packager"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+maximizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw (aE, ck)
+unMaximizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw (aE, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - myIO_IP", 1); // k (j, ck)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - myIO_IP", 1, false, true); // k (j, ck) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - myip", 1); // k (j, ck)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - myip", 1, false, true); // k (j, ck) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // ao (O, ck)
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Software Driver ;  ;  ; false ;  ;  ; ", 4, "Software Driver", 0, true); // M (O, ck) - Node
+expandTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Software Driver ;  ;  ; false ;  ;  ; ", 4); // M (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Addressing and Memory", 5); // ao (O, ck)
+// Elapsed time: 15 seconds
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // ao (O, ck)
+expandTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "VHDL Synthesis ;  ;  ; false ;  ;  ; myip_v1_0", 2); // M (O, ck)
+// Elapsed time: 22 seconds
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ao (O, ck)
+// [GUI Memory]: 144 MB (+135kb) [02:37:42]
+// Elapsed time: 15 seconds
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Addressing and Memory", 5); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Addressing and Memory", 5); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization GUI", 6); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization GUI", 6); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Identification", 0); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Compatibility", 1); // ao (O, ck)
+// [GUI Memory]: 153 MB (+2132kb) [02:38:22]
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Identification", 0); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Identification", 0); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ao (O, ck)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ao (O, ck)
+selectButton(PAResourceQtoS.ReviewContentPanel_EDIT_PACKAGING_SETTINGS, "Edit packaging settings"); // h (Q, ck)
+// Run Command: PAResourceCommand.PACommandNames_IP_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// C (ck): Settings: addNotify
+// [GUI Memory]: 162 MB (+1294kb) [02:38:40]
+// [Engine Memory]: 926 MB (+3189kb) [02:38:42]
+// HMemoryUtils.trashcanNow. Engine heap size: 927 MB. GUI used memory: 111 MB. Current time: 3/27/19 10:02:52 PM EDT
+selectButton(PAResourceQtoS.ReviewContentPanel_EDIT_PACKAGING_SETTINGS, "Edit packaging settings"); // h (Q, ck)
+// Run Command: PAResourceCommand.PACommandNames_IP_SETTINGS
+// C (ck): Settings: addNotify
+// Tcl Message: current_project myIO_IP_v1_0_project 
+dismissDialog("Settings"); // C (ck)
+// [GUI Memory]: 174 MB (+4048kb) [02:38:52]
+// [GUI Memory]: 187 MB (+4143kb) [02:38:57]
+// [GUI Memory]: 198 MB (+1662kb) [02:39:02]
+// HMemoryUtils.trashcanNow. Engine heap size: 994 MB. GUI used memory: 124 MB. Current time: 3/27/19 10:03:12 PM EDT
+// [Engine Memory]: 994 MB (+22957kb) [02:39:07]
+// Elapsed time: 99 seconds
+selectCheckBox(PAResourceQtoS.SettingsProjectIPPackagerPage_INCLUDE_SOURCE_PROJECT_ARCHIVE, "Include Source project archive", true); // g (g, C): TRUE
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (C)
+// bx (ck):  Change Settings : addNotify
+// TclEventType: CREATE_IP_CATALOG
+dismissDialog("Change Settings"); // bx (ck)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// bx (ck):  Refresh All IP Repositories : addNotify
+// Tcl Message: update_ip_catalog 
+// Tcl Message: ERROR: [Common 17-180] Spawn failed: No error 
+// Tcl Message: ERROR: [Common 17-39] 'update_ip_catalog' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'update_ip_catalog' failed due to earlier errors.  
+// S (ck): Critical Messages: addNotify
+dismissDialog("Refresh All IP Repositories"); // bx (ck)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (S)
+dismissDialog("Critical Messages"); // S (ck)
+// Elapsed time: 10 seconds
+selectButton(PAResourceQtoS.ReviewContentPanel_EDIT_PACKAGING_SETTINGS, "Edit packaging settings"); // h (Q, ck)
+// Run Command: PAResourceCommand.PACommandNames_IP_SETTINGS
+// C (ck): Settings: addNotify
+// 'dx' command handler elapsed time: 4 seconds
+selectButton("PAResourceTtoZ.ToolsSettings_THERE_UNSAVED_CHANGES_DO_YOU_WANT_No", "No"); // JButton (A, H)
+// Tcl Message: current_project myip_v1_0_project 
+dismissDialog("Settings"); // C (ck)
+dismissDialog("Settings"); // C (ck)
+// [GUI Memory]: 209 MB (+1597kb) [02:40:59]
+selectButton(PAResourceQtoS.ReviewContentPanel_EDIT_PACKAGING_SETTINGS, "Edit packaging settings"); // h (Q, ck)
+// Run Command: PAResourceCommand.PACommandNames_IP_SETTINGS
+// C (ck): Settings: addNotify
+// [GUI Memory]: 221 MB (+806kb) [02:41:04]
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (C)
+dismissDialog("Settings"); // C (ck)
+selectButton(PAResourceQtoS.ReviewContentPanel_EDIT_PACKAGING_SETTINGS, "Edit packaging settings"); // h (Q, ck)
+// Run Command: PAResourceCommand.PACommandNames_IP_SETTINGS
+// C (ck): Settings: addNotify
+// Tcl Message: current_project myIO_IP_v1_0_project 
+// Elapsed time: 23 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (C)
+// bx (ck):  Change Settings : addNotify
+// [GUI Memory]: 237 MB (+5434kb) [02:41:37]
+// [GUI Memory]: 257 MB (+8675kb) [02:41:37]
+// [GUI Memory]: 283 MB (+13208kb) [02:41:37]
+// [Engine Memory]: 1,045 MB (+1182kb) [02:41:37]
+// TclEventType: CREATE_IP_CATALOG
+dismissDialog("Change Settings"); // bx (ck)
+dismissDialog("Settings"); // C (ck)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: update_ip_catalog 
+// bx (ck):  Refresh All IP Repositories : addNotify
+dismissDialog("Refresh All IP Repositories"); // bx (ck)
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, ck)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,074 MB. GUI used memory: 159 MB. Current time: 3/27/19 10:05:48 PM EDT
+// bx (ck):  Package IP : addNotify
+// Tcl Message: set_property core_revision 3 [ipx::current_core] 
+// Tcl Message: ipx::update_source_project_archive -component [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: FILE_SET_CHANGE
+// bx (ck):  Package IP : addNotify
+selectButton("PAResourceQtoS.ReviewContentPanel_FINISHED_PACKAGING_SUCCESSFULLY_DO_Yes", "Yes"); // JButton (A, G)
+// Tcl Message: ipx::move_temp_component_back -component [ipx::current_core] 
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,076 MB. GUI used memory: 157 MB. Current time: 3/27/19 10:05:55 PM EDT
+// Tcl Message: close_project -delete 
+dismissDialog("Package IP"); // bx (ck)
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE

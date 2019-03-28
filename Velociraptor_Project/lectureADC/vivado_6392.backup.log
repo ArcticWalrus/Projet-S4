@@ -1,0 +1,435 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Mar 27 11:16:09 2019
+# Process ID: 6392
+# Current directory: C:/Users/raf_0/Desktop/ADC/lectureADC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13816 C:\Users\raf_0\Desktop\ADC\lectureADC\lectureADC.xpr
+# Log file: C:/Users/raf_0/Desktop/ADC/lectureADC/vivado.log
+# Journal file: C:/Users/raf_0/Desktop/ADC/lectureADC\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.xpr
+INFO: [Project 1-313] Project file moved from 'D:/Documents/School/UdeS-S4/Projet/projects/ADC/lectureADC' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'c:/Users/demo1701/Downloads/FichiersAtelier1/Pmod_vivado-library-2018.2-1'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myip_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myip_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myip_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/demo1701/Downloads/FichiersAtelier1/Pmod_vivado-library-2018.2-1'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_axi_gpio_0_0
+design_1_processing_system7_0_0
+design_1_PmodOLED_0_0
+design_1_axi_gpio_1_0
+design_1_rst_ps7_0_50M_0
+design_1_PmodGPIO_0_0
+
+open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 781.203 ; gain = 128.172
+launch_sdk -workspace C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.2
+  **** Build date : Jun 14 2018-20:42:52
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210351A77E4EA
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1433.785 ; gain = 630.355
+set_property PROGRAM.FILE {C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/Top.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/Top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+launch_sdk -workspace C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210351A77E4EA
+open_bd_design {C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- digilentinc.com:IP:PmodOLED:1.0 - PmodOLED_0
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: Pmod_out 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: Pmod_out 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: Pmod_out 
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding cell -- digilentinc.com:IP:PmodGPIO:1.0 - PmodGPIO_0
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: Pmod_out 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: Pmod_out 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: Pmod_out 
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1
+Adding cell -- usherbrooke.ca:user:myip:1.0 - myip_0
+CRITICAL WARNING: [BD 41-52] Could not find the abstraction definition specified by the vlnv: digilentinc.com:interface:pmod_rtl:1.0 
+CRITICAL WARNING: [BD 41-181] Type specified by the VLNV: 'digilentinc.com:interface:pmod_rtl:1.0', cannot be found. Interface port: 'Pmod_OLED' cannot be created
+CRITICAL WARNING: [BD 41-52] Could not find the abstraction definition specified by the vlnv: digilentinc.com:interface:pmod_rtl:1.0 
+CRITICAL WARNING: [BD 41-181] Type specified by the VLNV: 'digilentinc.com:interface:pmod_rtl:1.0', cannot be found. Interface port: 'Pmod_8LD' cannot be created
+CRITICAL WARNING: [BD 41-52] Could not find the abstraction definition specified by the vlnv: digilentinc.com:interface:pmod_rtl:1.0 
+CRITICAL WARNING: [BD 41-181] Type specified by the VLNV: 'digilentinc.com:interface:pmod_rtl:1.0', cannot be found. Interface port: 'Pmod_OLED' cannot be created
+CRITICAL WARNING: [BD 41-52] Could not find the abstraction definition specified by the vlnv: digilentinc.com:interface:pmod_rtl:1.0 
+CRITICAL WARNING: [BD 41-181] Type specified by the VLNV: 'digilentinc.com:interface:pmod_rtl:1.0', cannot be found. Interface port: 'Pmod_8LD' cannot be created
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <design_1> from BD file <C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1522.051 ; gain = 19.355
+import_files -norecurse {C:/Users/raf_0/Desktop/ADC/sources_1/new/Traitement.vhd C:/Users/raf_0/Desktop/ADC/sources_1/new/compteur_signal.vhd C:/Users/raf_0/Desktop/ADC/sources_1/new/memory_block.vhd C:/Users/raf_0/Desktop/ADC/sources_1/new/Velocyraptor_package.vhd C:/Users/raf_0/Desktop/ADC/sources_1/new/magnetic.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+create_bd_cell -type ip -vlnv usherbrooke.ca:user:myip:1.0 myip_1
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/myip_1/S00_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins myip_1/S00_AXI]
+</myip_1/S00_AXI/S00_AXI_reg> is being mapped into </processing_system7_0/Data> at <0x43C10000 [ 64K ]>
+set_property location {3 1000 917} [get_bd_cells myip_1]
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M06_AXI] [get_bd_cells myip_1]
+create_peripheral xilinx.com user myIO_IP 1.0 -dir C:/Users/raf_0/Desktop/ADC/lectureADC/../ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:myIO_IP:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:myIO_IP:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:myIO_IP:1.0]
+set_property  ip_repo_paths  {C:/Users/raf_0/Desktop/ADC/lectureADC/../ip_repo/myIO_IP_1.0 C:/Users/raf_0/Desktop/ADC/ip_repo/myip_1.0 C:/Users/raf_0/Desktop/ADC/ip_repo/myip_1.0 c:/Users/demo1701/Downloads/FichiersAtelier1/Pmod_vivado-library-2018.2-1} [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myIO_IP_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myip_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myip_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myip_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/demo1701/Downloads/FichiersAtelier1/Pmod_vivado-library-2018.2-1'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+ipx::edit_ip_in_project -upgrade true -name edit_myIO_IP_v1_0 -directory C:/Users/raf_0/Desktop/ADC/lectureADC/../ip_repo c:/Users/raf_0/Desktop/ADC/ip_repo/myIO_IP_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1618.465 ; gain = 22.020
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myIO_IP_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myip_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myip_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myip_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/demo1701/Downloads/FichiersAtelier1/Pmod_vivado-library-2018.2-1'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1708.387 ; gain = 112.047
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_ports' failed due to earlier errors.
+ERROR: [#UNDEF] Tcl Error in evaluating proc can_apply_rule : ERROR: [Common 17-39] 'get_bd_intf_ports' failed due to earlier errors.
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/raf_0/Desktop/ADC/ip_repo/myIO_IP_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/raf_0/Desktop/ADC/ip_repo/myIO_IP_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/raf_0/Desktop/ADC/ip_repo/myIO_IP_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myIO_IP_1.0'
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:myIO_IP:1.0 myIO_IP_0
+endgroup
+set_property location {4 1147 901} [get_bd_cells myIO_IP_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/myIO_IP_0/S00_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins myIO_IP_0/S00_AXI]
+</myIO_IP_0/S00_AXI/S00_AXI_reg> is being mapped into </processing_system7_0/Data> at <0x43C10000 [ 64K ]>
+startgroup
+make_bd_pins_external  [get_bd_pins myIO_IP_0/i_data]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins myIO_IP_0/o_data]
+endgroup
+set_property name i_data [get_bd_ports i_data_0]
+set_property name o_data [get_bd_ports o_data_0]
+validate_bd_design
+ERROR: [BD 5-336] This command cannot be run, as the BD-design is locked. Locked reason(s):
+* Block design contains locked IPs. Please run report_ip_status for more details and recommendations on how to fix this issue. 
+List of locked IPs: 
+design_1_axi_gpio_0_0
+design_1_processing_system7_0_0
+design_1_PmodOLED_0_0
+design_1_axi_gpio_1_0
+design_1_rst_ps7_0_50M_0
+design_1_PmodGPIO_0_0
+
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+regenerate_bd_layout
+upgrade_ip [get_ips *]
+WARNING: [Coretcl 2-1044] No upgrade is available for 'design_1_PmodGPIO_0_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'design_1_PmodOLED_0_0'
+Upgrading 'C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_axi_gpio_0_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated design_1_axi_gpio_1_0 to use current project options
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+INFO: [IP_Flow 19-3420] Updated design_1_processing_system7_0_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated design_1_rst_ps7_0_50M_0 to use current project options
+Wrote  : <C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+upgrade_ip: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1770.898 ; gain = 44.266
+c:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xci c:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0.xci c:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci c:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xci
+validate_bd_design
+ERROR: [BD 5-336] This command cannot be run, as the BD-design is locked. Locked reason(s):
+* Block design contains locked IPs. Please run report_ip_status for more details and recommendations on how to fix this issue. 
+List of locked IPs: 
+design_1_PmodOLED_0_0
+design_1_PmodGPIO_0_0
+
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+upgrade_ip [get_ips *]
+WARNING: [Coretcl 2-1044] No upgrade is available for 'design_1_PmodGPIO_0_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'design_1_PmodOLED_0_0'
+WARNING: [Coretcl 2-1042] No IP was identified for upgrade.
+report_ip_status
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Mar 27 13:13:27 2019
+| Host         : DESKTOP-6BCDJM7 running 64-bit major release  (build 9200)
+| Command      : report_ip_status
+------------------------------------------------------------------------------------
+
+IP Status Summary
+
+1. Project IP Status
+--------------------
+Your project uses 19 IP. Some of these IP may have undergone changes in this release of the software. Please review the recommended actions.
+
+More information on the Xilinx versioning policy is available at www.xilinx.com.
+
+Project IP Instances
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| Instance Name                   | Status                                              | Recommendation               | Change    | IP Name            | IP      | New Version   | New        | Original Part        |
+|                                 |                                                     |                              | Log       |                    | Version |               | License    |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| design_1_PmodGPIO_0_0           | IP definition not found. IP contains locked subcore | Add IP definition to catalog | Change    | PmodGPIO           | 1.0     | N/A           | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                                 |                                                     |                              | available |                    | 8)      |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| design_1_PmodOLED_0_0           | IP definition not found. IP contains locked subcore | Add IP definition to catalog | Change    | PmodOLED           | 1.0     | N/A           | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                                 |                                                     |                              | available |                    | 16)     |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| design_1_axi_gpio_0_0           | Up-to-date                                          | No changes required          |  *(1)     | AXI GPIO           | 2.0     | 2.0 (Rev. 19) | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              |           |                    | (Rev.   |               |            |                      |
+|                                 |                                                     |                              |           |                    | 19)     |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| design_1_axi_gpio_1_0           | Up-to-date                                          | No changes required          |  *(2)     | AXI GPIO           | 2.0     | 2.0 (Rev. 19) | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              |           |                    | (Rev.   |               |            |                      |
+|                                 |                                                     |                              |           |                    | 19)     |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| design_1_myIO_IP_0_0            | Up-to-date                                          | No changes required          | Change    | myIO_IP_v1.0       | 1.0     | 1.0 (Rev. 2)  | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                                 |                                                     |                              | available |                    | 2)      |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| design_1_myip_0_1               | Up-to-date                                          | No changes required          | Change    | myip_v1.0          | 1.0     | 1.0 (Rev. 3)  | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                                 |                                                     |                              | available |                    | 3)      |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| design_1_processing_system7_0_0 | Up-to-date                                          | No changes required          |  *(3)     | ZYNQ7 Processing   | 5.5     | 5.5 (Rev. 6)  | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              |           | System             | (Rev.   |               |            |                      |
+|                                 |                                                     |                              |           |                    | 6)      |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| design_1_ps7_0_axi_periph_0     | Up-to-date                                          | No changes required          |  *(4)     | AXI Interconnect   | 2.1     | 2.1 (Rev. 18) | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              |           |                    | (Rev.   |               |            |                      |
+|                                 |                                                     |                              |           |                    | 18)     |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| design_1_rst_ps7_0_50M_0        | Up-to-date                                          | No changes required          |  *(5)     | Processor System   | 5.0     | 5.0 (Rev. 12) | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              |           | Reset              | (Rev.   |               |            |                      |
+|                                 |                                                     |                              |           |                    | 12)     |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| PmodGPIO_axi_gpio_0_0           | IP board change                                     | Repackage parent IP          |  *(6)     | AXI GPIO           | 2.0     | 2.0 (Rev. 19) | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              |           |                    | (Rev.   |               |            |                      |
+|                                 |                                                     |                              |           |                    | 19)     |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| PmodGPIO_pmod_bridge_0_0        | IP definition not found                             | Repackage parent IP          | Change    | pmod_bridge        | 1.0     | N/A           | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                                 |                                                     |                              | available |                    | 12)     |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| PmodGPIO_xlconcat_0_0           | Up-to-date                                          | No changes required          |  *(7)     | Concat             | 2.1     | 2.1 (Rev. 1)  | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              |           |                    | (Rev.   |               |            |                      |
+|                                 |                                                     |                              |           |                    | 1)      |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| PmodGPIO_xlslice_0_0            | Up-to-date                                          | No changes required          | Change    | Slice              | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                                 |                                                     |                              | available |                    | 1)      |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| PmodGPIO_xlslice_0_1            | Up-to-date                                          | No changes required          | Change    | Slice              | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                                 |                                                     |                              | available |                    | 1)      |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| PmodGPIO_xlslice_0_2            | Up-to-date                                          | No changes required          | Change    | Slice              | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                                 |                                                     |                              | available |                    | 1)      |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| PmodGPIO_xlslice_t_0_0          | Up-to-date                                          | No changes required          | Change    | Slice              | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                                 |                                                     |                              | available |                    | 1)      |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| PmodOLED_axi_gpio_0_0           | IP board change                                     | Repackage parent IP          |  *(8)     | AXI GPIO           | 2.0     | 2.0 (Rev. 19) | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              |           |                    | (Rev.   |               |            |                      |
+|                                 |                                                     |                              |           |                    | 19)     |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| PmodOLED_axi_quad_spi_0_0       | IP board change                                     | Repackage parent IP          |  *(9)     | AXI Quad SPI       | 3.2     | 3.2 (Rev. 16) | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              |           |                    | (Rev.   |               |            |                      |
+|                                 |                                                     |                              |           |                    | 16)     |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| PmodOLED_pmod_bridge_0_0        | IP definition not found                             | Repackage parent IP          | Change    | pmod_bridge        | 1.0     | N/A           | Included   | xc7z010clg400-1      |
+|                                 |                                                     |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                                 |                                                     |                              | available |                    | 12)     |               |            |                      |
++---------------------------------+-----------------------------------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+*(1) c:/Xilinx/Vivado/2018.2/data/ip/xilinx/axi_gpio_v2_0/doc/axi_gpio_v2_0_changelog.txt
+*(2) c:/Xilinx/Vivado/2018.2/data/ip/xilinx/axi_gpio_v2_0/doc/axi_gpio_v2_0_changelog.txt
+*(3) c:/Xilinx/Vivado/2018.2/data/ip/xilinx/processing_system7_v5_5/doc/processing_system7_v5_5_changelog.txt
+*(4) c:/Xilinx/Vivado/2018.2/data/ip/xilinx/axi_interconnect_v2_1/doc/axi_interconnect_v2_1_changelog.txt
+*(5) c:/Xilinx/Vivado/2018.2/data/ip/xilinx/proc_sys_reset_v5_0/doc/proc_sys_reset_v5_0_changelog.txt
+*(6) c:/Xilinx/Vivado/2018.2/data/ip/xilinx/axi_gpio_v2_0/doc/axi_gpio_v2_0_changelog.txt
+*(7) c:/Xilinx/Vivado/2018.2/data/ip/xilinx/xlconcat_v2_1/doc/xlconcat_v2_1_changelog.txt
+*(8) c:/Xilinx/Vivado/2018.2/data/ip/xilinx/axi_gpio_v2_0/doc/axi_gpio_v2_0_changelog.txt
+*(9) c:/Xilinx/Vivado/2018.2/data/ip/xilinx/axi_quad_spi_v3_2/doc/axi_quad_spi_v3_2_changelog.txt
+
+
+set_property  ip_repo_paths  {c:/Users/raf_0/Desktop/ADC/ip_repo/myIO_IP_1.0 c:/Users/raf_0/Desktop/ADC/ip_repo/myip_1.0 c:/Users/demo1701/Downloads/FichiersAtelier1/Pmod_vivado-library-2018.2-1 C:/Users/raf_0/Desktop/ADC/Pmod_vivado-library-2018.2-1} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myIO_IP_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myip_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/demo1701/Downloads/FichiersAtelier1/Pmod_vivado-library-2018.2-1'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/Pmod_vivado-library-2018.2-1'.
+config_webtalk -user on
+update_ip_catalog
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/new/memory_block.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Ctrl_AD1.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Synchro_Horloges.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/new/memory_block.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Ctrl_AD1.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Synchro_Horloges.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/new/memory_block.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Ctrl_AD1.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Synchro_Horloges.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/new/memory_block.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Ctrl_AD1.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Synchro_Horloges.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/new/memory_block.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Ctrl_AD1.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Synchro_Horloges.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+update_ip_catalog
+validate_bd_design
+ERROR: [BD 5-336] This command cannot be run, as the BD-design is locked. Locked reason(s):
+* Block design contains locked IPs. Please run report_ip_status for more details and recommendations on how to fix this issue. 
+List of locked IPs: 
+design_1_PmodOLED_0_0
+design_1_PmodGPIO_0_0
+
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+upgrade_ip [get_ips *]
+Upgrading 'C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/design_1_PmodGPIO_0_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/design_1_PmodOLED_0_0_synth_1
+
+INFO: [IP_Flow 19-3420] Updated design_1_PmodGPIO_0_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated design_1_PmodOLED_0_0 to use current project options
+Wrote  : <C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+c:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ip/design_1_PmodGPIO_0_0/design_1_PmodGPIO_0_0.xci c:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ip/design_1_PmodOLED_0_0/design_1_PmodOLED_0_0.xci
+validate_bd_design
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/PmodGPIO_0/Pmod_out_pin10_i
+/PmodGPIO_0/Pmod_out_pin1_i
+/PmodGPIO_0/Pmod_out_pin2_i
+/PmodGPIO_0/Pmod_out_pin3_i
+/PmodGPIO_0/Pmod_out_pin4_i
+/PmodGPIO_0/Pmod_out_pin7_i
+/PmodGPIO_0/Pmod_out_pin8_i
+/PmodGPIO_0/Pmod_out_pin9_i
+/PmodOLED_0/Pmod_out_pin10_i
+/PmodOLED_0/Pmod_out_pin1_i
+/PmodOLED_0/Pmod_out_pin2_i
+/PmodOLED_0/Pmod_out_pin3_i
+/PmodOLED_0/Pmod_out_pin4_i
+/PmodOLED_0/Pmod_out_pin7_i
+/PmodOLED_0/Pmod_out_pin8_i
+/PmodOLED_0/Pmod_out_pin9_i
+
+open_bd_design {C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:myIO_IP:1.0 myIO_IP_1
+endgroup
+set_property location {3 1093 400} [get_bd_cells myIO_IP_1]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/myIO_IP_1/S00_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins myIO_IP_1/S00_AXI]
+</myIO_IP_1/S00_AXI/S00_AXI_reg> is being mapped into </processing_system7_0/Data> at <0x43C20000 [ 64K ]>
+startgroup
+make_bd_pins_external  [get_bd_pins myIO_IP_1/i_data]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins myIO_IP_1/o_data]
+endgroup
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M07_AXI] [get_bd_nets i_data_0_2] [get_bd_nets myIO_IP_1_o_data] [get_bd_cells myIO_IP_1]
+delete_bd_objs [get_bd_ports o_data_0]
+delete_bd_objs [get_bd_ports i_data_0]
+save_bd_design
+Wrote  : <C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+open_bd_design {C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd}
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 27 13:35:55 2019...

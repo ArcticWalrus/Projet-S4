@@ -1,0 +1,338 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Mar 27 13:49:51 2019
+# Process ID: 15784
+# Current directory: C:/Users/raf_0/Desktop/ADC/lectureADC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15928 C:\Users\raf_0\Desktop\ADC\lectureADC\lectureADC.xpr
+# Log file: C:/Users/raf_0/Desktop/ADC/lectureADC/vivado.log
+# Journal file: C:/Users/raf_0/Desktop/ADC/lectureADC\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Users/demo1701/Downloads/FichiersAtelier1/Pmod_vivado-library-2018.2-1'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myIO_IP_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/ip_repo/myip_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/demo1701/Downloads/FichiersAtelier1/Pmod_vivado-library-2018.2-1'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Desktop/ADC/Pmod_vivado-library-2018.2-1'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 775.168 ; gain = 110.816uupdate_compile_order -fileset sources_1eINFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.sdk/Top.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+WARNING: [BD 41-927] Following properties on pin /PmodGPIO_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /PmodOLED_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/PmodGPIO_0/Pmod_out_pin10_i
+/PmodGPIO_0/Pmod_out_pin1_i
+/PmodGPIO_0/Pmod_out_pin2_i
+/PmodGPIO_0/Pmod_out_pin3_i
+/PmodGPIO_0/Pmod_out_pin4_i
+/PmodGPIO_0/Pmod_out_pin7_i
+/PmodGPIO_0/Pmod_out_pin8_i
+/PmodGPIO_0/Pmod_out_pin9_i
+/PmodOLED_0/Pmod_out_pin10_i
+/PmodOLED_0/Pmod_out_pin1_i
+/PmodOLED_0/Pmod_out_pin2_i
+/PmodOLED_0/Pmod_out_pin3_i
+/PmodOLED_0/Pmod_out_pin4_i
+/PmodOLED_0/Pmod_out_pin7_i
+/PmodOLED_0/Pmod_out_pin8_i
+/PmodOLED_0/Pmod_out_pin9_i
+
+Wrote  : <C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+CRITICAL WARNING: [IP_Flow 19-4965] IP PmodOLED_pmod_bridge_0_0 was packaged with board value 'digilentinc.com:arty:part0:1.1'. Current project's board value is unset. Please update the project settings to match the packaged IP.
+INFO: [IP_Flow 19-3422] Upgraded PmodOLED_pmod_bridge_0_0 (Pmod Bridge 1.0) from revision 9 to revision 12
+CRITICAL WARNING: [IP_Flow 19-4965] IP PmodOLED_axi_quad_spi_0_0 was packaged with board value 'digilentinc.com:arty:part0:1.1'. Current project's board value is unset. Please update the project settings to match the packaged IP.
+INFO: [IP_Flow 19-3422] Upgraded PmodOLED_axi_quad_spi_0_0 (AXI Quad SPI 3.2) from revision 14 to revision 16
+CRITICAL WARNING: [IP_Flow 19-4965] IP PmodOLED_axi_gpio_0_0 was packaged with board value 'digilentinc.com:arty:part0:1.1'. Current project's board value is unset. Please update the project settings to match the packaged IP.
+INFO: [IP_Flow 19-3422] Upgraded PmodOLED_axi_gpio_0_0 (AXI GPIO 2.0) from revision 17 to revision 19
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PmodOLED_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+CRITICAL WARNING: [IP_Flow 19-4965] IP PmodGPIO_pmod_bridge_0_0 was packaged with board value 'digilentinc.com:arty:part0:1.1'. Current project's board value is unset. Please update the project settings to match the packaged IP.
+INFO: [IP_Flow 19-3422] Upgraded PmodGPIO_pmod_bridge_0_0 (Pmod Bridge 1.0) from revision 9 to revision 12
+CRITICAL WARNING: [IP_Flow 19-4965] IP PmodGPIO_axi_gpio_0_0 was packaged with board value 'digilentinc.com:arty:part0:1.1'. Current project's board value is unset. Please update the project settings to match the packaged IP.
+INFO: [IP_Flow 19-3422] Upgraded PmodGPIO_axi_gpio_0_0 (AXI GPIO 2.0) from revision 17 to revision 19
+CRITICAL WARNING: [IP_Flow 19-4965] IP PmodGPIO_xlslice_0_0 was packaged with board value 'digilentinc.com:arty:part0:1.1'. Current project's board value is unset. Please update the project settings to match the packaged IP.
+INFO: [IP_Flow 19-3420] Updated PmodGPIO_xlslice_0_0 to use current project options
+CRITICAL WARNING: [IP_Flow 19-4965] IP PmodGPIO_xlslice_0_1 was packaged with board value 'digilentinc.com:arty:part0:1.1'. Current project's board value is unset. Please update the project settings to match the packaged IP.
+INFO: [IP_Flow 19-3420] Updated PmodGPIO_xlslice_0_1 to use current project options
+CRITICAL WARNING: [IP_Flow 19-4965] IP PmodGPIO_xlslice_0_2 was packaged with board value 'digilentinc.com:arty:part0:1.1'. Current project's board value is unset. Please update the project settings to match the packaged IP.
+INFO: [IP_Flow 19-3420] Updated PmodGPIO_xlslice_0_2 to use current project options
+CRITICAL WARNING: [IP_Flow 19-4965] IP PmodGPIO_xlslice_t_0_0 was packaged with board value 'digilentinc.com:arty:part0:1.1'. Current project's board value is unset. Please update the project settings to match the packaged IP.
+INFO: [IP_Flow 19-3420] Updated PmodGPIO_xlslice_t_0_0 to use current project options
+CRITICAL WARNING: [IP_Flow 19-4965] IP PmodGPIO_xlconcat_0_0 was packaged with board value 'digilentinc.com:arty:part0:1.1'. Current project's board value is unset. Please update the project settings to match the packaged IP.
+INFO: [IP_Flow 19-3420] Updated PmodGPIO_xlconcat_0_0 to use current project options
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PmodGPIO_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myip_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myIO_IP_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Wed Mar 27 14:08:09 2019] Launched design_1_processing_system7_0_0_synth_1, design_1_PmodOLED_0_0_synth_1, design_1_PmodGPIO_0_0_synth_1, design_1_axi_gpio_0_0_synth_1, design_1_axi_gpio_1_0_synth_1, design_1_xbar_0_synth_1, design_1_rst_ps7_0_50M_0_synth_1, design_1_auto_pc_0_synth_1, design_1_myIO_IP_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_processing_system7_0_0_synth_1: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_PmodOLED_0_0_synth_1: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/design_1_PmodOLED_0_0_synth_1/runme.log
+design_1_PmodGPIO_0_0_synth_1: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/design_1_PmodGPIO_0_0_synth_1/runme.log
+design_1_axi_gpio_0_0_synth_1: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/design_1_axi_gpio_0_0_synth_1/runme.log
+design_1_axi_gpio_1_0_synth_1: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/design_1_axi_gpio_1_0_synth_1/runme.log
+design_1_xbar_0_synth_1: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/design_1_xbar_0_synth_1/runme.log
+design_1_rst_ps7_0_50M_0_synth_1: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/design_1_rst_ps7_0_50M_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_myIO_IP_0_0_synth_1: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/design_1_myIO_IP_0_0_synth_1/runme.log
+synth_1: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/synth_1/runme.log
+[Wed Mar 27 14:08:11 2019] Launched impl_1...
+Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:01:38 ; elapsed = 00:02:01 . Memory (MB): peak = 1050.891 ; gain = 257.297
+open_bd_design {C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- usherbrooke.ca:user:myip:1.0 - myip_0
+Adding cell -- xilinx.com:user:myIO_IP:1.0 - myIO_IP_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding cell -- digilentinc.com:IP:PmodGPIO:1.0 - PmodGPIO_0
+Adding cell -- digilentinc.com:IP:PmodOLED:1.0 - PmodOLED_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <design_1> from BD file <C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd>
+validate_bd_design -force
+WARNING: [BD 41-927] Following properties on pin /PmodGPIO_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /PmodOLED_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/PmodGPIO_0/Pmod_out_pin10_i
+/PmodGPIO_0/Pmod_out_pin1_i
+/PmodGPIO_0/Pmod_out_pin2_i
+/PmodGPIO_0/Pmod_out_pin3_i
+/PmodGPIO_0/Pmod_out_pin4_i
+/PmodGPIO_0/Pmod_out_pin7_i
+/PmodGPIO_0/Pmod_out_pin8_i
+/PmodGPIO_0/Pmod_out_pin9_i
+/PmodOLED_0/Pmod_out_pin10_i
+/PmodOLED_0/Pmod_out_pin1_i
+/PmodOLED_0/Pmod_out_pin2_i
+/PmodOLED_0/Pmod_out_pin3_i
+/PmodOLED_0/Pmod_out_pin4_i
+/PmodOLED_0/Pmod_out_pin7_i
+/PmodOLED_0/Pmod_out_pin8_i
+/PmodOLED_0/Pmod_out_pin9_i
+
+regenerate_bd_layout
+upgrade_ip [get_ips *]
+WARNING: [Coretcl 2-1042] No IP was identified for upgrade.
+validate_bd_design -force
+WARNING: [BD 41-927] Following properties on pin /PmodGPIO_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /PmodOLED_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/PmodGPIO_0/Pmod_out_pin10_i
+/PmodGPIO_0/Pmod_out_pin1_i
+/PmodGPIO_0/Pmod_out_pin2_i
+/PmodGPIO_0/Pmod_out_pin3_i
+/PmodGPIO_0/Pmod_out_pin4_i
+/PmodGPIO_0/Pmod_out_pin7_i
+/PmodGPIO_0/Pmod_out_pin8_i
+/PmodGPIO_0/Pmod_out_pin9_i
+/PmodOLED_0/Pmod_out_pin10_i
+/PmodOLED_0/Pmod_out_pin1_i
+/PmodOLED_0/Pmod_out_pin2_i
+/PmodOLED_0/Pmod_out_pin3_i
+/PmodOLED_0/Pmod_out_pin4_i
+/PmodOLED_0/Pmod_out_pin7_i
+/PmodOLED_0/Pmod_out_pin8_i
+/PmodOLED_0/Pmod_out_pin9_i
+
+delete_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd]
+set_property synth_checkpoint_mode Singular [get_files  C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd]
+generate_target all [get_files  C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/PmodGPIO_0/Pmod_out_pin10_i
+/PmodGPIO_0/Pmod_out_pin1_i
+/PmodGPIO_0/Pmod_out_pin2_i
+/PmodGPIO_0/Pmod_out_pin3_i
+/PmodGPIO_0/Pmod_out_pin4_i
+/PmodGPIO_0/Pmod_out_pin7_i
+/PmodGPIO_0/Pmod_out_pin8_i
+/PmodGPIO_0/Pmod_out_pin9_i
+/PmodOLED_0/Pmod_out_pin10_i
+/PmodOLED_0/Pmod_out_pin1_i
+/PmodOLED_0/Pmod_out_pin2_i
+/PmodOLED_0/Pmod_out_pin3_i
+/PmodOLED_0/Pmod_out_pin4_i
+/PmodOLED_0/Pmod_out_pin7_i
+/PmodOLED_0/Pmod_out_pin8_i
+/PmodOLED_0/Pmod_out_pin9_i
+
+Wrote  : <C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PmodOLED_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PmodGPIO_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myip_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myIO_IP_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1324.059 ; gain = 71.164
+export_ip_user_files -of_objects [get_files C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 4 design_1_synth_1
+[Wed Mar 27 14:28:21 2019] Launched design_1_synth_1...
+Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/design_1_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.ip_user_files -ipstatic_source_dir C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.cache/compile_simlib/modelsim} {questa=C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.cache/compile_simlib/questa} {riviera=C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.cache/compile_simlib/riviera} {activehdl=C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+open_bd_design {C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins PmodGPIO_0/Pmod_out]
+endgroup
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins PmodOLED_0/Pmod_out]
+endgroup
+set_property name Pmod_8LD [get_bd_intf_ports Pmod_out_0]
+set_property name Pmod_OLED [get_bd_intf_ports Pmod_out_1]
+save_bd_design
+Wrote  : <C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+delete_ip_run [get_files -of_objects [get_fileset design_1] C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [Project 1-386] Moving file 'C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd' from fileset 'design_1' to fileset 'sources_1'.
+set_property synth_checkpoint_mode None [get_files  C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd]
+generate_target all [get_files  C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-927] Following properties on pin /PmodGPIO_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /PmodOLED_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PmodOLED_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PmodGPIO_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myip_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myIO_IP_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1347.500 ; gain = 23.441
+export_ip_user_files -of_objects [get_files C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.ip_user_files -ipstatic_source_dir C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.cache/compile_simlib/modelsim} {questa=C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.cache/compile_simlib/questa} {riviera=C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.cache/compile_simlib/riviera} {activehdl=C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+validate_bd_design -force
+WARNING: [BD 41-927] Following properties on pin /PmodGPIO_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /PmodOLED_0/s_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+open_bd_design {C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd}
+make_wrapper -files [get_files C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd] -fileset [get_filesets sources_1] -inst_template
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PmodOLED_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PmodGPIO_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myip_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myIO_IP_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Wed Mar 27 14:38:07 2019] Launched synth_1...
+Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/synth_1/runme.log
+[Wed Mar 27 14:38:07 2019] Launched impl_1...
+Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1434.234 ; gain = 44.930
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Mar 27 14:44:46 2019] Launched synth_1...
+Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/synth_1/runme.log
+[Wed Mar 27 14:44:46 2019] Launched impl_1...
+Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Mar 27 14:52:39 2019] Launched synth_1...
+Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/synth_1/runme.log
+[Wed Mar 27 14:52:39 2019] Launched impl_1...
+Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Mar 27 15:06:43 2019] Launched synth_1...
+Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/synth_1/runme.log
+[Wed Mar 27 15:06:43 2019] Launched impl_1...
+Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Mar 27 15:09:36 2019] Launched synth_1...
+Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/synth_1/runme.log
+[Wed Mar 27 15:09:36 2019] Launched impl_1...
+Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1442.906 ; gain = 0.602
+import_files -norecurse {C:/Users/raf_0/Desktop/ADC/sources_1/imports/new/detectzero.vhd C:/Users/raf_0/Desktop/ADC/sources_1/imports/new/tamponcirc.vhd}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Mar 27 15:18:22 2019] Launched synth_1...
+Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/synth_1/runme.log
+[Wed Mar 27 15:18:22 2019] Launched impl_1...
+Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Mar 27 15:26:22 2019] Launched synth_1...
+Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/synth_1/runme.log
+[Wed Mar 27 15:26:22 2019] Launched impl_1...
+Run output will be captured here: C:/Users/raf_0/Desktop/ADC/lectureADC/lectureADC.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 27 16:49:01 2019...
