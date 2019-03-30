@@ -99,7 +99,7 @@ constant freq_sys_MHz: integer := 125;  -- MHz
            i_clk           : in std_logic;
            i_reset         : in std_logic;
            i_str_tampon    : in std_logic;
-           
+           i_ech_valid     : in std_logic;
            --Controle ADC
 --           i_Data          : in    std_logic; -- bit arrivant de l'adc
 --           i_Strobe_ADC    : in    std_logic; -- strobe debut conversion 380KHz??
@@ -230,7 +230,7 @@ begin
      port map(
         clk_AD         => clk_10MHz,         -- pour horloge externe du convertisseur (variable logique ne passant pas par bufg)
         i_DO           => d_AD_Dselect,     -- bit de données provenant du convertisseur (via um mux)
-        i_Strobe_AD    => d_strobe_380kHz,   -- synchronisation: déclencheur de la conversion
+        i_Strobe_AD    => d_strobe_200Hz,   -- synchronisation: déclencheur de la conversion
         RESET          => reset,
         o_dav_strobe   => d_davs,           -- indicateur de conversion complete
         o_ech          => d_echantillon,    -- valeur de l'échantillon lu
@@ -253,6 +253,7 @@ begin
                 i_reset         => reset,
                 i_str_tampon    => d_strobe_380kHz,
                 
+                i_ech_valid     => d_davs,
                 --Controle ADC
                 --i_Data          =>  i_ADC_Data,
                 --i_Strobe_ADC    =>  d_strobe_100Hz,

@@ -6,10 +6,13 @@ entity compteur_signal is
   Port ( 
         line_in          : in std_logic_vector(11 downto 0);
         i_clk, i_reset   : in std_logic;
+        i_ech_valid      : in std_logic;
         o_nb_items       : out unsigned(5 downto 0);
         i_stb_tampon     : in std_logic;
         o_high           : out std_logic;
-        o_nb_items_total : out unsigned(31 downto 0)
+        o_nb_items_total : out unsigned(31 downto 0);
+        
+        o_signe_x : out std_logic
   );
 end compteur_signal;
 
@@ -29,6 +32,7 @@ end component;
 component detectzero is
     Port ( 
             i_clk, id_reset     : in std_ulogic;
+            i_ech_valid     : in std_logic;
             i_x                 : in std_logic_vector(11 downto 0);
             o_s, o_z            : out std_ulogic
     );
@@ -57,6 +61,7 @@ iteration_tampon : tamponcirc
 iteration_detect :  detectzero
     Port map ( 
             i_clk       => i_clk,
+            i_ech_valid => i_ech_valid,
             id_reset    => i_reset,
             i_x         => line_in,
             o_s         => s_s, --Used for debugging purposes
@@ -64,4 +69,5 @@ iteration_detect :  detectzero
     );
 
 o_high <= s_z;
+o_signe_x <= s_s;
 end Behavioral;

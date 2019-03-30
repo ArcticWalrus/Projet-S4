@@ -299,6 +299,29 @@
 
 /******************************************************************/
 
+/* Definitions for driver MYIO_IP */
+#define XPAR_MYIO_IP_NUM_INSTANCES 3
+
+/* Definitions for peripheral MYIO_IP_0 */
+#define XPAR_MYIO_IP_0_DEVICE_ID 0
+#define XPAR_MYIO_IP_0_S00_AXI_BASEADDR 0x43C10000
+#define XPAR_MYIO_IP_0_S00_AXI_HIGHADDR 0x43C1FFFF
+
+
+/* Definitions for peripheral MYIO_IP_1 */
+#define XPAR_MYIO_IP_1_DEVICE_ID 1
+#define XPAR_MYIO_IP_1_S00_AXI_BASEADDR 0x43C20000
+#define XPAR_MYIO_IP_1_S00_AXI_HIGHADDR 0x43C2FFFF
+
+
+/* Definitions for peripheral MYIO_IP_2 */
+#define XPAR_MYIO_IP_2_DEVICE_ID 2
+#define XPAR_MYIO_IP_2_S00_AXI_BASEADDR 0x43C30000
+#define XPAR_MYIO_IP_2_S00_AXI_HIGHADDR 0x43C3FFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver MYIP */
 #define XPAR_MYIP_NUM_INSTANCES 1
 
@@ -306,39 +329,6 @@
 #define XPAR_MYIP_0_DEVICE_ID 0
 #define XPAR_MYIP_0_S00_AXI_BASEADDR 0x43C00000
 #define XPAR_MYIP_0_S00_AXI_HIGHADDR 0x43C0FFFF
-
-
-/******************************************************************/
-// VITESSE
-/* Definitions for driver MYIP */
-#define XPAR_MYIO_IP_VITESSE_NUM_INSTANCES 1
-
-/* Definitions for peripheral MYIP_0 */
-#define XPAR_MYIO_IP_VITESSE_DEVICE_ID 0
-#define XPAR_MYIO_IP_VITESSE_S00_AXI_BASEADDR 0x43C10000
-#define XPAR_MYIO_IP_VITESSE_S00_AXI_HIGHADDR 0x43C1FFFF
-
-
-/******************************************************************/
-// DISTANCE
-/* Definitions for driver MYIP */
-#define XPAR_MYIO_IP_DISTANCE_NUM_INSTANCES 1
-
-/* Definitions for peripheral MYIP_0 */
-#define XPAR_MYIO_IP_DISTANCE_DEVICE_ID 0
-#define XPAR_MYIO_IP_DISTANCE_S00_AXI_BASEADDR 0x43C20000
-#define XPAR_MYIO_IP_DISTANCE_S00_AXI_HIGHADDR 0x43C2FFFF
-
-
-/******************************************************************/
-// CALORIE
-/* Definitions for driver MYIO IP */
-#define XPAR_MYIO_IP_CALORIE_NUM_INSTANCES 1
-
-/* Definitions for peripheral MYIO IP_0 */
-#define XPAR_MYIO_IP_CALORIE_DEVICE_ID 0
-#define XPAR_MYIO_IP_CALORIE_S00_AXI_BASEADDR 0x43C30000
-#define XPAR_MYIO_IP_CALORIE_S00_AXI_HIGHADDR 0x43C3FFFF
 
 
 /******************************************************************/
