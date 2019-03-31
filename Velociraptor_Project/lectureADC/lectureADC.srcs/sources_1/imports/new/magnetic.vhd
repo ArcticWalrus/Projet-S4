@@ -89,11 +89,12 @@ begin
             i_stb_tampon    => i_str_tampon,
             i_reset         => i_reset,
             o_nb_items      => s_nb_items,
---            o_high          => s_detect,
+            o_high          => s_detect,
             o_nb_items_total => s_nb_items_total, 
             
-            o_signe_x =>    o_vitesse(0),
-            o_high          => o_calorie(0)
+--            o_signe_x =>    o_vitesse(0),
+            o_signe_x =>    open
+            --o_high          => o_calorie(0)
         );
 
 --    Controleur :  Ctrl_AD1 
@@ -110,10 +111,10 @@ begin
         Port map ( 
               i_clk             => i_clk, 
               i_reset           => i_reset,
---              o_vitesse         => o_vitesse,
---              o_calorie         => o_calorie,
-              o_vitesse         => open,
-              o_calorie         => open,
+              o_vitesse         => o_vitesse,
+              o_calorie         => o_calorie,
+--              o_vitesse         => open,
+--              o_calorie         => open,
               o_distance        => o_distance,
               i_nb_items_total  => s_nb_items_total ,
               i_poid_Kg         => i_poid_Kg,
@@ -121,6 +122,6 @@ begin
               i_tours_en_2sec   => s_nb_items        --temporaire
         );
         
-    o_vitesse(5 downto 1) <= (others => '0');
-    o_calorie(10 downto 1) <= (others => '0');
+--    o_vitesse(5 downto 1) <= (others => '0');
+--    o_calorie(10 downto 1) <= (others => '0');
 end Behavioral;

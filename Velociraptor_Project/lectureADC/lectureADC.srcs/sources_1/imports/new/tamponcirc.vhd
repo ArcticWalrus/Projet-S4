@@ -18,7 +18,7 @@ end tamponcirc;
 
 architecture comport of tamponcirc is
     type RAM is array (natural range <>) of unsigned(7 downto 0);
-    constant max: natural := 400;
+    constant max: natural := 200;
     constant taille_tampon: natural := 63;
 	signal tampon: RAM(0 to 63) := (others =>  to_unsigned(max,8));
     signal items: unsigned( 5 downto 0 );  -- nombre de données (items) dans le tampon
@@ -76,7 +76,7 @@ begin
                     end if;
                 end loop;
             end if;
-            if tete = taille_tampon then 
+            if tete = taille_tampon+1 then 
                 tete <= "000000";
             end if;
             

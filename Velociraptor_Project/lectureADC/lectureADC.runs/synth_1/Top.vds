@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Mar 30 17:56:59 2019
-# Process ID: 22404
+# Start of session at: Sun Mar 31 12:29:44 2019
+# Process ID: 10672
 # Current directory: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1
 # Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
 # Log file: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/Top.vds
@@ -22,24 +22,24 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 3248 
+INFO: Helper process launched with PID 27500 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 419.227 ; gain = 108.570
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 419.059 ; gain = 109.684
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Top' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:71]
-INFO: [Synth 8-3491] module 'Ctrl_AD1' declared at 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Ctrl_AD1.vhd:13' bound to instance 'Controleur' of component 'Ctrl_AD1' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:229]
+INFO: [Synth 8-3491] module 'Ctrl_AD1' declared at 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Ctrl_AD1.vhd:13' bound to instance 'Controleur' of component 'Ctrl_AD1' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:228]
 INFO: [Synth 8-638] synthesizing module 'Ctrl_AD1' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Ctrl_AD1.vhd:23]
 INFO: [Synth 8-3491] module 'AD7476_mef' declared at 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/AD7476_mef.vhd:16' bound to instance 'MEF' of component 'AD7476_mef' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Ctrl_AD1.vhd:46]
 INFO: [Synth 8-638] synthesizing module 'AD7476_mef' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/AD7476_mef.vhd:31]
 INFO: [Synth 8-256] done synthesizing module 'AD7476_mef' (1#1) [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/AD7476_mef.vhd:31]
 INFO: [Synth 8-256] done synthesizing module 'Ctrl_AD1' (2#1) [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Ctrl_AD1.vhd:23]
 	Parameter const_CLK_syst_MHz bound to: 125 - type: integer 
-INFO: [Synth 8-3491] module 'Synchro_Horloges' declared at 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Synchro_Horloges.vhd:11' bound to instance 'Synchronisation' of component 'Synchro_Horloges' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:240]
+INFO: [Synth 8-3491] module 'Synchro_Horloges' declared at 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Synchro_Horloges.vhd:11' bound to instance 'Synchronisation' of component 'Synchro_Horloges' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:239]
 INFO: [Synth 8-638] synthesizing module 'Synchro_Horloges' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Synchro_Horloges.vhd:23]
 	Parameter const_CLK_syst_MHz bound to: 125 - type: integer 
 INFO: [Synth 8-113] binding component instance 'ClockBuffer' to cell 'BUFG' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Synchro_Horloges.vhd:47]
 INFO: [Synth 8-256] done synthesizing module 'Synchro_Horloges' (3#1) [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Synchro_Horloges.vhd:23]
-INFO: [Synth 8-3491] module 'magnetic' declared at 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:8' bound to instance 'insta_magnetic' of component 'magnetic' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:250]
+INFO: [Synth 8-3491] module 'magnetic' declared at 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:8' bound to instance 'insta_magnetic' of component 'magnetic' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:249]
 INFO: [Synth 8-638] synthesizing module 'magnetic' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:28]
 INFO: [Synth 8-3491] module 'compteur_signal' declared at 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/compteur_signal.vhd:5' bound to instance 'entity_compteur_signal' of component 'compteur_signal' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:84]
 INFO: [Synth 8-638] synthesizing module 'compteur_signal' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/compteur_signal.vhd:19]
@@ -51,13 +51,15 @@ INFO: [Synth 8-638] synthesizing module 'detectzero' [D:/DEV/Git_Kraken/Velocira
 WARNING: [Synth 8-614] signal 'signe_x' is read in the process but is not in the sensitivity list [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/detectzero.vhd:53]
 INFO: [Synth 8-256] done synthesizing module 'detectzero' (5#1) [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/detectzero.vhd:14]
 INFO: [Synth 8-256] done synthesizing module 'compteur_signal' (6#1) [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/compteur_signal.vhd:19]
-INFO: [Synth 8-3491] module 'Traitement' declared at 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:6' bound to instance 'inst_traitement' of component 'Traitement' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:109]
+INFO: [Synth 8-3491] module 'Traitement' declared at 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:6' bound to instance 'inst_traitement' of component 'Traitement' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:110]
 INFO: [Synth 8-638] synthesizing module 'Traitement' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:20]
 WARNING: [Synth 8-614] signal 'calorie' is read in the process but is not in the sensitivity list [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:65]
 WARNING: [Synth 8-614] signal 'compteur' is read in the process but is not in the sensitivity list [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:65]
+WARNING: [Synth 8-614] signal 'constante_calorie' is read in the process but is not in the sensitivity list [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:65]
+WARNING: [Synth 8-614] signal 'current_weight' is read in the process but is not in the sensitivity list [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:111]
 INFO: [Synth 8-256] done synthesizing module 'Traitement' (7#1) [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:20]
 INFO: [Synth 8-256] done synthesizing module 'magnetic' (8#1) [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:28]
-INFO: [Synth 8-3491] module 'design_1_wrapper' declared at 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:14' bound to instance 'Design' of component 'design_1_wrapper' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:296]
+INFO: [Synth 8-3491] module 'design_1_wrapper' declared at 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:14' bound to instance 'Design' of component 'design_1_wrapper' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:295]
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:66]
 INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'Pmod_8LD_pin10_iobuf' of component 'IOBUF' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:207]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660]
@@ -2856,7 +2858,6 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM g
 INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (117#1) [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:66]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-WARNING: [Synth 8-3848] Net d_S_10MHz in module/entity Top does not have driver. [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:199]
 INFO: [Synth 8-256] done synthesizing module 'Top' (118#1) [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:71]
 WARNING: [Synth 8-3331] design cdc_sync__parameterized5 has unconnected port prmry_aclk
 WARNING: [Synth 8-3331] design cdc_sync__parameterized5 has unconnected port prmry_resetn
@@ -2960,7 +2961,7 @@ WARNING: [Synth 8-3331] design axi_crossbar_v2_1_18_axi_crossbar has unconnected
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_18_axi_crossbar has unconnected port m_axi_buser[8]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 661.625 ; gain = 350.969
+Finished RTL Elaboration : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 659.316 ; gain = 349.941
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2971,15 +2972,14 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 INFO: [Synth 8-3295] tying undriven pin FIFO_EXISTS.CLK_CROSS_I:SPISR_0_CMD_Error_cdc_from_spi to constant 0 [d:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ip/design_1_PmodOLED_0_0/src/PmodOLED_axi_quad_spi_0_0/hdl/axi_quad_spi_v3_2_rfs.vhd:19310]
 INFO: [Synth 8-3295] tying undriven pin FIFO_EXISTS.CLK_CROSS_I:Mst_N_Slv_mode_cdc_from_spi to constant 0 [d:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ip/design_1_PmodOLED_0_0/src/PmodOLED_axi_quad_spi_0_0/hdl/axi_quad_spi_v3_2_rfs.vhd:19310]
-WARNING: [Synth 8-3295] tying undriven pin insta_magnetic:i_clk to constant 0 [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:250]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 661.625 ; gain = 350.969
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:52 . Memory (MB): peak = 659.316 ; gain = 349.941
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 661.625 ; gain = 350.969
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:47 ; elapsed = 00:00:52 . Memory (MB): peak = 659.316 ; gain = 349.941
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 371 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -3130,16 +3130,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IOBUF => IOBUF (IBUF, OBUFT): 16 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 900.484 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 901.121 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:05 ; elapsed = 00:01:12 . Memory (MB): peak = 900.484 ; gain = 589.828
+Finished Constraint Validation : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 901.121 ; gain = 591.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:05 ; elapsed = 00:01:12 . Memory (MB): peak = 900.484 ; gain = 589.828
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 901.121 ; gain = 591.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -3194,7 +3194,7 @@ Applied set_property DONT_TOUCH = true for Design/design_1_i/PmodOLED_0/inst/axi
 Applied set_property DONT_TOUCH = true for Design/design_1_i/PmodOLED_0/inst/axi_quad_spi_0/U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Design/design_1_i/PmodOLED_0/inst/axi_quad_spi_0/U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst . (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:06 ; elapsed = 00:01:13 . Memory (MB): peak = 900.484 ; gain = 589.828
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:08 . Memory (MB): peak = 901.121 ; gain = 591.746
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'fsm_etat_courant_reg' in module 'AD7476_mef'
 INFO: [Synth 8-5546] ROM "o_DAV" won't be mapped to RAM because it is too sparse
@@ -3276,6 +3276,9 @@ INFO: [Synth 8-5544] ROM "etat_suivant" won't be mapped to Block RAM because add
 INFO: [Synth 8-5544] ROM "etat_suivant" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "etat_suivant" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "etat_suivant" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'compteur_etat_reg' in module 'Traitement'
+INFO: [Synth 8-5544] ROM "calorie" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "compteur_next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -3409,6 +3412,19 @@ INFO: [Synth 8-3354] encoded FSM with state register 'fsm_etat_courant_reg' usin
                       n0 |                        100000000 |                             0101
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'etat_courant_reg' using encoding 'one-hot' in module 'detectzero'
+WARNING: [Synth 8-327] inferring latch for variable 'calorie_reg' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:70]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_compteur_next_state_reg' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:61]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_compteur_next_state_reg' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:61]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                              001 |                               00
+                counting |                              010 |                               01
+            reached_10ms |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'compteur_etat_reg' using encoding 'one-hot' in module 'Traitement'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_compteur_next_state_reg' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:61]
+WARNING: [Synth 8-327] inferring latch for variable 'compteur_reg' [D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:69]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -3493,7 +3509,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_r
 INFO: [Synth 8-3354] encoded FSM with state register 'LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps_reg' using encoding 'sequential' in module 'qspi_mode_0_module'
 INFO: [Synth 8-6159] Found Keep on FSM register 'state_reg' in module 'axi_protocol_converter_v2_1_17_b2s_rd_cmd_fsm', re-encoding will not be performed
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:14 ; elapsed = 00:01:22 . Memory (MB): peak = 900.484 ; gain = 589.828
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:09 ; elapsed = 00:01:17 . Memory (MB): peak = 901.121 ; gain = 591.746
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3506,6 +3522,7 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     32 Bit       Adders := 1     
 	   2 Input     12 Bit       Adders := 8     
 	   2 Input      9 Bit       Adders := 2     
 	   2 Input      8 Bit       Adders := 66    
@@ -3535,7 +3552,7 @@ Detailed RTL Component Info :
 	                9 Bit    Registers := 6     
 	                8 Bit    Registers := 79    
 	                7 Bit    Registers := 1     
-	                6 Bit    Registers := 4     
+	                6 Bit    Registers := 5     
 	                5 Bit    Registers := 39    
 	                4 Bit    Registers := 57    
 	                3 Bit    Registers := 5     
@@ -3548,6 +3565,7 @@ Detailed RTL Component Info :
 	   2 Input     64 Bit        Muxes := 2     
 	   2 Input     47 Bit        Muxes := 2     
 	   2 Input     36 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 1     
 	   5 Input     32 Bit        Muxes := 4     
 	   2 Input     32 Bit        Muxes := 27    
 	   4 Input     32 Bit        Muxes := 16    
@@ -3555,6 +3573,7 @@ Detailed RTL Component Info :
 	   2 Input     17 Bit        Muxes := 1     
 	   2 Input     14 Bit        Muxes := 2     
 	   2 Input     12 Bit        Muxes := 6     
+	   2 Input     11 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 1     
 	   9 Input      9 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 18    
@@ -3566,12 +3585,14 @@ Detailed RTL Component Info :
 	   3 Input      5 Bit        Muxes := 2     
 	   4 Input      4 Bit        Muxes := 5     
 	   2 Input      4 Bit        Muxes := 52    
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 89    
 	   7 Input      2 Bit        Muxes := 5     
 	   4 Input      2 Bit        Muxes := 19    
 	  11 Input      2 Bit        Muxes := 1     
 	   5 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 560   
+	   2 Input      1 Bit        Muxes := 559   
 	   4 Input      1 Bit        Muxes := 22    
 	   5 Input      1 Bit        Muxes := 8     
 	   3 Input      1 Bit        Muxes := 3     
@@ -3614,13 +3635,13 @@ Detailed RTL Component Info :
 +---Registers : 
 	               64 Bit    Registers := 1     
 	                8 Bit    Registers := 64    
-	                6 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input     64 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 192   
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 262   
+	   2 Input      1 Bit        Muxes := 261   
 Module detectzero 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -3628,6 +3649,15 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   9 Input      9 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 9     
+Module Traitement 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
 Module axi_lite_ipif_v3_0_4_pselect_f 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -4310,6 +4340,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "tete" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-4471] merging register 'bus2ip_reset_reg' into 'AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst_reg' [d:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ip/design_1_PmodOLED_0_0/src/PmodOLED_axi_gpio_0_0/hdl/axi_gpio_v2_0_vh_rfs.vhd:1684]
 WARNING: [Synth 8-6014] Unused sequential element bus2ip_reset_reg was removed.  [d:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ip/design_1_PmodOLED_0_0/src/PmodOLED_axi_gpio_0_0/hdl/axi_gpio_v2_0_vh_rfs.vhd:1684]
@@ -4335,12 +4366,6 @@ INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [d:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:422]
 WARNING: [Synth 8-6014] Unused sequential element inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_grant_enc_i_reg was removed.  [d:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:324]
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [d:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:422]
-WARNING: [Synth 8-3332] Sequential element (tete_reg[5]) is unused and will be removed from module tamponcirc.
-WARNING: [Synth 8-3332] Sequential element (tete_reg[4]) is unused and will be removed from module tamponcirc.
-WARNING: [Synth 8-3332] Sequential element (tete_reg[3]) is unused and will be removed from module tamponcirc.
-WARNING: [Synth 8-3332] Sequential element (tete_reg[2]) is unused and will be removed from module tamponcirc.
-WARNING: [Synth 8-3332] Sequential element (tete_reg[1]) is unused and will be removed from module tamponcirc.
-WARNING: [Synth 8-3332] Sequential element (tete_reg[0]) is unused and will be removed from module tamponcirc.
 WARNING: [Synth 8-3332] Sequential element (tampon_reg[0][7]) is unused and will be removed from module tamponcirc.
 WARNING: [Synth 8-3332] Sequential element (tampon_reg[0][6]) is unused and will be removed from module tamponcirc.
 WARNING: [Synth 8-3332] Sequential element (tampon_reg[0][5]) is unused and will be removed from module tamponcirc.
@@ -4435,6 +4460,12 @@ WARNING: [Synth 8-3332] Sequential element (tampon_reg[11][5]) is unused and wil
 WARNING: [Synth 8-3332] Sequential element (tampon_reg[11][4]) is unused and will be removed from module tamponcirc.
 WARNING: [Synth 8-3332] Sequential element (tampon_reg[11][3]) is unused and will be removed from module tamponcirc.
 WARNING: [Synth 8-3332] Sequential element (tampon_reg[11][2]) is unused and will be removed from module tamponcirc.
+WARNING: [Synth 8-3332] Sequential element (tampon_reg[11][1]) is unused and will be removed from module tamponcirc.
+WARNING: [Synth 8-3332] Sequential element (tampon_reg[11][0]) is unused and will be removed from module tamponcirc.
+WARNING: [Synth 8-3332] Sequential element (tampon_reg[12][7]) is unused and will be removed from module tamponcirc.
+WARNING: [Synth 8-3332] Sequential element (tampon_reg[12][6]) is unused and will be removed from module tamponcirc.
+WARNING: [Synth 8-3332] Sequential element (tampon_reg[12][5]) is unused and will be removed from module tamponcirc.
+WARNING: [Synth 8-3332] Sequential element (tampon_reg[12][4]) is unused and will be removed from module tamponcirc.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'Design/design_1_i/PmodGPIO_0/inst/axi_gpio_0/U0/ip2bus_data_i_D1_reg[23]' (FDR) to 'Design/design_1_i/PmodGPIO_0/inst/axi_gpio_0/U0/ip2bus_data_i_D1_reg[22]'
 INFO: [Synth 8-3886] merging instance 'Design/design_1_i/PmodGPIO_0/inst/axi_gpio_0/U0/ip2bus_data_i_D1_reg[22]' (FDR) to 'Design/design_1_i/PmodGPIO_0/inst/axi_gpio_0/U0/ip2bus_data_i_D1_reg[21]'
@@ -4574,7 +4605,7 @@ INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Design/d
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Design/design_1_i /myip_0/\U0/myip_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Design/design_1_i /myip_0/\U0/myip_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:25 ; elapsed = 00:01:35 . Memory (MB): peak = 900.484 ; gain = 589.828
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:20 ; elapsed = 00:01:30 . Memory (MB): peak = 901.121 ; gain = 591.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -4602,13 +4633,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:34 ; elapsed = 00:01:45 . Memory (MB): peak = 999.414 ; gain = 688.758
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:29 ; elapsed = 00:01:40 . Memory (MB): peak = 1000.563 ; gain = 691.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:35 ; elapsed = 00:01:46 . Memory (MB): peak = 1034.484 ; gain = 723.828
+Finished Timing Optimization : Time (s): cpu = 00:01:30 ; elapsed = 00:01:41 . Memory (MB): peak = 1035.703 ; gain = 726.328
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -4635,7 +4666,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:38 ; elapsed = 00:01:50 . Memory (MB): peak = 1041.219 ; gain = 730.563
+Finished Technology Mapping : Time (s): cpu = 00:01:33 ; elapsed = 00:01:44 . Memory (MB): peak = 1043.637 ; gain = 734.262
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4676,7 +4707,7 @@ INFO: [Synth 8-4618] Found max_fanout attribute set to 20 on net \inst/gen_axili
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:39 ; elapsed = 00:01:51 . Memory (MB): peak = 1041.219 ; gain = 730.563
+Finished IO Insertion : Time (s): cpu = 00:01:35 ; elapsed = 00:01:46 . Memory (MB): peak = 1043.637 ; gain = 734.262
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -4689,7 +4720,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:40 ; elapsed = 00:01:51 . Memory (MB): peak = 1041.219 ; gain = 730.563
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:35 ; elapsed = 00:01:46 . Memory (MB): peak = 1043.637 ; gain = 734.262
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4701,25 +4732,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:40 ; elapsed = 00:01:52 . Memory (MB): peak = 1041.219 ; gain = 730.563
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:35 ; elapsed = 00:01:47 . Memory (MB): peak = 1043.637 ; gain = 734.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:40 ; elapsed = 00:01:52 . Memory (MB): peak = 1041.219 ; gain = 730.563
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:35 ; elapsed = 00:01:47 . Memory (MB): peak = 1043.637 ; gain = 734.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:40 ; elapsed = 00:01:52 . Memory (MB): peak = 1041.219 ; gain = 730.563
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:35 ; elapsed = 00:01:47 . Memory (MB): peak = 1043.637 ; gain = 734.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:40 ; elapsed = 00:01:52 . Memory (MB): peak = 1041.219 ; gain = 730.563
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:35 ; elapsed = 00:01:47 . Memory (MB): peak = 1043.637 ; gain = 734.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -4762,34 +4793,36 @@ Report Cell Usage:
 +------+--------+------+
 |1     |BIBUF   |   130|
 |2     |BUFG    |     3|
-|3     |CARRY4  |    22|
-|4     |LUT1    |   150|
-|5     |LUT2    |   202|
+|3     |CARRY4  |    30|
+|4     |LUT1    |   151|
+|5     |LUT2    |   234|
 |6     |LUT3    |   424|
-|7     |LUT4    |   334|
-|8     |LUT5    |   393|
-|9     |LUT6    |   596|
+|7     |LUT4    |   337|
+|8     |LUT5    |   395|
+|9     |LUT6    |   601|
 |10    |PS7     |     1|
 |11    |RAM32M  |     4|
 |12    |SRL16   |     1|
 |13    |SRL16E  |    19|
 |14    |SRLC32E |    47|
 |15    |FD      |     8|
-|16    |FDCE    |    20|
-|17    |FDPE    |     1|
+|16    |FDCE    |    22|
+|17    |FDPE    |     2|
 |18    |FDR     |   149|
 |19    |FDRE    |  2125|
 |20    |FDSE    |   125|
-|21    |IBUF    |     9|
-|22    |IOBUF   |    16|
-|23    |OBUF    |     7|
+|21    |LDC     |    34|
+|22    |LDP     |     1|
+|23    |IBUF    |     9|
+|24    |IOBUF   |    16|
+|25    |OBUF    |     7|
 +------+--------+------+
 
 Report Instance Areas: 
 +------+----------------------------------------------------------------------------------------------------+---------------------------------------------------------------+------+
 |      |Instance                                                                                            |Module                                                         |Cells |
 +------+----------------------------------------------------------------------------------------------------+---------------------------------------------------------------+------+
-|1     |top                                                                                                 |                                                               |  4786|
+|1     |top                                                                                                 |                                                               |  4875|
 |2     |  Controleur                                                                                        |Ctrl_AD1                                                       |    38|
 |3     |    MEF                                                                                             |AD7476_mef                                                     |    21|
 |4     |  Design                                                                                            |design_1_wrapper                                               |  4634|
@@ -4997,35 +5030,38 @@ Report Instance Areas:
 |206   |          SEQ                                                                                       |sequence_psr                                                   |    38|
 |207   |            SEQ_COUNTER                                                                             |upcnt_n                                                        |    13|
 |208   |  Synchronisation                                                                                   |Synchro_Horloges                                               |    79|
-|209   |  insta_magnetic                                                                                    |magnetic                                                       |    18|
+|209   |  insta_magnetic                                                                                    |magnetic                                                       |   107|
 |210   |    entity_compteur_signal                                                                          |compteur_signal                                                |    18|
 |211   |      iteration_detect                                                                              |detectzero                                                     |    18|
+|212   |    inst_traitement                                                                                 |Traitement                                                     |    89|
 +------+----------------------------------------------------------------------------------------------------+---------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:40 ; elapsed = 00:01:52 . Memory (MB): peak = 1041.219 ; gain = 730.563
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:36 ; elapsed = 00:01:47 . Memory (MB): peak = 1043.637 ; gain = 734.262
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1246 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:01:39 . Memory (MB): peak = 1041.219 ; gain = 491.703
-Synthesis Optimization Complete : Time (s): cpu = 00:01:40 ; elapsed = 00:01:52 . Memory (MB): peak = 1041.219 ; gain = 730.563
+Synthesis finished with 0 errors, 0 critical warnings and 1245 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:01:34 . Memory (MB): peak = 1043.637 ; gain = 492.457
+Synthesis Optimization Complete : Time (s): cpu = 00:01:36 ; elapsed = 00:01:47 . Memory (MB): peak = 1043.637 ; gain = 734.262
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 209 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-17] Analyzing 252 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 178 instances were transformed.
+  A total of 213 instances were transformed.
   FD => FDRE: 8 instances
   FDR => FDRE: 149 instances
   IOBUF => IOBUF (IBUF, OBUFT): 16 instances
+  LDC => LDCE: 34 instances
+  LDP => LDPE: 1 instances
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 4 instances
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-989 Infos, 385 Warnings, 0 Critical Warnings and 0 Errors encountered.
+994 Infos, 390 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:45 ; elapsed = 00:01:57 . Memory (MB): peak = 1041.219 ; gain = 737.457
+synth_design: Time (s): cpu = 00:01:40 ; elapsed = 00:01:51 . Memory (MB): peak = 1043.637 ; gain = 741.156
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1041.219 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Mar 30 17:59:05 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 1043.637 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 31 12:31:45 2019...

@@ -196,7 +196,6 @@ constant freq_sys_MHz: integer := 125;  -- MHz
        end component;
    
       signal clk_10MHz        : std_logic;
-      signal d_S_10MHz        : std_logic;
       signal d_strobe_380kHz  : std_logic := '0';  -- est utile pour debounce et cadence echantillonnage AD1
       signal d_strobe_200Hz   : std_logic := '0';  -- est utile pour debounce et cadence echantillonnage AD1
            
@@ -249,7 +248,7 @@ begin
     
     insta_magnetic : magnetic
         Port map(  --Generaux
-                i_clk           => d_S_10MHz,
+                i_clk           => clk_10MHz,
                 i_reset         => reset,
                 i_str_tampon    => d_strobe_380kHz,
                 

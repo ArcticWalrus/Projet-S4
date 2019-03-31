@@ -1,0 +1,751 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Mar 30 14:32:36 2019
+# Process ID: 28132
+# Current directory: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7832 D:\DEV\Git_Kraken\Velociraptor\Projet-S4\Velociraptor_Project\lectureADC\lectureADC.xpr
+# Log file: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/vivado.log
+# Journal file: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'D:/DEV/Git_Kraken/demo1701/Downloads/FichiersAtelier1/Pmod_vivado-library-2018.2-1', nor could it be found using path 'C:/Users/raf_0/Documents/Projet_Kraken_Local/demo1701/Downloads/FichiersAtelier1/Pmod_vivado-library-2018.2-1'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/ip_repo/myIO_IP_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/ip_repo/myip_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/DEV/Git_Kraken/demo1701/Downloads/FichiersAtelier1/Pmod_vivado-library-2018.2-1'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/Pmod_vivado-library-2018.2-1'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 860.656 ; gain = 128.090
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sat Mar 30 14:33:23 2019] Launched synth_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/runme.log
+[Sat Mar 30 14:33:23 2019] Launched impl_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/runme.log
+file copy -force D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+
+launch_sdk -workspace D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk -hwspec D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk -hwspec D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sat Mar 30 14:44:16 2019] Launched synth_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/runme.log
+[Sat Mar 30 14:44:16 2019] Launched impl_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/runme.log
+file copy -force D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+
+INFO: [Vivado 12-4159] Implementation run is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-run implementation and re-generate bitstream before doing hardware export.
+file copy -force D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sat Mar 30 14:50:43 2019] Launched synth_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/runme.log
+[Sat Mar 30 14:50:43 2019] Launched impl_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/runme.log
+file copy -force D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+
+launch_sdk -workspace D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk -hwspec D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk -hwspec D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_0_mixed.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_1_wb.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_2_nm.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_0_mixed.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_1_wb.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_2_nm.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_3_sp.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_3_sp.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_0_mixed.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_1_wb.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_2_nm.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_0_mixed.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_1_wb.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_2_nm.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_3_sp.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_3_sp.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj Top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_processing_system7_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ip/design_1_PmodOLED_0_0/src/PmodOLED_pmod_bridge_0_0/src/pmod_concat.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pmod_concat
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_PmodOLED_0_0/src/PmodOLED_pmod_bridge_0_0/sim/PmodOLED_pmod_bridge_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PmodOLED_pmod_bridge_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ipshared/43ae/src/PmodOLED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PmodOLED
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_PmodOLED_0_0/sim/design_1_PmodOLED_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_PmodOLED_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_PmodGPIO_0_0/src/PmodGPIO_pmod_bridge_0_0/sim/PmodGPIO_pmod_bridge_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PmodGPIO_pmod_bridge_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_PmodGPIO_0_0/src/PmodGPIO_xlslice_0_0/sim/PmodGPIO_xlslice_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PmodGPIO_xlslice_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_PmodGPIO_0_0/src/PmodGPIO_xlslice_0_1/sim/PmodGPIO_xlslice_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PmodGPIO_xlslice_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_PmodGPIO_0_0/src/PmodGPIO_xlslice_0_2/sim/PmodGPIO_xlslice_0_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PmodGPIO_xlslice_0_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_PmodGPIO_0_0/src/PmodGPIO_xlslice_t_0_0/sim/PmodGPIO_xlslice_t_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PmodGPIO_xlslice_t_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_PmodGPIO_0_0/src/PmodGPIO_xlconcat_0_0/sim/PmodGPIO_xlconcat_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PmodGPIO_xlconcat_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ipshared/86fc/src/PmodGPIO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PmodGPIO
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_PmodGPIO_0_0/sim/design_1_PmodGPIO_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_PmodGPIO_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_xbar_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj Top_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_PmodOLED_0_0/src/PmodOLED_axi_quad_spi_0_0/sim/PmodOLED_axi_quad_spi_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PmodOLED_axi_quad_spi_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_PmodOLED_0_0/src/PmodOLED_axi_gpio_0_0/sim/PmodOLED_axi_gpio_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PmodOLED_axi_gpio_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_rst_ps7_0_50M_0/sim/design_1_rst_ps7_0_50M_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_rst_ps7_0_50M_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_PmodGPIO_0_0/src/PmodGPIO_axi_gpio_0_0/sim/PmodGPIO_axi_gpio_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PmodGPIO_axi_gpio_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_axi_gpio_0_0/sim/design_1_axi_gpio_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_axi_gpio_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_axi_gpio_1_0/sim/design_1_axi_gpio_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_axi_gpio_1_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ipshared/339b/hdl/myip_v1_0_S00_AXI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity myip_v1_0_S00_AXI
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ipshared/339b/hdl/myip_v1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity myip_v1_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_myip_0_1/sim/design_1_myip_0_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_myip_0_1
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/sim/design_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity m00_couplers_imp_15SPJYW
+INFO: [VRFC 10-307] analyzing entity m01_couplers_imp_XU9C55
+INFO: [VRFC 10-307] analyzing entity m02_couplers_imp_14WQB4R
+INFO: [VRFC 10-307] analyzing entity m03_couplers_imp_YFYJ3U
+INFO: [VRFC 10-307] analyzing entity m04_couplers_imp_17KQ732
+INFO: [VRFC 10-307] analyzing entity m05_couplers_imp_VQEDA7
+INFO: [VRFC 10-307] analyzing entity m06_couplers_imp_16EQN6L
+INFO: [VRFC 10-307] analyzing entity m07_couplers_imp_X61OAK
+INFO: [VRFC 10-307] analyzing entity m08_couplers_imp_1024TAS
+INFO: [VRFC 10-307] analyzing entity s00_couplers_imp_UYSKKA
+INFO: [VRFC 10-307] analyzing entity design_1_ps7_0_axi_periph_0
+INFO: [VRFC 10-307] analyzing entity design_1
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ipshared/79e7/hdl/myIO_IP_v1_0_S00_AXI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity myIO_IP_v1_0_S00_AXI
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ipshared/79e7/hdl/myIO_IP_v1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity myIO_IP_v1_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_myIO_IP_0_0/sim/design_1_myIO_IP_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_myIO_IP_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_myIO_IP_1_0/sim/design_1_myIO_IP_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_myIO_IP_1_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.ip_user_files/bd/design_1/ip/design_1_myIO_IP_2_0/sim/design_1_myIO_IP_2_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_myIO_IP_2_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/AD7476_mef.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity AD7476_mef
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Ctrl_AD1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Ctrl_AD1
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Synchro_Horloges.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Synchro_Horloges
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Velocyraptor_package.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Traitement
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/compteur_signal.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity compteur_signal
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_wrapper
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/detectzero.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity detectzero
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity magnetic
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/tamponcirc.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tamponcirc
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Top
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 923.719 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '7' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 7f505bbe0574458c8cf0c9061e8d599c --incr --debug typical --relax --mt 2 -L axi_infrastructure_v1_1_0 -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xil_defaultlib -L dist_mem_gen_v8_0_12 -L lib_pkg_v1_0_2 -L lib_cdc_v1_0_2 -L lib_srl_fifo_v1_0_2 -L fifo_generator_v13_2_2 -L lib_fifo_v1_0_11 -L axi_lite_ipif_v3_0_4 -L interrupt_control_v3_1_4 -L axi_quad_spi_v3_2_16 -L axi_gpio_v2_0_19 -L proc_sys_reset_v5_0_12 -L xlslice_v1_0_1 -L xlconcat_v2_1_1 -L generic_baseblocks_v2_1_0 -L axi_register_slice_v2_1_17 -L axi_data_fifo_v2_1_16 -L axi_crossbar_v2_1_18 -L axi_protocol_converter_v2_1_17 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Top_behav xil_defaultlib.Top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 128 differs from formal bit length 64 for port WR_DATA_STRB [/proj/xbuilds/2018.2_0614_1954/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_5_axi_gp.v:208]
+WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 6 for port m_axi_bid [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:5425]
+WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 6 for port m_axi_rid [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:5443]
+WARNING: [VRFC 10-278] actual bit length 128 differs from formal bit length 64 for port WR_DATA_STRB [/proj/xbuilds/2018.2_0614_1954/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_5_axi_gp.v:292]
+WARNING: [VRFC 10-278] actual bit length 8 differs from formal bit length 9 for port WR_BYTES [/proj/xbuilds/2018.2_0614_1954/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_5_axi_hp.v:80]
+WARNING: [VRFC 10-278] actual bit length 8 differs from formal bit length 9 for port RD_BYTES [/proj/xbuilds/2018.2_0614_1954/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_5_axi_hp.v:89]
+WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 6 for port m_axi_bid [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8556]
+WARNING: [VRFC 10-278] actual bit length 12 differs from formal bit length 6 for port m_axi_rid [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8574]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port m_axi_rdata [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8575]
+WARNING: [VRFC 10-278] actual bit length 8 differs from formal bit length 9 for port WR_BYTES [/proj/xbuilds/2018.2_0614_1954/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_5_axi_hp.v:165]
+WARNING: [VRFC 10-278] actual bit length 8 differs from formal bit length 9 for port RD_BYTES [/proj/xbuilds/2018.2_0614_1954/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_5_axi_hp.v:174]
+WARNING: [VRFC 10-278] actual bit length 8 differs from formal bit length 9 for port WR_BYTES [/proj/xbuilds/2018.2_0614_1954/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_5_axi_hp.v:251]
+WARNING: [VRFC 10-278] actual bit length 8 differs from formal bit length 9 for port RD_BYTES [/proj/xbuilds/2018.2_0614_1954/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_5_axi_hp.v:260]
+WARNING: [VRFC 10-278] actual bit length 8 differs from formal bit length 9 for port WR_BYTES [/proj/xbuilds/2018.2_0614_1954/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_5_axi_hp.v:337]
+WARNING: [VRFC 10-278] actual bit length 8 differs from formal bit length 9 for port RD_BYTES [/proj/xbuilds/2018.2_0614_1954/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_5_axi_hp.v:346]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port m_axi_rdata [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:5444]
+WARNING: [VRFC 10-142] ocm_wr_strb_port0 was previously declared with a different range [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:3694]
+WARNING: [VRFC 10-597] element index 64 into wrp_strb is out of bounds [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:6006]
+WARNING: [VRFC 10-597] element index 128 into wrp_strb is out of bounds [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:9214]
+Completed static elaboration
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4764 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4767 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4773 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4776 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4782 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4785 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4791 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4794 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4800 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4803 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4809 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4812 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4818 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4821 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4827 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4830 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4836 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4839 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4845 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4850 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4856 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4859 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4865 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4868 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4876 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4881 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4887 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4892 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4898 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4903 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4909 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4914 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4920 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4925 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4932 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4937 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4943 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4948 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4954 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4959 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4965 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4970 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4976 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4981 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4987 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4992 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4998 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5003 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5009 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5014 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5020 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5025 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5031 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5036 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5042 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5047 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5053 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5058 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5064 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5069 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5075 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5080 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5086 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5091 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5097 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5102 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5108 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5113 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5119 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5124 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5130 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5135 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5141 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5146 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5152 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5157 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5163 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5168 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4764 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4767 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4773 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4776 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4782 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4785 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4791 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4794 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4800 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4803 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4809 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4812 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4818 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4821 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4827 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4830 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4836 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4839 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4845 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4850 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4856 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4859 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4865 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4868 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4876 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4881 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4887 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4892 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4898 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4903 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4909 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4914 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4920 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4925 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4932 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4937 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4943 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4948 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4954 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4959 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4965 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4970 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4976 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4981 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4987 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4992 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4998 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5003 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5009 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5014 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5020 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5025 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5031 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5036 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5042 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5047 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5053 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5058 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5064 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5069 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5075 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5080 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5086 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5091 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5097 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5102 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5108 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5113 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5119 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5124 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5130 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5135 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5141 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5146 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5152 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5157 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5163 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 5168 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4764 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4767 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4773 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4776 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4782 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4785 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4791 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4794 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4800 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4803 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4809 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4812 : The "System Verilog Assertion" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/axi_protocol_checker_v2_0/hdl/axi_protocol_checker_v2_0_vl_rfs.sv" Line 4818 : The "System Verilog Property Declaration" is not supported yet for simulation. The statement will be ignored.
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 923.719 ; gain = 0.000
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'elaborate' step aborted
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:23 . Memory (MB): peak = 923.719 ; gain = 7.020
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+set_property top Synchro_Horloges [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Synchro_Horloges' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_0_mixed.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_1_wb.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_2_nm.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_0_mixed.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_1_wb.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_2_nm.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_3_sp.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_3_sp.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_0_mixed.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_1_wb.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_2_nm.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_0_mixed.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_1_wb.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_2_nm.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_3_sp.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_3_sp.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj Synchro_Horloges_vlog.prj"
+"xvhdl --incr --relax -prj Synchro_Horloges_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 7f505bbe0574458c8cf0c9061e8d599c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Synchro_Horloges_behav xil_defaultlib.Synchro_Horloges xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling module xil_defaultlib.glbl
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture behavioral of entity xil_defaultlib.synchro_horloges
+Built simulation snapshot Synchro_Horloges_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/xsim.dir/Synchro_Horloges_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Mar 30 15:05:22 2019...
+run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 934.016 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Synchro_Horloges_behav -key {Behavioral:sim_1:Functional:Synchro_Horloges} -tclbatch {Synchro_Horloges.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Synchro_Horloges.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Synchro_Horloges_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 950.898 ; gain = 21.891
+add_force {/Synchro_Horloges/clkm} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 100 ms
+run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 958.152 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sat Mar 30 15:34:52 2019] Launched synth_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/runme.log
+[Sat Mar 30 15:34:52 2019] Launched impl_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/runme.log
+file copy -force D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Synchro_Horloges' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_0_mixed.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_1_wb.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_2_nm.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_0_mixed.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_1_wb.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_2_nm.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_3_sp.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_3_sp.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_0_mixed.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_1_wb.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_2_nm.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_0_mixed.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_1_wb.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_2_nm.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_3_sp.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_3_sp.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj Synchro_Horloges_vlog.prj"
+"xvhdl --incr --relax -prj Synchro_Horloges_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Synchro_Horloges.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Synchro_Horloges
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 7f505bbe0574458c8cf0c9061e8d599c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Synchro_Horloges_behav xil_defaultlib.Synchro_Horloges xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling module xil_defaultlib.glbl
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture behavioral of entity xil_defaultlib.synchro_horloges
+Built simulation snapshot Synchro_Horloges_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 978.430 ; gain = 0.000
+add_force {/Synchro_Horloges/clkm} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 100 ms
+run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 978.430 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Synchro_Horloges' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_0_mixed.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_1_wb.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_2_nm.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_0_mixed.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_1_wb.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_2_nm.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_3_sp.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_3_sp.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_0_mixed.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_1_wb.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_2_nm.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_0_mixed.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_1_wb.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_2_nm.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_3_sp.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_3_sp.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj Synchro_Horloges_vlog.prj"
+"xvhdl --incr --relax -prj Synchro_Horloges_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Synchro_Horloges.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Synchro_Horloges
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 7f505bbe0574458c8cf0c9061e8d599c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Synchro_Horloges_behav xil_defaultlib.Synchro_Horloges xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling module xil_defaultlib.glbl
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture behavioral of entity xil_defaultlib.synchro_horloges
+Built simulation snapshot Synchro_Horloges_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 978.430 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Synchro_Horloges' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_0_mixed.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_1_wb.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_2_nm.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_0_mixed.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_1_wb.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_2_nm.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_3_sp.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_3_sp.mif'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_0_mixed.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_1_wb.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_2_nm.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_0_mixed.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_1_wb.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_2_nm.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_2_memory_3_sp.mem'
+INFO: [SIM-utils-43] Exported 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim/mode_1_memory_3_sp.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_3 -L axi_vip_v1_1_3 -L processing_system7_vip_v1_0_5 -L xilinx_vip -prj Synchro_Horloges_vlog.prj"
+"xvhdl --incr --relax -prj Synchro_Horloges_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 7f505bbe0574458c8cf0c9061e8d599c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Synchro_Horloges_behav xil_defaultlib.Synchro_Horloges xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 978.430 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sat Mar 30 15:59:01 2019] Launched synth_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/runme.log
+[Sat Mar 30 15:59:01 2019] Launched impl_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/runme.log
+file copy -force D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sat Mar 30 16:35:30 2019] Launched synth_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/runme.log
+[Sat Mar 30 16:35:30 2019] Launched impl_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/runme.log
+file copy -force D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sat Mar 30 17:04:45 2019] Launched synth_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/runme.log
+[Sat Mar 30 17:04:45 2019] Launched impl_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/runme.log
+file copy -force D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sat Mar 30 17:18:11 2019] Launched synth_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/runme.log
+[Sat Mar 30 17:18:11 2019] Launched impl_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sat Mar 30 17:20:39 2019] Launched synth_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/runme.log
+[Sat Mar 30 17:20:39 2019] Launched impl_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/runme.log
+file copy -force D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sat Mar 30 17:39:55 2019] Launched synth_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/runme.log
+[Sat Mar 30 17:39:55 2019] Launched impl_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/runme.log
+file copy -force D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sat Mar 30 17:56:57 2019] Launched synth_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/runme.log
+[Sat Mar 30 17:56:57 2019] Launched impl_1...
+Run output will be captured here: D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/runme.log
+file copy -force D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 30 18:06:12 2019...

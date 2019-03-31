@@ -46,6 +46,7 @@ int main()
 	int sw_data = 0;
 	u8 pmod8LDvalue = 0;
 	float currentData = 0;
+	float currentVoltage = 0;
 	char dataChar[5];
 
     print("Bienvenue\n\r");
@@ -79,6 +80,7 @@ int main()
 		XGpio_DiscreteWrite(&outputLED, 1, sw_data);
 		//xil_printf("Switch value = 0x%X\n\r", sw_data);
 
+		currentVoltage= AD1_GetSampleVoltage();
 
 		// lire la tension provenant du PmodAD1
 		if(sw_data == 0){
@@ -116,24 +118,30 @@ int main()
 		}
 		else {
 			OLED_ClearBuffer(&oledDevice);
+			currentData = Speed_GetSampleValue();
 			OLED_SetCursor(&oledDevice, 0, 1);
-			OLED_PutString(&oledDevice, "You had one job");
-			currentData = AD1_GetSampleVoltage();
+			OLED_PutString(&oledDevice, "Vitesse = ");
+			// Affichage de la vitesse sur le Pmod OLED
+			sprintf(dataChar,"%2.2f",currentData);
+			OLED_SetCursor(&oledDevice, 10, 1);
+			OLED_PutString(&oledDevice, dataChar);
+
 			OLED_SetCursor(&oledDevice, 0, 3);
 			OLED_PutString(&oledDevice, "Voltage = ");
 			// Affichage de la Calorie sur le Pmod OLED
-			sprintf(dataChar,"%2.2f",currentData);
+			sprintf(dataChar,"%2.2f",currentVoltage);
 			OLED_SetCursor(&oledDevice, 10, 3);
 			OLED_PutString(&oledDevice, dataChar);
 			OLED_Update(&oledDevice);
-			// Affichage graduel du voltage sur le Pmod 8LD
-			// 3.3V => tous les leds allumés
-			// 0.0V => tous les leds éteints
-			pmod8LDvalue = 0xFF << (8 - (u8)(currentData / ReferenceVoltage * 8));
-			GPIO_setPins(&pmod8LD,pmod8LDvalue);
-		}
-//om a strobe il fsit clock de 380 mhz... ou communication directe avec mef qui regenere une clock
 
+
+		}
+
+		// Affichage graduel du voltage sur le Pmod 8LD
+		// 3.3V => tous les leds allumés
+		// 0.0V => tous les leds éteints
+		pmod8LDvalue = 0xFF << (8 - (u8)(currentVoltage / ReferenceVoltage * 8));
+		GPIO_setPins(&pmod8LD,pmod8LDvalue);
 	}
 
     return 0;
