@@ -61,3 +61,37 @@ file copy -force C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S
 
 file copy -force C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
 
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Apr  1 14:27:46 2019] Launched impl_1...
+Run output will be captured here: C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/runme.log
+file copy -force C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+
+file copy -force C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+
+launch_sdk -workspace C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Apr  1 14:52:41 2019] Launched synth_1...
+Run output will be captured here: C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/runme.log
+[Mon Apr  1 14:52:41 2019] Launched impl_1...
+Run output will be captured here: C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/runme.log
+file copy -force C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Apr  1 15:17:21 2019] Launched synth_1...
+Run output will be captured here: C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/runme.log
+[Mon Apr  1 15:17:21 2019] Launched impl_1...
+Run output will be captured here: C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Apr  1 15:22:33 2019] Launched synth_1...
+Run output will be captured here: C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/runme.log
+[Mon Apr  1 15:22:33 2019] Launched impl_1...
+Run output will be captured here: C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/runme.log
+file copy -force C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+

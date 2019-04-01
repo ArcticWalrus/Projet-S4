@@ -62,7 +62,8 @@ architecture Behavioral of magnetic is
                 i_nb_items_total    : in unsigned(31 downto 0);
                 i_poid_Kg           : in unsigned(7 downto 0);
                 i_taille_cm         : in unsigned(7 downto 0);
-                i_tours_en_2sec     : in unsigned(5 downto 0)
+                i_tours_en_2sec     : in unsigned(5 downto 0);
+                i_stb               : in std_logic
         );
     end component;
           
@@ -119,7 +120,9 @@ begin
               i_nb_items_total  => s_nb_items_total ,
               i_poid_Kg         => i_poid_Kg,
               i_taille_cm       => i_taille_cm,
-              i_tours_en_2sec   => s_nb_items        --temporaire
+              i_tours_en_2sec   => s_nb_items,        --temporaire
+              
+              i_stb             => i_str_tampon
         );
         
 --    o_vitesse(5 downto 1) <= (others => '0');

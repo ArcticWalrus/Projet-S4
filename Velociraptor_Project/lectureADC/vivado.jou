@@ -33,3 +33,24 @@ file copy -force C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S
 
 file copy -force C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
 
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+
+file copy -force C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+
+launch_sdk -workspace C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+

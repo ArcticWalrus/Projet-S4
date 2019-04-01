@@ -13,13 +13,14 @@ entity Traitement is
             i_nb_items_total    : in unsigned(31 downto 0);
             i_poid_Kg           : in unsigned(7 downto 0);
             i_taille_cm         : in unsigned(7 downto 0);
-            i_tours_en_2sec     : in unsigned(5 downto 0)
+            i_tours_en_2sec     : in unsigned(5 downto 0);
+            i_stb               : in std_logic
     );
 end Traitement;
 
 architecture Behavioral of Traitement is
 
-constant rayon_roue: natural := natural(0.336); --diamètre de la roue = 67.2 cm -> rayon de 33.6 cm
+--constant rayon_roue: natural := natural(0.336); --diamètre de la roue = 67.2 cm -> rayon de 33.6 cm
 
 type weight_category is (less_65, between_65_75, above_75);
 signal current_weight : weight_category;
@@ -29,9 +30,9 @@ signal compteur_etat : etat_compteur;
 signal compteur_next_state : etat_compteur;
 
 signal s_u_vitesse : unsigned(5 downto 0);
-constant circonference: natural := natural(2 * natural(MATH_PI) * rayon_roue);
+--constant circonference: natural := natural(2 * natural(MATH_PI) * rayon_roue);
 constant circ: integer := 211; --(m*100)
-signal calorie, constante_calorie : natural;
+signal calorie, constante_calorie : integer;
 signal s_vitesse : integer;
 signal compteur : unsigned(31 downto 0);
 
@@ -50,7 +51,7 @@ begin
             
             s_u_vitesse <= to_unsigned(s_vitesse * 360 / 100, 6); --(km/h) à vérifier l'allure de la valeur 
             o_distance <= to_unsigned(circ * to_integer(i_nb_items_total) / 100, 32); --à vérifier l'allure de la valeur facteur 100 -> 2 décimales
-            o_calorie  <= to_unsigned(calorie, 11); --temporaire, il faut accumuler les valeurs facteur 10 pour 1 décimale	
+            o_calorie  <= to_unsigned(calorie / 360000, 11); --temporaire, il faut accumuler les valeurs facteur 10 pour 1 décimale	
     	end if;
     
     end process;
@@ -64,38 +65,12 @@ begin
         end if;
     end process;
     
-    process(i_reset, compteur_etat, i_clk)
+    process(i_reset, i_stb)
     begin
     if (i_reset = '1') then
-        compteur_next_state <= init;
-        compteur <= x"00000000";
         calorie <= 0;     
-    elsif i_clk = '1' then
-        case compteur_etat is
-            when init =>
-                compteur_next_state <= counting;
-                compteur <= x"00000000";
-                calorie <= calorie;
-            when counting =>
-                if compteur < x"0001869D" then --en bas de 100000 coups d'horloges
-                    compteur_next_state <= counting;
-                    calorie <= calorie;
-                else
-                    compteur_next_state <= reached_10ms;
-                    calorie <= calorie;
-                end if;
-                compteur <= compteur + x"00000001";
-            when reached_10ms =>
-                compteur_next_state <= init;
-                calorie <= calorie + constante_calorie/2; --on rajoute le nombre de calories selon la constante
-                                                          -- à la vitesse actuelle selon le poids (2 est un hotfix
-                                                          --lié que la constante est additionnée 2 fois
-                compteur <= x"00000000";
-            when others =>
-                compteur_next_state <= init;   
-                calorie <= calorie;     
-                compteur <= x"00000000";  
-        end case;
+    elsif i_stb = '1' and i_stb'event then
+        calorie <= calorie + constante_calorie;
     end if;  
     end process;
     
@@ -110,53 +85,21 @@ begin
         end if;
     end process;
     
-    process(s_u_vitesse) -- défini la constante de calories / 10 ms
-    begin
-    --Less than 65 kg
-        if (s_u_vitesse < x"00000010" and current_weight = less_65) then -- < 16km/h
-            constante_calorie <= natural(236.0/360000);
-        elsif (s_u_vitesse >= x"00000010" and s_u_vitesse < x"00000013" and current_weight = less_65) then -- 16<= < 19km/h
-            constante_calorie     <= natural(354.0/360000); 
-        elsif (s_u_vitesse >= x"00000013" and s_u_vitesse < x"00000016" and current_weight = less_65) then -- 19<= < 22km/h
-            constante_calorie     <= natural(472.0/360000); 
-        elsif (s_u_vitesse >= x"00000016" and s_u_vitesse < x"00000019" and current_weight = less_65) then -- 22<= < 25km/h
-            constante_calorie     <= natural(590.0/360000); 
-        elsif (s_u_vitesse >= x"00000019" and s_u_vitesse < x"0000001e" and current_weight = less_65) then -- 25<= < 30km/h
-            constante_calorie     <= natural(708.0/360000);    
-        elsif (s_u_vitesse >= x"0000001d" and current_weight = less_65) then -- > 30km/h
-            constante_calorie     <= natural(944.0/360000);   
-         
-    --Between 65 and 75 kg        
-        elsif (s_u_vitesse < x"00000010" and current_weight = between_65_75) then -- < 16km/h
-            constante_calorie <= natural(281.0/360000);
-        elsif (s_u_vitesse >= x"00000010" and s_u_vitesse < x"00000013" and current_weight = between_65_75) then -- 16<= < 19km/h
-            constante_calorie     <= natural(422.0/360000); 
-        elsif (s_u_vitesse >= x"00000013" and s_u_vitesse < x"00000016" and current_weight = between_65_75) then -- 19<= < 22km/h
-            constante_calorie     <= natural(563.0/360000); 
-        elsif (s_u_vitesse >= x"00000016" and s_u_vitesse < x"00000019" and current_weight = between_65_75) then -- 22<= < 25km/h
-            constante_calorie     <= natural(704.0/360000); 
-        elsif (s_u_vitesse >= x"00000019" and s_u_vitesse < x"0000001e" and current_weight = between_65_75) then -- 25<= < 30km/h
-            constante_calorie     <= natural(844.0/360000);    
-        elsif (s_u_vitesse >= x"0000001d" and current_weight = between_65_75) then -- > 30km/h
-            constante_calorie     <= natural(1126.0/360000);  
-    -- Above 75 kg            
-        elsif (s_u_vitesse < x"00000010" and current_weight = above_75) then -- < 16km/h
-            constante_calorie <= natural(345.0/360000);
-        elsif (s_u_vitesse >= x"00000010" and s_u_vitesse < x"00000013" and current_weight = above_75) then -- 16<= < 19km/h
-            constante_calorie     <= natural(518.0/360000); 
-        elsif (s_u_vitesse >= x"00000013" and s_u_vitesse < x"00000016" and current_weight = above_75) then -- 19<= < 22km/h
-            constante_calorie     <= natural(690.0/360000); 
-        elsif (s_u_vitesse >= x"00000016" and s_u_vitesse < x"00000019" and current_weight = above_75) then -- 22<= < 25km/h
-            constante_calorie     <= natural(863.0/360000); 
-        elsif (s_u_vitesse >= x"00000019" and s_u_vitesse < x"0000001e" and current_weight = above_75) then -- 25<= < 30km/h
-            constante_calorie     <= natural(1035.0/360000);    
-        elsif (s_u_vitesse >= x"0000001d" and current_weight = above_75) then -- > 30km/h
-            constante_calorie     <= natural(1380.0/360000);                                                                                                 
-        else
-            constante_calorie <= natural(563.0/360000); -- valeur médiane      
-        end if;
-    
-    end process;
+process(s_u_vitesse) -- défini la constante de calories / 10 ms
+        begin    
+            if (s_u_vitesse < "001011") then -- < 11km/h (pas assez précis pour calculer calories)
+                    constante_calorie <= 17 * to_integer(s_u_vitesse);
+            elsif (current_weight = less_65) then --Less than 65 kg
+                constante_calorie     <= 40 * to_integer(s_u_vitesse) - 412 ;      
+            elsif (current_weight = between_65_75) then --Between 65 and 75 kg  
+                constante_calorie <= 48 * to_integer(s_u_vitesse) - 493;          
+            elsif (current_weight = above_75) then -- Above 75 kg  
+                constante_calorie <= 59 * to_integer(s_u_vitesse) - 603;                                                                                            
+            else
+                constante_calorie <= 563;   -- valeur moyenne   
+            end if;
+        
+        end process;
 
 	
 	o_vitesse <= s_u_vitesse; --(km/h) à vérifier l'allure de la valeur facteur 100 pour garder 2 décimales

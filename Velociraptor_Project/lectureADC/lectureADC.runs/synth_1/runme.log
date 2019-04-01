@@ -16,15 +16,15 @@ WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/raf_0/Doc
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/Pmod_vivado-library-2018.2-1'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-add_files: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 302.793 ; gain = 57.832
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 302.668 ; gain = 58.477
 Command: synth_design -top Top -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6520 
+INFO: Helper process launched with PID 2828 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 419.098 ; gain = 109.410
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 419.203 ; gain = 109.645
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Top' [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:71]
 INFO: [Synth 8-3491] module 'Ctrl_AD1' declared at 'C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Ctrl_AD1.vhd:13' bound to instance 'Controleur' of component 'Ctrl_AD1' [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:228]
@@ -41,7 +41,7 @@ INFO: [Synth 8-113] binding component instance 'ClockBuffer' to cell 'BUFG' [C:/
 INFO: [Synth 8-256] done synthesizing module 'Synchro_Horloges' (3#1) [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Synchro_Horloges.vhd:23]
 INFO: [Synth 8-3491] module 'magnetic' declared at 'C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:8' bound to instance 'insta_magnetic' of component 'magnetic' [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:249]
 INFO: [Synth 8-638] synthesizing module 'magnetic' [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:28]
-INFO: [Synth 8-3491] module 'compteur_signal' declared at 'C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/compteur_signal.vhd:5' bound to instance 'entity_compteur_signal' of component 'compteur_signal' [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:84]
+INFO: [Synth 8-3491] module 'compteur_signal' declared at 'C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/compteur_signal.vhd:5' bound to instance 'entity_compteur_signal' of component 'compteur_signal' [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:85]
 INFO: [Synth 8-638] synthesizing module 'compteur_signal' [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/compteur_signal.vhd:19]
 INFO: [Synth 8-3491] module 'tamponcirc' declared at 'C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/tamponcirc.vhd:5' bound to instance 'iteration_tampon' of component 'tamponcirc' [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/compteur_signal.vhd:49]
 INFO: [Synth 8-638] synthesizing module 'tamponcirc' [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/tamponcirc.vhd:19]
@@ -51,13 +51,10 @@ INFO: [Synth 8-638] synthesizing module 'detectzero' [C:/Users/raf_0/Documents/P
 WARNING: [Synth 8-614] signal 'signe_x' is read in the process but is not in the sensitivity list [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/detectzero.vhd:53]
 INFO: [Synth 8-256] done synthesizing module 'detectzero' (5#1) [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/detectzero.vhd:14]
 INFO: [Synth 8-256] done synthesizing module 'compteur_signal' (6#1) [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/compteur_signal.vhd:19]
-INFO: [Synth 8-3491] module 'Traitement' declared at 'C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:6' bound to instance 'inst_traitement' of component 'Traitement' [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:110]
-INFO: [Synth 8-638] synthesizing module 'Traitement' [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:20]
-WARNING: [Synth 8-614] signal 'calorie' is read in the process but is not in the sensitivity list [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:67]
-WARNING: [Synth 8-614] signal 'compteur' is read in the process but is not in the sensitivity list [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:67]
-WARNING: [Synth 8-614] signal 'constante_calorie' is read in the process but is not in the sensitivity list [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:67]
-WARNING: [Synth 8-614] signal 'current_weight' is read in the process but is not in the sensitivity list [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:113]
-INFO: [Synth 8-256] done synthesizing module 'Traitement' (7#1) [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:20]
+INFO: [Synth 8-3491] module 'Traitement' declared at 'C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:6' bound to instance 'inst_traitement' of component 'Traitement' [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:111]
+INFO: [Synth 8-638] synthesizing module 'Traitement' [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:21]
+WARNING: [Synth 8-614] signal 'current_weight' is read in the process but is not in the sensitivity list [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:88]
+INFO: [Synth 8-256] done synthesizing module 'Traitement' (7#1) [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:21]
 INFO: [Synth 8-256] done synthesizing module 'magnetic' (8#1) [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/magnetic.vhd:28]
 INFO: [Synth 8-3491] module 'design_1_wrapper' declared at 'C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:14' bound to instance 'Design' of component 'design_1_wrapper' [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/AD1/Top.vhd:295]
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:66]
@@ -2961,7 +2958,7 @@ WARNING: [Synth 8-3331] design axi_crossbar_v2_1_18_axi_crossbar has unconnected
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_18_axi_crossbar has unconnected port m_axi_buser[8]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:31 ; elapsed = 00:01:46 . Memory (MB): peak = 663.070 ; gain = 353.383
+Finished RTL Elaboration : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 660.387 ; gain = 350.828
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2976,10 +2973,10 @@ INFO: [Synth 8-3295] tying undriven pin FIFO_EXISTS.CLK_CROSS_I:Mst_N_Slv_mode_c
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:32 ; elapsed = 00:01:48 . Memory (MB): peak = 663.070 ; gain = 353.383
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:09 . Memory (MB): peak = 660.387 ; gain = 350.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:32 ; elapsed = 00:01:48 . Memory (MB): peak = 663.070 ; gain = 353.383
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:04 ; elapsed = 00:01:09 . Memory (MB): peak = 660.387 ; gain = 350.828
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 371 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -3130,16 +3127,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IOBUF => IOBUF (IBUF, OBUFT): 16 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 904.250 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 903.895 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:50 ; elapsed = 00:02:08 . Memory (MB): peak = 904.250 ; gain = 594.563
+Finished Constraint Validation : Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 903.895 ; gain = 594.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:50 ; elapsed = 00:02:08 . Memory (MB): peak = 904.250 ; gain = 594.563
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 903.895 ; gain = 594.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -3194,7 +3191,7 @@ Applied set_property DONT_TOUCH = true for Design/design_1_i/PmodOLED_0/inst/axi
 Applied set_property DONT_TOUCH = true for Design/design_1_i/PmodOLED_0/inst/axi_quad_spi_0/U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Design/design_1_i/PmodOLED_0/inst/axi_quad_spi_0/U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst . (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:51 ; elapsed = 00:02:09 . Memory (MB): peak = 904.250 ; gain = 594.563
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:24 ; elapsed = 00:01:32 . Memory (MB): peak = 903.895 ; gain = 594.336
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'fsm_etat_courant_reg' in module 'AD7476_mef'
 INFO: [Synth 8-5546] ROM "o_DAV" won't be mapped to RAM because it is too sparse
@@ -3421,9 +3418,6 @@ INFO: [Synth 8-3354] encoded FSM with state register 'fsm_etat_courant_reg' usin
                       n0 |                        100000000 |                             0101
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'etat_courant_reg' using encoding 'one-hot' in module 'detectzero'
-WARNING: [Synth 8-327] inferring latch for variable 'calorie_reg' [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:72]
-WARNING: [Synth 8-327] inferring latch for variable 'compteur_next_state_reg' [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:63]
-WARNING: [Synth 8-327] inferring latch for variable 'compteur_reg' [C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/imports/new/Traitement.vhd:71]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -3508,7 +3502,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_r
 INFO: [Synth 8-3354] encoded FSM with state register 'LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps_reg' using encoding 'sequential' in module 'qspi_mode_0_module'
 INFO: [Synth 8-6159] Found Keep on FSM register 'state_reg' in module 'axi_protocol_converter_v2_1_17_b2s_rd_cmd_fsm', re-encoding will not be performed
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:59 ; elapsed = 00:02:20 . Memory (MB): peak = 904.250 ; gain = 594.563
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:33 ; elapsed = 00:01:44 . Memory (MB): peak = 903.895 ; gain = 594.336
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3521,9 +3515,10 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 3     
-	   2 Input     31 Bit       Adders := 3     
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     31 Bit       Adders := 4     
 	   2 Input     12 Bit       Adders := 8     
+	   2 Input     11 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 2     
 	   2 Input      8 Bit       Adders := 66    
 	   2 Input      6 Bit       Adders := 6     
@@ -3556,7 +3551,7 @@ Detailed RTL Component Info :
 	                5 Bit    Registers := 39    
 	                4 Bit    Registers := 57    
 	                3 Bit    Registers := 5     
-	                2 Bit    Registers := 42    
+	                2 Bit    Registers := 41    
 	                1 Bit    Registers := 348   
 +---Multipliers : 
 	                10x32  Multipliers := 1     
@@ -3568,33 +3563,34 @@ Detailed RTL Component Info :
 	   2 Input     64 Bit        Muxes := 2     
 	   2 Input     47 Bit        Muxes := 2     
 	   2 Input     36 Bit        Muxes := 2     
-	   2 Input     32 Bit        Muxes := 31    
-	   4 Input     32 Bit        Muxes := 17    
+	   2 Input     32 Bit        Muxes := 32    
 	   5 Input     32 Bit        Muxes := 4     
-	   2 Input     31 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 16    
+	   2 Input     31 Bit        Muxes := 4     
 	  17 Input     17 Bit        Muxes := 1     
 	   2 Input     17 Bit        Muxes := 1     
 	   2 Input     14 Bit        Muxes := 2     
+	   4 Input     13 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 6     
-	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
 	   2 Input     10 Bit        Muxes := 1     
 	   9 Input      9 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 18    
 	   2 Input      8 Bit        Muxes := 203   
 	   2 Input      7 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      6 Bit        Muxes := 2     
 	   5 Input      5 Bit        Muxes := 2     
 	   2 Input      5 Bit        Muxes := 19    
 	   3 Input      5 Bit        Muxes := 2     
 	   4 Input      4 Bit        Muxes := 5     
 	   2 Input      4 Bit        Muxes := 52    
-	   2 Input      2 Bit        Muxes := 89    
-	   5 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 90    
 	   7 Input      2 Bit        Muxes := 5     
 	   4 Input      2 Bit        Muxes := 19    
 	  11 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 559   
-	   4 Input      1 Bit        Muxes := 23    
+	   4 Input      1 Bit        Muxes := 22    
 	   5 Input      1 Bit        Muxes := 8     
 	   3 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
@@ -3653,22 +3649,20 @@ Detailed RTL Component Info :
 Module Traitement 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 3     
-	   2 Input     31 Bit       Adders := 3     
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     31 Bit       Adders := 4     
+	   2 Input     11 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 1     
-+---Registers : 
-	                2 Bit    Registers := 1     
 +---Multipliers : 
 	                10x32  Multipliers := 1     
 	                 9x32  Multipliers := 1     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 4     
-	   4 Input     32 Bit        Muxes := 1     
-	   2 Input     31 Bit        Muxes := 3     
-	   2 Input     11 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 2     
-	   5 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 5     
+	   2 Input     31 Bit        Muxes := 4     
+	   4 Input     13 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
 Module axi_lite_ipif_v3_0_4_pselect_f 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -4379,42 +4373,6 @@ WARNING: [Synth 8-6014] Unused sequential element inst/gen_sasd.crossbar_sasd_0/
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [c:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:422]
 WARNING: [Synth 8-3332] Sequential element (o_plein_reg) is unused and will be removed from module tamponcirc.
 WARNING: [Synth 8-3332] Sequential element (o_vide_reg) is unused and will be removed from module tamponcirc.
-WARNING: [Synth 8-3332] Sequential element (compteur_next_state_reg[1]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_next_state_reg[0]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[31]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[30]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[29]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[28]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[27]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[26]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[25]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[24]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[23]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[22]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[21]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[20]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[19]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[18]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[17]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[16]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[15]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[14]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[13]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[12]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[11]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[10]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[9]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[8]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[7]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[6]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[5]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[4]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[3]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[2]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[1]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_reg[0]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_etat_reg[1]) is unused and will be removed from module Traitement.
-WARNING: [Synth 8-3332] Sequential element (compteur_etat_reg[0]) is unused and will be removed from module Traitement.
 INFO: [Synth 8-3886] merging instance 'Design/design_1_i/PmodGPIO_0/inst/axi_gpio_0/U0/ip2bus_data_i_D1_reg[23]' (FDR) to 'Design/design_1_i/PmodGPIO_0/inst/axi_gpio_0/U0/ip2bus_data_i_D1_reg[22]'
 INFO: [Synth 8-3886] merging instance 'Design/design_1_i/PmodGPIO_0/inst/axi_gpio_0/U0/ip2bus_data_i_D1_reg[22]' (FDR) to 'Design/design_1_i/PmodGPIO_0/inst/axi_gpio_0/U0/ip2bus_data_i_D1_reg[21]'
 INFO: [Synth 8-3886] merging instance 'Design/design_1_i/PmodGPIO_0/inst/axi_gpio_0/U0/ip2bus_data_i_D1_reg[21]' (FDR) to 'Design/design_1_i/PmodGPIO_0/inst/axi_gpio_0/U0/ip2bus_data_i_D1_reg[20]'
@@ -4594,6 +4552,42 @@ INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGA
 INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SLV_MODF_STRB_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_quad_spi.
 INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.MODF_STROBE_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_quad_spi.
 INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.MODF_STROBE_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_EMPTY_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_EMPTY_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_EMPTY_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_EMPTY_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_EMPTY_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_EMPTY_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_FIFO_EMPTY_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_FIFO_EMPTY_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_FIFO_EMPTY_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_FIFO_EMPTY_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_FIFO_EMPTY_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_FIFO_EMPTY_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_EMPT_4_SPISR_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_EMPT_4_SPISR_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_FIFO_FULL_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_FIFO_FULL_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_FIFO_FULL_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_FIFO_FULL_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_FIFO_FULL_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_FIFO_FULL_AX2S_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SPIXFER_DONE_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SPIXFER_DONE_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SPIXFER_DONE_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SPIXFER_DONE_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SPIXFER_DONE_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SPIXFER_DONE_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_FULL_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_FULL_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_FULL_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_FULL_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_FULL_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_FULL_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SYNC_SPIXFER_DONE_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SYNC_SPIXFER_DONE_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.DTR_UNDERRUN_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.DTR_UNDERRUN_S2AX_1/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_quad_spi.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Design/design_1_i /axi_gpio_0/U0/\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Design/design_1_i /axi_gpio_0/U0/\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_reg[1] )
@@ -4616,7 +4610,7 @@ INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Design/d
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Design/design_1_i /myip_0/\U0/myip_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Design/design_1_i /myip_0/\U0/myip_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:31 ; elapsed = 00:02:53 . Memory (MB): peak = 904.250 ; gain = 594.563
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:12 ; elapsed = 00:02:24 . Memory (MB): peak = 903.895 ; gain = 594.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -4644,13 +4638,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:41 ; elapsed = 00:03:05 . Memory (MB): peak = 1011.688 ; gain = 702.000
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:24 ; elapsed = 00:02:38 . Memory (MB): peak = 1021.109 ; gain = 711.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:46 ; elapsed = 00:03:10 . Memory (MB): peak = 1047.777 ; gain = 738.090
+Finished Timing Optimization : Time (s): cpu = 00:02:30 ; elapsed = 00:02:43 . Memory (MB): peak = 1057.453 ; gain = 747.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -4677,7 +4671,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:54 ; elapsed = 00:03:18 . Memory (MB): peak = 1082.934 ; gain = 773.246
+Finished Technology Mapping : Time (s): cpu = 00:02:39 ; elapsed = 00:02:53 . Memory (MB): peak = 1108.605 ; gain = 799.047
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4718,7 +4712,7 @@ INFO: [Synth 8-4618] Found max_fanout attribute set to 20 on net \inst/gen_axili
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:56 ; elapsed = 00:03:20 . Memory (MB): peak = 1082.934 ; gain = 773.246
+Finished IO Insertion : Time (s): cpu = 00:02:41 ; elapsed = 00:02:55 . Memory (MB): peak = 1108.605 ; gain = 799.047
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -4731,7 +4725,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:57 ; elapsed = 00:03:21 . Memory (MB): peak = 1082.934 ; gain = 773.246
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:41 ; elapsed = 00:02:56 . Memory (MB): peak = 1108.605 ; gain = 799.047
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4743,25 +4737,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:58 ; elapsed = 00:03:22 . Memory (MB): peak = 1082.934 ; gain = 773.246
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:42 ; elapsed = 00:02:57 . Memory (MB): peak = 1108.605 ; gain = 799.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:58 ; elapsed = 00:03:22 . Memory (MB): peak = 1082.934 ; gain = 773.246
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:43 ; elapsed = 00:02:58 . Memory (MB): peak = 1108.605 ; gain = 799.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:59 ; elapsed = 00:03:22 . Memory (MB): peak = 1082.934 ; gain = 773.246
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:43 ; elapsed = 00:02:58 . Memory (MB): peak = 1108.605 ; gain = 799.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:59 ; elapsed = 00:03:23 . Memory (MB): peak = 1082.934 ; gain = 773.246
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:44 ; elapsed = 00:02:58 . Memory (MB): peak = 1108.605 ; gain = 799.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -4803,14 +4797,14 @@ Report Cell Usage:
 |      |Cell    |Count |
 +------+--------+------+
 |1     |BIBUF   |   130|
-|2     |BUFG    |     3|
-|3     |CARRY4  |   307|
-|4     |LUT1    |   234|
-|5     |LUT2    |   473|
-|6     |LUT3    |   939|
-|7     |LUT4    |   732|
-|8     |LUT5    |  1001|
-|9     |LUT6    |  1696|
+|2     |BUFG    |     4|
+|3     |CARRY4  |   387|
+|4     |LUT1    |   278|
+|5     |LUT2    |   583|
+|6     |LUT3    |  1028|
+|7     |LUT4    |   774|
+|8     |LUT5    |  1118|
+|9     |LUT6    |  1988|
 |10    |MUXF7   |    64|
 |11    |MUXF8   |    32|
 |12    |PS7     |     1|
@@ -4819,10 +4813,10 @@ Report Cell Usage:
 |15    |SRL16E  |    19|
 |16    |SRLC32E |    47|
 |17    |FD      |     8|
-|18    |FDCE    |   454|
+|18    |FDCE    |   489|
 |19    |FDPE    |   193|
 |20    |FDR     |   149|
-|21    |FDRE    |  2128|
+|21    |FDRE    |  2125|
 |22    |FDSE    |   125|
 |23    |IBUF    |     9|
 |24    |IOBUF   |    16|
@@ -4833,10 +4827,10 @@ Report Instance Areas:
 +------+----------------------------------------------------------------------------------------------------+---------------------------------------------------------------+------+
 |      |Instance                                                                                            |Module                                                         |Cells |
 +------+----------------------------------------------------------------------------------------------------+---------------------------------------------------------------+------+
-|1     |top                                                                                                 |                                                               |  8772|
+|1     |top                                                                                                 |                                                               |  9579|
 |2     |  Controleur                                                                                        |Ctrl_AD1                                                       |    38|
 |3     |    MEF                                                                                             |AD7476_mef                                                     |    21|
-|4     |  Design                                                                                            |design_1_wrapper                                               |  4636|
+|4     |  Design                                                                                            |design_1_wrapper                                               |  4683|
 |5     |    design_1_i                                                                                      |design_1                                                       |  4618|
 |6     |      PmodGPIO_0                                                                                    |design_1_PmodGPIO_0_0                                          |   195|
 |7     |        inst                                                                                        |PmodGPIO                                                       |   195|
@@ -5040,22 +5034,22 @@ Report Instance Areas:
 |205   |            \ACTIVE_LOW_EXT.ACT_LO_EXT                                                              |cdc_sync__parameterized5_0                                     |     6|
 |206   |          SEQ                                                                                       |sequence_psr                                                   |    38|
 |207   |            SEQ_COUNTER                                                                             |upcnt_n                                                        |    13|
-|208   |  Synchronisation                                                                                   |Synchro_Horloges                                               |    85|
-|209   |  insta_magnetic                                                                                    |magnetic                                                       |  3955|
-|210   |    entity_compteur_signal                                                                          |compteur_signal                                                |  2677|
+|208   |  Synchronisation                                                                                   |Synchro_Horloges                                               |    79|
+|209   |  insta_magnetic                                                                                    |magnetic                                                       |  4560|
+|210   |    entity_compteur_signal                                                                          |compteur_signal                                                |  2733|
 |211   |      iteration_detect                                                                              |detectzero                                                     |    18|
-|212   |      iteration_tampon                                                                              |tamponcirc                                                     |  2659|
-|213   |    inst_traitement                                                                                 |Traitement                                                     |  1278|
+|212   |      iteration_tampon                                                                              |tamponcirc                                                     |  2715|
+|213   |    inst_traitement                                                                                 |Traitement                                                     |  1827|
 +------+----------------------------------------------------------------------------------------------------+---------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:59 ; elapsed = 00:03:23 . Memory (MB): peak = 1082.934 ; gain = 773.246
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:44 ; elapsed = 00:02:58 . Memory (MB): peak = 1108.605 ; gain = 799.047
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 719 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:12 ; elapsed = 00:03:05 . Memory (MB): peak = 1082.934 ; gain = 532.066
-Synthesis Optimization Complete : Time (s): cpu = 00:02:59 ; elapsed = 00:03:23 . Memory (MB): peak = 1082.934 ; gain = 773.246
+Synthesis finished with 0 errors, 0 critical warnings and 673 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:25 ; elapsed = 00:02:40 . Memory (MB): peak = 1108.605 ; gain = 555.539
+Synthesis Optimization Complete : Time (s): cpu = 00:02:44 ; elapsed = 00:02:58 . Memory (MB): peak = 1108.605 ; gain = 799.047
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 590 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 670 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -5067,11 +5061,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-1052 Infos, 326 Warnings, 0 Critical Warnings and 0 Errors encountered.
+1088 Infos, 284 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:05 ; elapsed = 00:03:30 . Memory (MB): peak = 1082.934 ; gain = 780.141
+synth_design: Time (s): cpu = 00:02:50 ; elapsed = 00:03:05 . Memory (MB): peak = 1108.605 ; gain = 805.938
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.104 . Memory (MB): peak = 1082.934 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Apr  1 14:15:42 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.119 . Memory (MB): peak = 1108.605 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  1 15:25:53 2019...
