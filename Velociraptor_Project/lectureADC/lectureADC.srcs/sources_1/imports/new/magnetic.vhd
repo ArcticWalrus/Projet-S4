@@ -19,7 +19,7 @@ entity magnetic is
             --Traitement de signal
             o_vitesse       : out   unsigned(5 downto 0);
             o_calorie       : out   unsigned(10 downto 0);
-            o_distance      : out   unsigned(10 downto 0);
+            o_distance      : out   unsigned(31 downto 0);
             i_poid_Kg       : in    unsigned(7 downto 0);
             i_taille_cm     : in    unsigned(7 downto 0)
     );     
@@ -58,7 +58,7 @@ architecture Behavioral of magnetic is
                 i_reset             : in std_logic;
                 o_vitesse           : out unsigned(5 downto 0);
                 o_calorie           : out unsigned(10 downto 0);
-                o_distance          : out unsigned(10 downto 0);
+                o_distance          : out unsigned(31 downto 0);
                 i_nb_items_total    : in unsigned(31 downto 0);
                 i_poid_Kg           : in unsigned(7 downto 0);
                 i_taille_cm         : in unsigned(7 downto 0);

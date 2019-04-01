@@ -108,7 +108,7 @@ constant freq_sys_MHz: integer := 125;  -- MHz
            --Traitement de signal
            o_vitesse       : out unsigned(5 downto 0);
            o_calorie      : out unsigned(10 downto 0);
-           o_distance      : out unsigned(10 downto 0);                  
+           o_distance      : out unsigned(31 downto 0);                  
            i_poid_Kg       : in  unsigned(7 downto 0);
            i_taille_cm      : in  unsigned(7 downto 0)               
        );               
@@ -211,7 +211,7 @@ constant freq_sys_MHz: integer := 125;  -- MHz
       
       --  Signaux de liaison 
       signal s_vitesse       : unsigned(5 downto 0);
-      signal s_distance      : unsigned(10 downto 0);
+      signal s_distance      : unsigned(31 downto 0);
       signal s_calorie      : unsigned(10 downto 0);
 begin
     reset    <= i_btn(0);    
@@ -337,8 +337,7 @@ begin
               i_data_echantillon            => d_echantillon,
               i_data_vitesse(5 downto 0)    => std_logic_vector(s_vitesse),
               i_data_vitesse(31 downto 6)   => (others => '0'), 
-              i_data_distance(10 downto 0)  => std_logic_vector(s_distance),
-              i_data_distance(31 downto 11) => (others => '0'), 
+              i_data_distance(31 downto 0)  => std_logic_vector(s_distance),
               i_data_calorie(10 downto 0)   => std_logic_vector(s_calorie),
               i_data_calorie(31 downto 11)  => (others => '0'), 
               i_sw_tri_i                    => i_sw,

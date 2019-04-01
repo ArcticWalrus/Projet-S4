@@ -9,7 +9,7 @@ entity Traitement is
             i_reset             : in std_logic;
             o_vitesse           : out unsigned(5 downto 0);
             o_calorie           : out unsigned(10 downto 0);
-            o_distance          : out unsigned(10 downto 0);
+            o_distance          : out unsigned(31 downto 0);
             i_nb_items_total    : in unsigned(31 downto 0);
             i_poid_Kg           : in unsigned(7 downto 0);
             i_taille_cm         : in unsigned(7 downto 0);
@@ -30,7 +30,9 @@ signal compteur_next_state : etat_compteur;
 
 signal s_u_vitesse : unsigned(5 downto 0);
 constant circonference: natural := natural(2 * natural(MATH_PI) * rayon_roue);
-signal s_vitesse, calorie, constante_calorie : natural;
+constant circ: integer := 211; --(m*100)
+signal calorie, constante_calorie : natural;
+signal s_vitesse : integer;
 signal compteur : unsigned(31 downto 0);
 
 begin
@@ -41,13 +43,13 @@ begin
             s_vitesse   <= 0; --m/s
             
             s_u_vitesse <= (others => '0');
-            o_distance  <= "00000000000";
-            o_calorie   <= "00000000000";
+            o_distance  <= (others => '0');
+            o_calorie   <= (others => '0');
     	else 
-            s_vitesse <= natural(circonference * to_integer(i_tours_en_2sec) / 2); --m/s
+            s_vitesse <= circ * to_integer(i_tours_en_2sec) / 200; --m/s
             
-            s_u_vitesse <= to_unsigned(s_vitesse * natural(3.6), 6); --(km/h) à vérifier l'allure de la valeur 
-            o_distance <= to_unsigned(natural(circonference * to_integer(i_nb_items_total)), 11); --à vérifier l'allure de la valeur facteur 100 -> 2 décimales
+            s_u_vitesse <= to_unsigned(s_vitesse * 360 / 100, 6); --(km/h) à vérifier l'allure de la valeur 
+            o_distance <= to_unsigned(circ * to_integer(i_nb_items_total) / 100, 32); --à vérifier l'allure de la valeur facteur 100 -> 2 décimales
             o_calorie  <= to_unsigned(calorie, 11); --temporaire, il faut accumuler les valeurs facteur 10 pour 1 décimale	
     	end if;
     
