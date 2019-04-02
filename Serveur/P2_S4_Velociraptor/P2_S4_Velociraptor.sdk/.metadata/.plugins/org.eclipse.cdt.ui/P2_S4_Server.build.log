@@ -1,4 +1,4 @@
-14:58:37 **** Auto Build of configuration Debug for project P2_S4_Server ****
+18:54:02 **** Auto Build of configuration Debug for project P2_S4_Server ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -39,5 +39,5 @@ c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\inc
         ^
 make: *** [src/http_server/http_response.o] Erreur 1
 
-14:58:40 Build Finished (took 2s.265ms)
+18:54:02 Build Finished (took 619ms)
 

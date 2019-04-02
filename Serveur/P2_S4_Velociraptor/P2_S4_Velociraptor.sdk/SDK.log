@@ -1425,3 +1425,10 @@ con
 14:57:34 INFO  : Processing command line option -hwspec C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Serveur/P2_S4_Velociraptor/P2_S4_Velociraptor.sdk/design_1_wrapper.hdf.
 14:57:34 INFO  : Successfully done setting XSCT server connection channel  
 14:57:41 INFO  : Successfully done setting SDK workspace  
+18:53:19 INFO  : Registering command handlers for SDK TCF services
+18:53:20 INFO  : Launching XSCT server: xsct.bat -interactive D:\DEV\Git_Kraken\Velociraptor\Projet-S4\Serveur\P2_S4_Velociraptor\P2_S4_Velociraptor.sdk\temp_xsdb_launch_script.tcl
+18:53:24 INFO  : XSCT server has started successfully.
+18:53:26 INFO  : Processing command line option -hwspec D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Serveur/P2_S4_Velociraptor/P2_S4_Velociraptor.sdk/design_1_wrapper.hdf.
+18:53:26 INFO  : Successfully done setting XSCT server connection channel  
+18:53:27 INFO  : Successfully done setting SDK workspace  
+18:53:27 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_2.

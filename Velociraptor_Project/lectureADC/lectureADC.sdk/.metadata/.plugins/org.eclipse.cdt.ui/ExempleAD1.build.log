@@ -1,8 +1,15 @@
-15:31:53 **** Incremental Build of configuration Debug for project ExempleAD1 ****
+20:09:45 **** Incremental Build of configuration Debug for project ExempleAD1 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Rien à faire pour « main-build ».
+'Building file: ../src/http_server/http_response.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ExempleAD1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
+../src/http_server/http_response.c:21:10: fatal error: ff.h: No such file or directory
+ #include <ff.h>
+          ^~~~~~
+compilation terminated.
+make: *** [src/http_server/http_response.o] Erreur 1
 
-15:31:53 Build Finished (took 306ms)
+20:09:45 Build Finished (took 496ms)
 

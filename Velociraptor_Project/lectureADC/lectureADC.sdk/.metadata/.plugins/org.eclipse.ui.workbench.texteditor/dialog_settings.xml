@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="10000000" key="selection"/>
+		<item value="main_thread_handle" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="main_thread_handle"/>
+			<item value="main_thread"/>
 			<item value="10000000"/>
 			<item value="voltageChar"/>
 			<item value="currentVoltage"/>
 			<item value="currentVoltag"/>
 			<item value="myio"/>
 			<item value="MYIO"/>
-			<item value="MyIO"/>
-			<item value="XPAR_MYIP_0_S00_AXI_BASEADDR"/>
 		</list>
 		<list key="replacehistory">
 			<item value="dataChar"/>

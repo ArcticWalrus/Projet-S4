@@ -7,12 +7,15 @@ LD_SRCS += \
 ../src/lscript.ld 
 
 C_SRCS += \
+../src/iic_phyreset.c \
 ../src/main.c 
 
 OBJS += \
+./src/iic_phyreset.o \
 ./src/main.o 
 
 C_DEPS += \
+./src/iic_phyreset.d \
 ./src/main.d 
 
 
