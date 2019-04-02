@@ -1,7 +1,5 @@
 <div style="display: block">
     <canvas baseChart width="400" height="200"
-            *ngIf="(lineChartData) != null"
-            [data]="{}"
             [datasets]="lineChartData"
             [labels]="lineChartLabels"
             [options]="lineChartOptions"

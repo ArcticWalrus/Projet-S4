@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, SimpleChanges } from '@angular/core';
 import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, Label, BaseChartDirective } from 'ng2-charts'
 import * as pluginAnnotations from 'chartjs-plugin-annotation';
@@ -11,8 +11,10 @@ import { DataService } from '../services/data-service.service';
 })
 export class DataDisplayComponent implements OnInit {
 
-  public lineChartData: ChartDataSets[];
-  public lineChartLabels: Label[];
+  public lineChartData: ChartDataSets[] = [
+    {data: [], label: 'Vitesse'},
+  ];
+  public lineChartLabels: Label[] = [];
   public lineChartOptions: (ChartOptions & { annotation: any }) = {
     responsive: true,
     scales: {
@@ -70,18 +72,19 @@ export class DataDisplayComponent implements OnInit {
   @ViewChild(BaseChartDirective) chart: BaseChartDirective;
 
   constructor(private dataService: DataService) { 
-    this.lineChartData = [
-      {data: [], label: 'Speed'},
-    ];
-    this.lineChartLabels = ['Vitesse'];
+  
   }
 
   ngOnInit() {
-      this.dataService.getData()
-      .subscribe(
-        data => {
-        this.lineChartData[0].data = data[0].values;
-        this.lineChartLabels = data[0].labels;
-        });
+    setInterval(async() => {
+      this.lineChartData = [
+        {data: [], label: 'vitesse'}
+      ];
+      let donnees = await this.dataService.getData();
+      this.lineChartData[0].data = donnees[0].values;
+      console.log(this.lineChartData);
+      this.lineChartLabels = donnees[0].labels;
+      this.chart.update();
+    }, 2000);
   }
 }

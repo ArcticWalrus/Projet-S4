@@ -27,7 +27,7 @@ import { MainDisplayComponent } from './main-display/main-display.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
 
     AppRoutingModule,
 
