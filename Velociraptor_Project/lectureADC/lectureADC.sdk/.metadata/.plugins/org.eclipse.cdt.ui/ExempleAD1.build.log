@@ -1,4 +1,4 @@
-20:09:45 **** Incremental Build of configuration Debug for project ExempleAD1 ****
+15:48:55 **** Incremental Build of configuration Debug for project ExempleAD1 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -11,5 +11,5 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_r
 compilation terminated.
 make: *** [src/http_server/http_response.o] Erreur 1
 
-20:09:45 Build Finished (took 496ms)
+15:48:56 Build Finished (took 419ms)
 

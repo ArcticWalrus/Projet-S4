@@ -19,8 +19,31 @@
 #ifndef __PLATFORM_GPIO_H_
 #define __PLATFORM_GPIO_H_
 
+#include <stdio.h>
+
+typedef uint16_t u16;
+
+#define MY_AD1_IP_BASEADDRESS  XPAR_MYIP_0_S00_AXI_BASEADDR
+
+#define MY_VITESSE_IP_BASEADDRESS  XPAR_MYIO_IP_0_S00_AXI_BASEADDR
+#define MY_DISTANCE_IP_BASEADDRESS  XPAR_MYIO_IP_1_S00_AXI_BASEADDR
+#define MY_CALORIE_IP_BASEADDRESS  XPAR_MYIO_IP_2_S00_AXI_BASEADDR
+
+#define AD1_NUM_BITS 	12
+
 void platform_init_gpios();
 int toggle_leds();
 unsigned int get_switch_state();
+
+u16 AD1_GetSampleRaw();
+float AD1_GetSampleVoltage();
+u16 Speed_GetSampleRaw();
+float Speed_GetSampleValue();
+u16 Distance_GetSampleRaw();
+float Distance_GetSampleValue();
+u16 Calorie_GetSampleRaw();
+float Calorie_GetSampleValue();
+u16 Deportation_GetSampleRaw();
+float Deportation_GetSampleValue();
 
 #endif

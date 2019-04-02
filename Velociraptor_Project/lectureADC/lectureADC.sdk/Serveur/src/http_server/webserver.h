@@ -35,6 +35,7 @@ void extract_file_name(char *filename, char *req, int rlen, int maxlen);
 char *get_file_extension(char *buf);
 int is_cmd_switch(char *buf);
 int is_cmd_led(char *buf);
+int is_cmd_fpga(char *buf);
 
 
 int generate_response(struct tcp_pcb *pcb, char *http_req, int http_req_len);

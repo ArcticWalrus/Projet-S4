@@ -44,6 +44,7 @@
 #include "xil_printf.h"
 #include "lwip/init.h"
 #include "lwip/inet.h"
+#include "http_server/platform_gpio.h"
 
 u16 AD1_GetSampleRaw();
 float AD1_GetSampleVoltage();
@@ -63,7 +64,7 @@ void DisplayVoltage(float value, char *voltage_char);
 
 #define AD1_NUM_BITS 	12
 
-const float ReferenceVoltage = 3.3;
+//const float ReferenceVoltage = 3.3;
 
 
 
@@ -359,7 +360,7 @@ void fpga_thread(void *p){
 		// Affichage graduel du voltage sur le Pmod 8LD
 		// 3.3V => tous les leds allumés
 		// 0.0V => tous les leds éteints
-		pmod8LDvalue = 0xFF << (8 - (u8)(currentVoltage / ReferenceVoltage * 8));
+		pmod8LDvalue = 0xFF << (8 - (u8)(currentVoltage / 3.3 * 8));
 		GPIO_setPins(&pmod8LD,pmod8LDvalue);
 	}
 	vTaskDelete(NULL);
@@ -382,63 +383,3 @@ int main()
 	return 0;
 }
 
-u16 AD1_GetSampleRaw()
-{
-	u16 rawData =  MYIP_mReadReg(MY_AD1_IP_BASEADDRESS, 0x0) & 0xFFF;
-	return rawData;
-}
-
-float AD1_GetSampleVoltage()
-{
-	float conversionFactor = ReferenceVoltage / ((1 << AD1_NUM_BITS) - 1);
-
-	u16 rawSample = AD1_GetSampleRaw();
-
-	return (float)rawSample * conversionFactor;
-
-}
-
-u16 Speed_GetSampleRaw()
-{
-	u16 rawData =  MYIP_mReadReg(MY_VITESSE_IP_BASEADDRESS, 0x0) & 0xFFF;
-	return rawData;
-}
-
-
-float Speed_GetSampleValue()
-{
-	u16 rawSample = Speed_GetSampleRaw();
-
-	return (float)rawSample;
-
-}
-
-u16 Distance_GetSampleRaw()
-{
-	u16 rawData =  MYIP_mReadReg(MY_DISTANCE_IP_BASEADDRESS, 0x0) & 0xFFF;
-	return rawData;
-}
-
-
-float Distance_GetSampleValue()
-{
-	u16 rawSample = Distance_GetSampleRaw();
-
-	return (float)rawSample;
-
-}
-
-u16 Calorie_GetSampleRaw()
-{
-	u16 rawData =  MYIP_mReadReg(MY_CALORIE_IP_BASEADDRESS, 0x0) & 0xFFF;
-	return rawData;
-}
-
-
-float Calorie_GetSampleValue()
-{
-	u16 rawSample = Calorie_GetSampleRaw();
-
-	return (float)rawSample;
-
-}

@@ -18,10 +18,14 @@
 
 #include "platform_gpio.h"
 #include "xparameters.h"
-
+#include "PmodGPIO.h"
+#include "PmodOLED.h"
+#include "myip.h"
+#include "myIO_IP.h"
 
 #include <xgpio.h>
 XGpio xgpio_input_;
+
 
 void
 platform_init_gpios()
@@ -34,4 +38,80 @@ unsigned int
 get_switch_state()
 {
     return XGpio_DiscreteRead(&xgpio_input_, 1);
+}
+
+u16 AD1_GetSampleRaw()
+{
+	u16 rawData =  MYIP_mReadReg(MY_AD1_IP_BASEADDRESS, 0x0) & 0xFFF;
+	return rawData;
+}
+
+float AD1_GetSampleVoltage()
+{
+	float conversionFactor = 3.3 / ((1 << AD1_NUM_BITS) - 1);
+
+	u16 rawSample = AD1_GetSampleRaw();
+
+	return (float)rawSample * conversionFactor;
+
+}
+
+u16 Speed_GetSampleRaw()
+{
+	u16 rawData =  MYIP_mReadReg(MY_VITESSE_IP_BASEADDRESS, 0x0) & 0xFFF;
+	return rawData;
+}
+
+
+float Speed_GetSampleValue()
+{
+	u16 rawSample = Speed_GetSampleRaw();
+
+	return (float)rawSample;
+
+}
+
+u16 Distance_GetSampleRaw()
+{
+	u16 rawData =  MYIP_mReadReg(MY_DISTANCE_IP_BASEADDRESS, 0x0) & 0xFFF;
+	return rawData;
+}
+
+
+float Distance_GetSampleValue()
+{
+	u16 rawSample = Distance_GetSampleRaw();
+
+	return (float)rawSample;
+
+}
+
+u16 Calorie_GetSampleRaw()
+{
+	u16 rawData =  MYIP_mReadReg(MY_CALORIE_IP_BASEADDRESS, 0x0) & 0xFFF;
+	return rawData;
+}
+
+
+float Calorie_GetSampleValue()
+{
+	u16 rawSample = Calorie_GetSampleRaw();
+
+	return (float)rawSample;
+
+}
+
+u16 Deportation_GetSampleRaw()
+{
+	u16 rawData =  MYIP_mReadReg(MY_CALORIE_IP_BASEADDRESS, 0x0) & 0xFFF;
+	return rawData;
+}
+
+
+float Deportation_GetSampleValue()
+{
+	u16 rawSample = Calorie_GetSampleRaw();
+
+	return (float)rawSample;
+
 }

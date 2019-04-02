@@ -12,3 +12,6 @@
 start_gui
 open_project D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.xpr
 update_compile_order -fileset sources_1
+file copy -force D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
+
+launch_sdk -workspace D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk -hwspec D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf

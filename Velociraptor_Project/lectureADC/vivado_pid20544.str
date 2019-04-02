@@ -101,3 +101,47 @@ dismissDialog("Open Project"); // bx (ck)
 // Tcl Message: update_compile_order -fileset sources_1 
 // HMemoryUtils.trashcanNow. Engine heap size: 636 MB. GUI used memory: 54 MB. Current time: 4/2/19 2:24:10 PM EDT
 // [Engine Memory]: 646 MB (+9563kb) [00:06:34]
+// [GUI Memory]: 82 MB (+496kb) [00:10:32]
+// Elapsed time: 717 seconds
+selectTab(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_PANEL_TABBED, PAResourceOtoP.ProjectSummaryUtilizationPanel_TABLE, "Table", 1); // f (C, ck)
+selectTab(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_PANEL_TABBED, PAResourceOtoP.ProjectSummaryUtilizationPanel_GRAPH, "Graph", 0); // f (C, ck)
+// [GUI Memory]: 90 MB (+3895kb) [00:12:36]
+// [GUI Memory]: 97 MB (+2850kb) [00:12:53]
+// Elapsed time: 53 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// X (ck): Export Hardware: addNotify
+selectCheckBox(PAResourceItoN.NewExportHardwareDialog_INCLUDE_BITSTREAM, "Include bitstream", true); // g (Q, X): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (X)
+selectButton("PAResourceItoN.NewExportHardwareDialog_EXPORTED_FILE_FOR_THIS_MODULE_WAS_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Export Hardware"); // X (ck)
+// Tcl Message: file copy -force D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf  
+// HMemoryUtils.trashcanNow. Engine heap size: 665 MB. GUI used memory: 55 MB. Current time: 4/2/19 2:35:46 PM EDT
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa (ck)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa (ck): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aa)
+dismissDialog("Launch SDK"); // aa (ck)
+// Tcl Message: launch_sdk -workspace D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk -hwspec D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk -hwspec D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// [GUI Memory]: 103 MB (+963kb) [00:17:43]
+// HMemoryUtils.trashcanNow. Engine heap size: 665 MB. GUI used memory: 55 MB. Current time: 4/2/19 3:05:46 PM EDT
+// [GUI Memory]: 109 MB (+777kb) [00:50:30]
+// HMemoryUtils.trashcanNow. Engine heap size: 665 MB. GUI used memory: 52 MB. Current time: 4/2/19 3:35:46 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 665 MB. GUI used memory: 52 MB. Current time: 4/2/19 4:05:47 PM EDT
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1593 ms. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1968 ms. Increasing delay to 3000 ms.

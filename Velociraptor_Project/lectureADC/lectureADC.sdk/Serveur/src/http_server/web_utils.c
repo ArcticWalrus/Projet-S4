@@ -49,6 +49,16 @@ is_cmd_switch(char *buf)
         return (!strncmp(buf, "cmd", 3) && !strncmp(buf + 4, "switchxhr", 9));
 }
 
+int
+is_cmd_fpga(char *buf)
+{
+        /* skip past 'POST /' */
+        buf += 6;
+
+        /* then check for cmd/ledxhr */
+        return (!strncmp(buf, "cmd", 3) && !strncmp(buf + 4, "fpgaxhr", 7));
+}
+
 void
 extract_file_name(char *filename, char *req, int rlen, int maxlen)
 {
