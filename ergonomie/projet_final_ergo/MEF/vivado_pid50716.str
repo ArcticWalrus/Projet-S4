@@ -1,0 +1,119 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 50716
+License: Customer
+
+Current time: 	Tue Apr 02 21:33:18 EDT 2019
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 176 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	ArcticWalrus
+User home directory: C:/Users/ArcticWalrus
+User working directory: C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/projet_final_ergo/MEF
+User country: 	CA
+User language: 	en
+User locale: 	en_CA
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/ArcticWalrus/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/ArcticWalrus/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/ArcticWalrus/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/projet_final_ergo/MEF/vivado.log
+Vivado journal file location: 	C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/projet_final_ergo/MEF/vivado.jou
+Engine tmp dir: 	C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/projet_final_ergo/MEF/.Xil/Vivado-50716-DESKTOP-J3PS77H
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	194 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 493 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 67 MB (+67820kb) [00:00:09]
+// [Engine Memory]: 478 MB (+349547kb) [00:00:09]
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\ArcticWalrus\Documents\GitHub\Projet-S4\ergonomie\projet_final_ergo\MEF\MEF.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/projet_final_ergo/MEF/MEF.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// [Engine Memory]: 525 MB (+24500kb) [00:00:13]
+// HMemoryUtils.trashcanNow. Engine heap size: 532 MB. GUI used memory: 36 MB. Current time: 4/2/19 9:33:20 PM EDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 553 MB (+1730kb) [00:00:15]
+// [Engine Memory]: 590 MB (+10067kb) [00:00:18]
+// Tcl Message: open_project C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/projet_final_ergo/MEF/MEF.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/New Projects/assembleur_ergonomie/MEF' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 819.695 ; gain = 99.184 
+// Project name: MEF; location: C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/projet_final_ergo/MEF; part: xc7z010clg400-1
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// a (ck): Critical Messages: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 70 MB (+56kb) [00:00:26]
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (ck)
+// [GUI Memory]: 75 MB (+1327kb) [00:01:22]
+// WARNING: HTimer (StateMonitor Timer) is taking 656ms to process. Increasing delay to 4000 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 360ms to process. Increasing delay to 2000 ms.
+// [GUI Memory]: 79 MB (+437kb) [00:08:16]
+// HMemoryUtils.trashcanNow. Engine heap size: 606 MB. GUI used memory: 42 MB. Current time: 4/2/19 10:03:20 PM EDT
+// [GUI Memory]: 84 MB (+16kb) [01:00:01]
+// HMemoryUtils.trashcanNow. Engine heap size: 606 MB. GUI used memory: 39 MB. Current time: 4/2/19 10:33:21 PM EDT
+// [GUI Memory]: 88 MB (+109kb) [01:20:27]
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking 7458ms to process. Increasing delay to 6000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 7311 ms. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 7593 ms. Increasing delay to 3000 ms.
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking 3496ms to process. Increasing delay to 7000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 3705 ms. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 3688 ms. Increasing delay to 4000 ms.
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 1845ms to process. Increasing delay to 4000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 606 MB. GUI used memory: 40 MB. Current time: 4/2/19 11:03:21 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 606 MB. GUI used memory: 52 MB. Current time: 4/2/19 11:41:28 PM EDT
