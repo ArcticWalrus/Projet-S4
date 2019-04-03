@@ -1,9 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/raye2601/Desktop/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/Labo_adder4b.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity labo_adder4b
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/raye2601/Desktop/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/synchro_module_v2.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity synchro_module_v2
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/raye2601/Desktop/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/imu.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity deportation
-ERROR: [VRFC 10-1412] syntax error near case [C:/Users/raye2601/Desktop/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/imu.vhd:128]
-ERROR: [VRFC 10-1472] type error near behavioral ; expected type  void [C:/Users/raye2601/Desktop/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/imu.vhd:130]
-INFO: [VRFC 10-240] VHDL file C:/Users/raye2601/Desktop/pb_APP_log_comb/pb_APP_log_comb.srcs/sources_1/new/imu.vhd ignored due to errors
