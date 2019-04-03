@@ -18,12 +18,17 @@ export class DataService {
   ];
 
   private counter = 0;
-  getData(){
-    //return this.http.get('API ici ou directement serveur');
-    let max = 30;
-    let min = 0;
-    this.speedData[0].values.push(Math.floor(Math.random()*(max-min+1)+min));
-    this.speedData[0].labels.push(this.counter++);
+  async getData(){
+    let servData = await this.http.post("http://192.168.1.10/cmd/switchxhr", {});
+    if(this.counter >= 10) {
+      this.speedData[0].values = this.speedData[0].values.slice(1,59);
+    }
+    else {
+      this.speedData[0].labels.push(this.counter++);
+    }
+    this.speedData[0].values.push(JSON.parse(servData['vitesse']));
+    
+    console.log(this.counter);
     return this.speedData;
   }
 }

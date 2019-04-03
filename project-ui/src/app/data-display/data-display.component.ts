@@ -57,7 +57,7 @@ export class DataDisplayComponent implements OnInit {
   };
   public lineChartColors:Array<any> = [
     { // dark grey
-      backgroundColor: 'rgba(77,83,96,0.2)',
+      backgroundColor: 'rgba(255,255,255,0.2)',
       borderColor: 'rgba(77,83,96,1)',
       pointBackgroundColor: 'rgba(77,83,96,1)',
       pointBorderColor: '#fff',
