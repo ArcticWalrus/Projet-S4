@@ -1,70 +1,332 @@
-15:50:01 **** Incremental Build of configuration Debug for project Serveur ****
+21:00:49 **** Incremental Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Rien à faire pour « main-build ».
-15:50:12 **** Incremental Build of configuration Debug for project Serveur ****
+21:01:00 **** Incremental Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Rien à faire pour « main-build ».
-15:53:46 **** Auto Build of configuration Debug for project Serveur ****
+21:01:36 **** Auto Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+'Finished building: ../src/http_server/platform_gpio.c'
+' '
+'Building target: Serveur.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Serveur.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 294000	   4336	16898336	17196672	1066680	Serveur.elf
+'Finished building: Serveur.elf.size'
+' '
+21:02:10 **** Incremental Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+21:10:04 **** Incremental Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+21:18:39 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+'Finished building: ../src/http_server/platform_gpio.c'
+' '
+'Building target: Serveur.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Serveur.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 294000	   4336	16898336	17196672	1066680	Serveur.elf
+'Finished building: Serveur.elf.size'
+' '
+21:19:07 **** Incremental Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+21:31:15 **** Incremental Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/http_response.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
+In file included from ../src/http_server/http_response.c:21:0:
+../../Serveur_bsp/ps7_cortexa9_0/include/ff.h:24:10: fatal error: xil_types.h: No such file or directory
+ #include "xil_types.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/http_server/http_response.o] Erreur 1
+21:31:35 **** Auto Build of project Serveur_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_1/src"
+make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"include"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/lwip202_v1_1/src"
+make -C ps7_cortexa9_0/libsrc/lwip202_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/myIO_IP_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/myIO_IP_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/myip_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/myip_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/PmodGPIO_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/PmodGPIO_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/PmodOLED_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/PmodOLED_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/xilffs_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_1/src"
+make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+"Compiling FreeRTOS"
+arm-none-eabi-ar: creating ../../../lib/libfreertos.a
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/lwip202_v1_1/src"
+make -C ps7_cortexa9_0/libsrc/lwip202_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling lwip src and adapter files"
+lwip-2.0.2/src/core/tcp.c: In function 'tcp_recved':
+lwip-2.0.2/src/core/tcp.c:798:20: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   if (pcb->rcv_wnd > TCP_WND_MAX(pcb)) {
+                    ^
+contrib/ports/xilinx/netif/xemacpsif.c: In function 'xemacpsif_init':
+contrib/ports/xilinx/netif/xemacpsif.c:728:16: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+  netif->output = xemacpsif_output;
+                ^
+In file included from ../../../include/xemacps.h:350:0,
+                 from ../../../include/netif/xemacpsif.h:59,
+                 from contrib/ports/xilinx/netif/xemacpsif_dma.c:39:
+contrib/ports/xilinx/netif/xemacpsif_dma.c: In function 'init_dma':
+../../../include/xemacps_hw.h:603:23: warning: 'bdrxterminate' may be used uninitialized in this function [-Wmaybe-uninitialized]
+ #define XEmacPs_Out32 Xil_Out32
+                       ^~~~~~~~~
+contrib/ports/xilinx/netif/xemacpsif_dma.c:558:14: note: 'bdrxterminate' was declared here
+  XEmacPs_Bd *bdrxterminate;
+              ^~~~~~~~~~~~~
+In file included from ../../../include/xemacps.h:351:0,
+                 from ../../../include/netif/xemacpsif.h:59,
+                 from contrib/ports/xilinx/netif/xemacpsif_dma.c:39:
+../../../include/xemacps_bd.h:144:12: warning: 'bdtxterminate' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  (*(u32 *)((UINTPTR)((void*)(BaseAddress)) + (u32)(Offset)))
+            ^
+contrib/ports/xilinx/netif/xemacpsif_dma.c:557:14: note: 'bdtxterminate' was declared here
+  XEmacPs_Bd *bdtxterminate;
+              ^~~~~~~~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/myIO_IP_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/myIO_IP_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling myIO_IP..."
+myIO_IP_selftest.c: In function 'MYIO_IP_Reg_SelfTest':
+myIO_IP_selftest.c:52:56: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( MYIO_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                        ^~
+myIO_IP_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/myip_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/myip_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling myip..."
+myip_selftest.c: In function 'MYIP_Reg_SelfTest':
+myip_selftest.c:52:53: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( MYIP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                     ^~
+myip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/PmodGPIO_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/PmodGPIO_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling PmodGPIO..."
+"Running Make libs in ps7_cortexa9_0/libsrc/PmodOLED_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/PmodOLED_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling PmodOLED..."
+OledDriver.c: In function 'OLED_Update':
+OledDriver.c:532:14: warning: unused variable 'icol' [-Wunused-variable]
+     int      icol;
+              ^~~~
+OledGrph.c: In function 'OLED_GetStdPattern':
+OledGrph.c:196:23: warning: return discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     return rgbFillPat + 8*ipat;
+            ~~~~~~~~~~~^~~~~~~~
+OledGrph.c: In function 'OLED_FillRect':
+OledGrph.c:506:9: warning: unused variable 'bTmp' [-Wunused-variable]
+     u8  bTmp;
+         ^~~~
+OledGrph.c: In function 'OLED_GetBmp':
+OledGrph.c:612:11: warning: variable 'bTmp' set but not used [-Wunused-but-set-variable]
+     u8    bTmp;
+           ^~~~
+OledGrph.c: In function 'OLED_PutBmp':
+OledGrph.c:713:11: warning: unused variable 'bTmp' [-Wunused-variable]
+     u8    bTmp;
+           ^~~~
+OledGrph.c:706:11: warning: unused variable 'bDsp' [-Wunused-variable]
+     u8    bDsp;
+           ^~~~
+OledGrph.c: In function 'OLED_DrawChar':
+OledGrph.c:812:11: warning: unused variable 'ib' [-Wunused-variable]
+     int   ib;
+           ^~
+OledGrph.c:811:11: warning: variable 'pbBmp' set but not used [-Wunused-but-set-variable]
+     u8   *pbBmp;
+           ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/xilffs_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling XilFFs Library"
+ff.c: In function 'dir_remove':
+ff.c:1872:7: warning: unused variable 'temp' [-Wunused-variable]
+  WORD temp;
+       ^~~~
+ff.c: In function 'create_name':
+ff.c:2017:9: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+  for (p = *path; *p == '/' || *p == '\\'; p++) ; /* Strip duplicated separator */
+         ^
+ff.c:2047:8: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+  *path = &p[si];      /* Return pointer to the next segment */
+        ^
+'Finished building libraries'
+21:32:43 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/http_response.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
+'Finished building: ../src/http_server/http_response.c'
+' '
+'Building file: ../src/http_server/platform_fs.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_fs.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_fs.d" -MT"src/http_server/platform_fs.o" -o "src/http_server/platform_fs.o" "../src/http_server/platform_fs.c"
+'Finished building: ../src/http_server/platform_fs.c'
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+'Finished building: ../src/http_server/platform_gpio.c'
 ' '
 'Building file: ../src/http_server/web_utils.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/web_utils.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/web_utils.d" -MT"src/http_server/web_utils.o" -o "src/http_server/web_utils.o" "../src/http_server/web_utils.c"
 'Finished building: ../src/http_server/web_utils.c'
 ' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 293872	   4336	17946912	18245120	1166600	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-15:54:25 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-16:03:16 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-16:15:02 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-16:17:00 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/http_server/http_response.c'
+'Building file: ../src/http_server/webserver.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
-../src/http_server/http_response.c: In function 'do_http_post':
-../src/http_server/http_response.c:113:49: error: 'switches' undeclared (first use in this function); did you mean 'num_switches'?
-   xil_printf("http POST: switch state: %x\r\n", switches);
-                                                 ^~~~~~~~
-                                                 num_switches
-../src/http_server/http_response.c:113:49: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [src/http_server/http_response.o] Erreur 1
-16:17:16 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/webserver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/webserver.d" -MT"src/http_server/webserver.o" -o "src/http_server/webserver.o" "../src/http_server/webserver.c"
+'Finished building: ../src/http_server/webserver.c'
 ' '
-'Building file: ../src/http_server/http_response.c'
+'Building file: ../src/iic_phyreset.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
-'Finished building: ../src/http_server/http_response.c'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/iic_phyreset.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/iic_phyreset.d" -MT"src/iic_phyreset.o" -o "src/iic_phyreset.o" "../src/iic_phyreset.c"
+'Finished building: ../src/iic_phyreset.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main_thread':
+../src/main.c:252:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+  print_web_app_header();
+  ^~~~~~~~~~~~~~~~~~~~
+  print_app_header
+../src/main.c:256:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+  start_web_application();
+  ^~~~~~~~~~~~~~~~~~~~~
+  start_application
+'Finished building: ../src/main.c'
 ' '
 'Building target: Serveur.elf'
 'Invoking: ARM v7 gcc linker'
@@ -74,151 +336,10 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 293872	   4336	17946912	18245120	1166600	Serveur.elf
+ 294000	   4336	16898336	17196672	1066680	Serveur.elf
 'Finished building: Serveur.elf.size'
 ' '
-16:19:35 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/http_server/web_utils.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/web_utils.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/web_utils.d" -MT"src/http_server/web_utils.o" -o "src/http_server/web_utils.o" "../src/http_server/web_utils.c"
-'Finished building: ../src/http_server/web_utils.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 293872	   4336	17946912	18245120	1166600	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-16:20:10 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-16:23:11 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-16:24:22 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/http_server/http_response.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
-../src/http_server/http_response.c: In function 'do_http_get':
-../src/http_server/http_response.c:171:12: error: 'sw_buf' undeclared (first use in this function); did you mean 'setbuf'?
-    sprintf(sw_buf, "{\"Calorie\": ");
-            ^~~~~~
-            setbuf
-../src/http_server/http_response.c:171:12: note: each undeclared identifier is reported only once for each function it appears in
-../src/http_server/http_response.c:182:4: error: 'sw_len' undeclared (first use in this function); did you mean 'strlen'?
-    sw_len = strlen(sw_buf);
-    ^~~~~~
-    strlen
-../src/http_server/http_response.c:184:4: error: 'len' undeclared (first use in this function); did you mean 'hlen'?
-    len = generate_http_header(buf, "js", sw_len);
-    ^~~
-    hlen
-../src/http_server/http_response.c:184:31: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
-    len = generate_http_header(buf, "js", sw_len);
-                               ^~~
-../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
- int generate_http_header(char *buf, char *fext, int fsize);
-     ^~~~~~~~~~~~~~~~~~~~
-../src/http_server/http_response.c:186:11: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
-    strcat(buf, sw_buf);
-           ^~~
-In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
-                 from ../src/http_server/http_response.c:19:
-c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
- char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
-        ^
-make: *** [src/http_server/http_response.o] Erreur 1
-16:24:48 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/http_server/http_response.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
-../src/http_server/http_response.c: In function 'do_http_get':
-../src/http_server/http_response.c:161:7: error: conflicting types for 'buf'
-  char buf[BUFSIZE];
-       ^~~
-../src/http_server/http_response.c:157:16: note: previous declaration of 'buf' was here
-  unsigned char buf[BUFSIZE];
-                ^~~
-make: *** [src/http_server/http_response.o] Erreur 1
-16:24:57 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/http_server/http_response.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
-../src/http_server/http_response.c: In function 'do_http_get':
-../src/http_server/http_response.c:187:31: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
-    len = generate_http_header(buf, "js", sw_len);
-                               ^~~
-../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
- int generate_http_header(char *buf, char *fext, int fsize);
-     ^~~~~~~~~~~~~~~~~~~~
-../src/http_server/http_response.c:189:11: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
-    strcat(buf, sw_buf);
-           ^~~
-In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
-                 from ../src/http_server/http_response.c:19:
-c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
- char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
-        ^
-'Finished building: ../src/http_server/http_response.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 294512	   4336	17946912	18245760	1166880	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-16:25:20 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-16:27:50 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/http_server/http_response.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
-'Finished building: ../src/http_server/http_response.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 293872	   4336	17946912	18245120	1166600	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-16:32:02 **** Incremental Build of configuration Debug for project Serveur ****
+21:33:02 **** Incremental Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '

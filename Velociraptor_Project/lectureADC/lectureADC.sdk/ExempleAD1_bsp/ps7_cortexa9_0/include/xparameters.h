@@ -300,7 +300,7 @@
 /******************************************************************/
 
 /* Definitions for driver MYIO_IP */
-#define XPAR_MYIO_IP_NUM_INSTANCES 3
+#define XPAR_MYIO_IP_NUM_INSTANCES 5
 
 /* Definitions for peripheral MYIO_IP_0 */
 #define XPAR_MYIO_IP_0_DEVICE_ID 0
@@ -318,6 +318,18 @@
 #define XPAR_MYIO_IP_2_DEVICE_ID 2
 #define XPAR_MYIO_IP_2_S00_AXI_BASEADDR 0x43C30000
 #define XPAR_MYIO_IP_2_S00_AXI_HIGHADDR 0x43C3FFFF
+
+
+/* Definitions for peripheral MYIO_IP_3 */
+#define XPAR_MYIO_IP_3_DEVICE_ID 3
+#define XPAR_MYIO_IP_3_S00_AXI_BASEADDR 0x43C40000
+#define XPAR_MYIO_IP_3_S00_AXI_HIGHADDR 0x43C4FFFF
+
+
+/* Definitions for peripheral MYIO_IP_4 */
+#define XPAR_MYIO_IP_4_DEVICE_ID 4
+#define XPAR_MYIO_IP_4_S00_AXI_BASEADDR 0x43C50000
+#define XPAR_MYIO_IP_4_S00_AXI_HIGHADDR 0x43C5FFFF
 
 
 /******************************************************************/

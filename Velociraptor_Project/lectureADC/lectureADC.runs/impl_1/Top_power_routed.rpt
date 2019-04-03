@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Mon Apr  1 19:12:26 2019
+| Date             : Tue Apr  2 21:29:20 2019
 | Host             : DESKTOP-L2Q9UI1 running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.559        |
+| Total On-Chip Power (W)  | 1.533        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.438        |
+| Dynamic (W)              | 1.412        |
 | Device Static (W)        | 0.121        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 67.0         |
-| Junction Temperature (C) | 43.0         |
+| Max Ambient (C)          | 67.3         |
+| Junction Temperature (C) | 42.7         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.005 |        4 |       --- |             --- |
-| Slice Logic              |     0.015 |     9386 |       --- |             --- |
-|   LUT as Logic           |     0.014 |     4639 |     17600 |           26.36 |
-|   CARRY4                 |     0.001 |      387 |      4400 |            8.80 |
-|   Register               |    <0.001 |     2952 |     35200 |            8.39 |
+| Clocks                   |     0.006 |        4 |       --- |             --- |
+| Slice Logic              |     0.002 |     9668 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     4669 |     17600 |           26.53 |
+|   Register               |    <0.001 |     3227 |     35200 |            9.17 |
+|   CARRY4                 |    <0.001 |      400 |      4400 |            9.09 |
 |   LUT as Distributed RAM |    <0.001 |       16 |      6000 |            0.27 |
 |   F7/F8 Muxes            |    <0.001 |       96 |     17600 |            0.55 |
 |   BUFG                   |    <0.001 |        2 |        32 |            6.25 |
 |   LUT as Shift Register  |    <0.001 |       63 |      6000 |            1.05 |
-|   Others                 |     0.000 |      361 |       --- |             --- |
-| Signals                  |     0.015 |     7053 |       --- |             --- |
+|   Others                 |     0.000 |      363 |       --- |             --- |
+| Signals                  |     0.002 |     7253 |       --- |             --- |
 | I/O                      |     0.003 |       32 |       100 |           32.00 |
 | PS7                      |     1.399 |        1 |       --- |             --- |
 | Static Power             |     0.121 |          |           |                 |
-| Total                    |     1.559 |          |           |                 |
+| Total                    |     1.533 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.043 |       0.036 |      0.007 |
+| Vccint    |       1.000 |     0.017 |       0.010 |      0.007 |
 | Vccaux    |       1.800 |     0.008 |       0.000 |      0.008 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -89,7 +89,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.746 |       0.717 |      0.029 |
+| Vccpint   |       1.000 |     0.746 |       0.717 |      0.028 |
 | Vccpaux   |       1.800 |     0.061 |       0.051 |      0.010 |
 | Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |
 | Vcco_ddr  |       1.350 |     0.413 |       0.411 |      0.002 |
@@ -153,10 +153,10 @@ Table of Contents
 +---------------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                              | Power (W) |
 +---------------------------------------------------------------------------------------------------+-----------+
-| Top                                                                                               |     1.438 |
+| Top                                                                                               |     1.412 |
 |   Controleur                                                                                      |    <0.001 |
-|     MEF                                                                                           |    <0.001 |
-|   Design                                                                                          |     1.409 |
+|     MEF                                                                                           |     0.000 |
+|   Design                                                                                          |     1.410 |
 |     Pmod_8LD_pin10_iobuf                                                                          |    <0.001 |
 |     Pmod_8LD_pin1_iobuf                                                                           |    <0.001 |
 |     Pmod_8LD_pin2_iobuf                                                                           |    <0.001 |
@@ -330,11 +330,17 @@ Table of Contents
 |       myIO_IP_2                                                                                   |    <0.001 |
 |         U0                                                                                        |    <0.001 |
 |           myIO_IP_v1_0_S00_AXI_inst                                                               |    <0.001 |
+|       myIO_IP_3                                                                                   |    <0.001 |
+|         U0                                                                                        |    <0.001 |
+|           myIO_IP_v1_0_S00_AXI_inst                                                               |    <0.001 |
+|       myIO_IP_4                                                                                   |    <0.001 |
+|         U0                                                                                        |    <0.001 |
+|           myIO_IP_v1_0_S00_AXI_inst                                                               |    <0.001 |
 |       myip_0                                                                                      |    <0.001 |
 |         U0                                                                                        |    <0.001 |
 |           myip_v1_0_S00_AXI_inst                                                                  |    <0.001 |
-|       processing_system7_0                                                                        |     1.399 |
-|         inst                                                                                      |     1.399 |
+|       processing_system7_0                                                                        |     1.400 |
+|         inst                                                                                      |     1.400 |
 |       ps7_0_axi_periph                                                                            |     0.003 |
 |         s00_couplers                                                                              |     0.002 |
 |           auto_pc                                                                                 |     0.002 |
@@ -376,12 +382,12 @@ Table of Contents
 |             ACTIVE_LOW_EXT.ACT_LO_EXT                                                             |    <0.001 |
 |           SEQ                                                                                     |    <0.001 |
 |             SEQ_COUNTER                                                                           |    <0.001 |
-|   Synchronisation                                                                                 |    <0.001 |
-|   insta_magnetic                                                                                  |     0.027 |
-|     entity_compteur_signal                                                                        |     0.011 |
-|       iteration_detect                                                                            |    <0.001 |
-|       iteration_tampon                                                                            |     0.011 |
-|     inst_traitement                                                                               |     0.016 |
+|   Synchronisation                                                                                 |     0.001 |
+|   insta_magnetic                                                                                  |    <0.001 |
+|     entity_compteur_signal                                                                        |    <0.001 |
+|       iteration_detect                                                                            |     0.000 |
+|       iteration_tampon                                                                            |    <0.001 |
+|     inst_traitement                                                                               |    <0.001 |
 +---------------------------------------------------------------------------------------------------+-----------+
 
 

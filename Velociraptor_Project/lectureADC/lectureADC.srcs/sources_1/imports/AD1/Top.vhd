@@ -184,6 +184,8 @@ constant freq_sys_MHz: integer := 125;  -- MHz
            i_data_vitesse   : in std_logic_vector (31 downto 0);
            i_data_distance   : in std_logic_vector (31 downto 0);
            i_data_calorie   : in std_logic_vector (31 downto 0);
+           i_data_deportation: in std_logic_vector (31 downto 0);
+           i_data_poids     : in std_logic_vector (31 downto 0);
            i_sw_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
            
            -- Output des blocs de communication fpga/serveur
@@ -191,6 +193,8 @@ constant freq_sys_MHz: integer := 125;  -- MHz
            o_data_vitesse   : out std_logic_vector (31 downto 0);
            o_data_distance   : out std_logic_vector (31 downto 0);
            o_data_calorie   : out std_logic_vector (31 downto 0);
+           o_data_deportation : out std_logic_vector (31 downto 0);
+           o_data_poids     : out std_logic_vector (31 downto 0);
            o_leds_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 )
        );
        end component;
@@ -213,6 +217,8 @@ constant freq_sys_MHz: integer := 125;  -- MHz
       signal s_vitesse       : unsigned(5 downto 0);
       signal s_distance      : unsigned(31 downto 0);
       signal s_calorie      : unsigned(10 downto 0);
+      signal s_deportation  : unsigned(7 downto 0);
+      signal s_poids          : std_logic_vector(31 downto 0);
 begin
     reset    <= i_btn(0);    
         
@@ -264,7 +270,7 @@ begin
                 o_distance      => s_distance,
 --                i_poid_Kg       => i_poid_Kg,
 --                i_taille_cm      => i_taille_cm
-                i_poid_Kg       => "00000000",
+                i_poid_Kg       => unsigned(s_poids(7 downto 0)),
                 i_taille_cm      => "00000000"
     );
         
@@ -339,13 +345,18 @@ begin
               i_data_vitesse(31 downto 6)   => (others => '0'), 
               i_data_distance(31 downto 0)  => std_logic_vector(s_distance),
               i_data_calorie(10 downto 0)   => std_logic_vector(s_calorie),
-              i_data_calorie(31 downto 11)  => (others => '0'), 
+              i_data_calorie(31 downto 11)  => (others => '0'),
+              i_data_deportation(7 downto 0) => (std_logic_vector(s_deportation)),
+              i_data_deportation(31 downto 8) => (others =>'0'), 
+              i_data_poids                   => (others =>'0'), 
               i_sw_tri_i                    => i_sw,
               ----------------------------------------
               o_data_out        => open,
               o_data_vitesse    => open,
               o_data_distance   => open,
               o_data_calorie    => open,
+              o_data_deportation => open,
+              o_data_poids      => s_poids,
               o_leds_tri_o      => o_leds
           );
          

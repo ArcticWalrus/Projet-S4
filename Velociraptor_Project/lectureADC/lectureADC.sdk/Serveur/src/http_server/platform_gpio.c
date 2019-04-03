@@ -115,3 +115,7 @@ float Deportation_GetSampleValue()
 	return (float)rawSample;
 
 }
+
+void Poids_WriteValue(unsigned int poids) {
+	MYIO_IP_mWriteReg(MY_POIDS_IP_BASEADDRESS, 0x4, poids);
+}

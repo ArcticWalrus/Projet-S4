@@ -51,6 +51,8 @@ begin
             
             s_u_vitesse <= to_unsigned(s_vitesse * 360 / 100, 6); --(km/h) à vérifier l'allure de la valeur 
             o_distance <= to_unsigned(circ * to_integer(i_nb_items_total) / 100, 32); --à vérifier l'allure de la valeur facteur 100 -> 2 décimales
+            --o_distance(7 downto 0) <= i_poid_Kg;
+            --o_distance(31 downto 8) <= (others => '0');
             o_calorie  <= to_unsigned(calorie / 360000, 11); --temporaire, il faut accumuler les valeurs facteur 10 pour 1 décimale	
     	end if;
     
@@ -76,9 +78,9 @@ begin
     
     process(i_poid_Kg)
     begin
-        if i_poid_Kg < x"00000041" then -- <65 kg
+        if i_poid_Kg < 65 then -- <65 kg
             current_weight <= less_65;
-        elsif i_poid_Kg > x"0000004b" then -- >75 kg
+        elsif i_poid_Kg > 75 then -- >75 kg
             current_weight <= above_75;
         else 
             current_weight <= between_65_75;

@@ -370,7 +370,10 @@ void fpga_thread(void *p){
 int main()
 {
 	print("Bienvenue\n\r");
-	printf("F Bienvenue\n\r");
+
+	Poids_WriteValue(200);
+	printf("You fat fuck\n\r");
+
 
 	main_thread_handle = sys_thread_new("main_thread", main_thread, 0,
 			THREAD_STACKSIZE, DEFAULT_THREAD_PRIO);

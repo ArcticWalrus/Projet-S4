@@ -28,6 +28,8 @@ typedef uint16_t u16;
 #define MY_VITESSE_IP_BASEADDRESS  XPAR_MYIO_IP_0_S00_AXI_BASEADDR
 #define MY_DISTANCE_IP_BASEADDRESS  XPAR_MYIO_IP_1_S00_AXI_BASEADDR
 #define MY_CALORIE_IP_BASEADDRESS  XPAR_MYIO_IP_2_S00_AXI_BASEADDR
+#define MY_DEPORTATION_IP_BASEADDRESS  XPAR_MYIO_IP_3_S00_AXI_BASEADDR
+#define MY_POIDS_IP_BASEADDRESS  XPAR_MYIO_IP_4_S00_AXI_BASEADDR
 
 #define AD1_NUM_BITS 	12
 
@@ -45,5 +47,7 @@ u16 Calorie_GetSampleRaw();
 float Calorie_GetSampleValue();
 u16 Deportation_GetSampleRaw();
 float Deportation_GetSampleValue();
+
+void Poids_WriteValue(unsigned int poids);
 
 #endif
