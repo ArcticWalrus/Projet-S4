@@ -2,13 +2,21 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Mar 28 13:03:23 2019
-# Process ID: 43712
-# Current directory: C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/assembleur_ergonomie/MEF
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent52876 C:\Users\ArcticWalrus\Documents\GitHub\Projet-S4\ergonomie\assembleur_ergonomie\MEF\MEF.xpr
-# Log file: C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/assembleur_ergonomie/MEF/vivado.log
-# Journal file: C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/assembleur_ergonomie/MEF\vivado.jou
+# Start of session at: Tue Apr  2 16:23:23 2019
+# Process ID: 31508
+# Current directory: C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/New Projects/assembleur_ergonomie/MEF
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7612 C:\Users\ArcticWalrus\Documents\GitHub\Projet-S4\ergonomie\New Projects\assembleur_ergonomie\MEF\MEF.xpr
+# Log file: C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/New Projects/assembleur_ergonomie/MEF/vivado.log
+# Journal file: C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/New Projects/assembleur_ergonomie/MEF\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/assembleur_ergonomie/MEF/MEF.xpr
+open_project {C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/New Projects/assembleur_ergonomie/MEF/MEF.xpr}
 update_compile_order -fileset sources_1
+open_bd_design {C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/IMU_demo/IMU_demo.srcs/sources_1/bd/design_1/design_1.bd}
+import_files -norecurse {{C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/New Projects/c_ergonomie/IMU_demo/IMU_demo.srcs/sources_1/bd/design_1/design_1.bd}}
+export_ip_user_files -of_objects  [get_files C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/IMU_demo/IMU_demo.srcs/sources_1/bd/design_1/design_1.bd] -no_script -reset -force -quiet
+remove_files  C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/IMU_demo/IMU_demo.srcs/sources_1/bd/design_1/design_1.bd
+import_files -norecurse {{C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/New Projects/c_ergonomie/IMU_demo/IMU_demo.srcs/sources_1/bd/design_1/design_1.bd}}
+export_ip_user_files -of_objects  [get_files  {{C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/New Projects/assembleur_ergonomie/MEF/MEF.srcs/sources_1/bd/design_1/design_1.bd}}] -lib_map_path [list {modelsim=C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/New Projects/assembleur_ergonomie/MEF/MEF.cache/compile_simlib/modelsim} {questa=C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/New Projects/assembleur_ergonomie/MEF/MEF.cache/compile_simlib/questa} {riviera=C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/New Projects/assembleur_ergonomie/MEF/MEF.cache/compile_simlib/riviera} {activehdl=C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/New Projects/assembleur_ergonomie/MEF/MEF.cache/compile_simlib/activehdl}] -force -quiet
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/New Projects/assembleur_ergonomie/MEF/MEF.srcs/sources_1/bd/design_1/design_1.bd}

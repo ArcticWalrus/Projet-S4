@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Mar 28 12:40:05 2019
+# Process ID: 52164
+# Current directory: C:/Users/ArcticWalrus/Downloads/ergonomie/IMU_demo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent40748 C:\Users\ArcticWalrus\Downloads\ergonomie\IMU_demo\IMU_demo.xpr
+# Log file: C:/Users/ArcticWalrus/Downloads/ergonomie/IMU_demo/vivado.log
+# Journal file: C:/Users/ArcticWalrus/Downloads/ergonomie/IMU_demo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ArcticWalrus/Downloads/ergonomie/IMU_demo/IMU_demo.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/raye2601/Desktop/IMU_demo' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:13 . Memory (MB): peak = 826.797 ; gain = 107.582
+update_compile_order -fileset sources_1

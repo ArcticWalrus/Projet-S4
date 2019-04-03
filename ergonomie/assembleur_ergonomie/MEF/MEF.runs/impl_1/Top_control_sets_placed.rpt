@@ -1,0 +1,85 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Apr  1 11:46:17 2019
+| Host         : DESKTOP-J3PS77H running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
+| Design       : Top
+| Device       : xc7z010
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    17 |
+| Unused register locations in slices containing registers |    34 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            2 |
+|      8 |            3 |
+|     10 |            2 |
+|     12 |            1 |
+|    16+ |            9 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             120 |           20 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              88 |           13 |
+| Yes          | No                    | No                     |               8 |            1 |
+| Yes          | No                    | Yes                    |              24 |            3 |
+| Yes          | Yes                   | No                     |              70 |           10 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------+-----------------------------------------------+-----------------------------------------------+------------------+----------------+
+|        Clock Signal       |                 Enable Signal                 |                Set/Reset Signal               | Slice Load Count | Bel Load Count |
++---------------------------+-----------------------------------------------+-----------------------------------------------+------------------+----------------+
+|  Synchronisation/clk_5MHz | Picoblaze/processor/flag_enable               | Picoblaze/processor/I1                        |                1 |              4 |
+|  sys_clock_IBUF_BUFG      |                                               |                                               |                2 |              4 |
+|  Synchronisation/clk_5MHz |                                               | Picoblaze/processor/active_interrupt          |                3 |              8 |
+|  Synchronisation/clk_5MHz |                                               | Picoblaze/processor/in_port_reg[7]            |                1 |              8 |
+|  Synchronisation/clk_5MHz | Picoblaze/processor/E[0]                      |                                               |                1 |              8 |
+|  sys_clock_IBUF_BUFG      |                                               | Synchronisation/eqOp2_in                      |                1 |             10 |
+|  sys_clock_IBUF_BUFG      | Synchronisation/eqOp2_in                      | Synchronisation/ValueCounter200kHz[4]_i_1_n_0 |                2 |             10 |
+|  Synchronisation/clk_5MHz |                                               | Picoblaze/processor/I1                        |                3 |             12 |
+|  Synchronisation/clk_5MHz |                                               | Picoblaze/program_rom/instruction[7]          |                2 |             16 |
+|  Synchronisation/clk_5MHz | Picoblaze/processor/spm_enable                |                                               |                2 |             16 |
+|  Synchronisation/clk_5MHz | Controleur/MEF/E[0]                           | i_btn_IBUF[0]                                 |                3 |             24 |
+|  Synchronisation/clk_5MHz | Picoblaze/processor/t_state_0                 | Picoblaze/processor/I1                        |                3 |             24 |
+|  Synchronisation/clk_5MHz | Picoblaze/processor/register_enable           |                                               |                2 |             32 |
+|  Synchronisation/clk_5MHz | Picoblaze/processor/t_state_0                 |                                               |                2 |             32 |
+|  sys_clock_IBUF_BUFG      | Synchronisation/ValueCounter200kHz[4]_i_1_n_0 | Synchronisation/ValueCounter100Hz             |                4 |             32 |
+|  Synchronisation/clk_5MHz |                                               | i_btn_IBUF[0]                                 |                3 |             34 |
+|  Synchronisation/clk_5MHz |                                               |                                               |               18 |            116 |
++---------------------------+-----------------------------------------------+-----------------------------------------------+------------------+----------------+
+
+

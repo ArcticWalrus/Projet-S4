@@ -1,7 +1,3 @@
-			; myProgram.psm
-			;
-			; This is the start of 'myProgram' for KCPSM6
-			;
 			;  8-bit LSB d'un echantillon de l'ADC
 			CONSTANT ADC_LSB_port, 00
 			;

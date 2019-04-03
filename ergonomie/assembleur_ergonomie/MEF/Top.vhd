@@ -1,9 +1,3 @@
-----------------------------------------------------------------------------------
--- Exercice1 Atelier #3 S4 info H19
--- Larissa Njejimana
--- v.1 20-02-2019
-----------------------------------------------------------------------------------
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
@@ -75,6 +69,15 @@ end component;
   signal d_AD_Dselect    : std_logic; 
   signal d_echantillon   : std_logic_vector (11 downto 0); 
   signal d_NbCycles      : std_logic_vector (7 downto 0) := (others => '0'); 
+  signal microproc       : std_logic_vector(7 downto 0);
+
+component deportation is
+    Port ( 
+           i_clk: in std_ulogic;
+           microproceseur : in STD_LOGIC_VECTOR (7 downto 0);
+           led8 : out STD_LOGIC_VECTOR (7 downto 0)
+           );
+end component;
 
 begin
     reset    <= i_btn(0);    
@@ -115,8 +118,15 @@ begin
           i_ADC_echantillon         => d_echantillon,
           i_ADC_echantillon_pret    => d_davs, 
           o_compteur                =>  o_leds,    
-          o_echantillon_out         =>  Pmod_8LD    
+          o_echantillon_out         =>  microproc    
     );
+  
+    traitement : deportation 
+    port map ( 
+               i_clk                => clk_5MHz,
+               microproceseur       => microproc,
+               led8                 => Pmod_8LD
+               );
   
 end Behavioral;
 
