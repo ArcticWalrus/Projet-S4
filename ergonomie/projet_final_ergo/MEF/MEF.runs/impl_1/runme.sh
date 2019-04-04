@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/New Projects/assembleur_ergonomie/MEF/MEF.runs/impl_1'
+HD_PWD='C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/projet_final_ergo/MEF/MEF.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

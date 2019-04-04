@@ -44,7 +44,6 @@ etatCourant <= debut;
                 if (microproceseur = "00000000") then           -- Si on a pas de valeur
                     prochainEtat <= debut;
                     
-                    
                 else
                 prochainEtat <= donnee1;
                 don1 <= microproceseur;

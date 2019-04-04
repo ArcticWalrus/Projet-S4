@@ -66,7 +66,7 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   open_checkpoint Top_routed.dcp
-  set_property webtalk.parent_dir {C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/New Projects/assembleur_ergonomie/MEF/MEF.cache/wt} [current_project]
+  set_property webtalk.parent_dir C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/projet_final_ergo/MEF/MEF.cache/wt [current_project]
   catch { write_mem_info -force Top.mmi }
   write_bitstream -force Top.bit 
   catch {write_debug_probes -quiet -force Top}
