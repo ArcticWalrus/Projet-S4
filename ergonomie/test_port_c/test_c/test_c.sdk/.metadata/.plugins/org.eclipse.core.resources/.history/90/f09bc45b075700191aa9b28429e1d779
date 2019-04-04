@@ -31,14 +31,13 @@ int main(void)
 	IMU_ReadSomeRegisters();
 	xil_printf("\r\n");
 
+	int i = 1;
 	int accel_y;
 
 	xil_printf("ACCEL data\r\n");
-
-
 	// Set acceleration Full Scale Range : 0 to 3
 	IMU_Set_Accel_FSR(3);
-	while(1)
+	while(i == 1)
 	{
 		accel_y =  IMU_Get_Accel_Y_value();
 		sleep(1); // in seconds
