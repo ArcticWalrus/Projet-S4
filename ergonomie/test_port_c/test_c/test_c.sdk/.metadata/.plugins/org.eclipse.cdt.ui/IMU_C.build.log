@@ -1,4 +1,8 @@
+11:56:22 **** Incremental Build of configuration Debug for project IMU_C ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
 
-**** Build of configuration Debug for project IMU_C ****
+11:56:23 Build Finished (took 697ms)
 
-Nothing to build for project IMU_C

@@ -4,3 +4,144 @@
 11:38:43 INFO  : Successfully done setting XSCT server connection channel  
 11:38:43 INFO  : Processing command line option -hwspec D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper.hdf.
 11:38:43 INFO  : Successfully done setting SDK workspace  
+11:50:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:51:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:51:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA" && level==0} -index 1' command is executed.
+11:51:39 INFO  : FPGA configured successfully with bitstream "D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper_hw_platform_0/zybo_wrapper.bit"
+11:51:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA" && level==0} -index 1' command is executed.
+11:51:58 INFO  : 'fpga -state' command is executed.
+11:51:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:51:59 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77C2BA' is selected.
+11:51:59 INFO  : 'jtag frequency' command is executed.
+11:51:59 INFO  : Sourcing of 'D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:51:59 INFO  : Context for 'APU' is selected.
+11:51:59 INFO  : Hardware design information is loaded from 'D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper_hw_platform_0/system.hdf'.
+11:51:59 INFO  : 'configparams force-mem-access 1' command is executed.
+11:51:59 INFO  : Context for 'APU' is selected.
+11:51:59 INFO  : 'stop' command is executed.
+11:51:59 INFO  : 'ps7_init' command is executed.
+11:51:59 INFO  : 'ps7_post_config' command is executed.
+11:51:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:51:59 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:51:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:52:00 INFO  : The application 'D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/IMU_C/Debug/IMU_C.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:52:00 INFO  : 'configparams force-mem-access 0' command is executed.
+11:52:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA"} -index 0
+loadhw -hw D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA"} -index 0
+dow D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/IMU_C/Debug/IMU_C.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:52:00 INFO  : Memory regions updated for context APU
+11:52:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:52:00 INFO  : 'con' command is executed.
+11:52:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA"} -index 0
+con
+----------------End of Script----------------
+
+11:52:00 INFO  : Launch script is exported to file 'D:\Projet-S4\ergonomie\test_port_c\test_c\test_c.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_imu_c.elf_on_local.tcl'
+11:52:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:52:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA" && level==0} -index 1' command is executed.
+11:52:23 INFO  : FPGA configured successfully with bitstream "D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper_hw_platform_0/zybo_wrapper.bit"
+11:52:35 INFO  : Disconnected from the channel tcfchan#1.
+11:52:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA" && level==0} -index 1' command is executed.
+11:52:37 INFO  : 'fpga -state' command is executed.
+11:52:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:52:37 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77C2BA' is selected.
+11:52:37 INFO  : 'jtag frequency' command is executed.
+11:52:37 INFO  : Sourcing of 'D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:52:37 INFO  : Context for 'APU' is selected.
+11:52:45 INFO  : Hardware design information is loaded from 'D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper_hw_platform_0/system.hdf'.
+11:52:45 INFO  : 'configparams force-mem-access 1' command is executed.
+11:52:45 INFO  : Context for 'APU' is selected.
+11:52:45 INFO  : 'stop' command is executed.
+11:52:46 INFO  : 'ps7_init' command is executed.
+11:52:46 INFO  : 'ps7_post_config' command is executed.
+11:52:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:52:46 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:52:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:52:46 INFO  : The application 'D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/IMU_C/Debug/IMU_C.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:52:46 INFO  : 'configparams force-mem-access 0' command is executed.
+11:52:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA"} -index 0
+loadhw -hw D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA"} -index 0
+dow D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/IMU_C/Debug/IMU_C.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:52:46 INFO  : Memory regions updated for context APU
+11:52:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:52:46 INFO  : 'con' command is executed.
+11:52:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA"} -index 0
+con
+----------------End of Script----------------
+
+11:52:46 INFO  : Launch script is exported to file 'D:\Projet-S4\ergonomie\test_port_c\test_c\test_c.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_imu_c.elf_on_local.tcl'
+11:56:25 INFO  : Disconnected from the channel tcfchan#2.
+11:56:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA" && level==0} -index 1' command is executed.
+11:56:26 INFO  : 'fpga -state' command is executed.
+11:56:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:56:26 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77C2BA' is selected.
+11:56:26 INFO  : 'jtag frequency' command is executed.
+11:56:26 INFO  : Sourcing of 'D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:56:26 INFO  : Context for 'APU' is selected.
+11:56:34 INFO  : Hardware design information is loaded from 'D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper_hw_platform_0/system.hdf'.
+11:56:34 INFO  : 'configparams force-mem-access 1' command is executed.
+11:56:35 INFO  : Context for 'APU' is selected.
+11:56:35 INFO  : 'stop' command is executed.
+11:56:35 INFO  : 'ps7_init' command is executed.
+11:56:35 INFO  : 'ps7_post_config' command is executed.
+11:56:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:56:35 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:56:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:56:36 INFO  : The application 'D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/IMU_C/Debug/IMU_C.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:56:36 INFO  : 'configparams force-mem-access 0' command is executed.
+11:56:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA"} -index 0
+loadhw -hw D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA"} -index 0
+dow D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/IMU_C/Debug/IMU_C.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:56:36 INFO  : Memory regions updated for context APU
+11:56:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:56:36 INFO  : 'con' command is executed.
+11:56:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77C2BA"} -index 0
+con
+----------------End of Script----------------
+
+11:56:36 INFO  : Launch script is exported to file 'D:\Projet-S4\ergonomie\test_port_c\test_c\test_c.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_imu_c.elf_on_local.tcl'
