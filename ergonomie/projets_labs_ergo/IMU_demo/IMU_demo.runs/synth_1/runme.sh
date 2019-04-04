@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/raye2601/Desktop/IMU_demo/IMU_demo.runs/synth_1'
+HD_PWD='D:/Projet-S4/ergonomie/projets_labs_ergo/IMU_demo/IMU_demo.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="C:/Users/raye2601/Desktop/IMU_demo/IMU_demo.xpr">
+<Project Version="7" Minor="38" Path="D:/Projet-S4/ergonomie/projets_labs_ergo/IMU_demo/IMU_demo.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="1bd669714e5243cfbe2d0258c83db34c"/>

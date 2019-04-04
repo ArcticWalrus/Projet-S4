@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Thu Feb 21 15:35:44 2019
--- Host        : LAB3027-GEL04 running 64-bit Service Pack 1  (build 7601)
+-- Date        : Thu Apr  4 10:53:28 2019
+-- Host        : LAB3035-GEL12 running 64-bit Service Pack 1  (build 7601)
 -- Command     : write_vhdl -force -mode synth_stub
---               q:/IMU_demo/IMU_demo.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0_stub.vhdl
+--               D:/Projet-S4/ergonomie/projets_labs_ergo/IMU_demo/IMU_demo.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0_stub.vhdl
 -- Design      : design_1_processing_system7_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z010clg400-1
