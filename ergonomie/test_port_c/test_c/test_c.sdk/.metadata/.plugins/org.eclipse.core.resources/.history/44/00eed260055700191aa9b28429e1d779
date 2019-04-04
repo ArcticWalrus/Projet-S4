@@ -39,7 +39,6 @@ int IMU_Device_Reset();
 
 // Accelerator functions
 int IMU_Get_Accel_Raw_value();
-int IMU_Get_Accel_Y_value();
 int Accel_raw_to_g_float();
 int IMU_Set_Accel_FSR(u8 newFSR);
 

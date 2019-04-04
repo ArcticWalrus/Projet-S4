@@ -66,11 +66,7 @@ int IMU_Get_Accel_Raw_value()
 	return 0;
 }
 
-int IMU_Get_Accel_Y_value()
-{
-	IMU_Get_Accel_Raw_value();
-	return accel_raw[1];
-}
+
 
 /******************************************************************************/
 /**

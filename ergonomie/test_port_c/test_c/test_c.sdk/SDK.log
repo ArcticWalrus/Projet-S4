@@ -153,3 +153,10 @@ con
 12:18:50 INFO  : Successfully done setting SDK workspace  
 12:18:50 INFO  : Processing command line option -hwspec D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper.hdf.
 12:18:50 INFO  : Checking for hwspec changes in the project zybo_wrapper_hw_platform_0.
+14:06:10 INFO  : Registering command handlers for SDK TCF services
+14:06:11 INFO  : Launching XSCT server: xsct.bat -interactive D:\Projet-S4\ergonomie\test_port_c\test_c\test_c.sdk\temp_xsdb_launch_script.tcl
+14:06:14 INFO  : XSCT server has started successfully.
+14:06:14 INFO  : Processing command line option -hwspec D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper.hdf.
+14:06:15 INFO  : Successfully done setting XSCT server connection channel  
+14:06:15 INFO  : Successfully done setting SDK workspace  
+14:06:15 INFO  : Checking for hwspec changes in the project zybo_wrapper_hw_platform_0.
