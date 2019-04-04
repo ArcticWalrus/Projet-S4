@@ -19,14 +19,15 @@ export class DataService {
 
   private counter = 0;
   async getData(){
-    let servData = await this.http.post("http://192.168.1.10/cmd/switchxhr", {});
+    let servData = await this.http.post("http://192.168.1.10/cmd/fpgaxhr", {}, httpOptions);
+    console.log(servData);
     if(this.counter >= 10) {
       this.speedData[0].values = this.speedData[0].values.slice(1,59);
     }
     else {
       this.speedData[0].labels.push(this.counter++);
     }
-    this.speedData[0].values.push(JSON.parse(servData['vitesse']));
+    this.speedData[0].values.push(1);
     
     console.log(this.counter);
     return this.speedData;
