@@ -776,3 +776,69 @@ selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sourc
 // Elapsed time: 71 seconds
 expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top(Behavioral) (Top.vhd)]", 1); // B (D, ck)
 // HMemoryUtils.trashcanNow. Engine heap size: 750 MB. GUI used memory: 98 MB. Current time: 4/4/19 7:39:26 AM EDT
+// Elapsed time: 2454 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper(STRUCTURE) (design_1_wrapper.vhd)]", 9); // B (D, ck)
+// Elapsed time: 57 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper(STRUCTURE) (design_1_wrapper.vhd)]", 9, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top(Behavioral) (Top.vhd), traitement : deportation(Behavioral) (deportation.vhd)]", 8, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top(Behavioral) (Top.vhd), traitement : deportation(Behavioral) (deportation.vhd)]", 8, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("deportation.vhd", 350, 148); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("deportation.vhd", 162, 248); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("deportation.vhd", 229, 302); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("deportation.vhd", 385, 307); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("deportation.vhd", 400, 454); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+typeControlKey((HResource) null, "deportation.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 396, 448); // ce (w, ck)
+typeControlKey((HResource) null, "deportation.vhd", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "deportation.vhd", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "deportation.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 342, 453); // ce (w, ck)
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "deportation.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 373, 477); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 373, 477, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("deportation.vhd", 373, 470); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 373, 470, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "deportation.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 372, 489); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 372, 489, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "deportation.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 375, 502); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 375, 502, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "deportation.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 293, 279); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 293, 279, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "deportation.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 441, 364); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 207, 419); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 207, 418, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "deportation.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 225, 432); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 225, 432, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "deportation.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 225, 448); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 225, 448, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "deportation.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 224, 470); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 223, 470, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "deportation.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 216, 487); // ce (w, ck)
+selectCodeEditor("deportation.vhd", 216, 487, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "deportation.vhd", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("deportation.vhd", 552, 438); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED

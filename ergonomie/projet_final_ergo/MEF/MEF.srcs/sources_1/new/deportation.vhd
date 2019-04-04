@@ -6,13 +6,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity deportation is
     Port ( 
            i_clk: in std_ulogic;
-           microproceseur : in STD_LOGIC_VECTOR (7 downto 0);
+           microproceseur : in STD_LOGIC_VECTOR (31 downto 0);
            led8 : out STD_LOGIC_VECTOR (7 downto 0)
            );
 end deportation;
 
 architecture Behavioral of deportation is
-SIGNAL moye : signed (7 downto 0);
+SIGNAL moye : signed (31 downto 0);
 
 type etats is (
       debut,
@@ -24,10 +24,10 @@ type etats is (
     
 signal etatCourant, prochainEtat : etats;
 
-signal don1 : STD_LOGIC_VECTOR (7 downto 0) := "00000000";
-signal don2 : STD_LOGIC_VECTOR (7 downto 0) := "00000000";
-signal don3 : STD_LOGIC_VECTOR (7 downto 0) := "00000000";
-signal don4 : STD_LOGIC_VECTOR (7 downto 0) := "00000000";
+signal don1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
+signal don2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
+signal don3 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
+signal don4 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
 begin
 etatCourant <= debut;
     registre: process(i_clk)
@@ -41,7 +41,7 @@ etatCourant <= debut;
     begin
         case etatCourant is
             when debut =>
-                if (microproceseur = "00000000") then           -- Si on a pas de valeur
+                if (microproceseur = "00000000000000000000000000000000") then           -- Si on a pas de valeur
                     prochainEtat <= debut;
                     
                 else
@@ -89,11 +89,11 @@ etatCourant <= debut;
                         else 
                             led8 <= "00000000";
                         end if;
-                  don1 <= "00000000";
-                  don2 <= "00000000";
-                  don3 <= "00000000";
-                  don4 <= "00000000";
-                  moye <= "00000000";
+                  don1 <= "00000000000000000000000000000000";
+                  don2 <= "00000000000000000000000000000000";
+                  don3 <= "00000000000000000000000000000000";
+                  don4 <= "00000000000000000000000000000000";
+                  moye <= "00000000000000000000000000000000";
         end case;
      end process;
 end Behavioral;
