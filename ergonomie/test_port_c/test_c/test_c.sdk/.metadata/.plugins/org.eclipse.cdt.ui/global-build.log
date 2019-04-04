@@ -704,3 +704,8 @@ arm-none-eabi-size IMU_C.elf  |tee "IMU_C.elf.size"
   99500	   2592	  23456	 125548	  1ea6c	IMU_C.elf
 'Finished building: IMU_C.elf.size'
 ' '
+14:20:57 **** Incremental Build of configuration Debug for project IMU_C ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».

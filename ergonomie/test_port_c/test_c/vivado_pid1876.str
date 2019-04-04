@@ -133,3 +133,4 @@ dismissDialog("Launch SDK"); // aa (ck)
 // WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1386 ms. Increasing delay to 3000 ms.
 // WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2648 ms. Increasing delay to 3000 ms.
 // WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 267ms to process. Increasing delay to 2000 ms.
+// [GUI Memory]: 89 MB (+761kb) [00:17:25]
