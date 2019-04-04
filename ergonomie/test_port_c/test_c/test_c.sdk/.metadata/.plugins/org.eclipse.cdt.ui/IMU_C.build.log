@@ -1,15 +1,11 @@
-14:16:38 **** Auto Build of configuration Debug for project IMU_C ****
+14:18:21 **** Auto Build of configuration Debug for project IMU_C ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/main.c'
+'Building file: ../src/IMU_Functions.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../IMU_C_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:35:6: warning: variable 'accel_y' set but not used [-Wunused-but-set-variable]
-  int accel_y;
-      ^~~~~~~
-'Finished building: ../src/main.c'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/IMU_Functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../IMU_C_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/IMU_Functions.d" -MT"src/IMU_Functions.o" -o "src/IMU_Functions.o" "../src/IMU_Functions.c"
+'Finished building: ../src/IMU_Functions.c'
 ' '
 'Building target: IMU_C.elf'
 'Invoking: ARM v7 gcc linker'
@@ -19,9 +15,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size IMU_C.elf  |tee "IMU_C.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  99492	   2592	  23456	 125540	  1ea64	IMU_C.elf
+  99500	   2592	  23456	 125548	  1ea6c	IMU_C.elf
 'Finished building: IMU_C.elf.size'
 ' '
 
-14:16:40 Build Finished (took 2s.63ms)
+14:18:23 Build Finished (took 1s.971ms)
 

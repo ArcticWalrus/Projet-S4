@@ -69,7 +69,6 @@ int IMU_Get_Accel_Raw_value()
 int IMU_Get_Accel_Y_value()
 {
 	IMU_Get_Accel_Raw_value();
-	xil_printf("%6d\n",accel_raw[1]);
 	return accel_raw[1];
 }
 
