@@ -79,7 +79,7 @@ int do_404(struct tcp_pcb *pcb, char *req, int rlen)
 
 int do_http_post(struct tcp_pcb *pcb, char *req, int rlen)
 {
-	int BUFSIZE = 1024;
+	int BUFSIZE = 512;
 	char buf[BUFSIZE];
 	char sw_buf[128];
 	int len, sw_len;
@@ -152,89 +152,132 @@ int do_http_post(struct tcp_pcb *pcb, char *req, int rlen)
 /* respond for a file GET request */
 int do_http_get(struct tcp_pcb *pcb, char *req, int rlen)
 {
-	int BUFSIZE = 1400;
+	int BUFSIZE = 512;
 	char filename[MAX_FILENAME];
 	unsigned char buf[BUFSIZE];
 	signed int fsize, hlen;
 	unsigned int n;
 
+	char sw_buf[128];
+	int len, sw_len;
+
 	char *fext;
 	err_t err;
 
-	/* determine file name */
-	extract_file_name(filename, req, rlen, MAX_FILENAME);
+	xil_printf("REQ: %s", req);
+	if (is_cmd_fpga(req)) {
+		char calorie[16];
+		sprintf(calorie, "%d", Calorie_GetSampleRaw());
+		char deportation[16];
+		sprintf(deportation, "%d", Deportation_GetSampleRaw());
+		char distance[16];
+		sprintf(distance, "%d", Distance_GetSampleRaw());
+		char vitesse[16];
+		sprintf(vitesse, "%d", Speed_GetSampleRaw());
+
+		sprintf(sw_buf, "{\"Calorie\": ");
+		strcat(sw_buf, calorie);
+		strcat(sw_buf, ", \"Deportation\": ");
+		strcat(sw_buf, deportation);
+		strcat(sw_buf, ", \"Distance\": ");
+		strcat(sw_buf, distance);
+		strcat(sw_buf, ", \"Vitesse\": ");
+		strcat(sw_buf, vitesse);
+		strcat(sw_buf, "}");
 
 
-	/* respond with correct file */
+		sw_len = strlen(sw_buf);
 
-	/* debug statement on UART */
-	xil_printf("http GET: %s\r\n", filename);
+		len = generate_http_header(buf, "js", sw_len);
 
-	/* get a pointer to file extension */
-	fext = get_file_extension(filename);
+		strcat(buf, sw_buf);
+		len += sw_len;
 
+		xil_printf("buffer: \r\n %s \r\n", buf);
 
-	FIL 	fd;
-	FRESULT res;
-	res = f_open(&fd, filename, FA_READ);
-	if (res != FR_OK) {
-        xil_printf("Error: %d\r\n", res);
+		if (tcp_write(pcb, buf, len, 1) != ERR_OK) {
+			xil_printf("error writing http POST response to socket\n\r");
+			xil_printf("http header = %s\r\n", buf);
+			return -1;
+		}
+	}
+	else {
+		/* determine file name */
 		extract_file_name(filename, req, rlen, MAX_FILENAME);
-		xil_printf("requested file %s not found, returning 404\r\n", filename);
-		do_404(pcb, req, rlen);
-		return -1;
-	}
 
-	/* obtain file size,
-	 * note that lseek with offset 0, MFS_SEEK_END does not move file pointer */
-	fsize = file_size(&fd);
-	if (fsize == -1) {
-		xil_printf("\r\nFile Read Error\r\n");
-		return -1;
-	}
 
-	/* write the http headers */
-	hlen = generate_http_header((char *)buf, fext, fsize);
-	if ((err = tcp_write(pcb, buf, hlen, 3)) != ERR_OK) {
-		xil_printf("error (%d) writing http header to socket\r\n", err);
-		xil_printf("attempted to write #bytes = %d, tcp_sndbuf = %d\r\n", hlen, tcp_sndbuf(pcb));
-		xil_printf("http header = %s\r\n", buf);
-		return -1;
-	}
+		/* respond with correct file */
 
-	/* now write the file */
-	while (fsize > 0) {
-		int sndbuf;
-		sndbuf = tcp_sndbuf(pcb);
+		/* debug statement on UART */
+		xil_printf("http GET: %s\r\n", filename);
 
-		if (sndbuf < BUFSIZE) {
-			/* not enough space in sndbuf, so send remaining bytes when there is space */
-			/* this is done by storing the fd in as part of the tcp_arg, so that the sent
-			   callback handler knows to send data */
-			http_arg *a = (http_arg *)pcb->callback_arg;
-			// TODO!!:a->fd = fd;
-			a->fsize = fsize;
+		/* get a pointer to file extension */
+		fext = get_file_extension(filename);
+
+
+		FIL 	fd;
+		FRESULT res;
+		res = f_open(&fd, filename, FA_READ);
+		if (res != FR_OK) {
+			xil_printf("Error: %d\r\n", res);
+			extract_file_name(filename, req, rlen, MAX_FILENAME);
+			xil_printf("requested file %s not found, returning 404\r\n", filename);
+			do_404(pcb, req, rlen);
 			return -1;
 		}
 
-		if (f_read(&fd, (char *)buf, BUFSIZE, &n) != FR_OK) {
-			xil_printf("File read error.\r\n");
+		/* obtain file size,
+		 * note that lseek with offset 0, MFS_SEEK_END does not move file pointer */
+		fsize = file_size(&fd);
+		if (fsize == -1) {
+			xil_printf("\r\nFile Read Error\r\n");
 			return -1;
 		}
 
-		if ((err = tcp_write(pcb, buf, n, 3)) != ERR_OK) {
-			xil_printf("error writing file (%s) to socket, remaining unwritten bytes = %d\r\n",
-					filename, fsize - n);
-			xil_printf("attempted to lwip_write %d bytes, tcp write error = %d\r\n", n, err);
-			break;
+		/* write the http headers */
+		hlen = generate_http_header((char *)buf, fext, fsize);
+
+		if ((err = tcp_write(pcb, buf, hlen, 3)) != ERR_OK) {
+			xil_printf("error (%d) writing http header to socket\r\n", err);
+			xil_printf("attempted to write #bytes = %d, tcp_sndbuf = %d\r\n", hlen, tcp_sndbuf(pcb));
+			xil_printf("http header = %s\r\n", buf);
+			return -1;
 		}
-		if (fsize >= n)
-			fsize -= n;
-		else
-			fsize = 0;
+		/* now write the file */
+		while (fsize > 0) {
+			int sndbuf;
+			sndbuf = tcp_sndbuf(pcb);
+
+			if (sndbuf < BUFSIZE) {
+				/* not enough space in sndbuf, so send remaining bytes when there is space */
+				/* this is done by storing the fd in as part of the tcp_arg, so that the sent
+				   callback handler knows to send data */
+				http_arg *a = (http_arg *)pcb->callback_arg;
+				// TODO!!:a->fd = fd;
+				a->fsize = fsize;
+				return -1;
+			}
+
+			if (f_read(&fd, (char *)buf, BUFSIZE, &n) != FR_OK) {
+				xil_printf("File read error.\r\n");
+				return -1;
+			}
+
+			if ((err = tcp_write(pcb, buf, n, 3)) != ERR_OK) {
+				xil_printf("error writing file (%s) to socket, remaining unwritten bytes = %d\r\n",
+						filename, fsize - n);
+				xil_printf("attempted to lwip_write %d bytes, tcp write error = %d\r\n", n, err);
+				break;
+			}
+			if (fsize >= n)
+				fsize -= n;
+			else
+				fsize = 0;
+		}
+		f_close(&fd);
 	}
 
-	f_close(&fd);
+
 
 
 	return 0;

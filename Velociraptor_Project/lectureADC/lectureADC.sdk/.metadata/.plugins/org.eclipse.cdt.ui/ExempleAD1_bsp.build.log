@@ -1,4 +1,4 @@
-15:29:52 **** Build of project ExempleAD1_bsp ****
+11:55:53 **** Auto Build of project ExempleAD1_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -45,28 +45,54 @@ make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=
 "Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling coresightps_dcc"
-arm-none-eabi-ar: creating ../../../lib/libxil.a
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [coresightps_dcc_comp_libs] Erreur 1
+make[1]: La cible « libs » n'a pas pu être refabriquée à cause d'erreurs.
+make: *** [ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
 make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling cpu_cortexa9"
 "Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling ddrps"
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [xddrps_libs] Erreur 1
+make[1]: La cible « libs » n'a pas pu être refabriquée à cause d'erreurs.
+make: *** [ps7_cortexa9_0/libsrc/ddrps_v1_0/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
 make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling devcfg"
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [xdevcfg_libs] Erreur 1
+make[1]: La cible « libs » n'a pas pu être refabriquée à cause d'erreurs.
+make: *** [ps7_cortexa9_0/libsrc/devcfg_v3_5/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
 make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling dmaps"
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [xdmaps_libs] Erreur 1
+make[1]: La cible « libs » n'a pas pu être refabriquée à cause d'erreurs.
+make: *** [ps7_cortexa9_0/libsrc/dmaps_v2_3/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
 make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling emacps"
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [xemacps_libs] Erreur 1
+make[1]: La cible « libs » n'a pas pu être refabriquée à cause d'erreurs.
+make: *** [ps7_cortexa9_0/libsrc/emacps_v3_7/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
 make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling gpio"
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [libs] Erreur 1
+make: *** [ps7_cortexa9_0/libsrc/gpio_v4_3/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
 make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling gpiops"
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [xgpiops_libs] Erreur 1
+make[1]: La cible « libs » n'a pas pu être refabriquée à cause d'erreurs.
+make: *** [ps7_cortexa9_0/libsrc/gpiops_v3_3/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/myIO_IP_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/myIO_IP_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling myIO_IP..."
@@ -77,6 +103,9 @@ myIO_IP_selftest.c:52:56: warning: comparison between signed and unsigned intege
 myIO_IP_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
   int Index;
       ^~~~~
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [libs] Erreur 1
+make: *** [ps7_cortexa9_0/libsrc/myIO_IP_v1_0/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/myip_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/myip_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling myip..."
@@ -87,9 +116,15 @@ myip_selftest.c:52:53: warning: comparison between signed and unsigned integer e
 myip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
   int Index;
       ^~~~~
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [libs] Erreur 1
+make: *** [ps7_cortexa9_0/libsrc/myip_v1_0/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/PmodGPIO_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/PmodGPIO_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling PmodGPIO..."
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [libs] Erreur 1
+make: *** [ps7_cortexa9_0/libsrc/PmodGPIO_v1_0/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/PmodOLED_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/PmodOLED_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling PmodOLED..."
@@ -123,34 +158,73 @@ OledGrph.c:812:11: warning: unused variable 'ib' [-Wunused-variable]
 OledGrph.c:811:11: warning: variable 'pbBmp' set but not used [-Wunused-but-set-variable]
      u8   *pbBmp;
            ^~~~~
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [libs] Erreur 1
+make: *** [ps7_cortexa9_0/libsrc/PmodOLED_v1_0/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
 make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling qspips"
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [xqspips_libs] Erreur 1
+make[1]: La cible « libs » n'a pas pu être refabriquée à cause d'erreurs.
+make: *** [ps7_cortexa9_0/libsrc/qspips_v3_4/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
 make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling scugic"
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [scugic_libs] Erreur 1
+make[1]: La cible « libs » n'a pas pu être refabriquée à cause d'erreurs.
+make: *** [ps7_cortexa9_0/libsrc/scugic_v3_9/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
 make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling scutimer"
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [scutimer_libs] Erreur 1
+make[1]: La cible « libs » n'a pas pu être refabriquée à cause d'erreurs.
+make: *** [ps7_cortexa9_0/libsrc/scutimer_v2_1/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
 make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling scuwdt"
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [scuwdt_libs] Erreur 1
+make[1]: La cible « libs » n'a pas pu être refabriquée à cause d'erreurs.
+make: *** [ps7_cortexa9_0/libsrc/scuwdt_v2_1/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
 make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling sdps"
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [xsdps_libs] Erreur 1
+make[1]: La cible « libs » n'a pas pu être refabriquée à cause d'erreurs.
+make: *** [ps7_cortexa9_0/libsrc/sdps_v3_5/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
 make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling standalone"
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [standalone_libs] Erreur 1
+make[1]: La cible « libs » n'a pas pu être refabriquée à cause d'erreurs.
+make: *** [ps7_cortexa9_0/libsrc/standalone_v6_7/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
 make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling uartps"
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [xuartps_libs] Erreur 1
+make[1]: La cible « libs » n'a pas pu être refabriquée à cause d'erreurs.
+make: *** [ps7_cortexa9_0/libsrc/uartps_v3_6/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
 make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling usbps"
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [xusbps_libs] Erreur 1
+make[1]: La cible « libs » n'a pas pu être refabriquée à cause d'erreurs.
+make: *** [ps7_cortexa9_0/libsrc/usbps_v2_4/src/make.libs] Erreur 2
 "Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
 make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling xadcps"
-'Finished building libraries'
+arm-none-eabi-ar: ../../../lib/libxil.a: No such file or directory
+make[1]: *** [xadcps_libs] Erreur 1
+make[1]: La cible « libs » n'a pas pu être refabriquée à cause d'erreurs.
+make: *** [ps7_cortexa9_0/libsrc/xadcps_v2_2/src/make.libs] Erreur 2
+make: La cible « all » n'a pas pu être refabriquée à cause d'erreurs.
 
-15:30:25 Build Finished (took 33s.72ms)
+11:56:29 Build Finished (took 36s.584ms)
 

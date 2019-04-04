@@ -96,7 +96,7 @@ static sys_thread_t fpga_thread_handle;
 void print_app_header();
 void start_application();
 
-#define THREAD_STACKSIZE 1024
+#define THREAD_STACKSIZE 2048
 
 struct netif server_netif;
 

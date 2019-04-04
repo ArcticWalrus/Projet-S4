@@ -1,8 +1,8 @@
-21:33:02 **** Incremental Build of configuration Debug for project Serveur ****
+15:15:27 **** Incremental Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Rien à faire pour « main-build ».
 
-21:33:03 Build Finished (took 484ms)
+15:15:28 Build Finished (took 722ms)
 
