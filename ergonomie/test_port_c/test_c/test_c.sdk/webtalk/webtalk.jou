@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# 
+# Start of session at: Thu Apr  4 12:08:06 2019
+# Process ID: 5036
+# Current directory: D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/webtalk/webtalk.log
+# Journal file: D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

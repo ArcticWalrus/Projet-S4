@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Apr  4 12:17:16 2019
+# Process ID: 9484
+# Current directory: D:/Projet-S4/ergonomie/test_port_c/test_c
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2212 D:\Projet-S4\ergonomie\test_port_c\test_c\test_c.xpr
+# Log file: D:/Projet-S4/ergonomie/test_port_c/test_c/vivado.log
+# Journal file: D:/Projet-S4/ergonomie/test_port_c/test_c\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.xpr
+update_compile_order -fileset sources_1
+file copy -force D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.runs/impl_1/zybo_wrapper.sysdef D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper.hdf
+
+launch_sdk -workspace D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk -hwspec D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper.hdf

@@ -4703,3 +4703,52 @@ java.lang.NullPointerException
 
 !ENTRY com.xilinx.sdk.utils 0 0 2019-04-04 11:56:36.728
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-04-04 12:08:04.873
+!MESSAGE Executed Webtalk command
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-04 12:08:04.890
+!MESSAGE XSCT Command: [disconnect tcfchan#3], Thread: Thread-271
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-04 12:08:04.922
+!MESSAGE XSCT command with result: [disconnect tcfchan#3], Result: [null, ]. Thread: Thread-271
+!SESSION 2019-04-04 12:18:40.444 -----------------------------------------------
+eclipse.buildId=2018.2
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk
+
+!ENTRY org.eclipse.ui 2 0 2019-04-04 12:18:42.454
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-04-04 12:18:42.454
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2019-04-04 12:18:43.038
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-04-04 12:18:43.038
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-04 12:18:50.473
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-04 12:18:50.476
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-04 12:18:50.486
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-04 12:18:50.490
+!MESSAGE XSCT Command: [setws D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk], Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-04 12:18:50.872
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-04 12:18:50.881
+!MESSAGE XSCT command with result: [setws D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk], Result: [null, ]. Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-04 12:18:50.906
+!MESSAGE XSCT Command: [::hsi::utils::openhw D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper_hw_platform_0/system.hdf], Thread: Worker-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-04 12:18:53.598
+!MESSAGE XSCT command with result: [::hsi::utils::openhw D:/Projet-S4/ergonomie/test_port_c/test_c/test_c.sdk/zybo_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-5
