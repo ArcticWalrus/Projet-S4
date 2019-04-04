@@ -1,0 +1,57 @@
+/*
+ * 		IMU_Functions.h
+ * 		Adapted from TDK Invensense ICM20948 drivers https://www.invensense.com/products/motion-tracking/9-axis/icm-20948/
+ *
+ * 		IMU Demo - Atelier #3
+ * 		Projet S4 informatique
+ * 		Hiver 2019
+ *
+ *  	Author: Larissa Njejimana
+ *  	21-02-2019
+ *
+ */
+
+#ifndef SRC_IMU_FUNCTIONS_H_
+#define SRC_IMU_FUNCTIONS_H_
+
+/***************************** Include Files **********************************/
+#include <stdio.h>
+#include "xparameters.h"
+#include "xiicps.h"
+#include "sleep.h"
+#include "IMU_Defines.h"
+
+
+/************************** Function Prototypes *******************************/
+int I2C_Interface_Init(u16 DeviceId);
+
+int IMU_Set_Bank(u8 bank);
+int IMU_Get_Bank(u8* bank);
+
+int IMU_I2C_WriteReg(u16 Reg_Addr, u8* data, int byteCount);
+int IMU_I2C_ReadReg(u16 Reg_Addr, u8* data, int byteCount);
+
+void IMU_ReadSomeRegisters();
+int IMU_Verify_ID();
+
+int IMU_Disable_SleepMode();
+int IMU_Device_Reset();
+
+// Accelerator functions
+int IMU_Get_Accel_Raw_value();
+int IMU_Get_Accel_Y_value();
+int Accel_raw_to_g_float();
+int IMU_Set_Accel_FSR(u8 newFSR);
+
+// Gyroscope functions
+int IMU_Get_Gyro_Raw_value();
+int Gyro_raw_to_dps_float();
+int IMU_Set_Gyro_FSR(u8 newFSR);
+
+// DMP functions
+int IMU_Load_DMP_firmware();
+int IMU_Write_DMP(unsigned short reg, unsigned int length, unsigned char *data);
+int IMU_Read_DMP(unsigned short reg, unsigned int length, unsigned char *data);
+
+
+#endif /* SRC_IMU_FUNCTIONS_H_ */
