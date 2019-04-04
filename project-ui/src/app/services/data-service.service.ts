@@ -19,7 +19,9 @@ export class DataService {
 
   private counter = 0;
   async getData(){
-    let servData = await this.http.post("http://192.168.1.10/cmd/fpgaxhr", {}, httpOptions);
+    let servData = await this.http.get("http://192.168.1.10/cmd/fpgaxhr").subscribe((data) => {
+      console.log(data)
+    });
     console.log(servData);
     if(this.counter >= 10) {
       this.speedData[0].values = this.speedData[0].values.slice(1,59);
