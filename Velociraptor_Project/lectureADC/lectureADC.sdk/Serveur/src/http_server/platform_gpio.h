@@ -33,6 +33,12 @@ typedef uint16_t u16;
 
 #define AD1_NUM_BITS 	12
 
+#define LIMITE_GAUCHE -200
+#define LIMITE_DROITE 200
+#define GAUCHE 0
+#define DROITE 2
+#define CENTRE 1
+
 void platform_init_gpios();
 int toggle_leds();
 unsigned int get_switch_state();
@@ -45,8 +51,9 @@ u16 Distance_GetSampleRaw();
 float Distance_GetSampleValue();
 u16 Calorie_GetSampleRaw();
 float Calorie_GetSampleValue();
-u16 Deportation_GetSampleRaw();
-float Deportation_GetSampleValue();
+int Deportation_GetSampleRaw();
+int Deportation_GetSampleValue();
+float Sensibilite_GetSampleValue();
 
 void Poids_WriteValue(unsigned int poids);
 

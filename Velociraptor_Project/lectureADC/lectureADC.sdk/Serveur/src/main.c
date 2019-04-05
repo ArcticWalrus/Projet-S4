@@ -56,6 +56,8 @@ u16 Calorie_GetSampleRaw();
 float Calorie_GetSampleValue();
 void DisplayVoltage(float value, char *voltage_char);
 
+
+
 #define MY_AD1_IP_BASEADDRESS  XPAR_MYIP_0_S00_AXI_BASEADDR
 
 #define MY_VITESSE_IP_BASEADDRESS  XPAR_MYIO_IP_0_S00_AXI_BASEADDR
@@ -268,6 +270,8 @@ void fpga_thread(void *p){
 	float currentData = 0;
 	float currentVoltage = 0;
 	char dataChar[5];
+	char directionGenou[7] = "Centre";
+	int sensibilite = 0;
 
 	print("Bienvenue 2\n\r");
 	printf("F Bienvenue 2\n\r");
@@ -306,33 +310,49 @@ void fpga_thread(void *p){
 		if(sw_data == 0){
 			OLED_ClearBuffer(&oledDevice);
 			currentData = Speed_GetSampleValue();
-			OLED_SetCursor(&oledDevice, 0, 3);
-			OLED_PutString(&oledDevice, "Vitesse = ");
+			OLED_SetCursor(&oledDevice, 0, 1);
+			OLED_PutString(&oledDevice, "--- Vitesse ---");
 			// Affichage de la vitesse sur le Pmod OLED
-			sprintf(dataChar,"%2.2f",currentData);
-			OLED_SetCursor(&oledDevice, 10, 3);
+			sprintf(dataChar,"%2.0f km/h",currentData);
+			OLED_SetCursor(&oledDevice, 0, 2);
 			OLED_PutString(&oledDevice, dataChar);
 			OLED_Update(&oledDevice);
 		}
 		else if (sw_data == 1){
 			OLED_ClearBuffer(&oledDevice);
 			currentData = Distance_GetSampleValue();
-			OLED_SetCursor(&oledDevice, 0, 3);
-			OLED_PutString(&oledDevice, "Distance = ");
+			OLED_SetCursor(&oledDevice, 0, 1);
+			OLED_PutString(&oledDevice, "--- Distance ---");
 			// Affichage de la distance sur le Pmod OLED
-			sprintf(dataChar,"%2.2f",currentData);
-			OLED_SetCursor(&oledDevice, 11, 3);
+			sprintf(dataChar,"%2.0f m",currentData);
+			OLED_SetCursor(&oledDevice, 0, 2);
 			OLED_PutString(&oledDevice, dataChar);
 			OLED_Update(&oledDevice);
 		}
 		else if (sw_data == 2){
 			OLED_ClearBuffer(&oledDevice);
 			currentData = Calorie_GetSampleValue();
-			OLED_SetCursor(&oledDevice, 0, 3);
-			OLED_PutString(&oledDevice, "Calorie = ");
+			OLED_SetCursor(&oledDevice, 0, 1);
+			OLED_PutString(&oledDevice, "--- Calories ---");
 			// Affichage de la Calorie sur le Pmod OLED
-			sprintf(dataChar,"%2.2f",currentData);
-			OLED_SetCursor(&oledDevice, 10, 3);
+			sprintf(dataChar,"%2.0f cal.",currentData);
+			OLED_SetCursor(&oledDevice, 0, 2);
+			OLED_PutString(&oledDevice, dataChar);
+			OLED_Update(&oledDevice);
+		}
+		else if (sw_data == 3){
+			OLED_ClearBuffer(&oledDevice);
+			currentData = Calorie_GetSampleValue();
+			if (currentData == GAUCHE) strcpy(directionGenou, "Gauche");
+			else if (currentData == DROITE) strcpy(directionGenou, "Droite");
+			else strcpy(directionGenou, "Centre");
+			OLED_SetCursor(&oledDevice, 0, 1);
+			OLED_PutString(&oledDevice, "- Align. genou -");
+			// Affichage de la Calorie sur le Pmod OLED
+			OLED_SetCursor(&oledDevice, 0, 2);
+			OLED_PutString(&oledDevice, directionGenou);
+			sprintf(dataChar,"Sens.: %1.1f",Sensibilite_GetSampleValue());
+			OLED_SetCursor(&oledDevice, 0, 3);
 			OLED_PutString(&oledDevice, dataChar);
 			OLED_Update(&oledDevice);
 		}
@@ -345,7 +365,6 @@ void fpga_thread(void *p){
 			sprintf(dataChar,"%2.2f",currentData);
 			OLED_SetCursor(&oledDevice, 10, 1);
 			OLED_PutString(&oledDevice, dataChar);
-
 			OLED_SetCursor(&oledDevice, 0, 3);
 			OLED_PutString(&oledDevice, "Voltage = ");
 			// Affichage de la Calorie sur le Pmod OLED

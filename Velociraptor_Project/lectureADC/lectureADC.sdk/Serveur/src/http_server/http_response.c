@@ -169,7 +169,7 @@ int do_http_get(struct tcp_pcb *pcb, char *req, int rlen)
 		char calorie[16];
 		sprintf(calorie, "%d", Calorie_GetSampleRaw());
 		char deportation[16];
-		sprintf(deportation, "%d", Deportation_GetSampleRaw());
+		sprintf(deportation, "%d", Deportation_GetSampleValue(1));
 		char distance[16];
 		sprintf(distance, "%d", Distance_GetSampleRaw());
 		char vitesse[16];

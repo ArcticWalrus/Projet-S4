@@ -27,6 +27,7 @@
 XGpio xgpio_input_;
 
 
+
 void
 platform_init_gpios()
 {
@@ -101,21 +102,24 @@ float Calorie_GetSampleValue()
 
 }
 
-u16 Deportation_GetSampleRaw()
-{
-	u16 rawData =  MYIP_mReadReg(MY_CALORIE_IP_BASEADDRESS, 0x0) & 0xFFF;
-	return rawData;
-}
-
-
-float Deportation_GetSampleValue()
-{
-	u16 rawSample = Calorie_GetSampleRaw();
-
-	return (float)rawSample;
-
-}
-
 void Poids_WriteValue(unsigned int poids) {
 	MYIO_IP_mWriteReg(MY_POIDS_IP_BASEADDRESS, 0x4, poids);
+}
+
+//Lecture de l'axe Y de l'IMU
+int Deportation_GetSampleRaw(){
+	// GET la valeur venant du I2C
+	return 0;
+}
+
+int Deportation_GetSampleValue(){
+	int rawData = Deportation_GetSampleRaw() * Sensibilite_GetSampleValue();
+	if (rawData < LIMITE_GAUCHE) return GAUCHE;
+	else if (rawData > LIMITE_DROITE) return DROITE;
+	else return CENTRE;
+}
+
+float Sensibilite_GetSampleValue(){
+	// LECTURE DES BOUTONS/SWITCHS
+	return 1.0;
 }
