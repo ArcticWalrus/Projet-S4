@@ -1,0 +1,125 @@
+/*
+ * Copyright (c) 2009 Xilinx, Inc.  All rights reserved.
+ *
+ * Xilinx, Inc.
+ * XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS" AS A
+ * COURTESY TO YOU.  BY PROVIDING THIS DESIGN, CODE, OR INFORMATION AS
+ * ONE POSSIBLE   IMPLEMENTATION OF THIS FEATURE, APPLICATION OR
+ * STANDARD, XILINX IS MAKING NO REPRESENTATION THAT THIS IMPLEMENTATION
+ * IS FREE FROM ANY CLAIMS OF INFRINGEMENT, AND YOU ARE RESPONSIBLE
+ * FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE FOR YOUR IMPLEMENTATION.
+ * XILINX EXPRESSLY DISCLAIMS ANY WARRANTY WHATSOEVER WITH RESPECT TO
+ * THE ADEQUACY OF THE IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO
+ * ANY WARRANTIES OR REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE
+ * FROM CLAIMS OF INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY
+ * AND FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ */
+
+#include "platform_gpio.h"
+#include "xparameters.h"
+#include "PmodGPIO.h"
+#include "PmodOLED.h"
+#include "myip.h"
+#include "myIO_IP.h"
+
+#include "../IMU_Defines.h"
+#include "../IMU_Functions.h"
+
+XGpio xgpio_input_;
+
+
+
+void
+platform_init_gpios()
+{
+	XGpio_Initialize(&xgpio_input_, XPAR_AXI_GPIO_0_DEVICE_ID);
+	XGpio_SetDataDirection(&xgpio_input_, 1, 0xF);
+}
+
+unsigned int 
+get_switch_state()
+{
+    return XGpio_DiscreteRead(&xgpio_input_, 1);
+}
+
+u16 AD1_GetSampleRaw()
+{
+	u16 rawData =  MYIP_mReadReg(MY_AD1_IP_BASEADDRESS, 0x0) & 0xFFF;
+	return rawData;
+}
+
+float AD1_GetSampleVoltage()
+{
+	float conversionFactor = 3.3 / ((1 << AD1_NUM_BITS) - 1);
+
+	u16 rawSample = AD1_GetSampleRaw();
+
+	return (float)rawSample * conversionFactor;
+
+}
+
+u16 Speed_GetSampleRaw()
+{
+	u16 rawData =  MYIP_mReadReg(MY_VITESSE_IP_BASEADDRESS, 0x0) & 0xFFF;
+	return rawData;
+}
+
+
+float Speed_GetSampleValue()
+{
+	u16 rawSample = Speed_GetSampleRaw();
+
+	return (float)rawSample;
+
+}
+
+u16 Distance_GetSampleRaw()
+{
+	u16 rawData =  MYIP_mReadReg(MY_DISTANCE_IP_BASEADDRESS, 0x0) & 0xFFF;
+	return rawData;
+}
+
+
+float Distance_GetSampleValue()
+{
+	u16 rawSample = Distance_GetSampleRaw();
+
+	return (float)rawSample;
+
+}
+
+u16 Calorie_GetSampleRaw()
+{
+	u16 rawData =  MYIP_mReadReg(MY_CALORIE_IP_BASEADDRESS, 0x0) & 0xFFF;
+	return rawData;
+}
+
+
+float Calorie_GetSampleValue()
+{
+	u16 rawSample = Calorie_GetSampleRaw();
+
+	return (float)rawSample;
+
+}
+
+void Poids_WriteValue(unsigned int poids) {
+	MYIO_IP_mWriteReg(MY_POIDS_IP_BASEADDRESS, 0x4, poids);
+}
+
+//Lecture de l'axe Y de l'IMU
+
+
+int Deportation_GetSampleValue(){
+	int rawData = IMU_Get_Accel_Y_value();
+	if (rawData > (LIMITE_GAUCHE * Sensibilite_GetSampleValue())) return GAUCHE;
+	else if (rawData < (LIMITE_DROITE * Sensibilite_GetSampleValue())) return DROITE;
+	else return CENTRE;
+}
+
+float Sensibilite_GetSampleValue(XGpio *inputSW){
+	int sw_data = XGpio_DiscreteRead(&inputSW, 1);
+	if (sw_data)
+	return 1.0;
+}

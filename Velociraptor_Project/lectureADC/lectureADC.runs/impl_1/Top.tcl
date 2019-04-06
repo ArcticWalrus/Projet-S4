@@ -68,23 +68,23 @@ set rc [catch {
   create_project -in_memory -part xc7z010clg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.cache/wt [current_project]
-  set_property parent.project_path C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.xpr [current_project]
+  set_property webtalk.parent_dir D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.cache/wt [current_project]
+  set_property parent.project_path D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.xpr [current_project]
   set_property ip_repo_paths {
-  C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/ip_repo/myIO_IP_1.0
-  C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/ip_repo/myip_1.0
-  C:/Users/raf_0/Documents/Projet_Kraken_Local/demo1701/Downloads/FichiersAtelier1/Pmod_vivado-library-2018.2-1
-  C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/Pmod_vivado-library-2018.2-1
+  D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/ip_repo/myIO_IP_1.0
+  D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/ip_repo/myip_1.0
+  D:/DEV/Git_Kraken/demo1701/Downloads/FichiersAtelier1/Pmod_vivado-library-2018.2-1
+  D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/Pmod_vivado-library-2018.2-1
 } [current_project]
-  set_property ip_output_repo C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.cache/ip [current_project]
+  set_property ip_output_repo D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/Top.dcp
+  add_files -quiet D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/Top.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd
+  add_files D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
-  read_xdc C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/constrs_1/imports/AD1/Atelier3_Constraintes.xdc
+  read_xdc D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.srcs/constrs_1/imports/AD1/Atelier3_Constraintes.xdc
   set_param project.isImplRun true
   link_design -top Top -part xc7z010clg400-1
   set_param project.isImplRun false

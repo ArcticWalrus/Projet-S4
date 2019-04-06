@@ -1,119 +1,69 @@
-14:21:41 **** Incremental Build of configuration Debug for project Serveur ****
+14:22:08 **** Incremental Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Rien à faire pour « main-build ».
-14:25:55 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/http_server/http_response.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
-../src/http_server/http_response.c: In function 'do_http_get':
-../src/http_server/http_response.c:190:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
-   len = generate_http_header(buf, "js", sw_len);
-                              ^~~
-../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
- int generate_http_header(char *buf, char *fext, int fsize);
-     ^~~~~~~~~~~~~~~~~~~~
-../src/http_server/http_response.c:192:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
-   strcat(buf, sw_buf);
-          ^~~
-In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
-                 from ../src/http_server/http_response.c:19:
-c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
- char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
-        ^
-'Finished building: ../src/http_server/http_response.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 294704	   4336	16898336	17197376	1066940	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-14:26:21 **** Incremental Build of configuration Debug for project Serveur ****
+14:22:23 **** Incremental Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Rien à faire pour « main-build ».
-14:32:01 **** Auto Build of configuration Debug for project Serveur ****
+14:30:17 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+../src/http_server/platform_gpio.c:26:10: fatal error: IMU_Defines.h: No such file or directory
+ #include "IMU_Defines.h"
+          ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/http_server/platform_gpio.o] Erreur 1
+14:30:56 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+../src/http_server/platform_gpio.c:27:10: fatal error: IMU_Functions.h: No such file or directory
+ #include "IMU_Functions.h"
+          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/http_server/platform_gpio.o] Erreur 1
+14:31:00 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+'Finished building: ../src/http_server/platform_gpio.c'
+' '
+'Building target: Serveur.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Serveur.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 322384	   4344	16898336	17225064	106d568	Serveur.elf
+'Finished building: Serveur.elf.size'
+' '
+14:31:42 **** Auto Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/http_server/http_response.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
-../src/http_server/http_response.c: In function 'do_http_get':
-../src/http_server/http_response.c:191:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
-   len = generate_http_header(buf, "js", sw_len);
-                              ^~~
-../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
- int generate_http_header(char *buf, char *fext, int fsize);
-     ^~~~~~~~~~~~~~~~~~~~
-../src/http_server/http_response.c:193:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
-   strcat(buf, sw_buf);
-          ^~~
-In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
-                 from ../src/http_server/http_response.c:19:
-c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
- char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
-        ^
-'Finished building: ../src/http_server/http_response.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 294712	   4336	16898336	17197384	1066948	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-14:39:11 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:252:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:256:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-'Finished building: ../src/main.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 294712	   4336	16898336	17197384	1066948	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-14:39:16 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/http_server/http_response.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
+../src/http_server/http_response.c: In function 'do_http_post':
+../src/http_server/http_response.c:116:30: warning: implicit declaration of function 'Deportation_GetSampleRaw'; did you mean 'Deportation_GetSampleValue'? [-Wimplicit-function-declaration]
+   sprintf(deportation, "%d", Deportation_GetSampleRaw());
+                              ^~~~~~~~~~~~~~~~~~~~~~~~
+                              Deportation_GetSampleValue
 ../src/http_server/http_response.c: In function 'do_http_get':
 ../src/http_server/http_response.c:191:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
    len = generate_http_header(buf, "js", sw_len);
@@ -131,125 +81,10 @@ c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\inc
         ^
 'Finished building: ../src/http_server/http_response.c'
 ' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 294712	   4336	16898336	17197384	1066948	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-14:39:37 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-14:43:28 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/http_server/http_response.c'
+'Building file: ../src/http_server/platform_gpio.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
-../src/http_server/http_response.c: In function 'do_http_get':
-../src/http_server/http_response.c:191:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
-   len = generate_http_header(buf, "js", sw_len);
-                              ^~~
-../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
- int generate_http_header(char *buf, char *fext, int fsize);
-     ^~~~~~~~~~~~~~~~~~~~
-../src/http_server/http_response.c:193:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
-   strcat(buf, sw_buf);
-          ^~~
-In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
-                 from ../src/http_server/http_response.c:19:
-c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
- char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
-        ^
-'Finished building: ../src/http_server/http_response.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 294712	   4336	16898336	17197384	1066948	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-14:51:55 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-14:55:20 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/http_server/web_utils.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/web_utils.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/web_utils.d" -MT"src/http_server/web_utils.o" -o "src/http_server/web_utils.o" "../src/http_server/web_utils.c"
-'Finished building: ../src/http_server/web_utils.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 294712	   4336	16898336	17197384	1066948	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-14:55:35 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-14:56:00 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-15:12:17 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-15:15:27 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-20:18:35 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/http_server/http_response.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
-../src/http_server/http_response.c: In function 'do_http_get':
-../src/http_server/http_response.c:191:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
-   len = generate_http_header(buf, "js", sw_len);
-                              ^~~
-../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
- int generate_http_header(char *buf, char *fext, int fsize);
-     ^~~~~~~~~~~~~~~~~~~~
-../src/http_server/http_response.c:193:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
-   strcat(buf, sw_buf);
-          ^~~
-In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
-                 from ../src/http_server/http_response.c:19:
-c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
- char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
-        ^
-'Finished building: ../src/http_server/http_response.c'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+'Finished building: ../src/http_server/platform_gpio.c'
 ' '
 'Building file: ../src/http_server/web_utils.c'
 'Invoking: ARM v7 gcc compiler'
@@ -260,906 +95,48 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/web_ut
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 ../src/main.c: In function 'main_thread':
-../src/main.c:252:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+../src/main.c:258:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
   print_web_app_header();
   ^~~~~~~~~~~~~~~~~~~~
   print_app_header
-../src/main.c:256:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-'Finished building: ../src/main.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 294712	   4336	16898336	17197384	1066948	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-20:39:29 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:252:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:256:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-'Finished building: ../src/main.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 294920	   4336	16898336	17197592	1066a18	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-20:40:09 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-20:48:18 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:252:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:256:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-'Finished building: ../src/main.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 294920	   4336	16898336	17197592	1066a18	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-20:48:39 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-20:48:54 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:252:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:256:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-'Finished building: ../src/main.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 294920	   4336	16898336	17197592	1066a18	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-20:55:24 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:252:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:256:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-'Finished building: ../src/main.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 294952	   4336	16898336	17197624	1066a38	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-20:55:49 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-21:12:03 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+../src/main.c:262:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
   start_web_application();
   ^~~~~~~~~~~~~~~~~~~~~
   start_application
 ../src/main.c: In function 'fpga_thread':
-../src/main.c:348:46: error: assignment to expression with array type
-    if (currentData == GAUCHE) directionGenou = "Gauche";
-                                              ^
-../src/main.c:349:13: error: 'currrentData' undeclared (first use in this function); did you mean 'currentData'?
-    else if (currrentData == DROITE) directionGenou = "Droite";
-             ^~~~~~~~~~~~
-             currentData
-../src/main.c:349:13: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:349:52: error: assignment to expression with array type
-    else if (currrentData == DROITE) directionGenou = "Droite";
-                                                    ^
-../src/main.c:350:24: error: assignment to expression with array type
-    else directionGenou = "Centre";
-                        ^
-../src/main.c:318:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f km/h",currentData);
-                      ^~~
-../src/main.c:318:4: note: 'sprintf' output between 14 and 323 bytes into a destination of size 5
-    sprintf(dataChar,"%2f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:329:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f m",currentData);
-                      ^~~
-../src/main.c:329:4: note: 'sprintf' output between 11 and 320 bytes into a destination of size 5
-    sprintf(dataChar,"%2f m",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f calories",currentData);
-                      ^~~
-../src/main.c:340:4: note: 'sprintf' output between 18 and 327 bytes into a destination of size 5
-    sprintf(dataChar,"%2f calories",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:356:27: warning: 'Sensibilite: ' directive writing 13 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-                      ~~~~~^~~~~~~~
-../src/main.c:356:4: note: 'sprintf' output between 15 and 25 bytes into a destination of size 5
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/main.o] Erreur 1
-21:13:28 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-../src/main.c: In function 'fpga_thread':
-../src/main.c:318:24: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat=]
-    sprintf(dataChar,"%2f km/h",currentData);
-                      ~~^
-                      %2d
-../src/main.c:329:24: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat=]
-    sprintf(dataChar,"%2f m",currentData);
-                      ~~^
-                      %2d
-../src/main.c:340:24: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat=]
-    sprintf(dataChar,"%2f calories",currentData);
-                      ~~^
-                      %2d
-../src/main.c:348:46: error: assignment to expression with array type
-    if (currentData == GAUCHE) directionGenou = "Gauche";
-                                              ^
-../src/main.c:349:13: error: 'currrentData' undeclared (first use in this function); did you mean 'currentData'?
-    else if (currrentData == DROITE) directionGenou = "Droite";
-             ^~~~~~~~~~~~
-             currentData
-../src/main.c:349:13: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:349:52: error: assignment to expression with array type
-    else if (currrentData == DROITE) directionGenou = "Droite";
-                                                    ^
-../src/main.c:350:24: error: assignment to expression with array type
-    else directionGenou = "Centre";
-                        ^
-../src/main.c:367:26: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat=]
-    sprintf(dataChar,"%2.2f",currentData);
-                      ~~~~^
-                      %2.2d
-../src/main.c:318:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f km/h",currentData);
-                      ^~~
-../src/main.c:318:4: note: 'sprintf' output between 14 and 323 bytes into a destination of size 5
-    sprintf(dataChar,"%2f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:329:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f m",currentData);
-                      ^~~
-../src/main.c:329:4: note: 'sprintf' output between 11 and 320 bytes into a destination of size 5
-    sprintf(dataChar,"%2f m",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f calories",currentData);
-                      ^~~
-../src/main.c:340:4: note: 'sprintf' output between 18 and 327 bytes into a destination of size 5
-    sprintf(dataChar,"%2f calories",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:356:27: warning: 'Sensibilite: ' directive writing 13 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-                      ~~~~~^~~~~~~~
-../src/main.c:356:4: note: 'sprintf' output between 15 and 25 bytes into a destination of size 5
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/main.o] Erreur 1
-21:13:40 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-../src/main.c: In function 'fpga_thread':
-../src/main.c:348:46: error: assignment to expression with array type
-    if (currentData == GAUCHE) directionGenou = "Gauche";
-                                              ^
-../src/main.c:349:13: error: 'currrentData' undeclared (first use in this function); did you mean 'currentData'?
-    else if (currrentData == DROITE) directionGenou = "Droite";
-             ^~~~~~~~~~~~
-             currentData
-../src/main.c:349:13: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:349:52: error: assignment to expression with array type
-    else if (currrentData == DROITE) directionGenou = "Droite";
-                                                    ^
-../src/main.c:350:24: error: assignment to expression with array type
-    else directionGenou = "Centre";
-                        ^
-../src/main.c:318:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f km/h",currentData);
-                      ^~~
-../src/main.c:318:4: note: 'sprintf' output between 14 and 323 bytes into a destination of size 5
-    sprintf(dataChar,"%2f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:329:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f m",currentData);
-                      ^~~
-../src/main.c:329:4: note: 'sprintf' output between 11 and 320 bytes into a destination of size 5
-    sprintf(dataChar,"%2f m",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f calories",currentData);
-                      ^~~
-../src/main.c:340:4: note: 'sprintf' output between 18 and 327 bytes into a destination of size 5
-    sprintf(dataChar,"%2f calories",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:356:27: warning: 'Sensibilite: ' directive writing 13 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-                      ~~~~~^~~~~~~~
-../src/main.c:356:4: note: 'sprintf' output between 15 and 25 bytes into a destination of size 5
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/main.o] Erreur 1
-21:14:17 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-../src/main.c: In function 'fpga_thread':
-../src/main.c:348:51: error: assignment to expression with array type
-    if ((int)currentData == GAUCHE) directionGenou = "Gauche";
-                                                   ^
-../src/main.c:349:13: error: 'currrentData' undeclared (first use in this function); did you mean 'currentData'?
-    else if (currrentData == DROITE) directionGenou = "Droite";
-             ^~~~~~~~~~~~
-             currentData
-../src/main.c:349:13: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:349:52: error: assignment to expression with array type
-    else if (currrentData == DROITE) directionGenou = "Droite";
-                                                    ^
-../src/main.c:350:24: error: assignment to expression with array type
-    else directionGenou = "Centre";
-                        ^
-../src/main.c:318:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f km/h",currentData);
-                      ^~~
-../src/main.c:318:4: note: 'sprintf' output between 14 and 323 bytes into a destination of size 5
-    sprintf(dataChar,"%2f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:329:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f m",currentData);
-                      ^~~
-../src/main.c:329:4: note: 'sprintf' output between 11 and 320 bytes into a destination of size 5
-    sprintf(dataChar,"%2f m",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f calories",currentData);
-                      ^~~
-../src/main.c:340:4: note: 'sprintf' output between 18 and 327 bytes into a destination of size 5
-    sprintf(dataChar,"%2f calories",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:356:27: warning: 'Sensibilite: ' directive writing 13 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-                      ~~~~~^~~~~~~~
-../src/main.c:356:4: note: 'sprintf' output between 15 and 25 bytes into a destination of size 5
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/main.o] Erreur 1
-21:15:23 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-../src/main.c: In function 'fpga_thread':
-../src/main.c:275:7: error: array size missing in 'directionGenou'
-  char directionGenou[];
-       ^~~~~~~~~~~~~~
-../src/main.c:348:46: error: assignment to expression with array type
-    if (currentData == GAUCHE) directionGenou = "Gauche";
-                                              ^
-../src/main.c:349:13: error: 'currrentData' undeclared (first use in this function); did you mean 'currentData'?
-    else if (currrentData == DROITE) directionGenou = "Droite";
-             ^~~~~~~~~~~~
-             currentData
-../src/main.c:349:13: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:349:52: error: assignment to expression with array type
-    else if (currrentData == DROITE) directionGenou = "Droite";
-                                                    ^
-../src/main.c:350:24: error: assignment to expression with array type
-    else directionGenou = "Centre";
-                        ^
-../src/main.c:318:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f km/h",currentData);
-                      ^~~
-../src/main.c:318:4: note: 'sprintf' output between 14 and 323 bytes into a destination of size 5
-    sprintf(dataChar,"%2f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:329:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f m",currentData);
-                      ^~~
-../src/main.c:329:4: note: 'sprintf' output between 11 and 320 bytes into a destination of size 5
-    sprintf(dataChar,"%2f m",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f calories",currentData);
-                      ^~~
-../src/main.c:340:4: note: 'sprintf' output between 18 and 327 bytes into a destination of size 5
-    sprintf(dataChar,"%2f calories",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:356:27: warning: 'Sensibilite: ' directive writing 13 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-                      ~~~~~^~~~~~~~
-../src/main.c:356:4: note: 'sprintf' output between 15 and 25 bytes into a destination of size 5
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/main.o] Erreur 1
-21:15:33 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-../src/main.c: In function 'fpga_thread':
-../src/main.c:348:46: error: assignment to expression with array type
-    if (currentData == GAUCHE) directionGenou = "Gauche";
-                                              ^
-../src/main.c:349:13: error: 'currrentData' undeclared (first use in this function); did you mean 'currentData'?
-    else if (currrentData == DROITE) directionGenou = "Droite";
-             ^~~~~~~~~~~~
-             currentData
-../src/main.c:349:13: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:349:52: error: assignment to expression with array type
-    else if (currrentData == DROITE) directionGenou = "Droite";
-                                                    ^
-../src/main.c:350:24: error: assignment to expression with array type
-    else directionGenou = "Centre";
-                        ^
-../src/main.c:318:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f km/h",currentData);
-                      ^~~
-../src/main.c:318:4: note: 'sprintf' output between 14 and 323 bytes into a destination of size 5
-    sprintf(dataChar,"%2f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:329:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f m",currentData);
-                      ^~~
-../src/main.c:329:4: note: 'sprintf' output between 11 and 320 bytes into a destination of size 5
-    sprintf(dataChar,"%2f m",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f calories",currentData);
-                      ^~~
-../src/main.c:340:4: note: 'sprintf' output between 18 and 327 bytes into a destination of size 5
-    sprintf(dataChar,"%2f calories",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:356:27: warning: 'Sensibilite: ' directive writing 13 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-                      ~~~~~^~~~~~~~
-../src/main.c:356:4: note: 'sprintf' output between 15 and 25 bytes into a destination of size 5
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/main.o] Erreur 1
-21:16:16 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-../src/main.c: In function 'fpga_thread':
-../src/main.c:275:7: error: array size missing in 'directionGenou'
-  char directionGenou[];
-       ^~~~~~~~~~~~~~
-../src/main.c:348:46: error: assignment to expression with array type
-    if (currentData == GAUCHE) directionGenou = "Gauche";
-                                              ^
-../src/main.c:349:13: error: 'currrentData' undeclared (first use in this function); did you mean 'currentData'?
-    else if (currrentData == DROITE) directionGenou = "Droite";
-             ^~~~~~~~~~~~
-             currentData
-../src/main.c:349:13: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:349:52: error: assignment to expression with array type
-    else if (currrentData == DROITE) directionGenou = "Droite";
-                                                    ^
-../src/main.c:350:24: error: assignment to expression with array type
-    else directionGenou = "Centre";
-                        ^
-../src/main.c:318:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f km/h",currentData);
-                      ^~~
-../src/main.c:318:4: note: 'sprintf' output between 14 and 323 bytes into a destination of size 5
-    sprintf(dataChar,"%2f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:329:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f m",currentData);
-                      ^~~
-../src/main.c:329:4: note: 'sprintf' output between 11 and 320 bytes into a destination of size 5
-    sprintf(dataChar,"%2f m",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f calories",currentData);
-                      ^~~
-../src/main.c:340:4: note: 'sprintf' output between 18 and 327 bytes into a destination of size 5
-    sprintf(dataChar,"%2f calories",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:356:27: warning: 'Sensibilite: ' directive writing 13 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-                      ~~~~~^~~~~~~~
-../src/main.c:356:4: note: 'sprintf' output between 15 and 25 bytes into a destination of size 5
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/main.o] Erreur 1
-21:17:00 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-../src/main.c: In function 'fpga_thread':
-../src/main.c:348:46: error: assignment to expression with array type
-    if (currentData == GAUCHE) directionGenou = "Gauche";
-                                              ^
-../src/main.c:349:13: error: 'currrentData' undeclared (first use in this function); did you mean 'currentData'?
-    else if (currrentData == DROITE) directionGenou = "Droite";
-             ^~~~~~~~~~~~
-             currentData
-../src/main.c:349:13: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:349:52: error: assignment to expression with array type
-    else if (currrentData == DROITE) directionGenou = "Droite";
-                                                    ^
-../src/main.c:350:24: error: assignment to expression with array type
-    else directionGenou = "Centre";
-                        ^
-../src/main.c:318:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f km/h",currentData);
-                      ^~~
-../src/main.c:318:4: note: 'sprintf' output between 14 and 323 bytes into a destination of size 5
-    sprintf(dataChar,"%2f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:329:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f m",currentData);
-                      ^~~
-../src/main.c:329:4: note: 'sprintf' output between 11 and 320 bytes into a destination of size 5
-    sprintf(dataChar,"%2f m",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f calories",currentData);
-                      ^~~
-../src/main.c:340:4: note: 'sprintf' output between 18 and 327 bytes into a destination of size 5
-    sprintf(dataChar,"%2f calories",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:356:27: warning: 'Sensibilite: ' directive writing 13 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-                      ~~~~~^~~~~~~~
-../src/main.c:356:4: note: 'sprintf' output between 15 and 25 bytes into a destination of size 5
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/main.o] Erreur 1
-21:18:30 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-../src/main.c: In function 'fpga_thread':
-../src/main.c:349:13: error: 'currrentData' undeclared (first use in this function); did you mean 'currentData'?
-    else if (currrentData == DROITE) directionGenou = "Droite";
-             ^~~~~~~~~~~~
-             currentData
-../src/main.c:349:13: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:349:52: error: assignment to expression with array type
-    else if (currrentData == DROITE) directionGenou = "Droite";
-                                                    ^
-../src/main.c:350:24: error: assignment to expression with array type
-    else directionGenou = "Centre";
-                        ^
-../src/main.c:318:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f km/h",currentData);
-                      ^~~
-../src/main.c:318:4: note: 'sprintf' output between 14 and 323 bytes into a destination of size 5
-    sprintf(dataChar,"%2f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:329:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f m",currentData);
-                      ^~~
-../src/main.c:329:4: note: 'sprintf' output between 11 and 320 bytes into a destination of size 5
-    sprintf(dataChar,"%2f m",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f calories",currentData);
-                      ^~~
-../src/main.c:340:4: note: 'sprintf' output between 18 and 327 bytes into a destination of size 5
-    sprintf(dataChar,"%2f calories",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:356:27: warning: 'Sensibilite: ' directive writing 13 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-                      ~~~~~^~~~~~~~
-../src/main.c:356:4: note: 'sprintf' output between 15 and 25 bytes into a destination of size 5
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/main.o] Erreur 1
-21:18:59 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-../src/main.c: In function 'fpga_thread':
-../src/main.c:349:13: error: 'currrentData' undeclared (first use in this function); did you mean 'currentData'?
-    else if (currrentData == DROITE) strcpy(directionGenou, "Droite");
-             ^~~~~~~~~~~~
-             currentData
-../src/main.c:349:13: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:318:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f km/h",currentData);
-                      ^~~
-../src/main.c:318:4: note: 'sprintf' output between 14 and 323 bytes into a destination of size 5
-    sprintf(dataChar,"%2f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:329:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f m",currentData);
-                      ^~~
-../src/main.c:329:4: note: 'sprintf' output between 11 and 320 bytes into a destination of size 5
-    sprintf(dataChar,"%2f m",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f calories",currentData);
-                      ^~~
-../src/main.c:340:4: note: 'sprintf' output between 18 and 327 bytes into a destination of size 5
-    sprintf(dataChar,"%2f calories",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:356:27: warning: 'Sensibilite: ' directive writing 13 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-                      ~~~~~^~~~~~~~
-../src/main.c:356:4: note: 'sprintf' output between 15 and 25 bytes into a destination of size 5
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/main.o] Erreur 1
-21:19:12 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-../src/main.c: In function 'fpga_thread':
-../src/main.c:318:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f km/h",currentData);
-                      ^~~
-../src/main.c:318:4: note: 'sprintf' output between 14 and 323 bytes into a destination of size 5
-    sprintf(dataChar,"%2f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:329:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f m",currentData);
-                      ^~~
-../src/main.c:329:4: note: 'sprintf' output between 11 and 320 bytes into a destination of size 5
-    sprintf(dataChar,"%2f m",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f calories",currentData);
-                      ^~~
-../src/main.c:340:4: note: 'sprintf' output between 18 and 327 bytes into a destination of size 5
-    sprintf(dataChar,"%2f calories",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:356:27: warning: 'Sensibilite: ' directive writing 13 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-                      ~~~~~^~~~~~~~
-../src/main.c:356:4: note: 'sprintf' output between 15 and 25 bytes into a destination of size 5
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 295288	   4336	16898336	17197960	1066b88	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-21:20:00 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-21:20:50 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-../src/main.c: In function 'fpga_thread':
-../src/main.c:318:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f km/h",currentData);
-                      ^~~
-../src/main.c:318:4: note: 'sprintf' output between 14 and 323 bytes into a destination of size 5
-    sprintf(dataChar,"%2f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:329:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f m",currentData);
-                      ^~~
-../src/main.c:329:4: note: 'sprintf' output between 11 and 320 bytes into a destination of size 5
-    sprintf(dataChar,"%2f m",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f calories",currentData);
-                      ^~~
-../src/main.c:340:4: note: 'sprintf' output between 18 and 327 bytes into a destination of size 5
-    sprintf(dataChar,"%2f calories",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:356:27: warning: 'Sensibilite: ' directive writing 13 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-                      ~~~~~^~~~~~~~
-../src/main.c:356:4: note: 'sprintf' output between 15 and 25 bytes into a destination of size 5
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 295288	   4336	16898336	17197960	1066b88	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-21:21:51 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-21:23:08 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-../src/main.c: In function 'fpga_thread':
-../src/main.c:276:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+../src/main.c:278:6: warning: unused variable 'sensibilite' [-Wunused-variable]
   int sensibilite = 0;
       ^~~~~~~~~~~
-../src/main.c:275:7: warning: unused variable 'directionGenou' [-Wunused-variable]
-  char directionGenou[7] = "Centre";
-       ^~~~~~~~~~~~~~
-../src/main.c:318:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f km/h",currentData);
-                      ^~~
-../src/main.c:318:4: note: 'sprintf' output between 14 and 323 bytes into a destination of size 5
-    sprintf(dataChar,"%2f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:329:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f m",currentData);
-                      ^~~
-../src/main.c:329:4: note: 'sprintf' output between 11 and 320 bytes into a destination of size 5
-    sprintf(dataChar,"%2f m",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:22: warning: '%2f' directive writing between 8 and 317 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"%2f calories",currentData);
-                      ^~~
-../src/main.c:340:4: note: 'sprintf' output between 18 and 327 bytes into a destination of size 5
-    sprintf(dataChar,"%2f calories",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 'Finished building: ../src/main.c'
 ' '
 'Building target: Serveur.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
 'Finished building target: Serveur.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 294856	   4336	16898336	17197528	10669d8	Serveur.elf
+ 322384	   4344	16898336	17225064	106d568	Serveur.elf
 'Finished building: Serveur.elf.size'
 ' '
-21:23:27 **** Incremental Build of configuration Debug for project Serveur ****
+14:32:58 **** Auto Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Rien à faire pour « main-build ».
-21:25:02 **** Auto Build of configuration Debug for project Serveur ****
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+'Finished building: ../src/http_server/platform_gpio.c'
+' '
+'Building target: Serveur.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+./src/http_server/http_response.o: In function `do_http_post':
+D:\DEV\Git_Kraken\Velociraptor\Projet-S4\Velociraptor_Project\lectureADC\lectureADC.sdk\Serveur\Debug/../src/http_server/http_response.c:116: undefined reference to `Deportation_GetSampleRaw'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Serveur.elf] Erreur 1
+14:36:06 **** Auto Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -1167,353 +144,88 @@ a9-linaro-pre-build-step
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 ../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+../src/main.c:258:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
   print_web_app_header();
   ^~~~~~~~~~~~~~~~~~~~
   print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+../src/main.c:262:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
   start_web_application();
   ^~~~~~~~~~~~~~~~~~~~~
   start_application
 ../src/main.c: In function 'fpga_thread':
-../src/main.c:276:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+../src/main.c:278:6: warning: unused variable 'sensibilite' [-Wunused-variable]
   int sensibilite = 0;
       ^~~~~~~~~~~
-../src/main.c:275:7: warning: unused variable 'directionGenou' [-Wunused-variable]
-  char directionGenou[7] = "Centre";
-       ^~~~~~~~~~~~~~
-../src/main.c:318:30: warning: ' km/h' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f km/h",currentData);
-                           ~~~^~
-../src/main.c:318:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:30: warning: ' calories' directive writing 9 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f calories",currentData);
-                           ~~~^~~~~~
-../src/main.c:340:4: note: 'sprintf' output between 12 and 320 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f calories",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 'Finished building: ../src/main.c'
 ' '
 'Building target: Serveur.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 294856	   4336	16898336	17197528	10669d8	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-21:25:39 **** Incremental Build of configuration Debug for project Serveur ****
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+./src/http_server/http_response.o: In function `do_http_post':
+D:\DEV\Git_Kraken\Velociraptor\Projet-S4\Velociraptor_Project\lectureADC\lectureADC.sdk\Serveur\Debug/../src/http_server/http_response.c:116: undefined reference to `Deportation_GetSampleRaw'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Serveur.elf] Erreur 1
+14:37:23 **** Auto Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Rien à faire pour « main-build ».
-21:27:40 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
+'Building file: ../src/http_server/http_response.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-../src/main.c: In function 'fpga_thread':
-../src/main.c:276:6: warning: unused variable 'sensibilite' [-Wunused-variable]
-  int sensibilite = 0;
-      ^~~~~~~~~~~
-../src/main.c:275:7: warning: unused variable 'directionGenou' [-Wunused-variable]
-  char directionGenou[7] = "Centre";
-       ^~~~~~~~~~~~~~
-../src/main.c:318:30: warning: ' km/h' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f km/h",currentData);
-                           ~~~^~
-../src/main.c:318:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 294848	   4336	16898336	17197520	10669d0	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-21:28:05 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-21:28:42 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-../src/main.c: In function 'fpga_thread':
-../src/main.c:276:6: warning: unused variable 'sensibilite' [-Wunused-variable]
-  int sensibilite = 0;
-      ^~~~~~~~~~~
-../src/main.c:275:7: warning: unused variable 'directionGenou' [-Wunused-variable]
-  char directionGenou[7] = "Centre";
-       ^~~~~~~~~~~~~~
-../src/main.c:318:30: warning: ' km/h' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f km/h",currentData);
-                           ~~~^~
-../src/main.c:318:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:30: warning: ' cal.' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f cal.",currentData);
-                           ~~~^~
-../src/main.c:340:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f cal.",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 294848	   4336	16898336	17197520	10669d0	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-21:29:08 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-21:31:34 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-../src/main.c: In function 'fpga_thread':
-../src/main.c:318:30: warning: ' km/h' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f km/h",currentData);
-                           ~~~^~
-../src/main.c:318:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:30: warning: ' cal.' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f cal.",currentData);
-                           ~~~^~
-../src/main.c:340:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f cal.",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:356:27: warning: 'Sensibilite: ' directive writing 13 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-                      ~~~~~^~~~~~~~
-../src/main.c:356:4: note: 'sprintf' output between 15 and 25 bytes into a destination of size 5
-    sprintf(dataChar,"Sensibilite: %d",sensibilite);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 295288	   4336	16898336	17197960	1066b88	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-21:31:55 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-21:32:49 **** Incremental Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Rien à faire pour « main-build ».
-21:34:14 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-../src/main.c: In function 'fpga_thread':
-../src/main.c:357:4: error: too many arguments to function 'strcat'
-    strcat(dataChar,"%d",sensibilite);
-    ^~~~~~
-In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
-                 from ../../Serveur_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
-                 from ../../Serveur_bsp/ps7_cortexa9_0/include/xil_io.h:65,
-                 from ../../Serveur_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
-                 from ../../Serveur_bsp/ps7_cortexa9_0/include/xgpio.h:136,
-                 from ../src/main.c:33:
-c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: declared here
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
+../src/http_server/http_response.c: In function 'do_http_get':
+../src/http_server/http_response.c:191:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
+   len = generate_http_header(buf, "js", sw_len);
+                              ^~~
+../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
+ int generate_http_header(char *buf, char *fext, int fsize);
+     ^~~~~~~~~~~~~~~~~~~~
+../src/http_server/http_response.c:193:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
+   strcat(buf, sw_buf);
+          ^~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
+                 from ../src/http_server/http_response.c:19:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
  char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
         ^
-../src/main.c:318:30: warning: ' km/h' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f km/h",currentData);
-                           ~~~^~
-../src/main.c:318:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:30: warning: ' cal.' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f cal.",currentData);
-                           ~~~^~
-../src/main.c:340:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f cal.",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/main.o] Erreur 1
-21:35:32 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-../src/main.c: In function 'fpga_thread':
-../src/main.c:357:11: warning: passing argument 1 of 'strcat' makes pointer from integer without a cast [-Wint-conversion]
-    strcat(sensibilite, dataChar);
-           ^~~~~~~~~~~
-In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\ctype.h:4:0,
-                 from ../../Serveur_bsp/ps7_cortexa9_0/include/xil_printf.h:8,
-                 from ../../Serveur_bsp/ps7_cortexa9_0/include/xil_io.h:65,
-                 from ../../Serveur_bsp/ps7_cortexa9_0/include/xgpio_l.h:87,
-                 from ../../Serveur_bsp/ps7_cortexa9_0/include/xgpio.h:136,
-                 from ../src/main.c:33:
-c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'int'
- char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
-        ^
-../src/main.c:318:30: warning: ' km/h' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f km/h",currentData);
-                           ~~~^~
-../src/main.c:318:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:30: warning: ' cal.' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f cal.",currentData);
-                           ~~~^~
-../src/main.c:340:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f cal.",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/main.c'
+'Finished building: ../src/http_server/http_response.c'
 ' '
 'Building target: Serveur.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
 'Finished building target: Serveur.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 295272	   4336	16898336	17197944	1066b78	Serveur.elf
+ 322384	   4344	16898336	17225064	106d568	Serveur.elf
 'Finished building: Serveur.elf.size'
 ' '
-21:36:15 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
-  print_web_app_header();
-  ^~~~~~~~~~~~~~~~~~~~
-  print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
-  start_web_application();
-  ^~~~~~~~~~~~~~~~~~~~~
-  start_application
-../src/main.c: In function 'fpga_thread':
-../src/main.c:318:30: warning: ' km/h' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f km/h",currentData);
-                           ~~~^~
-../src/main.c:318:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:30: warning: ' cal.' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f cal.",currentData);
-                           ~~~^~
-../src/main.c:340:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f cal.",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 295288	   4336	16898336	17197960	1066b88	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-21:36:49 **** Incremental Build of configuration Debug for project Serveur ****
+14:37:33 **** Incremental Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Rien à faire pour « main-build ».
-21:38:05 **** Auto Build of configuration Debug for project Serveur ****
+14:41:25 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+'Finished building: ../src/http_server/platform_gpio.c'
+' '
+'Building target: Serveur.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Serveur.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 322384	   4344	16898336	17225064	106d568	Serveur.elf
+'Finished building: Serveur.elf.size'
+' '
+14:44:36 **** Auto Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -1521,52 +233,113 @@ a9-linaro-pre-build-step
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 ../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+../src/main.c:258:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
   print_web_app_header();
   ^~~~~~~~~~~~~~~~~~~~
   print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+../src/main.c:262:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
   start_web_application();
   ^~~~~~~~~~~~~~~~~~~~~
   start_application
 ../src/main.c: In function 'fpga_thread':
-../src/main.c:318:30: warning: ' km/h' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f km/h",currentData);
-                           ~~~^~
-../src/main.c:318:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:30: warning: ' cal.' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f cal.",currentData);
-                           ~~~^~
-../src/main.c:340:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f cal.",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:356:27: warning: 'Sens.: ' directive writing 7 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sens.: %d",sensibilite);
-                      ~~~~~^~
-../src/main.c:356:4: note: 'sprintf' output between 9 and 19 bytes into a destination of size 5
-    sprintf(dataChar,"Sens.: %d",sensibilite);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:278:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+  int sensibilite = 0;
+      ^~~~~~~~~~~
 'Finished building: ../src/main.c'
 ' '
 'Building target: Serveur.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
 'Finished building target: Serveur.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 295280	   4336	16898336	17197952	1066b80	Serveur.elf
+ 322320	   4344	16898336	17225000	106d528	Serveur.elf
 'Finished building: Serveur.elf.size'
 ' '
-21:38:27 **** Incremental Build of configuration Debug for project Serveur ****
+14:45:43 **** Incremental Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Rien à faire pour « main-build ».
-21:50:17 **** Auto Build of configuration Debug for project Serveur ****
+14:46:17 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main_thread':
+../src/main.c:258:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+  print_web_app_header();
+  ^~~~~~~~~~~~~~~~~~~~
+  print_app_header
+../src/main.c:262:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+  start_web_application();
+  ^~~~~~~~~~~~~~~~~~~~~
+  start_application
+../src/main.c: In function 'fpga_thread':
+../src/main.c:278:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+  int sensibilite = 0;
+      ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Serveur.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Serveur.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 322320	   4344	16898336	17225000	106d528	Serveur.elf
+'Finished building: Serveur.elf.size'
+' '
+14:47:11 **** Incremental Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+14:49:27 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main_thread':
+../src/main.c:258:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+  print_web_app_header();
+  ^~~~~~~~~~~~~~~~~~~~
+  print_app_header
+../src/main.c:262:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+  start_web_application();
+  ^~~~~~~~~~~~~~~~~~~~~
+  start_application
+../src/main.c: In function 'fpga_thread':
+../src/main.c:278:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+  int sensibilite = 0;
+      ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Serveur.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Serveur.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 322384	   4344	16898336	17225064	106d568	Serveur.elf
+'Finished building: Serveur.elf.size'
+' '
+14:49:53 **** Incremental Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+14:51:16 **** Auto Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -1604,47 +377,202 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/web_ut
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 ../src/main.c: In function 'main_thread':
-../src/main.c:256:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+../src/main.c:258:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
   print_web_app_header();
   ^~~~~~~~~~~~~~~~~~~~
   print_app_header
-../src/main.c:260:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+../src/main.c:262:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
   start_web_application();
   ^~~~~~~~~~~~~~~~~~~~~
   start_application
 ../src/main.c: In function 'fpga_thread':
-../src/main.c:318:30: warning: ' km/h' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f km/h",currentData);
-                           ~~~^~
-../src/main.c:318:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:340:30: warning: ' cal.' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f cal.",currentData);
-                           ~~~^~
-../src/main.c:340:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f cal.",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:356:27: warning: 'Sens.: ' directive writing 7 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sens.: %d",sensibilite);
-                      ~~~~~^~
-../src/main.c:356:4: note: 'sprintf' output between 9 and 19 bytes into a destination of size 5
-    sprintf(dataChar,"Sens.: %d",sensibilite);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:278:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+  int sensibilite = 0;
+      ^~~~~~~~~~~
 'Finished building: ../src/main.c'
 ' '
 'Building target: Serveur.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
 'Finished building target: Serveur.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 295280	   4336	16898336	17197952	1066b80	Serveur.elf
+ 322384	   4344	16898336	17225064	106d568	Serveur.elf
 'Finished building: Serveur.elf.size'
 ' '
-21:54:59 **** Auto Build of configuration Debug for project Serveur ****
+14:51:46 **** Incremental Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+14:59:30 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+../src/http_server/platform_gpio.c: In function 'Sensibilite_GetSampleValue':
+../src/http_server/platform_gpio.c:123:2: error: 'sw_data' undeclared (first use in this function)
+  sw_data = XGpio_DiscreteRead(&inputSW, 1);
+  ^~~~~~~
+../src/http_server/platform_gpio.c:123:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/http_server/platform_gpio.c:123:32: error: 'inputSW' undeclared (first use in this function)
+  sw_data = XGpio_DiscreteRead(&inputSW, 1);
+                                ^~~~~~~
+make: *** [src/http_server/platform_gpio.o] Erreur 1
+15:00:04 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+../src/http_server/platform_gpio.c: In function 'Sensibilite_GetSampleValue':
+../src/http_server/platform_gpio.c:123:36: error: 'inputSW' undeclared (first use in this function)
+  int sw_data = XGpio_DiscreteRead(&inputSW, 1);
+                                    ^~~~~~~
+../src/http_server/platform_gpio.c:123:36: note: each undeclared identifier is reported only once for each function it appears in
+../src/http_server/platform_gpio.c:123:6: warning: unused variable 'sw_data' [-Wunused-variable]
+  int sw_data = XGpio_DiscreteRead(&inputSW, 1);
+      ^~~~~~~
+make: *** [src/http_server/platform_gpio.o] Erreur 1
+15:00:42 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+../src/http_server/platform_gpio.c: In function 'Sensibilite_GetSampleValue':
+../src/http_server/platform_gpio.c:123:36: error: 'inputSW' undeclared (first use in this function)
+  int sw_data = XGpio_DiscreteRead(&inputSW, 1);
+                                    ^~~~~~~
+../src/http_server/platform_gpio.c:123:36: note: each undeclared identifier is reported only once for each function it appears in
+../src/http_server/platform_gpio.c:124:8: warning: unused variable 'inputSW' [-Wunused-variable]
+  XGpio inputSW;
+        ^~~~~~~
+../src/http_server/platform_gpio.c:123:6: warning: unused variable 'sw_data' [-Wunused-variable]
+  int sw_data = XGpio_DiscreteRead(&inputSW, 1);
+      ^~~~~~~
+make: *** [src/http_server/platform_gpio.o] Erreur 1
+15:00:47 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+../src/http_server/platform_gpio.c: In function 'Sensibilite_GetSampleValue':
+../src/http_server/platform_gpio.c:124:6: warning: unused variable 'sw_data' [-Wunused-variable]
+  int sw_data = XGpio_DiscreteRead(&inputSW, 1);
+      ^~~~~~~
+'Finished building: ../src/http_server/platform_gpio.c'
+' '
+'Building target: Serveur.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Serveur.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 322448	   4344	16898336	17225128	106d5a8	Serveur.elf
+'Finished building: Serveur.elf.size'
+' '
+15:03:29 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main_thread':
+../src/main.c:258:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+  print_web_app_header();
+  ^~~~~~~~~~~~~~~~~~~~
+  print_app_header
+../src/main.c:262:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+  start_web_application();
+  ^~~~~~~~~~~~~~~~~~~~~
+  start_application
+../src/main.c: In function 'fpga_thread':
+../src/main.c:391:56: error: invalid type argument of unary '*' (have 'XGpio {aka struct <anonymous>}')
+    sprintf(dataChar,"%1.1f",Sensibilite_GetSampleValue(*inputSW));
+                                                        ^~~~~~~~
+../src/main.c:301:6: warning: variable 'accel_y' set but not used [-Wunused-but-set-variable]
+  int accel_y;
+      ^~~~~~~
+../src/main.c:278:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+  int sensibilite = 0;
+      ^~~~~~~~~~~
+make: *** [src/main.o] Erreur 1
+15:03:54 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main_thread':
+../src/main.c:258:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+  print_web_app_header();
+  ^~~~~~~~~~~~~~~~~~~~
+  print_app_header
+../src/main.c:262:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+  start_web_application();
+  ^~~~~~~~~~~~~~~~~~~~~
+  start_application
+../src/main.c: In function 'fpga_thread':
+../src/main.c:301:6: warning: variable 'accel_y' set but not used [-Wunused-but-set-variable]
+  int accel_y;
+      ^~~~~~~
+../src/main.c:278:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+  int sensibilite = 0;
+      ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Serveur.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Serveur.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 322456	   4344	16898336	17225136	106d5b0	Serveur.elf
+'Finished building: Serveur.elf.size'
+' '
+15:04:29 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/http_response.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
+In file included from ../src/http_server/http_response.c:22:0:
+../src/http_server/platform_gpio.h:56:34: error: unknown type name 'XGpio'
+ float Sensibilite_GetSampleValue(XGpio *inputSW);
+                                  ^~~~~
+../src/http_server/http_response.c: In function 'do_http_get':
+../src/http_server/http_response.c:191:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
+   len = generate_http_header(buf, "js", sw_len);
+                              ^~~
+../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
+ int generate_http_header(char *buf, char *fext, int fsize);
+     ^~~~~~~~~~~~~~~~~~~~
+../src/http_server/http_response.c:193:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
+   strcat(buf, sw_buf);
+          ^~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
+                 from ../src/http_server/http_response.c:19:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
+        ^
+make: *** [src/http_server/http_response.o] Erreur 1
+15:05:17 **** Auto Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -1652,22 +580,6 @@ a9-linaro-pre-build-step
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
 ../src/http_server/http_response.c: In function 'do_http_get':
-../src/http_server/http_response.c:170:22: warning: format '%d' expects argument of type 'int', but argument 3 has type 'double' [-Wformat=]
-   sprintf(calorie, "%d", Calorie_GetSampleValue());
-                     ~^   ~~~~~~~~~~~~~~~~~~~~~~~~
-                     %f
-../src/http_server/http_response.c:172:26: warning: format '%d' expects argument of type 'int', but argument 3 has type 'double' [-Wformat=]
-   sprintf(deportation, "%d", Deportation_GetSampleValue());
-                         ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                         %f
-../src/http_server/http_response.c:174:23: warning: format '%d' expects argument of type 'int', but argument 3 has type 'double' [-Wformat=]
-   sprintf(distance, "%d", Distance_GetSampleValue());
-                      ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~
-                      %f
-../src/http_server/http_response.c:176:22: warning: format '%d' expects argument of type 'int', but argument 3 has type 'double' [-Wformat=]
-   sprintf(vitesse, "%d", Speed_GetSampleValue());
-                     ~^   ~~~~~~~~~~~~~~~~~~~~~~
-                     %f
 ../src/http_server/http_response.c:191:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
    len = generate_http_header(buf, "js", sw_len);
                               ^~~
@@ -1684,68 +596,215 @@ c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\inc
         ^
 'Finished building: ../src/http_server/http_response.c'
 ' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+../src/http_server/platform_gpio.c: In function 'Deportation_GetSampleValue':
+../src/http_server/platform_gpio.c:117:33: error: too few arguments to function 'Sensibilite_GetSampleValue'
+  if (rawData > (LIMITE_GAUCHE * Sensibilite_GetSampleValue())) return GAUCHE;
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/http_server/platform_gpio.c:19:0:
+../src/http_server/platform_gpio.h:56:7: note: declared here
+ float Sensibilite_GetSampleValue(XGpio *inputSW);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.c:118:38: error: too few arguments to function 'Sensibilite_GetSampleValue'
+  else if (rawData < (LIMITE_DROITE * Sensibilite_GetSampleValue())) return DROITE;
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/http_server/platform_gpio.c:19:0:
+../src/http_server/platform_gpio.h:56:7: note: declared here
+ float Sensibilite_GetSampleValue(XGpio *inputSW);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.c: In function 'Sensibilite_GetSampleValue':
+../src/http_server/platform_gpio.c:122:1: error: number of arguments doesn't match prototype
+ float Sensibilite_GetSampleValue(){
+ ^~~~~
+In file included from ../src/http_server/platform_gpio.c:19:0:
+../src/http_server/platform_gpio.h:56:7: error: prototype declaration
+ float Sensibilite_GetSampleValue(XGpio *inputSW);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.c:124:6: warning: unused variable 'sw_data' [-Wunused-variable]
+  int sw_data = XGpio_DiscreteRead(&inputSW, 1);
+      ^~~~~~~
+../src/http_server/platform_gpio.c: In function 'Deportation_GetSampleValue':
+../src/http_server/platform_gpio.c:120:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/http_server/platform_gpio.o] Erreur 1
+15:05:19 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+../src/http_server/platform_gpio.c: In function 'Deportation_GetSampleValue':
+../src/http_server/platform_gpio.c:116:33: error: too few arguments to function 'Sensibilite_GetSampleValue'
+  if (rawData > (LIMITE_GAUCHE * Sensibilite_GetSampleValue())) return GAUCHE;
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/http_server/platform_gpio.c:19:0:
+../src/http_server/platform_gpio.h:56:7: note: declared here
+ float Sensibilite_GetSampleValue(XGpio *inputSW);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.c:117:38: error: too few arguments to function 'Sensibilite_GetSampleValue'
+  else if (rawData < (LIMITE_DROITE * Sensibilite_GetSampleValue())) return DROITE;
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/http_server/platform_gpio.c:19:0:
+../src/http_server/platform_gpio.h:56:7: note: declared here
+ float Sensibilite_GetSampleValue(XGpio *inputSW);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.c: In function 'Sensibilite_GetSampleValue':
+../src/http_server/platform_gpio.c:122:35: warning: passing argument 1 of 'XGpio_DiscreteRead' from incompatible pointer type [-Wincompatible-pointer-types]
+  int sw_data = XGpio_DiscreteRead(&inputSW, 1);
+                                   ^
+In file included from ../src/http_server/platform_gpio.h:23:0,
+                 from ../src/http_server/platform_gpio.c:19:
+../../Serveur_bsp/ps7_cortexa9_0/include/xgpio.h:183:5: note: expected 'XGpio * {aka struct <anonymous> *}' but argument is of type 'XGpio ** {aka struct <anonymous> **}'
+ u32 XGpio_DiscreteRead(XGpio *InstancePtr, unsigned Channel);
+     ^~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.c: In function 'Deportation_GetSampleValue':
+../src/http_server/platform_gpio.c:119:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/http_server/platform_gpio.c: In function 'Sensibilite_GetSampleValue':
+../src/http_server/platform_gpio.c:125:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/http_server/platform_gpio.o] Erreur 1
+15:05:42 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+../src/http_server/platform_gpio.c: In function 'Deportation_GetSampleValue':
+../src/http_server/platform_gpio.c:116:33: error: too few arguments to function 'Sensibilite_GetSampleValue'
+  if (rawData > (LIMITE_GAUCHE * Sensibilite_GetSampleValue())) return GAUCHE;
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/http_server/platform_gpio.c:19:0:
+../src/http_server/platform_gpio.h:56:7: note: declared here
+ float Sensibilite_GetSampleValue(XGpio *inputSW);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.c:117:38: error: too few arguments to function 'Sensibilite_GetSampleValue'
+  else if (rawData < (LIMITE_DROITE * Sensibilite_GetSampleValue())) return DROITE;
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/http_server/platform_gpio.c:19:0:
+../src/http_server/platform_gpio.h:56:7: note: declared here
+ float Sensibilite_GetSampleValue(XGpio *inputSW);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.c: In function 'Sensibilite_GetSampleValue':
+../src/http_server/platform_gpio.c:122:35: warning: passing argument 1 of 'XGpio_DiscreteRead' from incompatible pointer type [-Wincompatible-pointer-types]
+  int sw_data = XGpio_DiscreteRead(&inputSW, 1);
+                                   ^
+In file included from ../src/http_server/platform_gpio.h:23:0,
+                 from ../src/http_server/platform_gpio.c:19:
+../../Serveur_bsp/ps7_cortexa9_0/include/xgpio.h:183:5: note: expected 'XGpio * {aka struct <anonymous> *}' but argument is of type 'XGpio ** {aka struct <anonymous> **}'
+ u32 XGpio_DiscreteRead(XGpio *InstancePtr, unsigned Channel);
+     ^~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.c:122:6: warning: unused variable 'sw_data' [-Wunused-variable]
+  int sw_data = XGpio_DiscreteRead(&inputSW, 1);
+      ^~~~~~~
+../src/http_server/platform_gpio.c: In function 'Deportation_GetSampleValue':
+../src/http_server/platform_gpio.c:119:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/http_server/platform_gpio.o] Erreur 1
+15:06:18 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+../src/http_server/platform_gpio.c: In function 'Deportation_GetSampleValue':
+../src/http_server/platform_gpio.c:116:60: warning: passing argument 1 of 'Sensibilite_GetSampleValue' from incompatible pointer type [-Wincompatible-pointer-types]
+  if (rawData > (LIMITE_GAUCHE * Sensibilite_GetSampleValue(&inputSW))) return GAUCHE;
+                                                            ^
+In file included from ../src/http_server/platform_gpio.c:19:0:
+../src/http_server/platform_gpio.h:56:7: note: expected 'XGpio * {aka struct <anonymous> *}' but argument is of type 'XGpio ** {aka struct <anonymous> **}'
+ float Sensibilite_GetSampleValue(XGpio *inputSW);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.c:117:65: warning: passing argument 1 of 'Sensibilite_GetSampleValue' from incompatible pointer type [-Wincompatible-pointer-types]
+  else if (rawData < (LIMITE_DROITE * Sensibilite_GetSampleValue(&inputSW))) return DROITE;
+                                                                 ^
+In file included from ../src/http_server/platform_gpio.c:19:0:
+../src/http_server/platform_gpio.h:56:7: note: expected 'XGpio * {aka struct <anonymous> *}' but argument is of type 'XGpio ** {aka struct <anonymous> **}'
+ float Sensibilite_GetSampleValue(XGpio *inputSW);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.c: In function 'Sensibilite_GetSampleValue':
+../src/http_server/platform_gpio.c:122:35: warning: passing argument 1 of 'XGpio_DiscreteRead' from incompatible pointer type [-Wincompatible-pointer-types]
+  int sw_data = XGpio_DiscreteRead(&inputSW, 1);
+                                   ^
+In file included from ../src/http_server/platform_gpio.h:23:0,
+                 from ../src/http_server/platform_gpio.c:19:
+../../Serveur_bsp/ps7_cortexa9_0/include/xgpio.h:183:5: note: expected 'XGpio * {aka struct <anonymous> *}' but argument is of type 'XGpio ** {aka struct <anonymous> **}'
+ u32 XGpio_DiscreteRead(XGpio *InstancePtr, unsigned Channel);
+     ^~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.c:122:6: warning: unused variable 'sw_data' [-Wunused-variable]
+  int sw_data = XGpio_DiscreteRead(&inputSW, 1);
+      ^~~~~~~
+'Finished building: ../src/http_server/platform_gpio.c'
+' '
+'Building file: ../src/http_server/web_utils.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/web_utils.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/web_utils.d" -MT"src/http_server/web_utils.o" -o "src/http_server/web_utils.o" "../src/http_server/web_utils.c"
+'Finished building: ../src/http_server/web_utils.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main_thread':
+../src/main.c:258:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+  print_web_app_header();
+  ^~~~~~~~~~~~~~~~~~~~
+  print_app_header
+../src/main.c:262:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+  start_web_application();
+  ^~~~~~~~~~~~~~~~~~~~~
+  start_application
+../src/main.c: In function 'fpga_thread':
+../src/main.c:301:6: warning: variable 'accel_y' set but not used [-Wunused-but-set-variable]
+  int accel_y;
+      ^~~~~~~
+../src/main.c:278:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+  int sensibilite = 0;
+      ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
 'Building target: Serveur.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
 'Finished building target: Serveur.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 295280	   4336	16898336	17197952	1066b80	Serveur.elf
+ 322456	   4344	16898336	17225136	106d5b0	Serveur.elf
 'Finished building: Serveur.elf.size'
 ' '
-21:55:22 **** Auto Build of configuration Debug for project Serveur ****
+15:06:59 **** Auto Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/http_server/http_response.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
-../src/http_server/http_response.c: In function 'do_http_get':
-../src/http_server/http_response.c:172:26: warning: format '%d' expects argument of type 'int', but argument 3 has type 'double' [-Wformat=]
+../src/http_server/http_response.c: In function 'do_http_post':
+../src/http_server/http_response.c:116:30: error: too few arguments to function 'Deportation_GetSampleValue'
    sprintf(deportation, "%d", Deportation_GetSampleValue());
-                         ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                         %f
-../src/http_server/http_response.c:191:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
-   len = generate_http_header(buf, "js", sw_len);
-                              ^~~
-../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
- int generate_http_header(char *buf, char *fext, int fsize);
-     ^~~~~~~~~~~~~~~~~~~~
-../src/http_server/http_response.c:193:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
-   strcat(buf, sw_buf);
-          ^~~
-In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
-                 from ../src/http_server/http_response.c:19:
-c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
- char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
-        ^
-'Finished building: ../src/http_server/http_response.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 295280	   4336	16898336	17197952	1066b80	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-21:55:48 **** Auto Build of configuration Debug for project Serveur ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/http_server/http_response.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/http_server/http_response.c:22:0:
+../src/http_server/platform_gpio.h:55:5: note: declared here
+ int Deportation_GetSampleValue(XGpio *inputSW);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
 ../src/http_server/http_response.c: In function 'do_http_get':
-../src/http_server/http_response.c:172:26: warning: format '%d' expects argument of type 'int', but argument 3 has type 'double' [-Wformat=]
+../src/http_server/http_response.c:172:57: warning: passing argument 1 of 'Deportation_GetSampleValue' makes pointer from integer without a cast [-Wint-conversion]
    sprintf(deportation, "%d", Deportation_GetSampleValue(1));
-                         ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                         %f
+                                                         ^
+In file included from ../src/http_server/http_response.c:22:0:
+../src/http_server/platform_gpio.h:55:5: note: expected 'XGpio * {aka struct <anonymous> *}' but argument is of type 'int'
+ int Deportation_GetSampleValue(XGpio *inputSW);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
 ../src/http_server/http_response.c:191:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
    len = generate_http_header(buf, "js", sw_len);
                               ^~~
@@ -1760,84 +819,141 @@ In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-
 c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
  char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
         ^
-'Finished building: ../src/http_server/http_response.c'
-' '
-'Building target: Serveur.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 295280	   4336	16898336	17197952	1066b80	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-21:57:04 **** Auto Build of configuration Debug for project Serveur ****
+make: *** [src/http_server/http_response.o] Erreur 1
+15:07:15 **** Auto Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/http_server/platform_gpio.c'
+'Building file: ../src/http_server/http_response.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
-../src/http_server/platform_gpio.c:125:5: error: conflicting types for 'Deportation_GetSampleRaw'
- int Deportation_GetSampleRaw(){
-     ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/http_server/platform_gpio.c:105:5: note: previous definition of 'Deportation_GetSampleRaw' was here
- u16 Deportation_GetSampleRaw()
-     ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/http_server/platform_gpio.c:130:5: error: conflicting types for 'Deportation_GetSampleValue'
- int Deportation_GetSampleValue(){
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
+../src/http_server/http_response.c: In function 'do_http_post':
+../src/http_server/http_response.c:116:58: error: 'inputSW' undeclared (first use in this function)
+   sprintf(deportation, "%d", Deportation_GetSampleValue(&inputSW));
+                                                          ^~~~~~~
+../src/http_server/http_response.c:116:58: note: each undeclared identifier is reported only once for each function it appears in
+../src/http_server/http_response.c: In function 'do_http_get':
+../src/http_server/http_response.c:172:57: warning: passing argument 1 of 'Deportation_GetSampleValue' makes pointer from integer without a cast [-Wint-conversion]
+   sprintf(deportation, "%d", Deportation_GetSampleValue(1));
+                                                         ^
+In file included from ../src/http_server/http_response.c:22:0:
+../src/http_server/platform_gpio.h:55:5: note: expected 'XGpio * {aka struct <anonymous> *}' but argument is of type 'int'
+ int Deportation_GetSampleValue(XGpio *inputSW);
      ^~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/http_server/platform_gpio.c:112:7: note: previous definition of 'Deportation_GetSampleValue' was here
- float Deportation_GetSampleValue()
-       ^~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/http_server/platform_gpio.c: In function 'Deportation_GetSampleValue':
-../src/http_server/platform_gpio.c:131:45: warning: implicit declaration of function 'Sensibilite_GetSampleValue'; did you mean 'Deportation_GetSampleValue'? [-Wimplicit-function-declaration]
-  int rawData = Deportation_GetSampleRaw() * Sensibilite_GetSampleValue();
-                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~
-                                             Deportation_GetSampleValue
-../src/http_server/platform_gpio.c: At top level:
-../src/http_server/platform_gpio.c:137:7: error: conflicting types for 'Sensibilite_GetSampleValue'
- float Sensibilite_GetSampleValue(){
-       ^~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/http_server/platform_gpio.c:131:45: note: previous implicit declaration of 'Sensibilite_GetSampleValue' was here
-  int rawData = Deportation_GetSampleRaw() * Sensibilite_GetSampleValue();
-                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/http_server/platform_gpio.o] Erreur 1
-21:57:16 **** Auto Build of configuration Debug for project Serveur ****
+../src/http_server/http_response.c:191:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
+   len = generate_http_header(buf, "js", sw_len);
+                              ^~~
+../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
+ int generate_http_header(char *buf, char *fext, int fsize);
+     ^~~~~~~~~~~~~~~~~~~~
+../src/http_server/http_response.c:193:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
+   strcat(buf, sw_buf);
+          ^~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
+                 from ../src/http_server/http_response.c:19:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
+        ^
+make: *** [src/http_server/http_response.o] Erreur 1
+15:10:00 **** Auto Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/http_server/platform_gpio.c'
+'Building file: ../src/http_server/http_response.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
-../src/http_server/platform_gpio.c:125:5: error: conflicting types for 'Deportation_GetSampleRaw'
- int Deportation_GetSampleRaw(){
-     ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/http_server/platform_gpio.c:105:5: note: previous definition of 'Deportation_GetSampleRaw' was here
- u16 Deportation_GetSampleRaw()
-     ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/http_server/platform_gpio.c:130:5: error: conflicting types for 'Deportation_GetSampleValue'
- int Deportation_GetSampleValue(){
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
+../src/http_server/http_response.c: In function 'do_http_post':
+../src/http_server/http_response.c:116:58: error: 'inputSW' undeclared (first use in this function)
+   sprintf(deportation, "%d", Deportation_GetSampleValue(&inputSW));
+                                                          ^~~~~~~
+../src/http_server/http_response.c:116:58: note: each undeclared identifier is reported only once for each function it appears in
+../src/http_server/http_response.c: In function 'do_http_get':
+../src/http_server/http_response.c:172:57: warning: passing argument 1 of 'Deportation_GetSampleValue' makes pointer from integer without a cast [-Wint-conversion]
+   sprintf(deportation, "%d", Deportation_GetSampleValue(1));
+                                                         ^
+In file included from ../src/http_server/http_response.c:22:0:
+../src/http_server/platform_gpio.h:55:5: note: expected 'XGpio * {aka struct <anonymous> *}' but argument is of type 'int'
+ int Deportation_GetSampleValue(XGpio *inputSW);
      ^~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/http_server/platform_gpio.c:112:7: note: previous definition of 'Deportation_GetSampleValue' was here
- float Deportation_GetSampleValue()
-       ^~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/http_server/platform_gpio.c: In function 'Deportation_GetSampleValue':
-../src/http_server/platform_gpio.c:131:45: warning: implicit declaration of function 'Sensibilite_GetSampleValue'; did you mean 'Deportation_GetSampleValue'? [-Wimplicit-function-declaration]
-  int rawData = Deportation_GetSampleRaw() * Sensibilite_GetSampleValue();
-                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~
-                                             Deportation_GetSampleValue
-../src/http_server/platform_gpio.c: At top level:
-../src/http_server/platform_gpio.c:137:7: error: conflicting types for 'Sensibilite_GetSampleValue'
- float Sensibilite_GetSampleValue(){
-       ^~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/http_server/platform_gpio.c:131:45: note: previous implicit declaration of 'Sensibilite_GetSampleValue' was here
-  int rawData = Deportation_GetSampleRaw() * Sensibilite_GetSampleValue();
-                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/http_server/platform_gpio.o] Erreur 1
-21:58:14 **** Auto Build of configuration Debug for project Serveur ****
+../src/http_server/http_response.c:191:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
+   len = generate_http_header(buf, "js", sw_len);
+                              ^~~
+../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
+ int generate_http_header(char *buf, char *fext, int fsize);
+     ^~~~~~~~~~~~~~~~~~~~
+../src/http_server/http_response.c:193:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
+   strcat(buf, sw_buf);
+          ^~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
+                 from ../src/http_server/http_response.c:19:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
+        ^
+make: *** [src/http_server/http_response.o] Erreur 1
+15:10:02 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/http_response.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
+../src/http_server/http_response.c: In function 'do_http_post':
+../src/http_server/http_response.c:116:58: error: 'inputSW' undeclared (first use in this function)
+   sprintf(deportation, "%d", Deportation_GetSampleValue(&inputSW));
+                                                          ^~~~~~~
+../src/http_server/http_response.c:116:58: note: each undeclared identifier is reported only once for each function it appears in
+../src/http_server/http_response.c: In function 'do_http_get':
+../src/http_server/http_response.c:172:57: warning: passing argument 1 of 'Deportation_GetSampleValue' makes pointer from integer without a cast [-Wint-conversion]
+   sprintf(deportation, "%d", Deportation_GetSampleValue(1));
+                                                         ^
+In file included from ../src/http_server/http_response.c:22:0:
+../src/http_server/platform_gpio.h:55:5: note: expected 'XGpio * {aka struct <anonymous> *}' but argument is of type 'int'
+ int Deportation_GetSampleValue(XGpio *inputSW);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/http_server/http_response.c:191:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
+   len = generate_http_header(buf, "js", sw_len);
+                              ^~~
+../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
+ int generate_http_header(char *buf, char *fext, int fsize);
+     ^~~~~~~~~~~~~~~~~~~~
+../src/http_server/http_response.c:193:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
+   strcat(buf, sw_buf);
+          ^~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
+                 from ../src/http_server/http_response.c:19:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
+        ^
+make: *** [src/http_server/http_response.o] Erreur 1
+15:10:03 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/http_response.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
+../src/http_server/http_response.c: In function 'do_http_post':
+../src/http_server/http_response.c:116:58: error: 'inputSW' undeclared (first use in this function)
+   sprintf(deportation, "%d", Deportation_GetSampleValue(&inputSW));
+                                                          ^~~~~~~
+../src/http_server/http_response.c:116:58: note: each undeclared identifier is reported only once for each function it appears in
+../src/http_server/http_response.c: In function 'do_http_get':
+../src/http_server/http_response.c:191:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
+   len = generate_http_header(buf, "js", sw_len);
+                              ^~~
+../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
+ int generate_http_header(char *buf, char *fext, int fsize);
+     ^~~~~~~~~~~~~~~~~~~~
+../src/http_server/http_response.c:193:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
+   strcat(buf, sw_buf);
+          ^~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
+                 from ../src/http_server/http_response.c:19:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
+        ^
+make: *** [src/http_server/http_response.o] Erreur 1
+15:10:06 **** Auto Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -1864,46 +980,77 @@ c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\inc
 'Building file: ../src/http_server/platform_gpio.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
-../src/http_server/platform_gpio.c:105:5: error: conflicting types for 'Deportation_GetSampleRaw'
- u16 Deportation_GetSampleRaw()
-     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.c: In function 'Deportation_GetSampleValue':
+../src/http_server/platform_gpio.c:116:33: error: too few arguments to function 'Sensibilite_GetSampleValue'
+  if (rawData > (LIMITE_GAUCHE * Sensibilite_GetSampleValue())) return GAUCHE;
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
 In file included from ../src/http_server/platform_gpio.c:19:0:
-../src/http_server/platform_gpio.h:54:5: note: previous declaration of 'Deportation_GetSampleRaw' was here
- int Deportation_GetSampleRaw();
-     ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/http_server/platform_gpio.c:112:7: error: conflicting types for 'Deportation_GetSampleValue'
- float Deportation_GetSampleValue()
+../src/http_server/platform_gpio.h:56:7: note: declared here
+ float Sensibilite_GetSampleValue(XGpio *inputSW);
        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.c:117:38: error: too few arguments to function 'Sensibilite_GetSampleValue'
+  else if (rawData < (LIMITE_DROITE * Sensibilite_GetSampleValue())) return DROITE;
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
 In file included from ../src/http_server/platform_gpio.c:19:0:
-../src/http_server/platform_gpio.h:55:5: note: previous declaration of 'Deportation_GetSampleValue' was here
- int Deportation_GetSampleValue();
-     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.h:56:7: note: declared here
+ float Sensibilite_GetSampleValue(XGpio *inputSW);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.c: In function 'Sensibilite_GetSampleValue':
+../src/http_server/platform_gpio.c:122:35: warning: passing argument 1 of 'XGpio_DiscreteRead' from incompatible pointer type [-Wincompatible-pointer-types]
+  int sw_data = XGpio_DiscreteRead(&inputSW, 1);
+                                   ^
+In file included from ../src/http_server/platform_gpio.h:23:0,
+                 from ../src/http_server/platform_gpio.c:19:
+../../Serveur_bsp/ps7_cortexa9_0/include/xgpio.h:183:5: note: expected 'XGpio * {aka struct <anonymous> *}' but argument is of type 'XGpio ** {aka struct <anonymous> **}'
+ u32 XGpio_DiscreteRead(XGpio *InstancePtr, unsigned Channel);
+     ^~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.c:122:6: warning: unused variable 'sw_data' [-Wunused-variable]
+  int sw_data = XGpio_DiscreteRead(&inputSW, 1);
+      ^~~~~~~
+../src/http_server/platform_gpio.c: In function 'Deportation_GetSampleValue':
+../src/http_server/platform_gpio.c:119:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
 make: *** [src/http_server/platform_gpio.o] Erreur 1
-21:58:19 **** Auto Build of configuration Debug for project Serveur ****
+15:26:28 **** Auto Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/http_server/platform_gpio.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
-../src/http_server/platform_gpio.c:105:5: error: conflicting types for 'Deportation_GetSampleRaw'
- u16 Deportation_GetSampleRaw()
-     ^~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ../src/http_server/platform_gpio.c:19:0:
-../src/http_server/platform_gpio.h:54:5: note: previous declaration of 'Deportation_GetSampleRaw' was here
- int Deportation_GetSampleRaw();
-     ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/http_server/platform_gpio.c:112:7: error: conflicting types for 'Deportation_GetSampleValue'
- float Deportation_GetSampleValue()
-       ^~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ../src/http_server/platform_gpio.c:19:0:
-../src/http_server/platform_gpio.h:55:5: note: previous declaration of 'Deportation_GetSampleValue' was here
- int Deportation_GetSampleValue();
-     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.c: In function 'Deportation_GetSampleValue':
+../src/http_server/platform_gpio.c:116:33: error: 'global_sensibilite' undeclared (first use in this function)
+  if (rawData > (LIMITE_GAUCHE * global_sensibilite)) return GAUCHE;
+                                 ^~~~~~~~~~~~~~~~~~
+../src/http_server/platform_gpio.c:116:33: note: each undeclared identifier is reported only once for each function it appears in
+../src/http_server/platform_gpio.c:119:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
 make: *** [src/http_server/platform_gpio.o] Erreur 1
-21:58:53 **** Auto Build of configuration Debug for project Serveur ****
+15:26:39 **** Auto Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/http_response.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
+../src/http_server/http_response.c: In function 'do_http_get':
+../src/http_server/http_response.c:191:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
+   len = generate_http_header(buf, "js", sw_len);
+                              ^~~
+../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
+ int generate_http_header(char *buf, char *fext, int fsize);
+     ^~~~~~~~~~~~~~~~~~~~
+../src/http_server/http_response.c:193:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
+   strcat(buf, sw_buf);
+          ^~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
+                 from ../src/http_server/http_response.c:19:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
+        ^
+'Finished building: ../src/http_server/http_response.c'
 ' '
 'Building file: ../src/http_server/platform_gpio.c'
 'Invoking: ARM v7 gcc compiler'
@@ -1919,47 +1066,39 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/web_ut
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 ../src/main.c: In function 'main_thread':
-../src/main.c:254:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+../src/main.c:258:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
   print_web_app_header();
   ^~~~~~~~~~~~~~~~~~~~
   print_app_header
-../src/main.c:258:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+../src/main.c:262:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
   start_web_application();
   ^~~~~~~~~~~~~~~~~~~~~
   start_application
 ../src/main.c: In function 'fpga_thread':
-../src/main.c:316:30: warning: ' km/h' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f km/h",currentData);
-                           ~~~^~
-../src/main.c:316:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:338:30: warning: ' cal.' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f cal.",currentData);
-                           ~~~^~
-../src/main.c:338:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f cal.",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:354:27: warning: 'Sens.: ' directive writing 7 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sens.: %d",sensibilite);
-                      ~~~~~^~
-../src/main.c:354:4: note: 'sprintf' output between 9 and 19 bytes into a destination of size 5
-    sprintf(dataChar,"Sens.: %d",sensibilite);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:391:29: warning: implicit declaration of function 'Sensibilite_GetSampleValue'; did you mean 'Deportation_GetSampleValue'? [-Wimplicit-function-declaration]
+    sprintf(dataChar,"%1.1f",Sensibilite_GetSampleValue(&inputSW));
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                             Deportation_GetSampleValue
+../src/main.c:391:26: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat=]
+    sprintf(dataChar,"%1.1f",Sensibilite_GetSampleValue(&inputSW));
+                      ~~~~^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      %1.1d
+../src/main.c:301:6: warning: variable 'accel_y' set but not used [-Wunused-but-set-variable]
+  int accel_y;
+      ^~~~~~~
+../src/main.c:278:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+  int sensibilite = 0;
+      ^~~~~~~~~~~
 'Finished building: ../src/main.c'
 ' '
 'Building target: Serveur.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Serveur.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 295344	   4336	16898336	17198016	1066bc0	Serveur.elf
-'Finished building: Serveur.elf.size'
-' '
-21:59:41 **** Auto Build of configuration Debug for project Serveur ****
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `fpga_thread':
+D:\DEV\Git_Kraken\Velociraptor\Projet-S4\Velociraptor_Project\lectureADC\lectureADC.sdk\Serveur\Debug/../src/main.c:391: undefined reference to `Sensibilite_GetSampleValue'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Serveur.elf] Erreur 1
+15:30:08 **** Auto Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -1967,50 +1106,35 @@ a9-linaro-pre-build-step
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 ../src/main.c: In function 'main_thread':
-../src/main.c:254:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+../src/main.c:258:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
   print_web_app_header();
   ^~~~~~~~~~~~~~~~~~~~
   print_app_header
-../src/main.c:258:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+../src/main.c:262:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
   start_web_application();
   ^~~~~~~~~~~~~~~~~~~~~
   start_application
 ../src/main.c: In function 'fpga_thread':
-../src/main.c:274:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+../src/main.c:301:6: warning: variable 'accel_y' set but not used [-Wunused-but-set-variable]
+  int accel_y;
+      ^~~~~~~
+../src/main.c:278:6: warning: unused variable 'sensibilite' [-Wunused-variable]
   int sensibilite = 0;
       ^~~~~~~~~~~
-../src/main.c:316:30: warning: ' km/h' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f km/h",currentData);
-                           ~~~^~
-../src/main.c:316:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:338:30: warning: ' cal.' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f cal.",currentData);
-                           ~~~^~
-../src/main.c:338:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f cal.",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:354:27: warning: 'Sens.: ' directive writing 7 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sens.: %2.1f",Sensibilite_GetSampleValue());
-                      ~~~~~^~
-../src/main.c:354:4: note: 'sprintf' output between 11 and 320 bytes into a destination of size 5
-    sprintf(dataChar,"Sens.: %2.1f",Sensibilite_GetSampleValue());
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 'Finished building: ../src/main.c'
 ' '
 'Building target: Serveur.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
 'Finished building target: Serveur.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 295352	   4336	16898336	17198024	1066bc8	Serveur.elf
+ 322456	   4344	16898336	17225136	106d5b0	Serveur.elf
 'Finished building: Serveur.elf.size'
 ' '
-22:00:03 **** Auto Build of configuration Debug for project Serveur ****
+15:30:39 **** Auto Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -2018,50 +1142,40 @@ a9-linaro-pre-build-step
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 ../src/main.c: In function 'main_thread':
-../src/main.c:254:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+../src/main.c:258:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
   print_web_app_header();
   ^~~~~~~~~~~~~~~~~~~~
   print_app_header
-../src/main.c:258:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+../src/main.c:262:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
   start_web_application();
   ^~~~~~~~~~~~~~~~~~~~~
   start_application
 ../src/main.c: In function 'fpga_thread':
-../src/main.c:274:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+../src/main.c:301:6: warning: variable 'accel_y' set but not used [-Wunused-but-set-variable]
+  int accel_y;
+      ^~~~~~~
+../src/main.c:278:6: warning: unused variable 'sensibilite' [-Wunused-variable]
   int sensibilite = 0;
       ^~~~~~~~~~~
-../src/main.c:316:30: warning: ' km/h' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f km/h",currentData);
-                           ~~~^~
-../src/main.c:316:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:338:30: warning: ' cal.' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f cal.",currentData);
-                           ~~~^~
-../src/main.c:338:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f cal.",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:354:27: warning: 'Sens.: ' directive writing 7 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sens.: %1.1f",Sensibilite_GetSampleValue());
-                      ~~~~~^~
-../src/main.c:354:4: note: 'sprintf' output between 11 and 320 bytes into a destination of size 5
-    sprintf(dataChar,"Sens.: %1.1f",Sensibilite_GetSampleValue());
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 'Finished building: ../src/main.c'
 ' '
 'Building target: Serveur.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
 'Finished building target: Serveur.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 295352	   4336	16898336	17198024	1066bc8	Serveur.elf
+ 322456	   4344	16898336	17225136	106d5b0	Serveur.elf
 'Finished building: Serveur.elf.size'
 ' '
-22:01:37 **** Auto Build of configuration Debug for project Serveur ****
+15:31:19 **** Incremental Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+15:32:09 **** Auto Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -2069,46 +1183,94 @@ a9-linaro-pre-build-step
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 ../src/main.c: In function 'main_thread':
-../src/main.c:254:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+../src/main.c:258:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
   print_web_app_header();
   ^~~~~~~~~~~~~~~~~~~~
   print_app_header
-../src/main.c:258:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+../src/main.c:262:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
   start_web_application();
   ^~~~~~~~~~~~~~~~~~~~~
   start_application
 ../src/main.c: In function 'fpga_thread':
-../src/main.c:274:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+../src/main.c:394:30: error: 'align_y' undeclared (first use in this function)
+    sprintf(dataChar,"%1.1f", align_y);
+                              ^~~~~~~
+../src/main.c:394:30: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:301:6: warning: variable 'accel_y' set but not used [-Wunused-but-set-variable]
+  int accel_y;
+      ^~~~~~~
+../src/main.c:278:6: warning: unused variable 'sensibilite' [-Wunused-variable]
   int sensibilite = 0;
       ^~~~~~~~~~~
-../src/main.c:316:30: warning: ' km/h' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f km/h",currentData);
-                           ~~~^~
-../src/main.c:316:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:338:30: warning: ' cal.' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f cal.",currentData);
-                           ~~~^~
-../src/main.c:338:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f cal.",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:354:27: warning: 'Sens.: ' directive writing 7 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sens.: %1.1f",Sensibilite_GetSampleValue());
-                      ~~~~~^~
-../src/main.c:354:4: note: 'sprintf' output between 11 and 320 bytes into a destination of size 5
-    sprintf(dataChar,"Sens.: %1.1f",Sensibilite_GetSampleValue());
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/main.o] Erreur 1
+15:32:31 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main_thread':
+../src/main.c:258:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+  print_web_app_header();
+  ^~~~~~~~~~~~~~~~~~~~
+  print_app_header
+../src/main.c:262:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+  start_web_application();
+  ^~~~~~~~~~~~~~~~~~~~~
+  start_application
+../src/main.c: In function 'fpga_thread':
+../src/main.c:278:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+  int sensibilite = 0;
+      ^~~~~~~~~~~
 'Finished building: ../src/main.c'
 ' '
 'Building target: Serveur.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
 'Finished building target: Serveur.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 295352	   4336	16898336	17198024	1066bc8	Serveur.elf
+ 322448	   4344	16898336	17225128	106d5a8	Serveur.elf
+'Finished building: Serveur.elf.size'
+' '
+15:32:52 **** Incremental Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+15:33:28 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main_thread':
+../src/main.c:258:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+  print_web_app_header();
+  ^~~~~~~~~~~~~~~~~~~~
+  print_app_header
+../src/main.c:262:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+  start_web_application();
+  ^~~~~~~~~~~~~~~~~~~~~
+  start_application
+../src/main.c: In function 'fpga_thread':
+../src/main.c:278:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+  int sensibilite = 0;
+      ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Serveur.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Serveur.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 322456	   4344	16898336	17225136	106d5b0	Serveur.elf
 'Finished building: Serveur.elf.size'
 ' '

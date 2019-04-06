@@ -1,4 +1,4 @@
-22:01:37 **** Auto Build of configuration Debug for project Serveur ****
+15:33:28 **** Auto Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -6,49 +6,31 @@ a9-linaro-pre-build-step
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 ../src/main.c: In function 'main_thread':
-../src/main.c:254:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+../src/main.c:258:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
   print_web_app_header();
   ^~~~~~~~~~~~~~~~~~~~
   print_app_header
-../src/main.c:258:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+../src/main.c:262:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
   start_web_application();
   ^~~~~~~~~~~~~~~~~~~~~
   start_application
 ../src/main.c: In function 'fpga_thread':
-../src/main.c:274:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+../src/main.c:278:6: warning: unused variable 'sensibilite' [-Wunused-variable]
   int sensibilite = 0;
       ^~~~~~~~~~~
-../src/main.c:316:30: warning: ' km/h' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f km/h",currentData);
-                           ~~~^~
-../src/main.c:316:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f km/h",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:338:30: warning: ' cal.' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
-    sprintf(dataChar,"%2.0f cal.",currentData);
-                           ~~~^~
-../src/main.c:338:4: note: 'sprintf' output between 8 and 316 bytes into a destination of size 5
-    sprintf(dataChar,"%2.0f cal.",currentData);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:354:27: warning: 'Sens.: ' directive writing 7 bytes into a region of size 5 [-Wformat-overflow=]
-    sprintf(dataChar,"Sens.: %1.1f",Sensibilite_GetSampleValue());
-                      ~~~~~^~
-../src/main.c:354:4: note: 'sprintf' output between 11 and 320 bytes into a destination of size 5
-    sprintf(dataChar,"Sens.: %1.1f",Sensibilite_GetSampleValue());
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 'Finished building: ../src/main.c'
 ' '
 'Building target: Serveur.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
 'Finished building target: Serveur.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 295352	   4336	16898336	17198024	1066bc8	Serveur.elf
+ 322456	   4344	16898336	17225136	106d5b0	Serveur.elf
 'Finished building: Serveur.elf.size'
 ' '
 
-22:01:39 Build Finished (took 2s.103ms)
+15:33:29 Build Finished (took 1s.149ms)
 

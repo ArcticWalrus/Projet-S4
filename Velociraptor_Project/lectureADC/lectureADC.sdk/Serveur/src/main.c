@@ -46,6 +46,10 @@
 #include "lwip/inet.h"
 #include "http_server/platform_gpio.h"
 
+#include "xiicps.h"
+#include "IMU_Defines.h"
+#include "IMU_Functions.h"
+
 u16 AD1_GetSampleRaw();
 float AD1_GetSampleVoltage();
 u16 Speed_GetSampleRaw();
@@ -273,6 +277,35 @@ void fpga_thread(void *p){
 	char directionGenou[7] = "Centre";
 	int sensibilite = 0;
 
+	// INIT IMU
+	// I2C interface initialization in ZYNQ
+	I2C_Interface_Init(I2C_DEVICE_ID);
+
+	// Reset internal registers
+	IMU_Device_Reset();
+	IMU_Verify_ID();
+	xil_printf("\r\n");
+
+	// Disable sleep mode to wake the chip
+	IMU_Disable_SleepMode();
+	xil_printf("\r\n");
+
+	// Verify if correct ID is read
+	IMU_Verify_ID();
+	xil_printf("\r\n");
+
+	// Read some registers and compare their value to the datasheet
+	IMU_ReadSomeRegisters();
+	xil_printf("\r\n");
+
+	int accel_y;
+
+	xil_printf("ACCEL data\r\n");
+
+
+	// Set acceleration Full Scale Range : 0 to 3
+	IMU_Set_Accel_FSR(3);
+
 	print("Bienvenue 2\n\r");
 	printf("F Bienvenue 2\n\r");
 
@@ -298,6 +331,10 @@ void fpga_thread(void *p){
 	print("Initialisation finie\n\r");
 
 	while(1){
+		// IMU
+		accel_y =  IMU_Get_Accel_Y_value();
+		sleep(0.5); // in seconds
+
 
 		// Lire puis afficher les valeurs des switch sur les leds
 		sw_data = XGpio_DiscreteRead(&inputSW, 1);
@@ -306,52 +343,56 @@ void fpga_thread(void *p){
 
 		currentVoltage= AD1_GetSampleVoltage();
 
+		if (sw_data >= 8) global_sensibilite = 2;
+		else global_sensibilite = 1;
+
 		// lire la tension provenant du PmodAD1
-		if(sw_data == 0){
+		if(sw_data == 0 || sw_data == 8){
 			OLED_ClearBuffer(&oledDevice);
 			currentData = Speed_GetSampleValue();
 			OLED_SetCursor(&oledDevice, 0, 1);
-			OLED_PutString(&oledDevice, "--- Vitesse ---");
+			OLED_PutString(&oledDevice, "-Vitesse- (km/h)");
 			// Affichage de la vitesse sur le Pmod OLED
-			sprintf(dataChar,"%2.0f km/h",currentData);
+			sprintf(dataChar,"%2.0f",currentData);
 			OLED_SetCursor(&oledDevice, 0, 2);
 			OLED_PutString(&oledDevice, dataChar);
 			OLED_Update(&oledDevice);
 		}
-		else if (sw_data == 1){
+		else if (sw_data == 1 || sw_data == 9){
 			OLED_ClearBuffer(&oledDevice);
 			currentData = Distance_GetSampleValue();
 			OLED_SetCursor(&oledDevice, 0, 1);
-			OLED_PutString(&oledDevice, "--- Distance ---");
+			OLED_PutString(&oledDevice, "-Distance- (m)");
 			// Affichage de la distance sur le Pmod OLED
-			sprintf(dataChar,"%2.0f m",currentData);
+			sprintf(dataChar,"%2.0f",currentData);
 			OLED_SetCursor(&oledDevice, 0, 2);
 			OLED_PutString(&oledDevice, dataChar);
 			OLED_Update(&oledDevice);
 		}
-		else if (sw_data == 2){
+		else if (sw_data == 2 || sw_data == 10){
 			OLED_ClearBuffer(&oledDevice);
 			currentData = Calorie_GetSampleValue();
 			OLED_SetCursor(&oledDevice, 0, 1);
-			OLED_PutString(&oledDevice, "--- Calories ---");
+			OLED_PutString(&oledDevice, "-Calories-");
 			// Affichage de la Calorie sur le Pmod OLED
-			sprintf(dataChar,"%2.0f cal.",currentData);
+			sprintf(dataChar,"%2.0f",currentData);
 			OLED_SetCursor(&oledDevice, 0, 2);
 			OLED_PutString(&oledDevice, dataChar);
 			OLED_Update(&oledDevice);
 		}
-		else if (sw_data == 3){
+		else if (sw_data == 3 || sw_data == 11){
 			OLED_ClearBuffer(&oledDevice);
-			currentData = Calorie_GetSampleValue();
-			if (currentData == GAUCHE) strcpy(directionGenou, "Gauche");
-			else if (currentData == DROITE) strcpy(directionGenou, "Droite");
+			currentData = Deportation_GetSampleValue();
+			if ((int)currentData == GAUCHE) strcpy(directionGenou, "Gauche");
+			else if ((int)currentData == DROITE) strcpy(directionGenou, "Droite");
 			else strcpy(directionGenou, "Centre");
 			OLED_SetCursor(&oledDevice, 0, 1);
 			OLED_PutString(&oledDevice, "- Align. genou -");
 			// Affichage de la Calorie sur le Pmod OLED
 			OLED_SetCursor(&oledDevice, 0, 2);
-			OLED_PutString(&oledDevice, directionGenou);
-			sprintf(dataChar,"Sens.: %1.1f",Sensibilite_GetSampleValue());
+			//OLED_PutString(&oledDevice, directionGenou);
+			sprintf(dataChar,"%1.1f", global_sensibilite);
+			sprintf(dataChar,"%d", accel_y);
 			OLED_SetCursor(&oledDevice, 0, 3);
 			OLED_PutString(&oledDevice, dataChar);
 			OLED_Update(&oledDevice);
@@ -372,14 +413,20 @@ void fpga_thread(void *p){
 			OLED_SetCursor(&oledDevice, 10, 3);
 			OLED_PutString(&oledDevice, dataChar);
 			OLED_Update(&oledDevice);
-
-
 		}
+
 
 		// Affichage graduel du voltage sur le Pmod 8LD
 		// 3.3V => tous les leds allumés
 		// 0.0V => tous les leds éteints
-		pmod8LDvalue = 0xFF << (8 - (u8)(currentVoltage / 3.3 * 8));
+
+		//pmod8LDvalue = 0xFF << (8 - (u8)(currentVoltage / 3.3 * 8));
+
+		// 3 droite 192 gauche 24 centre
+		if (Deportation_GetSampleValue() == GAUCHE) pmod8LDvalue = 192;
+		else if (Deportation_GetSampleValue() == DROITE) pmod8LDvalue = 3;
+		else pmod8LDvalue = 24;
+
 		GPIO_setPins(&pmod8LD,pmod8LDvalue);
 	}
 	vTaskDelete(NULL);

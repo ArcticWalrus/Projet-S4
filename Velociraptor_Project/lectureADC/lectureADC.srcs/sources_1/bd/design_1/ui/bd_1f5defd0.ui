@@ -63,11 +63,11 @@ preplace netloc ps7_0_axi_periph_M05_AXI 1 2 1 830
 preplace netloc ps7_0_axi_periph_M04_AXI 1 2 1 850
 preplace netloc myIO_IP_2_o_data 1 3 1 N
 preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 90 500 -40 860
-preplace netloc ps7_0_axi_periph_M10_AXI 1 2 1 810
 preplace netloc axi_gpio_1_GPIO 1 3 1 NJ
+preplace netloc ps7_0_axi_periph_M10_AXI 1 2 1 810
 preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 930
 preplace netloc myip_0_o_data_out 1 3 1 NJ
-levelinfo -pg 1 -10 250 660 1090 1270 -top -130 -bot 1610
+levelinfo -pg 1 -10 250 660 1090 1280 -top -130 -bot 1610
 ",
 }
 {

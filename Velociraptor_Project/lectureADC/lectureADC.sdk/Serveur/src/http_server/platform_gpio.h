@@ -20,7 +20,7 @@
 #define __PLATFORM_GPIO_H_
 
 #include <stdio.h>
-
+#include <xgpio.h>
 typedef uint16_t u16;
 
 #define MY_AD1_IP_BASEADDRESS  XPAR_MYIP_0_S00_AXI_BASEADDR
@@ -33,8 +33,8 @@ typedef uint16_t u16;
 
 #define AD1_NUM_BITS 	12
 
-#define LIMITE_GAUCHE -200
-#define LIMITE_DROITE 200
+#define LIMITE_GAUCHE 200
+#define LIMITE_DROITE -200
 #define GAUCHE 0
 #define DROITE 2
 #define CENTRE 1
@@ -51,10 +51,10 @@ u16 Distance_GetSampleRaw();
 float Distance_GetSampleValue();
 u16 Calorie_GetSampleRaw();
 float Calorie_GetSampleValue();
-int Deportation_GetSampleRaw();
+
 int Deportation_GetSampleValue();
-float Sensibilite_GetSampleValue();
 
 void Poids_WriteValue(unsigned int poids);
 
+float global_sensibilite;
 #endif

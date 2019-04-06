@@ -23,7 +23,9 @@
 #include "myip.h"
 #include "myIO_IP.h"
 
-#include <xgpio.h>
+#include "../IMU_Defines.h"
+#include "../IMU_Functions.h"
+
 XGpio xgpio_input_;
 
 
@@ -107,19 +109,12 @@ void Poids_WriteValue(unsigned int poids) {
 }
 
 //Lecture de l'axe Y de l'IMU
-int Deportation_GetSampleRaw(){
-	// GET la valeur venant du I2C
-	return 0;
-}
+
 
 int Deportation_GetSampleValue(){
-	int rawData = Deportation_GetSampleRaw() * Sensibilite_GetSampleValue();
-	if (rawData < LIMITE_GAUCHE) return GAUCHE;
-	else if (rawData > LIMITE_DROITE) return DROITE;
+	int rawData = IMU_Get_Accel_Y_value();
+	if (rawData > (LIMITE_GAUCHE * global_sensibilite)) return GAUCHE;
+	else if (rawData < (LIMITE_DROITE * global_sensibilite)) return DROITE;
 	else return CENTRE;
 }
 
-float Sensibilite_GetSampleValue(){
-	// LECTURE DES BOUTONS/SWITCHS
-	return 1.0;
-}
