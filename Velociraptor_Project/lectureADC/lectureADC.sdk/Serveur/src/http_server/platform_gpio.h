@@ -35,9 +35,9 @@ typedef uint16_t u16;
 
 #define LIMITE_GAUCHE 500
 #define LIMITE_DROITE -100
-#define GAUCHE 0
+#define GAUCHE 1
 #define DROITE 2
-#define CENTRE 1
+#define CENTRE 3
 
 void platform_init_gpios();
 int toggle_leds();
@@ -53,8 +53,9 @@ u16 Calorie_GetSampleRaw();
 float Calorie_GetSampleValue();
 
 int Deportation_GetSampleValue();
-
+int Tendance_GetSampleValue();
 void Poids_WriteValue(unsigned int poids);
+void Deportation_WriteValue(unsigned int deportation);
 
 float global_sensibilite;
 #endif

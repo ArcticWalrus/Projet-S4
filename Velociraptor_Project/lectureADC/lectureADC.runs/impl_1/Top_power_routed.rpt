@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Tue Apr  9 19:41:27 2019
-| Host             : DESKTOP-6BCDJM7 running 64-bit major release  (build 9200)
+| Date             : Wed Apr 10 18:10:11 2019
+| Host             : DESKTOP-L2Q9UI1 running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
 | Device           : xc7z010clg400-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.533        |
+| Total On-Chip Power (W)  | 1.537        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.412        |
+| Dynamic (W)              | 1.416        |
 | Device Static (W)        | 0.121        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 67.3         |
@@ -52,21 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.006 |        4 |       --- |             --- |
-| Slice Logic              |     0.002 |     9668 |       --- |             --- |
-|   LUT as Logic           |     0.002 |     4669 |     17600 |           26.53 |
-|   Register               |    <0.001 |     3227 |     35200 |            9.17 |
-|   CARRY4                 |    <0.001 |      400 |      4400 |            9.09 |
-|   LUT as Distributed RAM |    <0.001 |       16 |      6000 |            0.27 |
+| Clocks                   |     0.007 |        4 |       --- |             --- |
+| Slice Logic              |     0.003 |     9939 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     4745 |     17600 |           26.96 |
+|   LUT as Distributed RAM |    <0.001 |       40 |      6000 |            0.67 |
+|   Register               |    <0.001 |     3317 |     35200 |            9.42 |
+|   CARRY4                 |    <0.001 |      410 |      4400 |            9.32 |
 |   F7/F8 Muxes            |    <0.001 |       96 |     17600 |            0.55 |
 |   BUFG                   |    <0.001 |        2 |        32 |            6.25 |
 |   LUT as Shift Register  |    <0.001 |       63 |      6000 |            1.05 |
-|   Others                 |     0.000 |      363 |       --- |             --- |
-| Signals                  |     0.002 |     7253 |       --- |             --- |
+|   Others                 |     0.000 |      382 |       --- |             --- |
+| Signals                  |     0.003 |     7465 |       --- |             --- |
+| Block RAM                |    <0.001 |        1 |        60 |            1.67 |
 | I/O                      |     0.003 |       32 |       100 |           32.00 |
 | PS7                      |     1.399 |        1 |       --- |             --- |
 | Static Power             |     0.121 |          |           |                 |
-| Total                    |     1.533 |          |           |                 |
+| Total                    |     1.537 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.017 |       0.010 |      0.007 |
+| Vccint    |       1.000 |     0.021 |       0.014 |      0.007 |
 | Vccaux    |       1.800 |     0.008 |       0.000 |      0.008 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -85,7 +86,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.000 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -153,7 +154,7 @@ Table of Contents
 +---------------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                              | Power (W) |
 +---------------------------------------------------------------------------------------------------+-----------+
-| Top                                                                                               |     1.412 |
+| Top                                                                                               |     1.416 |
 |   Controleur                                                                                      |    <0.001 |
 |     MEF                                                                                           |     0.000 |
 |   Design                                                                                          |     1.410 |
@@ -382,12 +383,56 @@ Table of Contents
 |             ACTIVE_LOW_EXT.ACT_LO_EXT                                                             |    <0.001 |
 |           SEQ                                                                                     |    <0.001 |
 |             SEQ_COUNTER                                                                           |    <0.001 |
-|   Synchronisation                                                                                 |     0.001 |
+|   Synchronisation                                                                                 |    <0.001 |
 |   insta_magnetic                                                                                  |    <0.001 |
 |     entity_compteur_signal                                                                        |    <0.001 |
 |       iteration_detect                                                                            |     0.000 |
 |       iteration_tampon                                                                            |    <0.001 |
 |     inst_traitement                                                                               |    <0.001 |
+|   processor                                                                                       |     0.003 |
+|     active_interrupt_lut                                                                          |    <0.001 |
+|     address_loop[0].output_data.pc_vector_mux_lut                                                 |    <0.001 |
+|     address_loop[10].output_data.pc_vector_mux_lut                                                |    <0.001 |
+|     address_loop[2].output_data.pc_vector_mux_lut                                                 |    <0.001 |
+|     address_loop[4].output_data.pc_vector_mux_lut                                                 |    <0.001 |
+|     address_loop[6].output_data.pc_vector_mux_lut                                                 |    <0.001 |
+|     address_loop[8].output_data.pc_vector_mux_lut                                                 |    <0.001 |
+|     alu_decode0_lut                                                                               |    <0.001 |
+|     alu_decode1_lut                                                                               |    <0.001 |
+|     alu_decode2_lut                                                                               |    <0.001 |
+|     carry_flag_lut                                                                                |    <0.001 |
+|     data_path_loop[0].arith_logical_lut                                                           |    <0.001 |
+|     data_path_loop[0].lsb_shift_rotate.shift_rotate_lut                                           |    <0.001 |
+|     data_path_loop[0].output_data.sy_kk_mux_lut                                                   |    <0.001 |
+|     data_path_loop[0].small_spm.small_spm_ram.spm_ram                                             |    <0.001 |
+|     data_path_loop[1].arith_logical_lut                                                           |    <0.001 |
+|     data_path_loop[2].arith_logical_lut                                                           |    <0.001 |
+|     data_path_loop[2].mid_shift_rotate.shift_rotate_lut                                           |    <0.001 |
+|     data_path_loop[2].output_data.sy_kk_mux_lut                                                   |    <0.001 |
+|     data_path_loop[3].arith_logical_lut                                                           |    <0.001 |
+|     data_path_loop[4].arith_logical_lut                                                           |    <0.001 |
+|     data_path_loop[4].mid_shift_rotate.shift_rotate_lut                                           |    <0.001 |
+|     data_path_loop[4].output_data.sy_kk_mux_lut                                                   |    <0.001 |
+|     data_path_loop[4].small_spm.small_spm_ram.spm_ram                                             |    <0.001 |
+|     data_path_loop[5].arith_logical_lut                                                           |    <0.001 |
+|     data_path_loop[6].arith_logical_lut                                                           |    <0.001 |
+|     data_path_loop[6].msb_shift_rotate.shift_rotate_lut                                           |    <0.001 |
+|     data_path_loop[6].output_data.sy_kk_mux_lut                                                   |    <0.001 |
+|     data_path_loop[7].arith_logical_lut                                                           |    <0.001 |
+|     int_enable_type_lut                                                                           |    <0.001 |
+|     lower_reg_banks                                                                               |    <0.001 |
+|     move_type_lut                                                                                 |    <0.001 |
+|     pc_mode1_lut                                                                                  |    <0.001 |
+|     push_pop_lut                                                                                  |    <0.001 |
+|     register_enable_lut                                                                           |    <0.001 |
+|     register_enable_type_lut                                                                      |    <0.001 |
+|     reset_lut                                                                                     |    <0.001 |
+|     stack_ram_high                                                                                |    <0.001 |
+|     stack_ram_low                                                                                 |    <0.001 |
+|     t_state_lut                                                                                   |    <0.001 |
+|     upper_reg_banks                                                                               |    <0.001 |
+|     use_zero_flag_lut                                                                             |    <0.001 |
+|   program_rom                                                                                     |    <0.001 |
 +---------------------------------------------------------------------------------------------------+-----------+
 
 

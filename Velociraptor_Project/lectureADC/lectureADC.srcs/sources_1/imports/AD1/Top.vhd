@@ -29,18 +29,6 @@ entity Top is
    i_AD_D1          : in std_logic;
    o_AD_CLK         : out std_logic;
    
-   -- Connection IMU
-   
-   
-   -- Echange Serveur/FPGA
---   o_ergonomie     : out std_logic_vector ( 2 downto 0 );
---   o_vitesse       : out unsigned(5 downto 0);
---   o_calories      : out unsigned(10 downto 0);
---   o_distance      : out unsigned(8 downto 0);
---   i_poid_Kg       : in    unsigned(7 downto 0);
---   i_taille_cm      : in    unsigned(7 downto 0);
---   i_signal        : in std_logic;
-               
    -- ports Block Design
    
    DDR_addr            : inout STD_LOGIC_VECTOR ( 14 downto 0 );
@@ -229,8 +217,9 @@ constant freq_sys_MHz: integer := 125;  -- MHz
       signal s_vitesse       : unsigned(5 downto 0);
       signal s_distance      : unsigned(31 downto 0);
       signal s_calorie      : unsigned(10 downto 0);
-      signal s_deportation  : unsigned(7 downto 0);
+      signal s_deportation  : std_logic_vector(31 downto 0);
       signal s_poids          : std_logic_vector(31 downto 0);
+      signal s_tendance      : std_logic_vector(3 downto 0);
       
       signal         address : std_logic_vector(11 downto 0);
       signal     instruction : std_logic_vector(17 downto 0);
@@ -304,7 +293,7 @@ begin
              case port_id(0) is  -- we have to inputs so 1 bit in port id is enough
        
                -- Read input_port_a at port address 00 hex
-               when '0' =>    in_port(3 downto 0) <= i_btn;  --input boutons zybo
+               when '0' =>    in_port(3 downto 0) <= std_logic_vector(s_deportation(3 downto 0));  --input boutons zybo
        
                -- Read input_port_b at port address 01 hex
                --when '1' =>    in_port(3 downto 0) <= i_sw; --input switches zybo
@@ -332,6 +321,9 @@ begin
            -- Write to output_port_w at port address 01 hex
            if port_id(1) = '1' then -- port 02
              q_leds <= out_port(3 downto 0); --output leds carte zybo
+             --q_leds <= s_deportation(3 downto 0); --output leds carte zybo
+             s_tendance(3 downto 0) <= out_port(3 downto 0);
+             --s_tendance(3 downto 0) <= s_deportation(3 downto 0);
            end if;
    
            -- Write to output_port_x at port address 02 hex
@@ -449,8 +441,8 @@ begin
               i_data_distance(31 downto 0)  => std_logic_vector(s_distance),
               i_data_calorie(10 downto 0)   => std_logic_vector(s_calorie),
               i_data_calorie(31 downto 11)  => (others => '0'),
-              i_data_deportation(7 downto 0) => (std_logic_vector(s_deportation)),
-              i_data_deportation(31 downto 8) => (others =>'0'), 
+              i_data_deportation(3 downto 0) => s_tendance,
+              i_data_deportation(31 downto 4) => (others =>'0'), 
               i_data_poids                   => (others =>'0'), 
               i_sw_tri_i                    => i_sw,
               ----------------------------------------
@@ -458,9 +450,9 @@ begin
               o_data_vitesse    => open,
               o_data_distance   => open,
               o_data_calorie    => open,
-              o_data_deportation => open,
+              o_data_deportation => s_deportation,
               o_data_poids      => s_poids,
-              o_leds_tri_o      => o_leds
+              o_leds_tri_o      => open
           );
          
     --o_AD_NCS <= d_strobe_200Hz;
