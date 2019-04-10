@@ -97,7 +97,7 @@ architecture Behavioral of Demo1_Top is
     signal    kcpsm6_reset : std_logic;
     
     signal q_leds          : std_logic_vector ( 3 downto 0 ) := (others => '1');
-    signal q_Pmod_8LD      : std_logic_vector ( 7 downto 0 ) := (others => '1');
+    --signal q_Pmod_8LD      : std_logic_vector ( 7 downto 0 ) := (others => '1');
 
 begin
 
@@ -196,7 +196,7 @@ begin
             when '0' =>    in_port(3 downto 0) <= i_btn;  --input boutons zybo
     
             -- Read input_port_b at port address 01 hex
-            when '1' =>    in_port(3 downto 0) <= i_sw; --input switches zybo
+            --when '1' =>    in_port(3 downto 0) <= i_sw; --input switches zybo
     
             -- To ensure minimum logic implementation when defining a multiplexer always
             -- use don't care for any of the unused cases (although there are none in this 
@@ -267,9 +267,9 @@ begin
           end if;
   
           -- Write to output_port_x at port address 02 hex
-          if port_id(2) = '1' then  -- port 04
-            q_Pmod_8LD <= out_port; --output leds 8led
-          end if;
+          --if port_id(2) = '1' then  -- port 04
+            --q_Pmod_8LD <= out_port; --output leds 8led
+          --end if;
     
         end if;
   
@@ -277,7 +277,7 @@ begin
   
     end process output_ports;
     
-    Pmod_8LD <= q_Pmod_8LD;
+    --Pmod_8LD <= q_Pmod_8LD;
     o_leds <= q_leds;
                        
 end Behavioral;
