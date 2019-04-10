@@ -113,32 +113,44 @@ constant freq_sys_MHz: integer := 125;  -- MHz
            i_taille_cm      : in  unsigned(7 downto 0)               
        );               
    end component;
-           
---    component memory_block is
---    Port (
---        reset           : in    std_logic;
-        
---        -- data qui provient de l'ergonomie
---        i_strb_ergo     : in    std_logic;
---        i_data_ergo     : in    std_logic_vector (31 downto 0);
-        
---        -- data qui provient du capteur magnétique
---        --i_strb_mag      : in    std_logic;
---        i_data_speed    : in    unsigned (31 downto 0);
---        i_data_dist     : in    unsigned (31 downto 0);
---        i_data_cals     : in    unsigned (31 downto 0);
-        
---        -- signal du serveur
---        i_serv_sig      : in    std_logic;
-        
---        -- data out
---        o_data_ergo     : out   ERGO_MEM; 
---        o_data_speed    : out   SPEED_MEM;
---        o_data_dist     : out   DIST_MEM; 
---        o_data_cals     : out   CALS_MEM
---    );               
---    end component;
-         
+     
+  component kcpsm6
+   generic( 
+       hwbuild                     : std_logic_vector(7 downto 0) := X"00";
+       interrupt_vector            : std_logic_vector(11 downto 0) := X"3FF";
+       scratch_pad_memory_size     : integer := 64 -- other options are 128, 256
+   );
+   port ( 
+       address         : out std_logic_vector(11 downto 0);
+       instruction     : in std_logic_vector(17 downto 0);
+       bram_enable     : out std_logic;
+       in_port         : in std_logic_vector(7 downto 0);
+       out_port        : out std_logic_vector(7 downto 0);
+       port_id         : out std_logic_vector(7 downto 0);
+       write_strobe    : out std_logic;
+       k_write_strobe  : out std_logic;
+       read_strobe     : out std_logic;
+       interrupt       : in std_logic;
+       interrupt_ack   : out std_logic;
+       sleep           : in std_logic;
+       reset           : in std_logic;
+       clk             : in std_logic
+   );
+   end component;      
+    
+  component myProgram                             
+    generic(             
+                    C_FAMILY : string := "S6"; 
+           C_RAM_SIZE_KWORDS : integer := 1;
+        C_JTAG_LOADER_ENABLE : integer := 0);
+    Port (      
+           address : in std_logic_vector(11 downto 0);
+       instruction : out std_logic_vector(17 downto 0);
+            enable : in std_logic;
+               rdl : out std_logic;                    
+               clk : in std_logic);
+    end component;     
+       
   component design_1_wrapper is 
        Port (
            DDR_addr : inout STD_LOGIC_VECTOR ( 14 downto 0 );
@@ -219,10 +231,124 @@ constant freq_sys_MHz: integer := 125;  -- MHz
       signal s_calorie      : unsigned(10 downto 0);
       signal s_deportation  : unsigned(7 downto 0);
       signal s_poids          : std_logic_vector(31 downto 0);
+      
+      signal         address : std_logic_vector(11 downto 0);
+      signal     instruction : std_logic_vector(17 downto 0);
+      signal     bram_enable : std_logic;
+      signal         in_port : std_logic_vector(7 downto 0);
+      signal        out_port : std_logic_vector(7 downto 0);
+      signal         port_id : std_logic_vector(7 downto 0);
+      signal    write_strobe : std_logic;
+      signal  k_write_strobe : std_logic;
+      signal     read_strobe : std_logic;
+      signal       interrupt : std_logic;
+      signal   interrupt_ack : std_logic;
+      signal    kcpsm6_sleep : std_logic;
+      signal    kcpsm6_reset : std_logic;
+      
+      signal q_leds          : std_logic_vector ( 3 downto 0 ) := (others => '1');
+      
+      
+      
+      
+      
+      
+      
+      
 begin
     reset    <= i_btn(0);    
-        
-     mux_select_Entree_AD1 : process (i_btn(3), i_AD_D0, i_AD_D1)
+     
+     processor: kcpsm6
+        generic map (                 
+            hwbuild => X"00", 
+            interrupt_vector => X"3FF",
+            scratch_pad_memory_size => 64) -- other options are 128, 256
+        port map(      
+               address => address,
+           instruction => instruction,
+           bram_enable => bram_enable,
+               port_id => port_id,
+          write_strobe => write_strobe,
+        k_write_strobe => k_write_strobe,
+              out_port => out_port,
+           read_strobe => read_strobe,
+               in_port => in_port,
+             interrupt => interrupt,
+         interrupt_ack => interrupt_ack,
+                 sleep => kcpsm6_sleep,
+                 reset => kcpsm6_reset,
+                   clk => sys_clock
+       );
+       
+     kcpsm6_sleep <= '0';
+     interrupt <= interrupt_ack;
+     
+     program_rom: myProgram                            --Name to match your PSM file
+     generic map(             
+             C_FAMILY => "7S",                       --Family 'S6', 'V6' or '7S'
+             C_RAM_SIZE_KWORDS => 2,                 --Program size '1', '2' or '4'
+             C_JTAG_LOADER_ENABLE => 0               --Include JTAG Loader when set to '1' 
+                )      
+     port map(      
+                address => address,      
+            instruction => instruction,
+                 enable => bram_enable,
+                    rdl => kcpsm6_reset,
+                    clk => sys_clock
+               );
+               
+    input_ports: process(sys_clock)
+         begin
+           if sys_clock'event and sys_clock = '1' then
+       
+             case port_id(0) is  -- we have to inputs so 1 bit in port id is enough
+       
+               -- Read input_port_a at port address 00 hex
+               when '0' =>    in_port(3 downto 0) <= i_btn;  --input boutons zybo
+       
+               -- Read input_port_b at port address 01 hex
+               --when '1' =>    in_port(3 downto 0) <= i_sw; --input switches zybo
+       
+               -- To ensure minimum logic implementation when defining a multiplexer always
+               -- use don't care for any of the unused cases (although there are none in this 
+               -- example).    
+               when others =>    in_port(3 downto 0) <= "XXXX";  
+       
+             end case;
+             
+             in_port(7 downto 4) <= "0000";
+       
+           end if;
+       
+         end process input_ports;
+    
+    output_ports: process(sys_clock)
+     begin  
+       if sys_clock'event and sys_clock = '1' then
+   
+         -- 'write_strobe' is used to qualify all writes to general output ports.
+         if write_strobe = '1' then
+   
+           -- Write to output_port_w at port address 01 hex
+           if port_id(1) = '1' then -- port 02
+             q_leds <= out_port(3 downto 0); --output leds carte zybo
+           end if;
+   
+           -- Write to output_port_x at port address 02 hex
+           --if port_id(2) = '1' then  -- port 04
+             --q_Pmod_8LD <= out_port; --output leds 8led
+           --end if;
+     
+         end if;
+   
+       end if; 
+   
+     end process output_ports;
+     
+     --Pmod_8LD <= q_Pmod_8LD;
+     o_leds <= q_leds;
+                                           
+    mux_select_Entree_AD1 : process (i_btn(3), i_AD_D0, i_AD_D1)
      begin
           if (i_btn(3) ='0') then 
             d_AD_Dselect <= i_AD_D0;
@@ -231,7 +357,7 @@ begin
           end if;
      end process;
      
-   Controleur :  Ctrl_AD1 
+    Controleur :  Ctrl_AD1 
      port map(
         clk_AD         => clk_10MHz,         -- pour horloge externe du convertisseur (variable logique ne passant pas par bufg)
         i_DO           => d_AD_Dselect,     -- bit de données provenant du convertisseur (via um mux)
@@ -242,7 +368,7 @@ begin
         o_ncs_adc      => o_AD_NCS          -- chip select pour le convertisseur
       );
       
-   Synchronisation : Synchro_Horloges
+    Synchronisation : Synchro_Horloges
     port map (
            clkm         => sys_clock,
            o_S_10MHz     => o_AD_CLK,
@@ -274,29 +400,6 @@ begin
                 i_taille_cm      => "00000000"
     );
         
---    insta_memory : memory_block
---        Port map( 
---             reset          =>  reset,
-             
---             -- data qui provient de l'ergonomie
---             i_strb_ergo    =>  '0',
---             i_data_ergo    =>  x"00000000",
-             
---             -- data qui provient du capteur magnétique
---             --i_strb_mag     =>  '0',
---             i_data_speed   =>  s_vitesse,
---             i_data_cals    =>  s_calories,
---             i_data_dist    =>  s_distance,
-             
---             -- signal du serveur
---             i_serv_sig     =>  '0',
-             
---             -- data out
---             o_data_ergo    =>  o_ergonomie,
---             o_data_speed   =>  o_vitesse,
---             o_data_cals    =>  o_calories,
---             o_data_dist    =>  o_distance                 
---    );
     
     Design :  design_1_wrapper
           Port map (

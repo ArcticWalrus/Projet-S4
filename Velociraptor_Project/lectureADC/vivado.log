@@ -2,10 +2,10 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Apr  9 19:28:19 2019
-# Process ID: 10504
+# Start of session at: Wed Apr 10 12:05:00 2019
+# Process ID: 7576
 # Current directory: C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9252 C:\Users\raf_0\Documents\Projet_Kraken_Local\Projet-S4\Projet-S4\Velociraptor_Project\lectureADC\lectureADC.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4728 C:\Users\raf_0\Documents\Projet_Kraken_Local\Projet-S4\Projet-S4\Velociraptor_Project\lectureADC\lectureADC.xpr
 # Log file: C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/vivado.log
 # Journal file: C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC\vivado.jou
 #-----------------------------------------------------------
@@ -13,10 +13,9 @@ start_gui
 open_project C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.xpr
 INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
 Current project path is 'C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC'
-INFO: [Project 1-313] Project file moved from 'D:/DEV/Git_Kraken/Velociraptor/Projet-S4/Velociraptor_Project/lectureADC' since last save.
 Scanning sources...
 Finished scanning sources
-WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'C:/Users/raf_0/Documents/Projet_Kraken_Local/demo1701/Downloads/FichiersAtelier1/Pmod_vivado-library-2018.2-1', nor could it be found using path 'D:/DEV/Git_Kraken/demo1701/Downloads/FichiersAtelier1/Pmod_vivado-library-2018.2-1'.
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Users/raf_0/Documents/Projet_Kraken_Local/demo1701/Downloads/FichiersAtelier1/Pmod_vivado-library-2018.2-1'.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/ip_repo/myIO_IP_1.0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/ip_repo/myip_1.0'.
@@ -24,19 +23,11 @@ WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/raf_0/Doc
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/Pmod_vivado-library-2018.2-1'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-open_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:21 . Memory (MB): peak = 787.273 ; gain = 115.523
+open_project: Time (s): cpu = 00:00:37 ; elapsed = 00:00:33 . Memory (MB): peak = 777.125 ; gain = 100.156
 update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Tue Apr  9 19:32:39 2019] Launched synth_1...
-Run output will be captured here: C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/synth_1/runme.log
-[Tue Apr  9 19:32:39 2019] Launched impl_1...
-Run output will be captured here: C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/runme.log
-file copy -force C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.runs/impl_1/Top.sysdef C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
-
-launch_sdk -workspace C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
-INFO: [Vivado 12-393] Launching SDK...
-INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk -hwspec C:/Users/raf_0/Documents/Projet_Kraken_Local/Projet-S4/Projet-S4/Velociraptor_Project/lectureADC/lectureADC.sdk/Top.hdf
-INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+import_files -norecurse {C:/Users/raf_0/Desktop/Projet_Pico/kcpsm6.vhd C:/Users/raf_0/Desktop/Projet_Pico/myProgram.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue Apr  9 20:40:27 2019...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 10 12:26:51 2019...
