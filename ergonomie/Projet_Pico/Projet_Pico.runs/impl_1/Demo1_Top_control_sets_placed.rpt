@@ -1,0 +1,77 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Apr 10 01:21:00 2019
+| Host         : DESKTOP-J3PS77H running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Demo1_Top_control_sets_placed.rpt
+| Design       : Demo1_Top
+| Device       : xc7z010
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    10 |
+| Unused register locations in slices containing registers |    12 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            1 |
+|      8 |            2 |
+|     12 |            1 |
+|    16+ |            6 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             108 |           15 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              36 |            8 |
+| Yes          | No                    | No                     |               8 |            2 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              28 |            4 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+---------------------------+----------------------------+------------------+----------------+
+|     Clock Signal     |       Enable Signal       |      Set/Reset Signal      | Slice Load Count | Bel Load Count |
++----------------------+---------------------------+----------------------------+------------------+----------------+
+|  sys_clock_IBUF_BUFG | processor/flag_enable     | processor/I1               |                1 |              4 |
+|  sys_clock_IBUF_BUFG |                           | processor/active_interrupt |                2 |              8 |
+|  sys_clock_IBUF_BUFG | processor/E[0]            |                            |                2 |              8 |
+|  sys_clock_IBUF_BUFG |                           | processor/I1               |                3 |             12 |
+|  sys_clock_IBUF_BUFG |                           | program_rom/instruction[7] |                3 |             16 |
+|  sys_clock_IBUF_BUFG | processor/spm_enable      |                            |                2 |             16 |
+|  sys_clock_IBUF_BUFG | processor/t_state_0       | processor/I1               |                3 |             24 |
+|  sys_clock_IBUF_BUFG | processor/register_enable |                            |                2 |             32 |
+|  sys_clock_IBUF_BUFG | processor/t_state_0       |                            |                2 |             32 |
+|  sys_clock_IBUF_BUFG |                           |                            |               15 |            108 |
++----------------------+---------------------------+----------------------------+------------------+----------------+
+
+

@@ -1,0 +1,26 @@
+       ; myProgram.psm
+       ;
+       ; This is the start of 'myProgram' for KCPSM6
+       ;
+       ;
+       ; 4 Buttons
+       CONSTANT Buttons_port, 00
+       ;
+       ; 4 LEDs
+       CONSTANT LED_port, 02
+       ;
+       ;
+       ; Bit assignements for each LED/button
+       CONSTANT bit0, 00000001'b ;
+       CONSTANT bit1, 00000010'b ;
+       CONSTANT bit2, 00000100'b ;
+       CONSTANT bit3, 00001000'b ;
+       CONSTANT bit4, 00010000'b ;
+       CONSTANT bit5, 00100000'b ;
+       CONSTANT bit6, 01000000'b ;
+       CONSTANT bit7, 10000000'b ;
+       ;
+       ;
+start: INPUT s0, Buttons_port
+       OUTPUT s0, LED_port       ; display 4-bits switches value on Leds (ZYBO Z710)
+       JUMP start
