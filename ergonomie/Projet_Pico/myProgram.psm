@@ -24,6 +24,7 @@ init:	LOAD s4, 00 ; leftCount
 		LOAD s5, 00 ; rightCount
 		LOAD s6, 00 ; centerCount
 		LOAD s7, 00 ; noneCount
+		LOAD s1, 00 ; initial display
 		
 start: INPUT s0, Buttons_port			
        OUTPUT s1, LED_port
