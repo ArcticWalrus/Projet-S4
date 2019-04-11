@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewChild, AfterViewInit, SimpleChanges } from '@angular/core';
-import { ChartDataSets, ChartOptions } from 'chart.js';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import { Color, Label, BaseChartDirective } from 'ng2-charts'
 import * as pluginAnnotations from 'chartjs-plugin-annotation';
+import * as pluginDataLabels from 'chartjs-plugin-datalabels';
 import { DataService } from '../services/data-service.service';
 
 @Component({
@@ -11,6 +12,8 @@ import { DataService } from '../services/data-service.service';
 })
 export class DataDisplayComponent implements OnInit {
 
+  public vitesseFlag;
+  public deportationFlag;
   public lineChartData: ChartDataSets[] = [
     {data: [], label: 'Vitesse'},
   ];
@@ -69,6 +72,31 @@ export class DataDisplayComponent implements OnInit {
   public lineChartType:string = 'line';
   public lineChartPlugins = [pluginAnnotations];
 
+
+  public pieChartOptions: ChartOptions = {
+    responsive: true,
+    legend: {
+      position: 'top',
+    },
+    plugins: {
+      datalabels: {
+        formatter: (value, ctx) => {
+          const label = ctx.chart.data.labels[ctx.dataIndex];
+          return label;
+        },
+      },
+    }
+  };
+  public pieChartLabels: Label[] = [['Droite'], ['Centre'], ['Gauche']];
+  public pieChartData: number[] = [0, 0, 0];
+  public pieChartType: ChartType = 'pie';
+  public pieChartLegend = true;
+  public pieChartPlugins = [pluginDataLabels];
+  public pieChartColors = [
+    {
+      backgroundColor: ['rgba(255,0,0,0.3)', 'rgba(0,255,0,0.3)', 'rgba(0,0,255,0.3)'],
+    },
+  ];
   @ViewChild(BaseChartDirective) chart: BaseChartDirective;
 
   constructor(private dataService: DataService) { 
@@ -83,7 +111,18 @@ export class DataDisplayComponent implements OnInit {
       let donnees = await this.dataService.getData();
       this.lineChartData[0].data = donnees[0].values;
       this.lineChartLabels = donnees[0].labels;
-      this.chart.update();
+
+      let deportation = await this.dataService.getDeportation();
+      if(deportation == 0){
+        this.pieChartData[0] = this.pieChartData[0] + 1;
+      }
+      else if(deportation == 1){
+        this.pieChartData[1] = this.pieChartData[1] + 1;
+      }
+      else {
+        this.pieChartData[2] = this.pieChartData[2] + 1;
+      }
     }, 2000);
   }
+
 }

@@ -1,7 +1,7 @@
 <div class='displayContainer'>
   <div class="buttonGroup">
-    <button mat-raised-button>Vitesse</button>
-    <button mat-raised-button>Déportation</button>
+    <button mat-raised-button (click)="setVitesse()">Vitesse</button>
+    <button mat-raised-button (click)="setDeportation()">Déportation</button>
   </div>
   <div class='dataDisplayContainer'>
       <app-data-display></app-data-display>

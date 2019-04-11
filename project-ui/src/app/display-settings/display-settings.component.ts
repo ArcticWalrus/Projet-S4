@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { DataService } from '../services/data-service.service';
+import { DataDisplayComponent } from '../data-display/data-display.component';
 
 @Component({
   selector: 'app-display-settings',
@@ -8,10 +9,21 @@ import { DataService } from '../services/data-service.service';
 })
 export class DisplaySettingsComponent implements OnInit {
 
-  constructor(private dataService: DataService) { }
+  @ViewChild(DataDisplayComponent) child;
+
+  constructor() { }
 
   ngOnInit() {
-    this.dataService.getData();
+  }
+
+  setVitesse(){
+    this.child.deportationFlag = 0;
+    this.child.vitesseFlag = 1;
+  }
+
+  setDeportation(){
+    this.child.vitesseFlag = 0;
+    this.child.deportationFlag = 1;
   }
 
 }

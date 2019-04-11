@@ -19,6 +19,7 @@ export class DataService {
   ];
   public distanceData;
   public calorieData;
+  public deportationData;
 
   private counter = 0;
   getData() {
@@ -26,6 +27,7 @@ export class DataService {
       this.speedData[0].values.push(data.Vitesse);
       this.distanceData = data.Distance;
       this.calorieData = data.Calorie;
+      this.deportationData = data.Deportation;
       /* console.log(data.Vitesse);
       console.log(data.Distance);
       console.log(data.Calorie); */
@@ -48,8 +50,13 @@ export class DataService {
     return this.calorieData;
   }
 
+  getDeportation(){
+    return this.deportationData;
+  }
+
   postPoids(poids: number){
     this.http.post("http://192.168.1.10/cmd/fpgaxhr", poids, httpOptions);
   }
+
 
 }

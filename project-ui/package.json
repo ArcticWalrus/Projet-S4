@@ -24,6 +24,7 @@
     "@types/chart.js": "^2.7.48",
     "chart.js": "^2.8.0",
     "chartjs-plugin-annotation": "^0.5.7",
+    "chartjs-plugin-datalabels": "^0.6.0",
     "core-js": "^2.6.4",
     "cors": "^2.8.5",
     "install": "^0.12.2",
