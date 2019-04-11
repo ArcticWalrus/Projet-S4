@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Thu Apr 11 10:50:22 2019
+| Date         : Thu Apr 11 11:32:29 2019
 | Host         : LAB3027-GEL13 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_timing_summary -max_paths 10 -file Demo1_Top_timing_summary_routed.rpt -pb Demo1_Top_timing_summary_routed.pb -rpx Demo1_Top_timing_summary_routed.rpx -warn_on_violation
 | Design       : Demo1_Top
@@ -126,7 +126,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      0.434        0.000                      0                  437        0.060        0.000                      0                  437        2.750        0.000                       0                   132  
+      0.434        0.000                      0                  437        0.061        0.000                      0                  437        2.750        0.000                       0                   132  
 
 
 All user specified timing constraints are met.
@@ -149,7 +149,7 @@ sys_clk_pin  {0.000 4.000}        8.000           125.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-sys_clk_pin         0.434        0.000                      0                  437        0.060        0.000                      0                  437        2.750        0.000                       0                   132  
+sys_clk_pin         0.434        0.000                      0                  437        0.061        0.000                      0                  437        2.750        0.000                       0                   132  
 
 
 ------------------------------------------------------------------------------------------------
@@ -181,7 +181,7 @@ From Clock:  sys_clk_pin
   To Clock:  sys_clk_pin
 
 Setup :            0  Failing Endpoints,  Worst Slack        0.434ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.060ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.061ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        2.750ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
@@ -808,20 +808,20 @@ Slack (MET) :             0.921ns  (required time - arrival time)
   -------------------------------------------------------------------
                          slack                                  0.921    
 
-Slack (MET) :             1.027ns  (required time - arrival time)
+Slack (MET) :             1.000ns  (required time - arrival time)
   Source:                 program_rom/ram_2k_generate.akv7.kcpsm6_rom/CLKARDCLK
                             (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
-  Destination:            processor/data_path_loop[0].low_hwbuild.shift_rotate_flop/D
+  Destination:            processor/address_loop[9].pc_flop/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        6.628ns  (logic 3.106ns (46.861%)  route 3.522ns (53.139%))
-  Logic Levels:           3  (LUT5=1 LUT6=1 RAMD32=1)
-  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.954ns = ( 12.954 - 8.000 ) 
+  Data Path Delay:        6.960ns  (logic 4.293ns (61.684%)  route 2.667ns (38.316%))
+  Logic Levels:           6  (CARRY4=3 LUT5=2 LUT6=1)
+  Clock Path Skew:        -0.067ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.879ns = ( 12.879 - 8.000 ) 
     Source Clock Delay      (SCD):    5.371ns
-    Clock Pessimism Removal (CPR):    0.391ns
+    Clock Pessimism Removal (CPR):    0.425ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -840,17 +840,25 @@ Slack (MET) :             1.027ns  (required time - arrival time)
                          net (fo=131, routed)         1.702     5.371    program_rom/CLK
     RAMB36_X2Y10         RAMB36E1                                     r  program_rom/ram_2k_generate.akv7.kcpsm6_rom/CLKARDCLK
   -------------------------------------------------------------------    -------------------
-    RAMB36_X2Y10         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[8])
-                                                      2.454     7.825 r  program_rom/ram_2k_generate.akv7.kcpsm6_rom/DOADO[8]
-                         net (fo=22, routed)          1.840     9.665    processor/lower_reg_banks/ADDRB0
-    SLICE_X38Y54         RAMD32 (Prop_ramd32_RADR0_O)
-                                                      0.152     9.817 r  processor/lower_reg_banks/RAMB/O
-                         net (fo=10, routed)          0.473    10.291    processor/sx[0]
-    SLICE_X39Y53         LUT6 (Prop_lut6_I4_O)        0.348    10.639 r  processor/data_path_loop[0].lsb_shift_rotate.shift_bit_lut/O
-                         net (fo=4, routed)           0.676    11.315    processor/data_path_loop[0].lsb_shift_rotate.shift_rotate_lut/I0
-    SLICE_X39Y53         LUT5 (Prop_lut5_I0_O)        0.152    11.467 r  processor/data_path_loop[0].lsb_shift_rotate.shift_rotate_lut/LUT5/O
-                         net (fo=1, routed)           0.533    11.999    processor/shift_rotate_value_0
-    SLICE_X39Y53         FDRE                                         r  processor/data_path_loop[0].low_hwbuild.shift_rotate_flop/D
+    RAMB36_X2Y10         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[12])
+                                                      2.454     7.825 f  program_rom/ram_2k_generate.akv7.kcpsm6_rom/DOADO[12]
+                         net (fo=30, routed)          1.297     9.122    processor/move_type_lut/I0
+    SLICE_X37Y51         LUT5 (Prop_lut5_I0_O)        0.149     9.271 f  processor/move_type_lut/LUT5/O
+                         net (fo=2, routed)           0.662     9.933    processor/pc_mode1_lut/I1
+    SLICE_X36Y51         LUT5 (Prop_lut5_I1_O)        0.360    10.293 r  processor/pc_mode1_lut/LUT5/O
+                         net (fo=13, routed)          0.708    11.001    processor/pc_mode_0
+    SLICE_X35Y51         LUT6 (Prop_lut6_I3_O)        0.332    11.333 r  processor/address_loop[1].upper_pc.high_int_vector.pc_lut/O
+                         net (fo=1, routed)           0.000    11.333    processor/half_pc_1
+    SLICE_X35Y51         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    11.883 r  processor/address_loop[0].lsb_pc.pc_muxcy_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000    11.883    processor/carry_pc_3
+    SLICE_X35Y52         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.997 r  processor/address_loop[4].upper_pc.mid_pc.pc_muxcy_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000    11.997    processor/carry_pc_7
+    SLICE_X35Y53         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    12.331 r  processor/address_loop[8].upper_pc.mid_pc.pc_muxcy_CARRY4/O[1]
+                         net (fo=1, routed)           0.000    12.331    processor/pc_value_9
+    SLICE_X35Y53         FDRE                                         r  processor/address_loop[9].pc_flop/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -860,16 +868,16 @@ Slack (MET) :             1.027ns  (required time - arrival time)
     K17                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  sys_clock_IBUF_inst/O
                          net (fo=1, routed)           1.880    11.301    sys_clock_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.392 r  sys_clock_IBUF_BUFG_inst/O
-                         net (fo=131, routed)         1.562    12.954    processor/CLK
-    SLICE_X39Y53         FDRE                                         r  processor/data_path_loop[0].low_hwbuild.shift_rotate_flop/C
-                         clock pessimism              0.391    13.345    
-                         clock uncertainty           -0.035    13.309    
-    SLICE_X39Y53         FDRE (Setup_fdre_C_D)       -0.283    13.026    processor/data_path_loop[0].low_hwbuild.shift_rotate_flop
+                         net (fo=131, routed)         1.487    12.879    processor/CLK
+    SLICE_X35Y53         FDRE                                         r  processor/address_loop[9].pc_flop/C
+                         clock pessimism              0.425    13.304    
+                         clock uncertainty           -0.035    13.268    
+    SLICE_X35Y53         FDRE (Setup_fdre_C_D)        0.062    13.330    processor/address_loop[9].pc_flop
   -------------------------------------------------------------------
-                         required time                         13.026    
-                         arrival time                         -11.999    
+                         required time                         13.330    
+                         arrival time                         -12.331    
   -------------------------------------------------------------------
-                         slack                                  1.027    
+                         slack                                  1.000    
 
 
 
@@ -877,7 +885,7 @@ Slack (MET) :             1.027ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.060ns  (arrival time - required time)
+Slack (MET) :             0.061ns  (arrival time - required time)
   Source:                 processor/address_loop[4].pc_flop/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
   Destination:            processor/stack_ram_high/RAMA/I
@@ -885,7 +893,7 @@ Slack (MET) :             0.060ns  (arrival time - required time)
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.220ns  (logic 0.141ns (64.051%)  route 0.079ns (35.949%))
+  Data Path Delay:        0.221ns  (logic 0.141ns (63.734%)  route 0.080ns (36.266%))
   Logic Levels:           0  
   Clock Path Skew:        0.013ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    1.989ns
@@ -905,7 +913,7 @@ Slack (MET) :             0.060ns  (arrival time - required time)
     SLICE_X35Y52         FDRE                                         r  processor/address_loop[4].pc_flop/C
   -------------------------------------------------------------------    -------------------
     SLICE_X35Y52         FDRE (Prop_fdre_C_Q)         0.141     1.613 r  processor/address_loop[4].pc_flop/Q
-                         net (fo=3, routed)           0.079     1.692    processor/stack_ram_high/DIA0
+                         net (fo=3, routed)           0.080     1.694    processor/stack_ram_high/DIA0
     SLICE_X34Y52         RAMD32                                       r  processor/stack_ram_high/RAMA/I
   -------------------------------------------------------------------    -------------------
 
@@ -923,9 +931,9 @@ Slack (MET) :             0.060ns  (arrival time - required time)
                                                       0.147     1.632    processor/stack_ram_high/RAMA
   -------------------------------------------------------------------
                          required time                         -1.632    
-                         arrival time                           1.692    
+                         arrival time                           1.694    
   -------------------------------------------------------------------
-                         slack                                  0.060    
+                         slack                                  0.061    
 
 Slack (MET) :             0.074ns  (arrival time - required time)
   Source:                 processor/sx_addr4_flop/C

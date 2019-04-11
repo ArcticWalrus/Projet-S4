@@ -12,9 +12,7 @@ entity Demo1_Top is
 Port ( 
     sys_clock   : in std_logic;
     o_leds      : out std_logic_vector ( 3 downto 0 );
-    i_sw        : in std_logic_vector ( 3 downto 0 );
-    i_btn       : in std_logic_vector ( 3 downto 0 );   
-    Pmod_8LD    : out std_logic_vector ( 7 downto 0 )  -- port JD
+    i_btn       : in std_logic_vector ( 3 downto 0 )
   );
 end Demo1_Top;
 
