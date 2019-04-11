@@ -2,12 +2,12 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Apr 10 03:33:32 2019
-# Process ID: 40872
-# Current directory: C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.runs/synth_1
+# Start of session at: Thu Apr 11 10:48:43 2019
+# Process ID: 9096
+# Current directory: C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.runs/synth_1
 # Command line: vivado.exe -log Demo1_Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Demo1_Top.tcl
-# Log file: C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.runs/synth_1/Demo1_Top.vds
-# Journal file: C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.runs/synth_1\vivado.jou
+# Log file: C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.runs/synth_1/Demo1_Top.vds
+# Journal file: C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Demo1_Top.tcl -notrace
 Command: synth_design -top Demo1_Top -part xc7z010clg400-1
@@ -15,228 +15,228 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 28500 
+INFO: Helper process launched with PID 2100 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 356.535 ; gain = 99.348
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 351.699 ; gain = 97.508
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Demo1_Top' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_Top.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'Demo1_Top' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_Top.vhd:21]
 	Parameter hwbuild bound to: 8'b00000000 
 	Parameter interrupt_vector bound to: 12'b001111111111 
 	Parameter scratch_pad_memory_size bound to: 64 - type: integer 
-INFO: [Synth 8-3491] module 'kcpsm6' declared at 'C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:87' bound to instance 'processor' of component 'kcpsm6' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_Top.vhd:111]
-INFO: [Synth 8-638] synthesizing module 'kcpsm6' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:111]
+INFO: [Synth 8-3491] module 'kcpsm6' declared at 'C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:87' bound to instance 'processor' of component 'kcpsm6' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_Top.vhd:111]
+INFO: [Synth 8-638] synthesizing module 'kcpsm6' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:111]
 	Parameter hwbuild bound to: 8'b00000000 
 	Parameter interrupt_vector bound to: 12'b001111111111 
 	Parameter scratch_pad_memory_size bound to: 64 - type: integer 
 	Parameter INIT bound to: 64'b1111111111111111111101010101010100000000000000000000111011101110 
-INFO: [Synth 8-113] binding component instance 'reset_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:685]
+INFO: [Synth 8-113] binding component instance 'reset_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:685]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'run_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:696]
+INFO: [Synth 8-113] binding component instance 'run_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:696]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'internal_reset_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:701]
+INFO: [Synth 8-113] binding component instance 'internal_reset_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:701]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'sync_sleep_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:706]
+INFO: [Synth 8-113] binding component instance 'sync_sleep_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:706]
 	Parameter INIT bound to: 64'b0000000010000011000000000000101100000000110001000000000001001100 
-INFO: [Synth 8-113] binding component instance 't_state_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:711]
+INFO: [Synth 8-113] binding component instance 't_state_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:711]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 't_state1_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:722]
+INFO: [Synth 8-113] binding component instance 't_state1_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:722]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 't_state2_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:727]
+INFO: [Synth 8-113] binding component instance 't_state2_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:727]
 	Parameter INIT bound to: 64'b0000000000010000000000000000000000000000000000000000100000000000 
-INFO: [Synth 8-113] binding component instance 'int_enable_type_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:733]
+INFO: [Synth 8-113] binding component instance 'int_enable_type_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:733]
 	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000001100101010101010 
-INFO: [Synth 8-113] binding component instance 'interrupt_enable_lut' to cell 'LUT6' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:744]
+INFO: [Synth 8-113] binding component instance 'interrupt_enable_lut' to cell 'LUT6' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:744]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'interrupt_enable_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:754]
+INFO: [Synth 8-113] binding component instance 'interrupt_enable_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:754]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'sync_interrupt_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:759]
+INFO: [Synth 8-113] binding component instance 'sync_interrupt_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:759]
 	Parameter INIT bound to: 64'b1100110000110011111111110000000010000000100000001000000010000000 
-INFO: [Synth 8-113] binding component instance 'active_interrupt_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:764]
+INFO: [Synth 8-113] binding component instance 'active_interrupt_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:764]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'active_interrupt_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:775]
+INFO: [Synth 8-113] binding component instance 'active_interrupt_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:775]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'interrupt_ack_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:780]
+INFO: [Synth 8-113] binding component instance 'interrupt_ack_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:780]
 	Parameter INIT bound to: 64'b0101101000111100111111111111111100000000000000000000000000000000 
-INFO: [Synth 8-113] binding component instance 'pc_move_is_valid_lut' to cell 'LUT6' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:804]
+INFO: [Synth 8-113] binding component instance 'pc_move_is_valid_lut' to cell 'LUT6' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:804]
 	Parameter INIT bound to: 64'b0111011101110111000000100111011100000000000000000000001000000000 
-INFO: [Synth 8-113] binding component instance 'move_type_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:814]
+INFO: [Synth 8-113] binding component instance 'move_type_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:814]
 	Parameter INIT bound to: 64'b0000000000000000111100000000000000000000000000000010001111111111 
-INFO: [Synth 8-113] binding component instance 'pc_mode1_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:825]
+INFO: [Synth 8-113] binding component instance 'pc_mode1_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:825]
 	Parameter INIT bound to: 64'b1111111111111111111111111111111100000000000001000000000000000000 
-INFO: [Synth 8-113] binding component instance 'pc_mode2_lut' to cell 'LUT6' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:836]
+INFO: [Synth 8-113] binding component instance 'pc_mode2_lut' to cell 'LUT6' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:836]
 	Parameter INIT bound to: 64'b1111111111111111000100000000000000000000000000000010000000000000 
-INFO: [Synth 8-113] binding component instance 'push_pop_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:846]
+INFO: [Synth 8-113] binding component instance 'push_pop_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:846]
 	Parameter INIT bound to: 64'b0000001111001010000000000000000000000100001000000000000000000000 
-INFO: [Synth 8-113] binding component instance 'alu_decode0_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:861]
+INFO: [Synth 8-113] binding component instance 'alu_decode0_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:861]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'alu_mux_sel0_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:872]
+INFO: [Synth 8-113] binding component instance 'alu_mux_sel0_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:872]
 	Parameter INIT bound to: 64'b0111011100001000000000000000000000000000000000000000111100000000 
-INFO: [Synth 8-113] binding component instance 'alu_decode1_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:877]
+INFO: [Synth 8-113] binding component instance 'alu_decode1_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:877]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'alu_mux_sel1_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:888]
+INFO: [Synth 8-113] binding component instance 'alu_mux_sel1_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:888]
 	Parameter INIT bound to: 64'b1101000000000000000000000000000000000010000000000000000000000000 
-INFO: [Synth 8-113] binding component instance 'alu_decode2_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:894]
+INFO: [Synth 8-113] binding component instance 'alu_decode2_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:894]
 	Parameter INIT bound to: 64'b0000000000000001001111110011111100000000000100001111011111001110 
-INFO: [Synth 8-113] binding component instance 'register_enable_type_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:909]
+INFO: [Synth 8-113] binding component instance 'register_enable_type_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:909]
 	Parameter INIT bound to: 64'b1100000011001100000000000000000010100000101010100000000000000000 
-INFO: [Synth 8-113] binding component instance 'register_enable_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:920]
+INFO: [Synth 8-113] binding component instance 'register_enable_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:920]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'flag_enable_flop' to cell 'FDR' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:931]
+INFO: [Synth 8-113] binding component instance 'flag_enable_flop' to cell 'FDR' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:931]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'register_enable_flop' to cell 'FDR' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:937]
+INFO: [Synth 8-113] binding component instance 'register_enable_flop' to cell 'FDR' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:937]
 	Parameter INIT bound to: 64'b1000000000000000000000000000000000100000000000000000000000000000 
-INFO: [Synth 8-113] binding component instance 'spm_enable_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:943]
+INFO: [Synth 8-113] binding component instance 'spm_enable_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:943]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'k_write_strobe_flop' to cell 'FDR' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:954]
+INFO: [Synth 8-113] binding component instance 'k_write_strobe_flop' to cell 'FDR' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:954]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'spm_enable_flop' to cell 'FDR' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:960]
+INFO: [Synth 8-113] binding component instance 'spm_enable_flop' to cell 'FDR' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:960]
 	Parameter INIT bound to: 64'b0100000000000000000000000000000000000001000000000000000000000000 
-INFO: [Synth 8-113] binding component instance 'read_strobe_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:966]
+INFO: [Synth 8-113] binding component instance 'read_strobe_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:966]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'write_strobe_flop' to cell 'FDR' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:977]
+INFO: [Synth 8-113] binding component instance 'write_strobe_flop' to cell 'FDR' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:977]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'read_strobe_flop' to cell 'FDR' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:983]
+INFO: [Synth 8-113] binding component instance 'read_strobe_flop' to cell 'FDR' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:983]
 	Parameter INIT bound to: 64'b0000000010000000000000100000000000000000000000000000000000000000 
-INFO: [Synth 8-113] binding component instance 'regbank_type_lut' to cell 'LUT6' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1001]
+INFO: [Synth 8-113] binding component instance 'regbank_type_lut' to cell 'LUT6' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1001]
 	Parameter INIT bound to: 64'b1010110010101100111111110000000011111111000000001111111100000000 
-INFO: [Synth 8-113] binding component instance 'bank_lut' to cell 'LUT6' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1011]
+INFO: [Synth 8-113] binding component instance 'bank_lut' to cell 'LUT6' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1011]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'bank_flop' to cell 'FDR' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1021]
+INFO: [Synth 8-113] binding component instance 'bank_flop' to cell 'FDR' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1021]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'sx_addr4_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1027]
-INFO: [Synth 8-113] binding component instance 'arith_carry_xorcy' to cell 'XORCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1051]
+INFO: [Synth 8-113] binding component instance 'sx_addr4_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1027]
+INFO: [Synth 8-113] binding component instance 'arith_carry_xorcy' to cell 'XORCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1051]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'arith_carry_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1056]
+INFO: [Synth 8-113] binding component instance 'arith_carry_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1056]
 	Parameter INIT bound to: 64'b0000000000000000000000000000000010000111011110000000000000000000 
-INFO: [Synth 8-113] binding component instance 'lower_parity_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1061]
-INFO: [Synth 8-113] binding component instance 'parity_muxcy' to cell 'MUXCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1072]
+INFO: [Synth 8-113] binding component instance 'lower_parity_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1061]
+INFO: [Synth 8-113] binding component instance 'parity_muxcy' to cell 'MUXCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1072]
 	Parameter INIT bound to: 64'b0110100110010110100101100110100110010110011010010110100110010110 
-INFO: [Synth 8-113] binding component instance 'upper_parity_lut' to cell 'LUT6' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1078]
-INFO: [Synth 8-113] binding component instance 'parity_xorcy' to cell 'XORCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1088]
+INFO: [Synth 8-113] binding component instance 'upper_parity_lut' to cell 'LUT6' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1078]
+INFO: [Synth 8-113] binding component instance 'parity_xorcy' to cell 'XORCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1088]
 	Parameter INIT bound to: 64'b1111111111111111101010101100110011110000111100001111000011110000 
-INFO: [Synth 8-113] binding component instance 'shift_carry_lut' to cell 'LUT6' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1093]
+INFO: [Synth 8-113] binding component instance 'shift_carry_lut' to cell 'LUT6' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1093]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'shift_carry_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1103]
+INFO: [Synth 8-113] binding component instance 'shift_carry_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1103]
 	Parameter INIT bound to: 64'b0011001100110011101010101100110011110000101010100000000000000000 
-INFO: [Synth 8-113] binding component instance 'carry_flag_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1108]
+INFO: [Synth 8-113] binding component instance 'carry_flag_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1108]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'carry_flag_flop' to cell 'FDRE' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1119]
-INFO: [Synth 8-113] binding component instance 'init_zero_muxcy' to cell 'MUXCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1126]
+INFO: [Synth 8-113] binding component instance 'carry_flag_flop' to cell 'FDRE' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1119]
+INFO: [Synth 8-113] binding component instance 'init_zero_muxcy' to cell 'MUXCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1126]
 	Parameter INIT bound to: 64'b1010001010000000000000000000000000000000111100000000000011110000 
-INFO: [Synth 8-113] binding component instance 'use_zero_flag_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1132]
+INFO: [Synth 8-113] binding component instance 'use_zero_flag_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1132]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'use_zero_flag_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1143]
+INFO: [Synth 8-113] binding component instance 'use_zero_flag_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1143]
 	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000000000000000001 
-INFO: [Synth 8-113] binding component instance 'lower_zero_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1148]
-INFO: [Synth 8-113] binding component instance 'lower_zero_muxcy' to cell 'MUXCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1159]
+INFO: [Synth 8-113] binding component instance 'lower_zero_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1148]
+INFO: [Synth 8-113] binding component instance 'lower_zero_muxcy' to cell 'MUXCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1159]
 	Parameter INIT bound to: 64'b0000000000000000000000000000110100000000000000000000000000000000 
-INFO: [Synth 8-113] binding component instance 'middle_zero_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1165]
-INFO: [Synth 8-113] binding component instance 'middle_zero_muxcy' to cell 'MUXCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1176]
+INFO: [Synth 8-113] binding component instance 'middle_zero_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'middle_zero_muxcy' to cell 'MUXCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1176]
 	Parameter INIT bound to: 64'b1111101111111111000000000000000000000000000000000000000000000000 
-INFO: [Synth 8-113] binding component instance 'upper_zero_lut' to cell 'LUT6' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1182]
-INFO: [Synth 8-113] binding component instance 'upper_zero_muxcy' to cell 'MUXCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1192]
+INFO: [Synth 8-113] binding component instance 'upper_zero_lut' to cell 'LUT6' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1182]
+INFO: [Synth 8-113] binding component instance 'upper_zero_muxcy' to cell 'MUXCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1192]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'zero_flag_flop' to cell 'FDRE' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1198]
+INFO: [Synth 8-113] binding component instance 'zero_flag_flop' to cell 'FDRE' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1198]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'return_vector_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1249]
+INFO: [Synth 8-113] binding component instance 'return_vector_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1249]
 	Parameter INIT bound to: 64'b1111111100000000111100001111000011001100110011001010101010101010 
-INFO: [Synth 8-113] binding component instance 'pc_vector_mux_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1264]
+INFO: [Synth 8-113] binding component instance 'pc_vector_mux_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1264]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'pc_flop' to cell 'FDRE' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1309]
+INFO: [Synth 8-113] binding component instance 'pc_flop' to cell 'FDRE' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1309]
 	Parameter INIT bound to: 64'b0000000010101010000000001111111100110011110011000000111100000000 
-INFO: [Synth 8-113] binding component instance 'pc_lut' to cell 'LUT6' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1350]
-INFO: [Synth 8-113] binding component instance 'pc_xorcy' to cell 'XORCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1366]
-INFO: [Synth 8-113] binding component instance 'pc_muxcy' to cell 'MUXCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1371]
+INFO: [Synth 8-113] binding component instance 'pc_lut' to cell 'LUT6' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1350]
+INFO: [Synth 8-113] binding component instance 'pc_xorcy' to cell 'XORCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1366]
+INFO: [Synth 8-113] binding component instance 'pc_muxcy' to cell 'MUXCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1371]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'return_vector_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1249]
+INFO: [Synth 8-113] binding component instance 'return_vector_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1249]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'pc_flop' to cell 'FDRE' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1309]
+INFO: [Synth 8-113] binding component instance 'pc_flop' to cell 'FDRE' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1309]
 	Parameter INIT bound to: 64'b0000000010101010000000001111111111001100110011001111000000000000 
-INFO: [Synth 8-113] binding component instance 'pc_lut' to cell 'LUT6' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1411]
-INFO: [Synth 8-113] binding component instance 'pc_xorcy' to cell 'XORCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1426]
-INFO: [Synth 8-113] binding component instance 'pc_muxcy' to cell 'MUXCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1440]
+INFO: [Synth 8-113] binding component instance 'pc_lut' to cell 'LUT6' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1411]
+INFO: [Synth 8-113] binding component instance 'pc_xorcy' to cell 'XORCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1426]
+INFO: [Synth 8-113] binding component instance 'pc_muxcy' to cell 'MUXCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1440]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'return_vector_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1249]
+INFO: [Synth 8-113] binding component instance 'return_vector_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1249]
 	Parameter INIT bound to: 64'b1111111100000000111100001111000011001100110011001010101010101010 
-INFO: [Synth 8-113] binding component instance 'pc_vector_mux_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1264]
+INFO: [Synth 8-113] binding component instance 'pc_vector_mux_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1264]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'pc_flop' to cell 'FDRE' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1309]
+INFO: [Synth 8-113] binding component instance 'pc_flop' to cell 'FDRE' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1309]
 	Parameter INIT bound to: 64'b0000000010101010000000001111111111001100110011001111000000000000 
-INFO: [Synth 8-113] binding component instance 'pc_lut' to cell 'LUT6' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1411]
-INFO: [Synth 8-113] binding component instance 'pc_xorcy' to cell 'XORCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1426]
-INFO: [Synth 8-113] binding component instance 'pc_muxcy' to cell 'MUXCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1440]
+INFO: [Synth 8-113] binding component instance 'pc_lut' to cell 'LUT6' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1411]
+INFO: [Synth 8-113] binding component instance 'pc_xorcy' to cell 'XORCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1426]
+INFO: [Synth 8-113] binding component instance 'pc_muxcy' to cell 'MUXCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1440]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'return_vector_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1249]
+INFO: [Synth 8-113] binding component instance 'return_vector_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1249]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'pc_flop' to cell 'FDRE' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1309]
+INFO: [Synth 8-113] binding component instance 'pc_flop' to cell 'FDRE' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1309]
 	Parameter INIT bound to: 64'b0000000010101010000000001111111111001100110011001111000000000000 
-INFO: [Synth 8-113] binding component instance 'pc_lut' to cell 'LUT6' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1411]
-INFO: [Synth 8-113] binding component instance 'pc_xorcy' to cell 'XORCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1426]
-INFO: [Synth 8-113] binding component instance 'pc_muxcy' to cell 'MUXCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1440]
+INFO: [Synth 8-113] binding component instance 'pc_lut' to cell 'LUT6' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1411]
+INFO: [Synth 8-113] binding component instance 'pc_xorcy' to cell 'XORCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1426]
+INFO: [Synth 8-113] binding component instance 'pc_muxcy' to cell 'MUXCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1440]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'return_vector_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1249]
+INFO: [Synth 8-113] binding component instance 'return_vector_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1249]
 	Parameter INIT bound to: 64'b1111111100000000111100001111000011001100110011001010101010101010 
-INFO: [Synth 8-113] binding component instance 'pc_vector_mux_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1264]
+INFO: [Synth 8-113] binding component instance 'pc_vector_mux_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1264]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'pc_flop' to cell 'FDRE' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1309]
+INFO: [Synth 8-113] binding component instance 'pc_flop' to cell 'FDRE' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1309]
 	Parameter INIT bound to: 64'b0000000010101010000000001111111111001100110011001111000000000000 
-INFO: [Synth 8-113] binding component instance 'pc_lut' to cell 'LUT6' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1411]
-INFO: [Synth 8-113] binding component instance 'pc_xorcy' to cell 'XORCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1426]
-INFO: [Synth 8-113] binding component instance 'pc_muxcy' to cell 'MUXCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1440]
+INFO: [Synth 8-113] binding component instance 'pc_lut' to cell 'LUT6' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1411]
+INFO: [Synth 8-113] binding component instance 'pc_xorcy' to cell 'XORCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1426]
+INFO: [Synth 8-113] binding component instance 'pc_muxcy' to cell 'MUXCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1440]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'return_vector_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1249]
+INFO: [Synth 8-113] binding component instance 'return_vector_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1249]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'pc_flop' to cell 'FDRE' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1309]
+INFO: [Synth 8-113] binding component instance 'pc_flop' to cell 'FDRE' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1309]
 	Parameter INIT bound to: 64'b0000000010101010000000001111111111001100110011001111000000000000 
-INFO: [Synth 8-113] binding component instance 'pc_lut' to cell 'LUT6' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1411]
-INFO: [Synth 8-113] binding component instance 'pc_xorcy' to cell 'XORCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1426]
-INFO: [Synth 8-113] binding component instance 'pc_muxcy' to cell 'MUXCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1440]
+INFO: [Synth 8-113] binding component instance 'pc_lut' to cell 'LUT6' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1411]
+INFO: [Synth 8-113] binding component instance 'pc_xorcy' to cell 'XORCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1426]
+INFO: [Synth 8-113] binding component instance 'pc_muxcy' to cell 'MUXCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1440]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'return_vector_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1249]
+INFO: [Synth 8-113] binding component instance 'return_vector_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1249]
 	Parameter INIT bound to: 64'b1111111100000000111100001111000011001100110011001010101010101010 
-INFO: [Synth 8-113] binding component instance 'pc_vector_mux_lut' to cell 'LUT6_2' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1264]
+INFO: [Synth 8-113] binding component instance 'pc_vector_mux_lut' to cell 'LUT6_2' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1264]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'pc_flop' to cell 'FDRE' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1309]
+INFO: [Synth 8-113] binding component instance 'pc_flop' to cell 'FDRE' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1309]
 	Parameter INIT bound to: 64'b0000000010101010000000001111111111001100110011001111000000000000 
-INFO: [Synth 8-113] binding component instance 'pc_lut' to cell 'LUT6' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1411]
-INFO: [Synth 8-113] binding component instance 'pc_xorcy' to cell 'XORCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1426]
-INFO: [Synth 8-113] binding component instance 'pc_muxcy' to cell 'MUXCY' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1440]
+INFO: [Synth 8-113] binding component instance 'pc_lut' to cell 'LUT6' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1411]
+INFO: [Synth 8-113] binding component instance 'pc_xorcy' to cell 'XORCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1426]
+INFO: [Synth 8-113] binding component instance 'pc_muxcy' to cell 'MUXCY' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1440]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'return_vector_flop' to cell 'FD' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1249]
+INFO: [Synth 8-113] binding component instance 'return_vector_flop' to cell 'FD' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1249]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'pc_flop' to cell 'FDRE' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1309]
+INFO: [Synth 8-113] binding component instance 'pc_flop' to cell 'FDRE' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1309]
 	Parameter INIT bound to: 64'b0000000010101010000000001111111111001100110011001111000000000000 
-INFO: [Synth 8-113] binding component instance 'pc_lut' to cell 'LUT6' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1411]
+INFO: [Synth 8-113] binding component instance 'pc_lut' to cell 'LUT6' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:1411]
 INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 64'b1111111100000000111100001111000011001100110011001010101010101010 
@@ -362,12 +362,12 @@ INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instanc
 	Parameter INIT_C bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_D bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
 	Parameter IS_WCLK_INVERTED bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'kcpsm6' (1#1) [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:111]
+INFO: [Synth 8-256] done synthesizing module 'kcpsm6' (1#1) [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd:111]
 	Parameter C_FAMILY bound to: 7S - type: string 
 	Parameter C_RAM_SIZE_KWORDS bound to: 2 - type: integer 
 	Parameter C_JTAG_LOADER_ENABLE bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'myProgram' declared at 'C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/myProgram.vhd:132' bound to instance 'program_rom' of component 'myProgram' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_Top.vhd:160]
-INFO: [Synth 8-638] synthesizing module 'myProgram' [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/myProgram.vhd:143]
+INFO: [Synth 8-3491] module 'myProgram' declared at 'C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/myProgram.vhd:132' bound to instance 'program_rom' of component 'myProgram' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_Top.vhd:160]
+INFO: [Synth 8-638] synthesizing module 'myProgram' [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/myProgram.vhd:143]
 	Parameter C_FAMILY bound to: 7S - type: string 
 	Parameter C_RAM_SIZE_KWORDS bound to: 2 - type: integer 
 	Parameter C_JTAG_LOADER_ENABLE bound to: 0 - type: integer 
@@ -375,7 +375,7 @@ INFO: [Synth 8-638] synthesizing module 'myProgram' [C:/Users/ArcticWalrus/Docum
 	Parameter DOB_REG bound to: 0 - type: integer 
 	Parameter EN_ECC_READ bound to: 0 - type: bool 
 	Parameter EN_ECC_WRITE bound to: 0 - type: bool 
-	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101101101101110110001000100010011001100110011011011101110110100000000000 
+	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010110110110111011000100010001001100110011001101101110111011010000000000000 
 	Parameter INITP_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_02 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -391,9 +391,9 @@ INFO: [Synth 8-638] synthesizing module 'myProgram' [C:/Users/ArcticWalrus/Docum
 	Parameter INITP_0D bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_0E bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_0F bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_00 bound to: 256'b0010000000011100000101010000000100100000000101000010000000010010110100000000001100100000000011101101000000000010001000000001000011010000000000010010000000000111110100010000001010010000000000000001011100000000000101100000000000010101000000000001010000000000 
-	Parameter INIT_01 bound to: 256'b1010000000011010110001000110000010100000001000011100010001010000001000000000010000010001000000100010000000000100000100010000010000100000000001000001000100000001001000000001110000010100000000010010000000011100000101000000000100100000000111000001010000000001 
-	Parameter INIT_02 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000010110101000000001101011000101011000000010000000011000 
+	Parameter INIT_00 bound to: 256'b0001010100000001001000000001010100100000000100111101000000000010001000000000111111010000000001000010000000010001110100000000000100100000000010001101000100000010100100000000000000010001000000000001011100000000000101100000000000010101000000000001010000000000 
+	Parameter INIT_01 bound to: 256'b1100010001100000101000000010001011000100010100000010000000000101000100010000001000100000000001010001000100000100001000000000010100010001000000010010000000011101000101110000000100100000000111010001011000000001001000000001110100010100000000010010000000011101 
+	Parameter INIT_02 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000101111010000000011011110001010110000000100000000110011010000000011011 
 	Parameter INIT_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_04 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_05 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -546,9 +546,9 @@ INFO: [Synth 8-638] synthesizing module 'myProgram' [C:/Users/ArcticWalrus/Docum
 	Parameter WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter WRITE_WIDTH_A bound to: 18 - type: integer 
 	Parameter WRITE_WIDTH_B bound to: 18 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'myProgram' (2#1) [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/myProgram.vhd:143]
-WARNING: [Synth 8-3848] Net Pmod_8LD in module/entity Demo1_Top does not have driver. [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_Top.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'Demo1_Top' (3#1) [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_Top.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'myProgram' (2#1) [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/myProgram.vhd:143]
+WARNING: [Synth 8-3848] Net Pmod_8LD in module/entity Demo1_Top does not have driver. [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_Top.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'Demo1_Top' (3#1) [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_Top.vhd:21]
 WARNING: [Synth 8-3331] design Demo1_Top has unconnected port Pmod_8LD[7]
 WARNING: [Synth 8-3331] design Demo1_Top has unconnected port Pmod_8LD[6]
 WARNING: [Synth 8-3331] design Demo1_Top has unconnected port Pmod_8LD[5]
@@ -562,7 +562,7 @@ WARNING: [Synth 8-3331] design Demo1_Top has unconnected port i_sw[2]
 WARNING: [Synth 8-3331] design Demo1_Top has unconnected port i_sw[1]
 WARNING: [Synth 8-3331] design Demo1_Top has unconnected port i_sw[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 414.602 ; gain = 157.414
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 405.602 ; gain = 151.410
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -575,10 +575,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 414.602 ; gain = 157.414
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 405.602 ; gain = 151.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 414.602 ; gain = 157.414
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 405.602 ; gain = 151.410
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 181 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -587,9 +587,9 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_constraints.xdc]
-Finished Parsing XDC File [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Demo1_Top_propImpl.xdc].
+Parsing XDC File [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_constraints.xdc]
+Finished Parsing XDC File [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Demo1_Top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Demo1_Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
@@ -601,25 +601,25 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 4 instances
   RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 707.035 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 691.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 707.035 ; gain = 449.848
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 691.445 ; gain = 437.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 707.035 ; gain = 449.848
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 691.445 ; gain = 437.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 707.035 ; gain = 449.848
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 691.445 ; gain = 437.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 707.035 ; gain = 449.848
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 691.445 ; gain = 437.254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -677,7 +677,7 @@ WARNING: [Synth 8-3332] Sequential element (processor/sync_sleep_flop) is unused
 WARNING: [Synth 8-3332] Sequential element (processor/k_write_strobe_flop) is unused and will be removed from module Demo1_Top.
 WARNING: [Synth 8-3332] Sequential element (processor/read_strobe_flop) is unused and will be removed from module Demo1_Top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 707.035 ; gain = 449.848
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 691.445 ; gain = 437.254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -689,13 +689,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:44 . Memory (MB): peak = 736.461 ; gain = 479.273
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 735.574 ; gain = 481.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:44 . Memory (MB): peak = 736.758 ; gain = 479.570
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 735.855 ; gain = 481.664
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -707,7 +707,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:44 . Memory (MB): peak = 736.938 ; gain = 479.750
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 736.234 ; gain = 482.043
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -731,7 +731,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 738.211 ; gain = 481.023
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 737.715 ; gain = 483.523
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -744,7 +744,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 738.211 ; gain = 481.023
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 737.715 ; gain = 483.523
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -756,25 +756,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 738.211 ; gain = 481.023
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 737.715 ; gain = 483.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 738.211 ; gain = 481.023
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 737.715 ; gain = 483.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 738.211 ; gain = 481.023
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 737.715 ; gain = 483.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 738.211 ; gain = 481.023
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 737.715 ; gain = 483.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -816,11 +816,11 @@ Report Instance Areas:
 |3     |  program_rom |myProgram |     1|
 +------+--------------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 738.211 ; gain = 481.023
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 737.715 ; gain = 483.523
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 738.223 ; gain = 188.602
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 738.223 ; gain = 481.035
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 737.715 ; gain = 197.680
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 737.719 ; gain = 483.523
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 181 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -838,9 +838,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 124 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:52 . Memory (MB): peak = 758.977 ; gain = 514.422
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 756.660 ; gain = 514.559
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.runs/synth_1/Demo1_Top.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.runs/synth_1/Demo1_Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Demo1_Top_utilization_synth.rpt -pb Demo1_Top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.192 . Memory (MB): peak = 759.402 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 10 03:34:46 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 756.969 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 11 10:49:17 2019...

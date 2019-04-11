@@ -15,18 +15,18 @@
        CONSTANT showNone, 00000000'b  ;
 	   ;
 	   CONSTANT left, 00000001'b ;
-	   CONSTANT right, 00000010'b ;
-	   CONSTANT center, 00000011'b ;
+	   CONSTANT right, 00000100'b ;
+	   CONSTANT center, 00000010'b ;
 	   CONSTANT none, 00000000'b ;
        ;
        ;
 init:	LOAD s4, 00 ; leftCount
-		LOAD s5, 00 ; rightCount
-		LOAD s6, 00 ; centerCount
-		LOAD s7, 00 ; noneCount
-		LOAD s1, 00 ; initial display
+		LOAD s5, 00  ; rightCount
+		LOAD s6, 00  ; centerCount
+		LOAD s7, 00  ; noneCount
+		LOAD s1, 00000000'b  ; initial display
 		
-start: INPUT s0, Buttons_port			
+start: INPUT s0, Buttons_port	
        OUTPUT s1, LED_port
        JUMP getValue
 	   
@@ -49,10 +49,10 @@ addRight: ADD s5, 1'd ; add one to right count
 addLeft:  ADD s4, 1'd ; add one to left count
 		  JUMP evaluate
 		  
-addCenter: ADD s4, 1'd ; add one to center count
+addCenter: ADD s6, 1'd ; add one to center count
 		   JUMP evaluate
 
-addNone:  ADD s4, 1'd ; add one to none count
+addNone:  ADD s7, 1'd ; add one to none count
 		  JUMP evaluate
 
 displayRight: LOAD s1, showRight

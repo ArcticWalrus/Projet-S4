@@ -23,17 +23,17 @@ create_project -in_memory -part xc7z010clg400-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.cache/wt [current_project]
-set_property parent.project_path C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.cache/wt [current_project]
+set_property parent.project_path C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
-set_property ip_output_repo c:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.cache/ip [current_project]
+set_property ip_output_repo c:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd
-  C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/myProgram.vhd
-  C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_Top.vhd
+  C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/kcpsm6.vhd
+  C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/myProgram.vhd
+  C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_Top.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -43,8 +43,8 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_constraints.xdc
-set_property used_in_implementation false [get_files C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_constraints.xdc]
+read_xdc C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_constraints.xdc
+set_property used_in_implementation false [get_files C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_constraints.xdc]
 
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]

@@ -70,12 +70,12 @@ set rc [catch {
   set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.cache/wt [current_project]
-  set_property parent.project_path C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.xpr [current_project]
-  set_property ip_output_repo C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.cache/wt [current_project]
+  set_property parent.project_path C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.xpr [current_project]
+  set_property ip_output_repo C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.runs/synth_1/Demo1_Top.dcp
-  read_xdc C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_constraints.xdc
+  add_files -quiet C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.runs/synth_1/Demo1_Top.dcp
+  read_xdc C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Demo1_constraints.xdc
   link_design -top Demo1_Top -part xc7z010clg400-1
   close_msg_db -file init_design.pb
 } RESULT]

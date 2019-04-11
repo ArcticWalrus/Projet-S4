@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/ArcticWalrus/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.runs/impl_1'
+HD_PWD='C:/Users/stjm2505/Documents/GitHub/Projet-S4/ergonomie/Projet_Pico/Projet_Pico.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
