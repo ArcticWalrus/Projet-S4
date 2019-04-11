@@ -82,7 +82,6 @@ export class DataDisplayComponent implements OnInit {
       ];
       let donnees = await this.dataService.getData();
       this.lineChartData[0].data = donnees[0].values;
-      console.log(this.lineChartData);
       this.lineChartLabels = donnees[0].labels;
       this.chart.update();
     }, 2000);

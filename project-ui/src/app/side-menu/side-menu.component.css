@@ -20,11 +20,32 @@
 }
 
 .sidenavText {
-    height: 200px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     margin-top: 50px;
     font-size: 20px;
     font-weight: bold;
     justify-content: space-evenly;
+}
+
+.labels {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    font-size: 16px;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.bouton {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border: solid;
+    border-width: 0.5px;
 }

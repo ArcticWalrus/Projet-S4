@@ -3,9 +3,36 @@
         <img src="../../assets/UdeS_logo.png" alt="Logo UdeS" height ="150" width="150">
     </mat-sidenav-content>
     <mat-sidenav-content class='sidenavText'>
-        <mat-sidenav-content>Nom : Tobie Desgreniers</mat-sidenav-content>
-        <mat-sidenav-content>Âge : 22 ans</mat-sidenav-content>
-        <mat-sidenav-content>Poids : 165 lbs</mat-sidenav-content>
+        <mat-sidenav-content>Nom : {{fullName}}</mat-sidenav-content>
+        <mat-sidenav-content>Âge : {{age}} ans</mat-sidenav-content>
+        <mat-sidenav-content>Poids : {{poids}} lbs</mat-sidenav-content>
+        <mat-sidenav-content>Distance : {{distance}}</mat-sidenav-content>
+        <mat-sidenav-content>Calories : {{calorie}}</mat-sidenav-content>
     </mat-sidenav-content>
     
+    <mat-sidenav-content>
+
+            <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class='form'>
+  
+                <div class='labels'>
+                <label>
+                    Nom:
+                    <input type="text" formControlName="fullName" placeholder="Entrez votre nom" required>
+                </label>
+
+                <label>
+                    Âge:
+                    <input type="text" formControlName="age" placeholder="Entrez votre âge" required>
+                </label>
+
+                <label>
+                    Poids:
+                    <input type="text" formControlName="poids" placeholder="Entrez votre poids" required>
+                </label>
+                </div>
+            </form>
+    <div class='bouton'>
+        <button mat-raised-button (click)="updateInfo()">Update</button>
+    </div>
+    </mat-sidenav-content>
 </mat-sidenav-container>

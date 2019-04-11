@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../services/data-service.service';
 
 @Component({
   selector: 'app-display-settings',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplaySettingsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.getData();
   }
 
 }
