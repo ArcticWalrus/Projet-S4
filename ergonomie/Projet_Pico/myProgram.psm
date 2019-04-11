@@ -24,6 +24,7 @@ init:	LOAD s4, 00 ; leftCount
 		
 start: INPUT s0, Buttons_port	
        OUTPUT s1, LED_port
+	   CALL delay_1s
        JUMP getValue
 	   
 getValue:
@@ -72,4 +73,11 @@ right_bigger_than_left:
 	JUMP C, displayCenter
 	JUMP displayRight
 	
-	
+delay_1s: LOAD s8, 7D
+	LOAD s9, E2
+	LOAD sA, 90
+delay_loop:	SUB sA, 1'd
+	SUBCY s9, 0'd
+	SUBCY s8, 0'd
+	JUMP NZ, delay_loop
+	RETURN
