@@ -12,6 +12,7 @@ import { DataService } from '../services/data-service.service';
 })
 export class DataDisplayComponent implements OnInit {
 
+  public pieData: number[];
   public vitesseFlag;
   public deportationFlag;
   public lineChartData: ChartDataSets[] = [
@@ -87,7 +88,7 @@ export class DataDisplayComponent implements OnInit {
       },
     }
   };
-  public pieChartLabels: Label[] = [['Droite'], ['Centre'], ['Gauche']];
+  public pieChartLabels: Label[] = [['Gauche'], ['Centre'], ['Droite']];
   public pieChartData: number[] = [0, 0, 0];
   public pieChartType: ChartType = 'pie';
   public pieChartLegend = true;
@@ -100,10 +101,12 @@ export class DataDisplayComponent implements OnInit {
   @ViewChild(BaseChartDirective) chart: BaseChartDirective;
 
   constructor(private dataService: DataService) { 
-  
+    this.pieData = [0, 0 , 0];
   }
 
   ngOnInit() {
+    this.vitesseFlag = 1;
+    this.deportationFlag = 0;
     setInterval(async() => {
       this.lineChartData = [
         {data: [], label: 'vitesse'}
@@ -114,14 +117,19 @@ export class DataDisplayComponent implements OnInit {
 
       let deportation = await this.dataService.getDeportation();
       if(deportation == 0){
-        this.pieChartData[0] = this.pieChartData[0] + 1;
+        this.pieData[0] += 1;
       }
       else if(deportation == 1){
-        this.pieChartData[1] = this.pieChartData[1] + 1;
+        this.pieData[1] += 1;
       }
       else {
-        this.pieChartData[2] = this.pieChartData[2] + 1;
+        this.pieData[2] += 1;
       }
+
+      console.log(this.pieData);
+      console.log(this.pieChartData);
+      this.pieChartData = this.pieData;
+      this.pieChartLabels = [['Gauche'], ['Centre'], ['Droite']]
     }, 2000);
   }
 

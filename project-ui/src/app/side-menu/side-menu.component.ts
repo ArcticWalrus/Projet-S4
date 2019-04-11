@@ -27,7 +27,7 @@ export class SideMenuComponent implements OnInit {
     this.fullName = localStorage.getItem('fullName');
     this.age = localStorage.getItem('age');
     this.poids = localStorage.getItem('poids');
-    let flag = localStorage.getItem('flag');
+    //let flag = localStorage.getItem('flag');
     
     this.profileForm = this.formBuilder.group({
       fullName: [''],
@@ -35,25 +35,26 @@ export class SideMenuComponent implements OnInit {
       poids:['']
     })
 
+    this.getData();
   }
 
   async updateInfo() {
-    console.log(this.profileForm);
+    //console.log(this.profileForm);
     localStorage.setItem('fullName', this.profileForm.value.fullName);
     localStorage.setItem('age', this.profileForm.value.age);
     localStorage.setItem('poids', this.profileForm.value.poids);
 
-    await this.dataService.postPoids(this.profileForm.value.poids);
+    //await this.dataService.postPoids(this.profileForm.value.poids);
 
-    window.location.reload();
+    await window.location.reload();
   }
 
   getData() {
     setInterval(() => {
       this.distance = this.dataService.getDistance();
       this.calorie = this.dataService.getCalorie();
-      //console.log("distance :" + this.distance);
-      //console.log("Calorie : " + this.calorie);
+      console.log("distance :" + this.distance);
+      console.log("Calorie : " + this.calorie);
     }, 2000);
   }
 }
