@@ -38,6 +38,9 @@
 #include "myIO_IP.h"
 #include "xparameters.h"
 
+#include "FreeRTOS.h"
+#include "Task.h"
+
 #include <sleep.h>
 #include "netif/xadapter.h"
 #include "platform_config.h"
@@ -199,6 +202,7 @@ void network_thread(void *p)
 			dhcp_coarse_tmr();
 			mscnt = 0;
 		}
+		vTaskDelay(10 / portTICK_RATE_MS);
 	}
 #else
 	vTaskDelete(NULL);
@@ -241,6 +245,7 @@ void main_thread(void *p)
 						&(server_netif.gw));
 			break;
 		}
+		vTaskDelay(10 / portTICK_RATE_MS);
 	}
 
 #else
@@ -341,7 +346,6 @@ void fpga_thread(void *p){
 
 		// Lire puis afficher les valeurs des switch sur les leds
 		sw_data = XGpio_DiscreteRead(&inputSW, 1);
-		XGpio_DiscreteWrite(&outputLED, 1, sw_data);
 		//xil_printf("Switch value = 0x%X\n\r", sw_data);
 
 		currentVoltage= AD1_GetSampleVoltage();
@@ -454,6 +458,7 @@ void fpga_thread(void *p){
 		else pmod8LDvalue = 24;
 
 		GPIO_setPins(&pmod8LD,pmod8LDvalue);
+		vTaskDelay(10 / portTICK_RATE_MS);
 	}
 	vTaskDelete(NULL);
 	return;
@@ -463,7 +468,7 @@ int main()
 {
 	print("Bienvenue\n\r");
 
-	Poids_WriteValue(200);
+	Poids_WriteValue(75);
 
 
 	main_thread_handle = sys_thread_new("main_thread", main_thread, 0,

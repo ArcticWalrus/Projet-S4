@@ -1,9 +1,349 @@
-23:34:15 **** Incremental Build of configuration Debug for project Serveur ****
+12:10:14 **** Incremental Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Rien à faire pour « main-build ».
-23:35:37 **** Incremental Build of configuration Debug for project Serveur ****
+12:18:10 **** Incremental Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+12:20:31 **** Incremental Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+12:29:54 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/http_response.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
+../src/http_server/http_response.c: In function 'do_http_get':
+../src/http_server/http_response.c:174:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
+   len = generate_http_header(buf, "js", sw_len);
+                              ^~~
+../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
+ int generate_http_header(char *buf, char *fext, int fsize);
+     ^~~~~~~~~~~~~~~~~~~~
+../src/http_server/http_response.c:176:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
+   strcat(buf, sw_buf);
+          ^~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
+                 from ../src/http_server/http_response.c:19:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
+        ^
+'Finished building: ../src/http_server/http_response.c'
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+'Finished building: ../src/http_server/platform_gpio.c'
+' '
+'Building file: ../src/http_server/web_utils.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/web_utils.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/web_utils.d" -MT"src/http_server/web_utils.o" -o "src/http_server/web_utils.o" "../src/http_server/web_utils.c"
+'Finished building: ../src/http_server/web_utils.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main_thread':
+../src/main.c:263:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+  print_web_app_header();
+  ^~~~~~~~~~~~~~~~~~~~
+  print_app_header
+../src/main.c:267:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+  start_web_application();
+  ^~~~~~~~~~~~~~~~~~~~~
+  start_application
+../src/main.c: In function 'fpga_thread':
+../src/main.c:283:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+  int sensibilite = 0;
+      ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Serveur.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Serveur.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 322640	   4344	16898336	17225320	106d668	Serveur.elf
+'Finished building: Serveur.elf.size'
+' '
+12:29:59 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/http_response.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
+../src/http_server/http_response.c: In function 'do_http_get':
+../src/http_server/http_response.c:174:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
+   len = generate_http_header(buf, "js", sw_len);
+                              ^~~
+../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
+ int generate_http_header(char *buf, char *fext, int fsize);
+     ^~~~~~~~~~~~~~~~~~~~
+../src/http_server/http_response.c:176:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
+   strcat(buf, sw_buf);
+          ^~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
+                 from ../src/http_server/http_response.c:19:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
+        ^
+'Finished building: ../src/http_server/http_response.c'
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+'Finished building: ../src/http_server/platform_gpio.c'
+' '
+'Building file: ../src/http_server/web_utils.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/web_utils.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/web_utils.d" -MT"src/http_server/web_utils.o" -o "src/http_server/web_utils.o" "../src/http_server/web_utils.c"
+'Finished building: ../src/http_server/web_utils.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main_thread':
+../src/main.c:263:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+  print_web_app_header();
+  ^~~~~~~~~~~~~~~~~~~~
+  print_app_header
+../src/main.c:267:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+  start_web_application();
+  ^~~~~~~~~~~~~~~~~~~~~
+  start_application
+../src/main.c: In function 'fpga_thread':
+../src/main.c:283:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+  int sensibilite = 0;
+      ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Serveur.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Serveur.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 322640	   4344	16898336	17225320	106d668	Serveur.elf
+'Finished building: Serveur.elf.size'
+' '
+12:30:37 **** Incremental Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+12:31:48 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/http_response.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
+../src/http_server/http_response.c: In function 'do_http_get':
+../src/http_server/http_response.c:174:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
+   len = generate_http_header(buf, "js", sw_len);
+                              ^~~
+../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
+ int generate_http_header(char *buf, char *fext, int fsize);
+     ^~~~~~~~~~~~~~~~~~~~
+../src/http_server/http_response.c:176:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
+   strcat(buf, sw_buf);
+          ^~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
+                 from ../src/http_server/http_response.c:19:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
+        ^
+'Finished building: ../src/http_server/http_response.c'
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+'Finished building: ../src/http_server/platform_gpio.c'
+' '
+'Building file: ../src/http_server/web_utils.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/web_utils.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/web_utils.d" -MT"src/http_server/web_utils.o" -o "src/http_server/web_utils.o" "../src/http_server/web_utils.c"
+'Finished building: ../src/http_server/web_utils.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main_thread':
+../src/main.c:263:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+  print_web_app_header();
+  ^~~~~~~~~~~~~~~~~~~~
+  print_app_header
+../src/main.c:267:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+  start_web_application();
+  ^~~~~~~~~~~~~~~~~~~~~
+  start_application
+../src/main.c: In function 'fpga_thread':
+../src/main.c:283:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+  int sensibilite = 0;
+      ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Serveur.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Serveur.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 322640	   4344	16898336	17225320	106d668	Serveur.elf
+'Finished building: Serveur.elf.size'
+' '
+12:32:07 **** Incremental Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+12:33:09 **** Auto Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/http_response.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
+../src/http_server/http_response.c: In function 'do_http_get':
+../src/http_server/http_response.c:174:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
+   len = generate_http_header(buf, "js", sw_len);
+                              ^~~
+../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
+ int generate_http_header(char *buf, char *fext, int fsize);
+     ^~~~~~~~~~~~~~~~~~~~
+../src/http_server/http_response.c:176:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
+   strcat(buf, sw_buf);
+          ^~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
+                 from ../src/http_server/http_response.c:19:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
+        ^
+'Finished building: ../src/http_server/http_response.c'
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+'Finished building: ../src/http_server/platform_gpio.c'
+' '
+'Building file: ../src/http_server/web_utils.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/web_utils.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/web_utils.d" -MT"src/http_server/web_utils.o" -o "src/http_server/web_utils.o" "../src/http_server/web_utils.c"
+'Finished building: ../src/http_server/web_utils.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main_thread':
+../src/main.c:263:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+  print_web_app_header();
+  ^~~~~~~~~~~~~~~~~~~~
+  print_app_header
+../src/main.c:267:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+  start_web_application();
+  ^~~~~~~~~~~~~~~~~~~~~
+  start_application
+../src/main.c: In function 'fpga_thread':
+../src/main.c:283:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+  int sensibilite = 0;
+      ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Serveur.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Serveur.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 322640	   4344	16898336	17225320	106d668	Serveur.elf
+'Finished building: Serveur.elf.size'
+' '
+12:33:42 **** Incremental Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Rien à faire pour « main-build ».
+12:35:47 **** Incremental Build of configuration Debug for project Serveur ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/http_server/http_response.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/http_response.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/http_response.d" -MT"src/http_server/http_response.o" -o "src/http_server/http_response.o" "../src/http_server/http_response.c"
+../src/http_server/http_response.c: In function 'do_http_get':
+../src/http_server/http_response.c:174:30: warning: pointer targets in passing argument 1 of 'generate_http_header' differ in signedness [-Wpointer-sign]
+   len = generate_http_header(buf, "js", sw_len);
+                              ^~~
+../src/http_server/http_response.c:48:5: note: expected 'char *' but argument is of type 'unsigned char *'
+ int generate_http_header(char *buf, char *fext, int fsize);
+     ^~~~~~~~~~~~~~~~~~~~
+../src/http_server/http_response.c:176:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
+   strcat(buf, sw_buf);
+          ^~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:10:0,
+                 from ../src/http_server/http_response.c:19:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:26:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
+        ^
+'Finished building: ../src/http_server/http_response.c'
+' '
+'Building file: ../src/http_server/platform_gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/platform_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/platform_gpio.d" -MT"src/http_server/platform_gpio.o" -o "src/http_server/platform_gpio.o" "../src/http_server/platform_gpio.c"
+'Finished building: ../src/http_server/platform_gpio.c'
+' '
+'Building file: ../src/http_server/web_utils.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/http_server/web_utils.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/http_server/web_utils.d" -MT"src/http_server/web_utils.o" -o "src/http_server/web_utils.o" "../src/http_server/web_utils.c"
+'Finished building: ../src/http_server/web_utils.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Serveur_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main_thread':
+../src/main.c:263:2: warning: implicit declaration of function 'print_web_app_header'; did you mean 'print_app_header'? [-Wimplicit-function-declaration]
+  print_web_app_header();
+  ^~~~~~~~~~~~~~~~~~~~
+  print_app_header
+../src/main.c:267:2: warning: implicit declaration of function 'start_web_application'; did you mean 'start_application'? [-Wimplicit-function-declaration]
+  start_web_application();
+  ^~~~~~~~~~~~~~~~~~~~~
+  start_application
+../src/main.c: In function 'fpga_thread':
+../src/main.c:283:6: warning: unused variable 'sensibilite' [-Wunused-variable]
+  int sensibilite = 0;
+      ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Serveur.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Serveur_bsp/ps7_cortexa9_0/lib -o "Serveur.elf"  ./src/http_server/http_response.o ./src/http_server/platform_fs.o ./src/http_server/platform_gpio.o ./src/http_server/web_utils.o ./src/http_server/webserver.o  ./src/IMU_Functions.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Serveur.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Serveur.elf  |tee "Serveur.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 322640	   4344	16898336	17225320	106d668	Serveur.elf
+'Finished building: Serveur.elf.size'
+' '
+12:55:23 **** Incremental Build of configuration Debug for project Serveur ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '

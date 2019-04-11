@@ -34,7 +34,7 @@ typedef uint16_t u16;
 #define AD1_NUM_BITS 	12
 
 #define LIMITE_GAUCHE 500
-#define LIMITE_DROITE -100
+#define LIMITE_DROITE -500
 #define GAUCHE 0
 #define DROITE 2
 #define CENTRE 1
