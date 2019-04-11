@@ -277,6 +277,10 @@ void fpga_thread(void *p){
 	char directionGenou[7] = "Centre";
 	int sensibilite = 0;
 
+	char calorie[16];
+	char deportation[16];
+	char distance[16];
+	char vitesse[16];
 	// INIT IMU
 	// I2C interface initialization in ZYNQ
 	I2C_Interface_Init(I2C_DEVICE_ID);
@@ -298,7 +302,7 @@ void fpga_thread(void *p){
 	IMU_ReadSomeRegisters();
 	xil_printf("\r\n");
 
-	int accel_y;
+	int accel_y = 0;
 
 	xil_printf("ACCEL data\r\n");
 
@@ -332,9 +336,8 @@ void fpga_thread(void *p){
 
 	while(1){
 		// IMU
-		accel_y =  IMU_Get_Accel_Y_value();
-		sleep(0.5); // in seconds
-
+		//accel_y =  IMU_Get_Accel_Y_value();
+		usleep(500);
 
 		// Lire puis afficher les valeurs des switch sur les leds
 		sw_data = XGpio_DiscreteRead(&inputSW, 1);
@@ -345,6 +348,29 @@ void fpga_thread(void *p){
 
 		if (sw_data >= 8) global_sensibilite = 2;
 		else global_sensibilite = 1;
+
+
+
+		sprintf(calorie, "%d", Calorie_GetSampleRaw());
+
+		sprintf(deportation, "%d", Deportation_GetSampleValue());
+
+		sprintf(distance, "%d", Distance_GetSampleRaw());
+
+		sprintf(vitesse, "%d", Speed_GetSampleRaw());
+
+		sprintf(global_buf, "{\"Calorie\": ");
+		strcat(global_buf, calorie);
+		strcat(global_buf, ", \"Deportation\": ");
+		strcat(global_buf, deportation);
+		strcat(global_buf, ", \"Distance\": ");
+		strcat(global_buf, distance);
+		strcat(global_buf, ", \"Vitesse\": ");
+		strcat(global_buf, vitesse);
+		strcat(global_buf, "}");
+
+
+
 
 		// lire la tension provenant du PmodAD1
 		if(sw_data == 0 || sw_data == 8){
@@ -438,7 +464,6 @@ int main()
 	print("Bienvenue\n\r");
 
 	Poids_WriteValue(200);
-	printf("You fat fuck\n\r");
 
 
 	main_thread_handle = sys_thread_new("main_thread", main_thread, 0,

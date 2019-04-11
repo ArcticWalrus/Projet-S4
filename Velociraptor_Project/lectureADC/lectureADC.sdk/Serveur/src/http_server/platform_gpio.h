@@ -57,4 +57,5 @@ int Deportation_GetSampleValue();
 void Poids_WriteValue(unsigned int poids);
 
 float global_sensibilite;
+char global_buf[128];
 #endif

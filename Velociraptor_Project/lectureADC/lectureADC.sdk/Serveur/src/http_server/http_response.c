@@ -110,10 +110,11 @@ int do_http_post(struct tcp_pcb *pcb, char *req, int rlen)
 	}
 
 	if (is_cmd_fpga(req)) {
+
 		char calorie[16];
 		sprintf(calorie, "%d", Calorie_GetSampleRaw());
 		char deportation[16];
-		sprintf(deportation, "%d", Deportation_GetSampleValue());
+		sprintf(deportation, "%d", Deportation_GetSampleValue(1));
 		char distance[16];
 		sprintf(distance, "%d", Distance_GetSampleRaw());
 		char vitesse[16];
@@ -128,7 +129,6 @@ int do_http_post(struct tcp_pcb *pcb, char *req, int rlen)
 		strcat(sw_buf, ", \"Vitesse\": ");
 		strcat(sw_buf, vitesse);
 		strcat(sw_buf, "}");
-
 
 		sw_len = strlen(sw_buf);
 
@@ -166,25 +166,8 @@ int do_http_get(struct tcp_pcb *pcb, char *req, int rlen)
 
 	xil_printf("REQ: %s", req);
 	if (is_cmd_fpga(req)) {
-		char calorie[16];
-		sprintf(calorie, "%d", Calorie_GetSampleRaw());
-		char deportation[16];
-		sprintf(deportation, "%d", Deportation_GetSampleValue(1));
-		char distance[16];
-		sprintf(distance, "%d", Distance_GetSampleRaw());
-		char vitesse[16];
-		sprintf(vitesse, "%d", Speed_GetSampleRaw());
 
-		sprintf(sw_buf, "{\"Calorie\": ");
-		strcat(sw_buf, calorie);
-		strcat(sw_buf, ", \"Deportation\": ");
-		strcat(sw_buf, deportation);
-		strcat(sw_buf, ", \"Distance\": ");
-		strcat(sw_buf, distance);
-		strcat(sw_buf, ", \"Vitesse\": ");
-		strcat(sw_buf, vitesse);
-		strcat(sw_buf, "}");
-
+		sprintf(sw_buf, global_buf);
 
 		sw_len = strlen(sw_buf);
 
